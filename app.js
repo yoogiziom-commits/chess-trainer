@@ -19,6 +19,8 @@
       allPuzzlesBtn: 'Catalog',
       modePuzzlesTab: (n) => `Checkmate Puzzles (${n})`,
       modeOpeningsTab: (n) => `Openings & Traps (${n})`,
+      modeMaterialTab: (n) => `Win Material (${n})`,
+      modeDefenseTab: (n) => `Defense Mode (${n})`,
       filterDiffLabel: 'Difficulty:',
       filterDiffAll: 'All',
       filterDiffEasy: 'Easy',
@@ -37,19 +39,23 @@
       whiteToMove: 'White to move',
       blackToMove: 'Black to move',
       mateInN: (n) => `Mate in ${n}`,
-      stepsCount: (n) => `${n} Moves`,
+      stepsCount: (n) => `${n} ${n === 1 ? 'Move' : 'Moves'}`,
       remainingMoves: (n) => (n === 1 ? '1 move to mate' : `${n} moves to mate`),
       promptStart: (colorStr, n) =>
         `${colorStr} — Find forced checkmate in ${n} ${n === 1 ? 'move' : 'moves'}!`,
       promptOpeningStart: (colorStr, n) =>
         `${colorStr} — Follow the guided opening trap (${n} steps to mate)!`,
+      promptMaterialStart: (colorStr, n) =>
+        `${colorStr} — Find the tactical combination that wins material (${n} ${n === 1 ? 'move' : 'moves'})!`,
+      promptDefenseStart: (colorStr, n) =>
+        `${colorStr} — Danger! Find the ONLY move that saves your king (${n} ${n === 1 ? 'move' : 'moves'})!`,
       statusCorrectKeepGoing: (rem) =>
         `Great move! Keep calculating (${rem} ${rem === 1 ? 'move' : 'moves'} left)...`,
       statusOpponentThinking: 'Opponent is responding...',
-      statusWrongMove: 'Not quite! That move does not force mate in time. Try again!',
+      statusWrongMove: 'Not quite! That move does not work here. Try again!',
       statusWrongOpeningMove: 'Follow the opening trap line! Check the coach box below for guidance.',
-      statusSolvedClean: 'Checkmate! Completed flawlessly!',
-      statusSolvedAssisted: 'Checkmate! Completed.',
+      statusSolvedClean: 'Brilliant! Challenge solved flawlessly!',
+      statusSolvedAssisted: 'Challenge completed.',
       hintBtn1: 'Hint (Piece)',
       hintBtn2: 'Hint (Move Arrow)',
       solutionBtn: 'Solution',
@@ -83,6 +89,8 @@
       allPuzzlesBtn: 'Katalog',
       modePuzzlesTab: (n) => `Zadania Matowe (${n})`,
       modeOpeningsTab: (n) => `Debiuty i Pułapki (${n})`,
+      modeMaterialTab: (n) => `Zdobądź Przewagę (${n})`,
+      modeDefenseTab: (n) => `Obrona przed Matem (${n})`,
       filterDiffLabel: 'Poziom:',
       filterDiffAll: 'Wszystkie',
       filterDiffEasy: 'Łatwy',
@@ -101,20 +109,24 @@
       whiteToMove: 'Ruch białych',
       blackToMove: 'Ruch czarnych',
       mateInN: (n) => `Mat w ${n}`,
-      stepsCount: (n) => `${n} ruchów`,
+      stepsCount: (n) => `${n} ${n === 1 ? 'ruch' : 'ruchy'}`,
       remainingMoves: (n) =>
         n === 1 ? 'Pozostał 1 ruch do mata' : `Pozostały ${n} ruchy do mata`,
       promptStart: (colorStr, n) =>
         `${colorStr} — Znajdź forsującego mata w ${n} ${n === 1 ? 'ruchu' : 'ruchach'}!`,
       promptOpeningStart: (colorStr, n) =>
         `${colorStr} — Rozegraj pułapkę debiutową (${n} kroków do mata)!`,
+      promptMaterialStart: (colorStr, n) =>
+        `${colorStr} — Znajdź kombinację zdobywającą przewagę materiałową (${n} ${n === 1 ? 'ruch' : 'ruchy'})!`,
+      promptDefenseStart: (colorStr, n) =>
+        `${colorStr} — Zagrożenie matem! Znajdź jedyną obronę lub kontratak (${n} ${n === 1 ? 'ruch' : 'ruchy'})!`,
       statusCorrectKeepGoing: (rem) =>
         `Świetny ruch! Kontynuuj (${rem} do końca)...`,
       statusOpponentThinking: 'Przeciwnik odpowiada...',
-      statusWrongMove: 'Niedokładny ruch! To nie daje mata w wyznaczonym czasie. Spróbuj ponownie!',
+      statusWrongMove: 'Niedokładny ruch! To nie wygrywa w tej pozycji. Spróbuj ponownie!',
       statusWrongOpeningMove: 'To nie jest ruch z tego wariantu! Sprawdź wskazówkę trenera poniżej.',
-      statusSolvedClean: 'Szach-mat! Ukończono bezbłędnie!',
-      statusSolvedAssisted: 'Szach-mat! Ukończono.',
+      statusSolvedClean: 'Brawo! Zadanie rozwiązane bezbłędnie!',
+      statusSolvedAssisted: 'Zadanie ukończone.',
       hintBtn1: 'Podpowiedź (Figura)',
       hintBtn2: 'Podpowiedź (Ruch)',
       solutionBtn: 'Rozwiązanie',
@@ -183,24 +195,40 @@
       this._populateThemeFilter();
 
       // Load initial puzzle (last active or first unsolved)
-      const allItems = [...window.PUZZLES, ...(window.OPENING_TRAPS || [])];
+      const allItems = this._getAllItems();
       const initialPuzzle =
         allItems.find((p) => p.id === this.state.lastPuzzleId) ||
         window.PUZZLES.find((p) => !this.state.solved[p.id]) ||
         window.PUZZLES[0];
       if (initialPuzzle.isOpeningTrap) {
         this.setMode('openings', initialPuzzle.id);
+      } else if (initialPuzzle.isWinMaterial) {
+        this.setMode('material', initialPuzzle.id);
+      } else if (initialPuzzle.isDefensePuzzle) {
+        this.setMode('defense', initialPuzzle.id);
       } else {
         this.loadPuzzle(initialPuzzle.id);
       }
     }
 
+    _getAllItems() {
+      return [
+        ...window.PUZZLES,
+        ...(window.OPENING_TRAPS || []),
+        ...(window.WIN_MATERIAL_PUZZLES || []),
+        ...(window.DEFENSE_PUZZLES || [])
+      ];
+    }
+
     _getPool() {
-      return this.mode === 'openings' ? window.OPENING_TRAPS || [] : window.PUZZLES;
+      if (this.mode === 'openings') return window.OPENING_TRAPS || [];
+      if (this.mode === 'material') return window.WIN_MATERIAL_PUZZLES || [];
+      if (this.mode === 'defense') return window.DEFENSE_PUZZLES || [];
+      return window.PUZZLES;
     }
 
     setMode(newMode, targetId = null) {
-      if (newMode !== 'puzzles' && newMode !== 'openings') return;
+      if (!['puzzles', 'openings', 'material', 'defense'].includes(newMode)) return;
       this.mode = newMode;
       this.filterDifficulty = 'all';
       this.filterMoves = 'all';
@@ -208,7 +236,9 @@
 
       this.dom.modePuzzlesTab.classList.toggle('active', this.mode === 'puzzles');
       this.dom.modeOpeningsTab.classList.toggle('active', this.mode === 'openings');
-      this.dom.movesFilterWrap.classList.toggle('hidden', this.mode === 'openings');
+      this.dom.modeMaterialTab.classList.toggle('active', this.mode === 'material');
+      this.dom.modeDefenseTab.classList.toggle('active', this.mode === 'defense');
+      this.dom.movesFilterWrap.classList.toggle('hidden', this.mode !== 'puzzles');
 
       this._applyThemeAndLang();
       this._populateThemeFilter();
@@ -262,8 +292,8 @@
     }
 
     t(key) {
-      const dict = I18N[this.state.lang] || I18N.en;
-      return dict[key] !== undefined ? dict[key] : I18N.en[key];
+      const dict = I18N[this.state.lang] || I18N.pl;
+      return dict[key] !== undefined ? dict[key] : I18N.pl[key];
     }
 
     _cacheDom() {
@@ -284,8 +314,12 @@
 
         modePuzzlesTab: document.getElementById('modePuzzlesTab'),
         modeOpeningsTab: document.getElementById('modeOpeningsTab'),
+        modeMaterialTab: document.getElementById('modeMaterialTab'),
+        modeDefenseTab: document.getElementById('modeDefenseTab'),
         modePuzzlesText: document.getElementById('modePuzzlesText'),
         modeOpeningsText: document.getElementById('modeOpeningsText'),
+        modeMaterialText: document.getElementById('modeMaterialText'),
+        modeDefenseText: document.getElementById('modeDefenseText'),
         movesFilterWrap: document.getElementById('movesFilterWrap'),
 
         filterDiffLabel: document.getElementById('filterDiffLabel'),
@@ -373,9 +407,11 @@
         this._applyThemeAndLang();
       });
 
-      // Mode switcher tabs (Checkmate Puzzles vs Guided Openings & Traps)
+      // Mode switcher tabs (4 Training Modes)
       this.dom.modePuzzlesTab.addEventListener('click', () => this.setMode('puzzles'));
       this.dom.modeOpeningsTab.addEventListener('click', () => this.setMode('openings'));
+      this.dom.modeMaterialTab.addEventListener('click', () => this.setMode('material'));
+      this.dom.modeDefenseTab.addEventListener('click', () => this.setMode('defense'));
 
       // Difficulty tier switcher (All / Easy / Medium / Hard)
       this.dom.filterDiffGroup.addEventListener('click', (e) => {
@@ -454,6 +490,12 @@
       this.dom.modePuzzlesText.textContent = this.t('modePuzzlesTab')(window.PUZZLES.length);
       this.dom.modeOpeningsText.textContent = this.t('modeOpeningsTab')(
         (window.OPENING_TRAPS || []).length
+      );
+      this.dom.modeMaterialText.textContent = this.t('modeMaterialTab')(
+        (window.WIN_MATERIAL_PUZZLES || []).length
+      );
+      this.dom.modeDefenseText.textContent = this.t('modeDefenseTab')(
+        (window.DEFENSE_PUZZLES || []).length
       );
 
       this.dom.filterDiffLabel.textContent = this.t('filterDiffLabel');
@@ -553,7 +595,7 @@
         const matchDiff =
           this.filterDifficulty === 'all' || p.difficulty === this.filterDifficulty;
         const matchMoves =
-          this.mode === 'openings' ||
+          this.mode !== 'puzzles' ||
           this.filterMoves === 'all' ||
           String(p.movesToMate) === String(this.filterMoves);
         const matchTheme =
@@ -593,7 +635,7 @@
     loadPuzzle(puzzleId) {
       this._clearTimers();
       const pool = this._getPool();
-      const allItems = [...window.PUZZLES, ...(window.OPENING_TRAPS || [])];
+      const allItems = this._getAllItems();
       const puzzle =
         pool.find((p) => p.id === puzzleId) ||
         allItems.find((p) => p.id === puzzleId) ||
@@ -654,7 +696,7 @@
     }
 
     _renderStats() {
-      const total = window.PUZZLES.length + (window.OPENING_TRAPS || []).length;
+      const total = this._getAllItems().length;
       const solvedCount = Object.keys(this.state.solved).length;
       this.dom.solvedCount.textContent = `${solvedCount}/${total}`;
       this.dom.streakCount.textContent = String(this.state.streak);
@@ -669,9 +711,10 @@
       const diffLabels = this.t('difficultyNames');
       this.dom.turnDot.className = `turn-dot ${isWhite ? 'white' : 'black'}`;
       this.dom.turnText.textContent = isWhite ? this.t('whiteToMove') : this.t('blackToMove');
-      const goalLabel = p.isOpeningTrap
-        ? this.t('stepsCount')(p.movesToMate)
-        : this.t('mateInN')(p.movesToMate);
+      const goalLabel =
+        p.isOpeningTrap || p.isWinMaterial || p.isDefensePuzzle
+          ? this.t('stepsCount')(p.movesToMate)
+          : this.t('mateInN')(p.movesToMate);
       this.dom.mateBadge.textContent = `${diffLabels[p.difficulty]} • ${goalLabel}`;
       this.dom.mateBadge.dataset.difficulty = p.difficulty;
       this.dom.puzzleIdBadge.textContent = `#${p.id.toUpperCase()}`;
@@ -741,6 +784,12 @@
       } else if (p.isOpeningTrap) {
         icon = '📖';
         msg = this.t('promptOpeningStart')(colorStr, p.movesToMate);
+      } else if (p.isWinMaterial) {
+        icon = '⚔️';
+        msg = this.t('promptMaterialStart')(colorStr, p.movesToMate);
+      } else if (p.isDefensePuzzle) {
+        icon = '🛡️';
+        msg = this.t('promptDefenseStart')(colorStr, p.movesToMate);
       } else {
         msg = this.t('promptStart')(colorStr, p.movesToMate);
       }
@@ -1123,7 +1172,10 @@
 
       // Check if candidate matches canonical solution OR forces mate in the remaining moves
       const isCanonical = candidateUci === expectedUci;
-      const canCheckAltForcedMate = !this.currentPuzzle.isOpeningTrap || remMoves <= 2;
+      const canCheckAltForcedMate =
+        !this.currentPuzzle.isOpeningTrap &&
+        !this.currentPuzzle.isWinMaterial &&
+        !this.currentPuzzle.isDefensePuzzle;
       const isAltForcedMate =
         !isCanonical &&
         canCheckAltForcedMate &&
@@ -1140,12 +1192,17 @@
         // Correct move!
         this.hintLevel = 0;
         this._recordMoveInNotation(moveObj);
-        this._playMoveSound(moveObj);
+        const reachedEndOfLine =
+          this.engine.isCheckmate() ||
+          this.solutionStep + 1 >= this.currentPuzzle.solution.length;
 
-        if (this.engine.isCheckmate()) {
+        if (reachedEndOfLine) {
+          this.sound.solved();
           this._onPuzzleSolved();
           return;
         }
+
+        this._playMoveSound(moveObj);
 
         // Advance solution step and play opponent reply
         this.solutionStep++;

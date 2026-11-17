@@ -187,8 +187,15 @@ select {
   margin: 0.65rem auto 0;
   padding: 0 1rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+@media (max-width: 860px) {
+  .mode-tabs-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0.75rem;
+  }
 }
 
 .mode-tab {
