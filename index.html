@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Interactive Chess Checkmate & Calculation Trainer — Solve Mate in 1, 2, 3, and 4 puzzles on PC and mobile." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>MateTrainer — Chess Calculation & Checkmate Puzzles</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-board-theme="emerald">
+  <!-- Top Header / Stats Bar -->
+  <header class="top-bar">
+    <div class="brand">
+      <div class="brand-logo" aria-hidden="true">♞</div>
+      <div>
+        <h1 id="appTitle" class="brand-title">MateTrainer</h1>
+        <p id="appSubtitle" class="brand-subtitle">Chess Calculation &amp; Checkmate Puzzles</p>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-pill">
+        <span class="stat-icon">✓</span>
+        <div>
+          <span id="solvedCount" class="stat-value">0/26</span>
+          <span id="solvedLabel" class="stat-label">Solved</span>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-icon">🔥</span>
+        <div>
+          <span id="streakCount" class="stat-value">0</span>
+          <span id="streakLabel" class="stat-label">Streak</span>
+        </div>
+      </div>
+      <div class="stat-pill hide-xs">
+        <span class="stat-icon">🏆</span>
+        <div>
+          <span id="bestCount" class="stat-value">0</span>
+          <span id="bestLabel" class="stat-label">Best</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button type="button" id="themeBtn" class="icon-btn" title="Switch board theme" aria-label="Switch board theme">
+        🎨
+      </button>
+      <button type="button" id="soundBtn" class="icon-btn" title="Toggle sound effects" aria-label="Toggle sound effects"></button>
+      <button type="button" id="langBtn" class="lang-btn" title="Switch language EN / PL">EN</button>
+      <button type="button" id="openDrawerBtn" class="drawer-trigger-btn">
+        <span>☰</span>
+        <span id="allPuzzlesBtnText">Puzzles</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Filter Bar (Difficulty: Easy / Medium / Hard + Moves + Tactical Themes) -->
+  <section class="filter-bar" aria-label="Puzzle Filters">
+    <div class="filter-group">
+      <span id="filterDiffLabel" class="filter-label">Difficulty:</span>
+      <div id="filterDiffGroup" class="pill-group diff-pill-group">
+        <button type="button" class="filter-pill diff-pill active" data-diff="all">All (48)</button>
+        <button type="button" class="filter-pill diff-pill diff-easy" data-diff="easy">Easy</button>
+        <button type="button" class="filter-pill diff-pill diff-medium" data-diff="medium">Medium</button>
+        <button type="button" class="filter-pill diff-pill diff-hard" data-diff="hard">Hard</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <span id="filterMovesLabel" class="filter-label">Goal:</span>
+      <div id="filterMovesGroup" class="pill-group">
+        <button type="button" class="filter-pill active" data-moves="all">All (M1–M4)</button>
+        <button type="button" class="filter-pill" data-moves="1">Mate in 1</button>
+        <button type="button" class="filter-pill" data-moves="2">Mate in 2</button>
+        <button type="button" class="filter-pill" data-moves="3">Mate in 3</button>
+        <button type="button" class="filter-pill" data-moves="4">Mate in 4</button>
+      </div>
+    </div>
+
+    <div class="filter-group theme-select-wrap">
+      <label for="filterThemeSelect" id="filterThemeLabel" class="filter-label">Theme:</label>
+      <select id="filterThemeSelect" class="theme-select"></select>
+    </div>
+  </section>
+
+  <!-- Main Workspace: Chessboard + Training Sidebar -->
+  <main class="trainer-layout">
+    <!-- Left Column: Chessboard -->
+    <section class="board-column">
+      <div id="boardContainer" class="board-container">
+        <div id="boardGrid" class="board-grid" role="grid" aria-label="Chessboard"></div>
+        <svg id="arrowSvg" class="arrow-overlay" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+
+        <!-- Promotion Picker Modal Overlay -->
+        <div id="promoModal" class="promo-modal hidden" role="dialog" aria-modal="true">
+          <div class="promo-card">
+            <h3 id="promoTitle" class="promo-title">Choose Promotion Piece</h3>
+            <div id="promoChoices" class="promo-choices"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Tactical Dashboard & Controls -->
+    <aside class="panel-column">
+      <!-- Puzzle Info Card -->
+      <div class="panel-card puzzle-header-card">
+        <div class="puzzle-badges-row">
+          <div id="turnBadge" class="turn-badge">
+            <span id="turnDot" class="turn-dot white"></span>
+            <span id="turnText">White to move</span>
+          </div>
+          <div class="puzzle-meta-right">
+            <span id="mateBadge" class="mate-badge" data-difficulty="easy">Mate in 1</span>
+            <span id="puzzleIdBadge" class="puzzle-id-badge">#M1-01</span>
+            <span id="puzzleSolvedBadge" class="solved-badge hidden"></span>
+          </div>
+        </div>
+
+        <h2 id="puzzleTitle" class="puzzle-title">Classic Back-Rank Mate</h2>
+        <div id="puzzleThemes" class="puzzle-themes"></div>
+      </div>
+
+      <!-- Interactive Status Banner -->
+      <div id="statusBanner" class="status-banner">
+        <span id="statusIcon" class="status-icon">⚡</span>
+        <p id="statusText" class="status-text">White to move — Find forced checkmate in 1 move!</p>
+      </div>
+
+      <!-- Coach Hint / Post-Solve Explanation Box -->
+      <div id="coachBox" class="coach-box hidden">
+        <strong id="coachLabel" class="coach-label">Tactical Hint:</strong>
+        <p id="coachText" class="coach-text"></p>
+      </div>
+
+      <!-- Primary Training Controls -->
+      <div class="controls-grid">
+        <button type="button" id="hintBtn" class="ctrl-btn hint-btn">
+          <span>💡</span>
+          <span id="hintBtnText">Hint (Piece)</span>
+        </button>
+        <button type="button" id="solutionBtn" class="ctrl-btn solution-btn">
+          <span>▶</span>
+          <span id="solutionBtnText">Solution</span>
+        </button>
+        <button type="button" id="retryBtn" class="ctrl-btn">
+          <span>↺</span>
+          <span id="retryBtnText">Reset</span>
+        </button>
+        <button type="button" id="flipBtn" class="ctrl-btn">
+          <span>⇅</span>
+          <span id="flipBtnText">Flip</span>
+        </button>
+      </div>
+
+      <!-- Navigation Controls (Prev / Next Puzzle) -->
+      <div class="nav-controls-row">
+        <button type="button" id="prevBtn" class="nav-btn prev-btn">
+          <span>←</span>
+          <span id="prevBtnText">Prev</span>
+        </button>
+        <button type="button" id="nextBtn" class="nav-btn next-btn">
+          <span id="nextBtnText">Next Puzzle</span>
+          <span>→</span>
+        </button>
+      </div>
+
+      <!-- Move History / Notation Card -->
+      <div class="panel-card moves-card">
+        <h3 id="movesHeader" class="moves-header">Move Notation</h3>
+        <div id="movesList" class="moves-list"></div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Floating Drag Ghost Piece for Smooth Mouse/Touch Dragging -->
+  <div id="dragGhost" class="drag-ghost hidden" aria-hidden="true"></div>
+
+  <!-- Puzzle Selection Drawer -->
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <aside id="puzzleDrawer" class="puzzle-drawer" aria-label="Puzzle Selector">
+    <div class="drawer-header">
+      <h2 id="drawerTitle" class="drawer-title">Select a Puzzle</h2>
+      <button type="button" id="closeDrawerBtn" class="icon-btn" aria-label="Close">✕</button>
+    </div>
+    <div id="drawerList" class="drawer-list"></div>
+    <div class="drawer-footer">
+      <button type="button" id="resetStatsBtn" class="reset-stats-btn">Reset Progress</button>
+    </div>
+  </aside>
+
+  <script src="js/chess-engine.js"></script>
+  <script src="js/puzzles.js"></script>
+  <script src="js/pieces.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
