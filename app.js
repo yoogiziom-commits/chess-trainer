@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'szachy_mate_trainer_v1';
+  const STORAGE_KEY = 'szachy_mate_trainer_v2';
 
   const I18N = {
     en: {
@@ -16,7 +16,9 @@
       solvedLabel: 'Solved',
       streakLabel: 'Streak',
       bestLabel: 'Best',
-      allPuzzlesBtn: 'Puzzles',
+      allPuzzlesBtn: 'Catalog',
+      modePuzzlesTab: (n) => `Checkmate Puzzles (${n})`,
+      modeOpeningsTab: (n) => `Openings & Traps (${n})`,
       filterDiffLabel: 'Difficulty:',
       filterDiffAll: 'All',
       filterDiffEasy: 'Easy',
@@ -29,32 +31,39 @@
       filterM3: 'Mate in 3',
       filterM4: 'Mate in 4',
       filterThemeLabel: 'Theme:',
+      filterOpeningLabel: 'Opening:',
       filterAllThemes: 'All tactical themes',
+      filterAllOpenings: 'All opening families',
       whiteToMove: 'White to move',
       blackToMove: 'Black to move',
       mateInN: (n) => `Mate in ${n}`,
+      stepsCount: (n) => `${n} Moves`,
       remainingMoves: (n) => (n === 1 ? '1 move to mate' : `${n} moves to mate`),
       promptStart: (colorStr, n) =>
         `${colorStr} — Find forced checkmate in ${n} ${n === 1 ? 'move' : 'moves'}!`,
+      promptOpeningStart: (colorStr, n) =>
+        `${colorStr} — Follow the guided opening trap (${n} steps to mate)!`,
       statusCorrectKeepGoing: (rem) =>
         `Great move! Keep calculating (${rem} ${rem === 1 ? 'move' : 'moves'} left)...`,
       statusOpponentThinking: 'Opponent is responding...',
       statusWrongMove: 'Not quite! That move does not force mate in time. Try again!',
-      statusSolvedClean: 'Checkmate! Puzzle solved flawlessly!',
-      statusSolvedAssisted: 'Checkmate! Puzzle completed.',
+      statusWrongOpeningMove: 'Follow the opening trap line! Check the coach box below for guidance.',
+      statusSolvedClean: 'Checkmate! Completed flawlessly!',
+      statusSolvedAssisted: 'Checkmate! Completed.',
       hintBtn1: 'Hint (Piece)',
       hintBtn2: 'Hint (Move Arrow)',
       solutionBtn: 'Solution',
       retryBtn: 'Reset',
       flipBtn: 'Flip',
       prevBtn: 'Prev',
-      nextBtn: 'Next Puzzle',
+      nextBtn: 'Next',
       movesHeader: 'Move Notation',
       noMovesYet: 'Make a move on the board to begin...',
+      guidedCoachPrefix: 'Guided Opening Coach:',
       hintPrefix: 'Tactical Hint:',
       explanationPrefix: 'Analysis:',
       promoTitle: 'Choose Promotion Piece',
-      drawerTitle: 'Select a Puzzle',
+      drawerTitle: 'Select a Challenge',
       resetStatsBtn: 'Reset Progress',
       resetStatsConfirm: 'Reset all solved puzzles and streaks?',
       difficultyNames: {
@@ -67,11 +76,13 @@
     },
     pl: {
       appTitle: 'TrenerMata',
-      appSubtitle: 'Trening Myślenia i Kombinacji Matowych',
+      appSubtitle: 'Trening Myślenia, Debiutów i Kombinacji Matowych',
       solvedLabel: 'Rozwiązane',
       streakLabel: 'Seria',
       bestLabel: 'Rekord',
-      allPuzzlesBtn: 'Zadania',
+      allPuzzlesBtn: 'Katalog',
+      modePuzzlesTab: (n) => `Zadania Matowe (${n})`,
+      modeOpeningsTab: (n) => `Debiuty i Pułapki (${n})`,
       filterDiffLabel: 'Poziom:',
       filterDiffAll: 'Wszystkie',
       filterDiffEasy: 'Łatwy',
@@ -84,20 +95,26 @@
       filterM3: 'Mat w 3',
       filterM4: 'Mat w 4',
       filterThemeLabel: 'Motyw:',
+      filterOpeningLabel: 'Debiut:',
       filterAllThemes: 'Wszystkie motywy taktyczne',
+      filterAllOpenings: 'Wszystkie debiuty',
       whiteToMove: 'Ruch białych',
       blackToMove: 'Ruch czarnych',
       mateInN: (n) => `Mat w ${n}`,
+      stepsCount: (n) => `${n} ruchów`,
       remainingMoves: (n) =>
         n === 1 ? 'Pozostał 1 ruch do mata' : `Pozostały ${n} ruchy do mata`,
       promptStart: (colorStr, n) =>
         `${colorStr} — Znajdź forsującego mata w ${n} ${n === 1 ? 'ruchu' : 'ruchach'}!`,
+      promptOpeningStart: (colorStr, n) =>
+        `${colorStr} — Rozegraj pułapkę debiutową (${n} kroków do mata)!`,
       statusCorrectKeepGoing: (rem) =>
-        `Świetny ruch! Licz dalej (pozostało: ${rem})...`,
+        `Świetny ruch! Kontynuuj (${rem} do końca)...`,
       statusOpponentThinking: 'Przeciwnik odpowiada...',
       statusWrongMove: 'Niedokładny ruch! To nie daje mata w wyznaczonym czasie. Spróbuj ponownie!',
-      statusSolvedClean: 'Szach-mat! Zadanie rozwiązane bezbłędnie!',
-      statusSolvedAssisted: 'Szach-mat! Zadanie ukończone.',
+      statusWrongOpeningMove: 'To nie jest ruch z tego wariantu! Sprawdź wskazówkę trenera poniżej.',
+      statusSolvedClean: 'Szach-mat! Ukończono bezbłędnie!',
+      statusSolvedAssisted: 'Szach-mat! Ukończono.',
       hintBtn1: 'Podpowiedź (Figura)',
       hintBtn2: 'Podpowiedź (Ruch)',
       solutionBtn: 'Rozwiązanie',
@@ -107,10 +124,11 @@
       nextBtn: 'Następne',
       movesHeader: 'Zapis ruchów',
       noMovesYet: 'Wykonaj ruch na szachownicy, aby rozpocząć...',
+      guidedCoachPrefix: 'Przewodnik Debiutowy:',
       hintPrefix: 'Wskazówka taktyczna:',
       explanationPrefix: 'Wyjaśnienie kombinacji:',
       promoTitle: 'Wybierz figurę do promocji',
-      drawerTitle: 'Wybierz zadanie szachowe',
+      drawerTitle: 'Wybierz zadanie lub debiut',
       resetStatsBtn: 'Wyzeruj postępy',
       resetStatsConfirm: 'Czy na pewno chcesz wyzerować rozwiązane zadania i serię?',
       difficultyNames: {
@@ -131,6 +149,7 @@
       this.state = this._loadState();
       this.sound.enabled = this.state.soundEnabled;
 
+      this.mode = 'puzzles'; // 'puzzles' | 'openings'
       this.filterDifficulty = 'all';
       this.filterMoves = 'all';
       this.filterTheme = 'all';
@@ -164,16 +183,50 @@
       this._populateThemeFilter();
 
       // Load initial puzzle (last active or first unsolved)
+      const allItems = [...window.PUZZLES, ...(window.OPENING_TRAPS || [])];
       const initialPuzzle =
-        window.PUZZLES.find((p) => p.id === this.state.lastPuzzleId) ||
+        allItems.find((p) => p.id === this.state.lastPuzzleId) ||
         window.PUZZLES.find((p) => !this.state.solved[p.id]) ||
         window.PUZZLES[0];
-      this.loadPuzzle(initialPuzzle.id);
+      if (initialPuzzle.isOpeningTrap) {
+        this.setMode('openings', initialPuzzle.id);
+      } else {
+        this.loadPuzzle(initialPuzzle.id);
+      }
+    }
+
+    _getPool() {
+      return this.mode === 'openings' ? window.OPENING_TRAPS || [] : window.PUZZLES;
+    }
+
+    setMode(newMode, targetId = null) {
+      if (newMode !== 'puzzles' && newMode !== 'openings') return;
+      this.mode = newMode;
+      this.filterDifficulty = 'all';
+      this.filterMoves = 'all';
+      this.filterTheme = 'all';
+
+      this.dom.modePuzzlesTab.classList.toggle('active', this.mode === 'puzzles');
+      this.dom.modeOpeningsTab.classList.toggle('active', this.mode === 'openings');
+      this.dom.movesFilterWrap.classList.toggle('hidden', this.mode === 'openings');
+
+      this._applyThemeAndLang();
+      this._populateThemeFilter();
+      this._updateFilteredPuzzles(false);
+
+      const pool = this._getPool();
+      const chosen =
+        (targetId && pool.find((p) => p.id === targetId)) ||
+        pool.find((p) => !this.state.solved[p.id]) ||
+        pool[0];
+      if (chosen) {
+        this.loadPuzzle(chosen.id);
+      }
     }
 
     _loadState() {
       const defaults = {
-        lang: 'en',
+        lang: 'pl',
         solved: {}, // id -> 'clean' | 'assisted'
         streak: 0,
         bestStreak: 0,
@@ -228,6 +281,12 @@
         langBtn: document.getElementById('langBtn'),
         openDrawerBtn: document.getElementById('openDrawerBtn'),
         allPuzzlesBtnText: document.getElementById('allPuzzlesBtnText'),
+
+        modePuzzlesTab: document.getElementById('modePuzzlesTab'),
+        modeOpeningsTab: document.getElementById('modeOpeningsTab'),
+        modePuzzlesText: document.getElementById('modePuzzlesText'),
+        modeOpeningsText: document.getElementById('modeOpeningsText'),
+        movesFilterWrap: document.getElementById('movesFilterWrap'),
 
         filterDiffLabel: document.getElementById('filterDiffLabel'),
         filterDiffGroup: document.getElementById('filterDiffGroup'),
@@ -314,6 +373,10 @@
         this._applyThemeAndLang();
       });
 
+      // Mode switcher tabs (Checkmate Puzzles vs Guided Openings & Traps)
+      this.dom.modePuzzlesTab.addEventListener('click', () => this.setMode('puzzles'));
+      this.dom.modeOpeningsTab.addEventListener('click', () => this.setMode('openings'));
+
       // Difficulty tier switcher (All / Easy / Medium / Hard)
       this.dom.filterDiffGroup.addEventListener('click', (e) => {
         const btn = e.target.closest('[data-diff]');
@@ -388,15 +451,22 @@
       this.dom.soundBtn.title = this.t('soundTitle');
       this._updateSoundButton();
 
+      this.dom.modePuzzlesText.textContent = this.t('modePuzzlesTab')(window.PUZZLES.length);
+      this.dom.modeOpeningsText.textContent = this.t('modeOpeningsTab')(
+        (window.OPENING_TRAPS || []).length
+      );
+
       this.dom.filterDiffLabel.textContent = this.t('filterDiffLabel');
       this.dom.filterMovesLabel.textContent = this.t('filterMovesLabel');
-      this.dom.filterThemeLabel.textContent = this.t('filterThemeLabel');
+      this.dom.filterThemeLabel.textContent =
+        this.mode === 'openings' ? this.t('filterOpeningLabel') : this.t('filterThemeLabel');
 
+      const pool = this._getPool();
       const diffCounts = {
-        all: window.PUZZLES.length,
-        easy: window.PUZZLES.filter((p) => p.difficulty === 'easy').length,
-        medium: window.PUZZLES.filter((p) => p.difficulty === 'medium').length,
-        hard: window.PUZZLES.filter((p) => p.difficulty === 'hard').length
+        all: pool.length,
+        easy: pool.filter((p) => p.difficulty === 'easy').length,
+        medium: pool.filter((p) => p.difficulty === 'medium').length,
+        hard: pool.filter((p) => p.difficulty === 'hard').length
       };
       const diffFilterLabels = {
         all: `${this.t('filterDiffAll')} (${diffCounts.all})`,
@@ -444,15 +514,29 @@
     _populateThemeFilter() {
       const currentVal = this.filterTheme;
       const lang = this.state.lang;
-      const themes = window.PUZZLE_THEMES;
-      let html = `<option value="all">${this.t('filterAllThemes')}</option>`;
-      for (const [key, labels] of Object.entries(themes)) {
-        const count = window.PUZZLES.filter((p) => p.themes.includes(key)).length;
-        if (count > 0) {
-          html += `<option value="${key}">${labels[lang] || labels.en} (${count})</option>`;
+      const pool = this._getPool();
+
+      if (this.mode === 'openings') {
+        const families = window.OPENING_FAMILIES || {};
+        let html = `<option value="all">${this.t('filterAllOpenings')}</option>`;
+        for (const [key, labels] of Object.entries(families)) {
+          const count = pool.filter((p) => p.openingFamily === key).length;
+          if (count > 0) {
+            html += `<option value="${key}">${labels[lang] || labels.en} (${count})</option>`;
+          }
         }
+        this.dom.filterThemeSelect.innerHTML = html;
+      } else {
+        const themes = window.PUZZLE_THEMES;
+        let html = `<option value="all">${this.t('filterAllThemes')}</option>`;
+        for (const [key, labels] of Object.entries(themes)) {
+          const count = pool.filter((p) => p.themes.includes(key)).length;
+          if (count > 0) {
+            html += `<option value="${key}">${labels[lang] || labels.en} (${count})</option>`;
+          }
+        }
+        this.dom.filterThemeSelect.innerHTML = html;
       }
-      this.dom.filterThemeSelect.innerHTML = html;
       this.dom.filterThemeSelect.value = currentVal;
     }
 
@@ -464,13 +548,19 @@
         btn.classList.toggle('active', btn.dataset.moves === this.filterMoves);
       });
 
-      this.filteredPuzzles = window.PUZZLES.filter((p) => {
+      const pool = this._getPool();
+      this.filteredPuzzles = pool.filter((p) => {
         const matchDiff =
           this.filterDifficulty === 'all' || p.difficulty === this.filterDifficulty;
         const matchMoves =
-          this.filterMoves === 'all' || String(p.movesToMate) === String(this.filterMoves);
+          this.mode === 'openings' ||
+          this.filterMoves === 'all' ||
+          String(p.movesToMate) === String(this.filterMoves);
         const matchTheme =
-          this.filterTheme === 'all' || p.themes.includes(this.filterTheme);
+          this.filterTheme === 'all' ||
+          (this.mode === 'openings'
+            ? p.openingFamily === this.filterTheme
+            : p.themes.includes(this.filterTheme));
         return matchDiff && matchMoves && matchTheme;
       });
 
@@ -482,7 +572,7 @@
         this.dom.filterMovesGroup.querySelectorAll('[data-moves]').forEach((btn) => {
           btn.classList.toggle('active', btn.dataset.moves === 'all');
         });
-        this.filteredPuzzles = window.PUZZLES.filter(
+        this.filteredPuzzles = pool.filter(
           (p) => this.filterDifficulty === 'all' || p.difficulty === this.filterDifficulty
         );
       }
@@ -502,7 +592,12 @@
 
     loadPuzzle(puzzleId) {
       this._clearTimers();
-      const puzzle = window.PUZZLES.find((p) => p.id === puzzleId) || window.PUZZLES[0];
+      const pool = this._getPool();
+      const allItems = [...window.PUZZLES, ...(window.OPENING_TRAPS || [])];
+      const puzzle =
+        pool.find((p) => p.id === puzzleId) ||
+        allItems.find((p) => p.id === puzzleId) ||
+        pool[0];
       this.currentPuzzle = puzzle;
       this.state.lastPuzzleId = puzzle.id;
       this._saveState();
@@ -528,7 +623,8 @@
     }
 
     navigatePuzzle(delta) {
-      const list = this.filteredPuzzles.length ? this.filteredPuzzles : window.PUZZLES;
+      const pool = this._getPool();
+      const list = this.filteredPuzzles.length ? this.filteredPuzzles : pool;
       const idx = list.findIndex((p) => p.id === this.currentPuzzle.id);
       const nextIdx = (idx + delta + list.length) % list.length;
       this.loadPuzzle(list[nextIdx].id);
@@ -558,7 +654,7 @@
     }
 
     _renderStats() {
-      const total = window.PUZZLES.length;
+      const total = window.PUZZLES.length + (window.OPENING_TRAPS || []).length;
       const solvedCount = Object.keys(this.state.solved).length;
       this.dom.solvedCount.textContent = `${solvedCount}/${total}`;
       this.dom.streakCount.textContent = String(this.state.streak);
@@ -573,7 +669,10 @@
       const diffLabels = this.t('difficultyNames');
       this.dom.turnDot.className = `turn-dot ${isWhite ? 'white' : 'black'}`;
       this.dom.turnText.textContent = isWhite ? this.t('whiteToMove') : this.t('blackToMove');
-      this.dom.mateBadge.textContent = `${diffLabels[p.difficulty]} • ${this.t('mateInN')(p.movesToMate)}`;
+      const goalLabel = p.isOpeningTrap
+        ? this.t('stepsCount')(p.movesToMate)
+        : this.t('mateInN')(p.movesToMate);
+      this.dom.mateBadge.textContent = `${diffLabels[p.difficulty]} • ${goalLabel}`;
       this.dom.mateBadge.dataset.difficulty = p.difficulty;
       this.dom.puzzleIdBadge.textContent = `#${p.id.toUpperCase()}`;
 
@@ -593,13 +692,17 @@
 
       this.dom.puzzleTitle.textContent = p.title[lang] || p.title.en;
 
-      this.dom.puzzleThemes.innerHTML = p.themes
-        .map((thKey) => {
-          const th = window.PUZZLE_THEMES[thKey];
-          const label = th ? th[lang] || th.en : thKey;
-          return `<span class="theme-chip">${label}</span>`;
-        })
-        .join('');
+      const chips = [];
+      if (p.openingFamily && window.OPENING_FAMILIES && window.OPENING_FAMILIES[p.openingFamily]) {
+        const fam = window.OPENING_FAMILIES[p.openingFamily];
+        chips.push(`<span class="theme-chip">📖 ${fam[lang] || fam.en}</span>`);
+      }
+      for (const thKey of p.themes || []) {
+        const th = window.PUZZLE_THEMES[thKey];
+        const label = th ? th[lang] || th.en : thKey;
+        chips.push(`<span class="theme-chip">${label}</span>`);
+      }
+      this.dom.puzzleThemes.innerHTML = chips.join('');
     }
 
     _renderStatusAndCoach(customStatusType = null, customMessage = null) {
@@ -635,6 +738,9 @@
         bannerClass += ' progress';
         icon = '✓';
         msg = this.t('statusCorrectKeepGoing')(rem);
+      } else if (p.isOpeningTrap) {
+        icon = '📖';
+        msg = this.t('promptOpeningStart')(colorStr, p.movesToMate);
       } else {
         msg = this.t('promptStart')(colorStr, p.movesToMate);
       }
@@ -643,11 +749,20 @@
       this.dom.statusIcon.textContent = icon;
       this.dom.statusText.textContent = msg;
 
-      // Coach box (shows Hint when hintLevel >= 1, or Explanation when solved)
+      // Coach box:
+      // 1. When solved -> show full explanation
+      // 2. When in Guided Openings mode -> always show current step's coaching commentary!
+      // 3. When in Puzzles mode & hintLevel >= 1 -> show puzzle hint
+      const playerStepIdx = Math.floor(this.solutionStep / 2);
       if (this.status === 'solved') {
         this.dom.coachBox.className = 'coach-box explanation';
         this.dom.coachLabel.textContent = this.t('explanationPrefix');
         this.dom.coachText.textContent = p.explanation[lang] || p.explanation.en;
+      } else if (p.isOpeningTrap && p.stepHints && p.stepHints[playerStepIdx]) {
+        this.dom.coachBox.className = this.hintLevel >= 1 ? 'coach-box hint' : 'coach-box guided';
+        this.dom.coachLabel.textContent = this.t('guidedCoachPrefix');
+        const stepObj = p.stepHints[playerStepIdx];
+        this.dom.coachText.textContent = stepObj[lang] || stepObj.en;
       } else if (this.hintLevel >= 1) {
         this.dom.coachBox.className = 'coach-box hint';
         this.dom.coachLabel.textContent = this.t('hintPrefix');
@@ -1008,8 +1123,11 @@
 
       // Check if candidate matches canonical solution OR forces mate in the remaining moves
       const isCanonical = candidateUci === expectedUci;
+      const canCheckAltForcedMate = !this.currentPuzzle.isOpeningTrap || remMoves <= 2;
       const isAltForcedMate =
-        !isCanonical && this.engine.doesMoveForceMateInN({ from, to, promotion }, remMoves);
+        !isCanonical &&
+        canCheckAltForcedMate &&
+        this.engine.doesMoveForceMateInN({ from, to, promotion }, remMoves);
 
       const moveObj = this.engine.makeMove({ from, to, promotion });
       if (!moveObj) return;
@@ -1049,7 +1167,10 @@
         this.sound.wrong();
         this._renderBoard();
         this._renderStats();
-        this._renderStatusAndCoach('error', this.t('statusWrongMove'));
+        const errMsg = this.currentPuzzle.isOpeningTrap
+          ? this.t('statusWrongOpeningMove')
+          : this.t('statusWrongMove');
+        this._renderStatusAndCoach('error', errMsg);
 
         this._schedule(() => {
           this.engine.undo();

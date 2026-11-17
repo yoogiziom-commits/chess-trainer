@@ -180,8 +180,49 @@ select {
 }
 
 /* ==========================================================================
-   FILTER BAR
+   MODE NAVIGATION TABS & FILTER BAR
    ========================================================================== */
+.mode-tabs-bar {
+  max-width: 1180px;
+  margin: 0.65rem auto 0;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+.mode-tab {
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  padding: 0.68rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.16s ease;
+}
+
+.mode-tab:hover {
+  background: var(--bg-elevated);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.mode-tab.active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(59, 130, 246, 0.2));
+  border-color: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.18);
+}
+
+.mode-tab-icon {
+  font-size: 1.1rem;
+}
+
 .filter-bar {
   max-width: 1180px;
   margin: 0 auto;
@@ -697,6 +738,15 @@ select {
 .coach-box.hint {
   background: rgba(245, 158, 11, 0.12);
   border-color: rgba(245, 158, 11, 0.4);
+}
+
+.coach-box.guided {
+  background: rgba(59, 130, 246, 0.13);
+  border-color: rgba(59, 130, 246, 0.42);
+}
+
+.coach-box.guided .coach-label {
+  color: #60a5fa;
 }
 
 .coach-box.explanation {

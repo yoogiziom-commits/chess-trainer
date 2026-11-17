@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="description" content="Interactive Chess Checkmate & Calculation Trainer — Solve Mate in 1, 2, 3, and 4 puzzles on PC and mobile." />
+  <meta name="description" content="TrenerMata — Interaktywny trening myślenia szachowego, debiutów i kombinacji matowych (Mat w 1, 2, 3 i 4) na PC oraz telefon." />
   <meta name="theme-color" content="#0f172a" />
-  <title>MateTrainer — Chess Calculation & Checkmate Puzzles</title>
+  <title>TrenerMata — Trening Myślenia, Debiutów i Kombinacji Matowych</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-board-theme="emerald">
@@ -14,8 +14,8 @@
     <div class="brand">
       <div class="brand-logo" aria-hidden="true">♞</div>
       <div>
-        <h1 id="appTitle" class="brand-title">MateTrainer</h1>
-        <p id="appSubtitle" class="brand-subtitle">Chess Calculation &amp; Checkmate Puzzles</p>
+        <h1 id="appTitle" class="brand-title">TrenerMata</h1>
+        <p id="appSubtitle" class="brand-subtitle">Trening Myślenia, Debiutów i Kombinacji Matowych</p>
       </div>
     </div>
 
@@ -23,38 +23,50 @@
       <div class="stat-pill">
         <span class="stat-icon">✓</span>
         <div>
-          <span id="solvedCount" class="stat-value">0/26</span>
-          <span id="solvedLabel" class="stat-label">Solved</span>
+          <span id="solvedCount" class="stat-value">0/60</span>
+          <span id="solvedLabel" class="stat-label">Rozwiązane</span>
         </div>
       </div>
       <div class="stat-pill">
         <span class="stat-icon">🔥</span>
         <div>
           <span id="streakCount" class="stat-value">0</span>
-          <span id="streakLabel" class="stat-label">Streak</span>
+          <span id="streakLabel" class="stat-label">Seria</span>
         </div>
       </div>
       <div class="stat-pill hide-xs">
         <span class="stat-icon">🏆</span>
         <div>
           <span id="bestCount" class="stat-value">0</span>
-          <span id="bestLabel" class="stat-label">Best</span>
+          <span id="bestLabel" class="stat-label">Rekord</span>
         </div>
       </div>
     </div>
 
     <div class="top-actions">
-      <button type="button" id="themeBtn" class="icon-btn" title="Switch board theme" aria-label="Switch board theme">
+      <button type="button" id="themeBtn" class="icon-btn" title="Zmień kolorystykę szachownicy" aria-label="Zmień kolorystykę szachownicy">
         🎨
       </button>
-      <button type="button" id="soundBtn" class="icon-btn" title="Toggle sound effects" aria-label="Toggle sound effects"></button>
-      <button type="button" id="langBtn" class="lang-btn" title="Switch language EN / PL">EN</button>
+      <button type="button" id="soundBtn" class="icon-btn" title="Włącz / wyłącz dźwięki" aria-label="Włącz / wyłącz dźwięki"></button>
+      <button type="button" id="langBtn" class="lang-btn" title="Przełącz język PL / EN">PL</button>
       <button type="button" id="openDrawerBtn" class="drawer-trigger-btn">
         <span>☰</span>
-        <span id="allPuzzlesBtnText">Puzzles</span>
+        <span id="allPuzzlesBtnText">Katalog</span>
       </button>
     </div>
   </header>
+
+  <!-- Mode Navigation Tabs (Checkmate Puzzles vs Guided Openings & Traps) -->
+  <nav class="mode-tabs-bar" aria-label="Training Mode">
+    <button type="button" id="modePuzzlesTab" class="mode-tab active" data-mode="puzzles">
+      <span class="mode-tab-icon">🎯</span>
+      <span id="modePuzzlesText">Zadania Matowe (48)</span>
+    </button>
+    <button type="button" id="modeOpeningsTab" class="mode-tab" data-mode="openings">
+      <span class="mode-tab-icon">📖</span>
+      <span id="modeOpeningsText">Debiuty i Pułapki (12)</span>
+    </button>
+  </nav>
 
   <!-- Filter Bar (Difficulty: Easy / Medium / Hard + Moves + Tactical Themes) -->
   <section class="filter-bar" aria-label="Puzzle Filters">
@@ -68,7 +80,7 @@
       </div>
     </div>
 
-    <div class="filter-group">
+    <div id="movesFilterWrap" class="filter-group">
       <span id="filterMovesLabel" class="filter-label">Goal:</span>
       <div id="filterMovesGroup" class="pill-group">
         <button type="button" class="filter-pill active" data-moves="all">All (M1–M4)</button>

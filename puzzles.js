@@ -1002,10 +1002,599 @@
     }
   ];
 
+  const OPENING_FAMILIES = {
+    italian: { en: 'Italian Game', pl: 'Partia Włoska' },
+    philidor: { en: 'Philidor Defense', pl: 'Obrona Philidora' },
+    caroKann: { en: 'Caro-Kann Defense', pl: 'Obrona Caro-Kann' },
+    ruyLopez: { en: 'Ruy Lopez (Spanish)', pl: 'Partia Hiszpańska' },
+    french: { en: 'French / Greek Gift', pl: 'Obrona Francuska / Ofiara Grecka' },
+    budapest: { en: 'Budapest Gambit', pl: 'Gambit Budapeszteński' },
+    stafford: { en: 'Stafford Gambit', pl: 'Gambit Stafforda' },
+    englund: { en: 'Englund Gambit', pl: 'Gambit Englunda' },
+    classical: { en: 'Classical Traps', pl: 'Klasyczne Pułapki' }
+  };
+
+  /**
+   * 12 Guided Opening Traps & Tactical Courses (4 Easy, 4 Medium, 4 Hard)
+   * Each entry includes `stepHints` — an array of bilingual coaching tips shown
+   * before each player move (index 0 = player's 1st move, index 1 = player's 2nd move, etc.).
+   */
+  const OPENING_TRAPS = [
+    // =========================================================================
+    // EASY OPENING TRAPS (4 Courses)
+    // =========================================================================
+    {
+      id: 'op-01',
+      isOpeningTrap: true,
+      movesToMate: 4,
+      difficulty: 'easy',
+      openingFamily: 'italian',
+      themes: ['battery', 'Classical'],
+      fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+      solution: ['e2e4', 'e7e5', 'f1c4', 'b8c6', 'd1h5', 'g8f6', 'h5f7'],
+      title: {
+        en: "Scholar's Mate Setup (4-Move Opening Trap)",
+        pl: 'Mat Szewski od 1. ruchu (Pułapka w 4 ruchach)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/4: Play 1. e4 to claim the center and open diagonals for your light-squared bishop and queen.',
+          pl: 'Krok 1/4: Zagraj 1. e4, aby zająć centrum i otworzyć przekątne dla gońca oraz hetmana.'
+        },
+        {
+          en: 'Step 2/4: Develop your bishop to c4 (2. Bc4), aiming directly at Black’s weakest square: f7!',
+          pl: 'Krok 2/4: Rozwiń gońca na c4 (2. Gc4), celując bezpośrednio w najsłabszy punkt czarnych: f7!'
+        },
+        {
+          en: 'Step 3/4: Bring the queen to h5 (3. Qh5), creating a deadly Queen + Bishop battery aimed at f7 and e5.',
+          pl: 'Krok 3/4: Wyprowadź hetmana na h5 (3. Hh5), tworząc groźną baterię z gońcem wycelowaną w f7 oraz e5.'
+        },
+        {
+          en: 'Step 4/4: Black blundered with 3... Nf6?? instead of defending f7! Capture on f7 (4. Qxf7#) for checkmate!',
+          pl: 'Krok 4/4: Czarne popełniły błąd 3... Sf6?? zamiast bronić f7! Zbij na f7 (4. Hxf7#) i daj mata!'
+        }
+      ],
+      hint: {
+        en: 'Follow the guided coach step above: 1. e4 → 2. Bc4 → 3. Qh5 → 4. Qxf7#.',
+        pl: 'Postępuj zgodnie ze wskazówką trenera: 1. e4 → 2. Gc4 → 3. Hh5 → 4. Hxf7#.'
+      },
+      explanation: {
+        en: '1. e4 e5 2. Bc4 Nc6 3. Qh5 Nf6?? 4. Qxf7# is Scholar’s Mate. Black should defend with 3... g6! or 3... Qe7.',
+        pl: '1. e4 e5 2. Gc4 Sc6 3. Hh5 Sf6?? 4. Hxf7# to Mat Szewski. Czarne powinny bronić się ruchem 3... g6! lub 3... He7.'
+      }
+    },
+    {
+      id: 'op-02',
+      isOpeningTrap: true,
+      movesToMate: 2,
+      difficulty: 'easy',
+      openingFamily: 'classical',
+      themes: ['battery'],
+      fen: 'rnbqkbnr/pppppppp/8/8/8/5P2/PPPPP1PP/RNBQKBNR b KQkq - 0 1',
+      solution: ['e7e5', 'g2g4', 'd8h4'],
+      title: {
+        en: "Fool's Mate: Punishing Weakened Kingside Pawns",
+        pl: 'Mat Głupca: Kara za osłabienie skrzydła królewskiego'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/2 (Black): White played the weakening 1. f3?! Respond with 1... e5 to open your queen’s diagonal!',
+          pl: 'Krok 1/2 (Czarne): Białe zagrały osłabiające 1. f3?! Odpowiedz 1... e5, otwierając przekątną dla hetmana!'
+        },
+        {
+          en: 'Step 2/2 (Black): White blundered with 2. g4?? — the e1-h4 diagonal is wide open! Play 2... Qh4#!',
+          pl: 'Krok 2/2 (Czarne): Białe popełniły koszmarny błąd 2. g4?? — przekątna e1-h4 jest otwarta! Zagraj 2... Hh4#!'
+        }
+      ],
+      hint: {
+        en: 'Open the diagonal with 1... e5, then strike with 2... Qh4#!',
+        pl: 'Otwórz przekątną ruchem 1... e5, a następnie uderz 2... Hh4#!'
+      },
+      explanation: {
+        en: '1. f3 e5 2. g4?? Qh4# is the fastest possible checkmate in chess, showing why the f-pawn shields the king.',
+        pl: '1. f3 e5 2. g4?? Hh4# to najszybszy możliwy mat w szachach, pokazujący jak ważny dla obrony króla jest pion f.'
+      }
+    },
+    {
+      id: 'op-03',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'easy',
+      openingFamily: 'caroKann',
+      themes: ['smothered', 'pin'],
+      fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+      solution: ['e2e4', 'c7c6', 'd2d4', 'd7d5', 'b1c3', 'd5e4', 'c3e4', 'b8d7', 'd1e2', 'g8f6', 'e4d6'],
+      title: {
+        en: 'Caro-Kann Defense: 6-Move Smothered Trap',
+        pl: 'Obrona Caro-Kann: Mat zaduszony w 6. ruchu'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6: Start with 1. e4. Black replies with the Caro-Kann Defense (1... c6).',
+          pl: 'Krok 1/6: Zacznij od 1. e4. Czarne odpowiadają Obroną Caro-Kann (1... c6).'
+        },
+        {
+          en: 'Step 2/6: Play 2. d4 to build an ideal two-pawn center.',
+          pl: 'Krok 2/6: Zagraj 2. d4, budując silne centrum pionowe.'
+        },
+        {
+          en: 'Step 3/6: Develop your knight with 3. Nc3 to defend e4.',
+          pl: 'Krok 3/6: Rozwiń skoczka ruchem 3. Sc3, broniąc centralnego piona e4.'
+        },
+        {
+          en: 'Step 4/6: Recapture in the center with 4. Nxe4! Black plays 4... Nd7 to prepare ...Ngf6.',
+          pl: 'Krok 4/6: Odbij w centrum ruchem 4. Sxe4! Czarne grają 4... Sd7, przygotowując ...Sgf6.'
+        },
+        {
+          en: 'Step 5/6: Set a sneaky trap with 5. Qe2! This quietly pins Black’s e7-pawn if the e-file opens.',
+          pl: 'Krok 5/6: Zastaw subtelną pułapkę ruchem 5. He2! Hetman po cichu wiąże piona e7 z czarnym królem.'
+        },
+        {
+          en: 'Step 6/6: Black fell for 5... Ngf6?? forgetting the e7-pawn is pinned! Jump in with 6. Nd6#!',
+          pl: 'Krok 6/6: Czarne zagrały automatyczne 5... Sgf6?? zapominając o związaniu piona e7! Wskocz 6. Sd6#!'
+        }
+      ],
+      hint: {
+        en: 'Follow the Classical Caro-Kann line: 1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Qe2! Ngf6?? 6. Nd6#.',
+        pl: 'Zagraj główną linię Caro-Kann: 1. e4 c6 2. d4 d5 3. Sc3 dxe4 4. Sxe4 Sd7 5. He2! Sgf6?? 6. Sd6#.'
+      },
+      explanation: {
+        en: '5. Qe2! sets a famous trap: after 5... Ngf6??, 6. Nd6# is smothered checkmate because the e7-pawn is pinned to the king on e8!',
+        pl: '5. He2! zastawia słynną pułapkę: po 5... Sgf6?? ruch 6. Sd6# daje mata zaduszonego, bo pion e7 jest związany z królem!'
+      }
+    },
+    {
+      id: 'op-04',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'easy',
+      openingFamily: 'budapest',
+      themes: ['smothered', 'pin'],
+      fen: 'rnbqkb1r/pppp1ppp/5n2/4P3/2P5/8/PP2PPPP/RNBQKBNR b KQkq - 0 3',
+      solution: ['f6g4', 'g1f3', 'b8c6', 'c1f4', 'f8b4', 'b1d2', 'd8e7', 'a2a3', 'g4e5', 'a3b4', 'e5d3'],
+      title: {
+        en: 'Budapest Gambit: The Kieninger Smothered Trap',
+        pl: 'Gambit Budapeszteński: Pułapka Kieningera'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6 (Black): After 1. d4 Nf6 2. c4 e5 3. dxe5, jump your knight to g4 (3... Ng4!) attacking e5.',
+          pl: 'Krok 1/6 (Czarne): Po 1. d4 Sf6 2. c4 e5 3. dxe5 wskocz skoczkiem na g4 (3... Sg4!), atakując piona e5.'
+        },
+        {
+          en: 'Step 2/6: Develop your queenside knight to c6 (4... Nc6) adding pressure on the e5-pawn.',
+          pl: 'Krok 2/6: Rozwiń drugiego skoczka na c6 (4... Sc6), zwiększając nacisk na piona e5.'
+        },
+        {
+          en: 'Step 3/6: Give a developing check with 5... Bb4+! White blocks with 6. Nbd2.',
+          pl: 'Krok 3/6: Daj rozwijającego szacha ruchem 5... Gb4+! Białe zasłaniają się skoczkiem 6. Sbd2.'
+        },
+        {
+          en: 'Step 4/6: Play 6... Qe7! piling up on e5 and quietly eyeing the e-file toward White’s king.',
+          pl: 'Krok 4/6: Zagraj 6... He7!, dokładając atak na e5 i po cichu celując po linii e w białego króla.'
+        },
+        {
+          en: 'Step 5/6: White attacks your bishop with 7. a3. Ignore the bishop and capture 7... Ngxe5!!',
+          pl: 'Krok 5/6: Białe atakują gońca ruchem 7. a3. Zignoruj gońca i zbij w centrum 7... Sgxe5!!'
+        },
+        {
+          en: 'Step 6/6: White greedily took the bishop (8. axb4??)! The e2-pawn is pinned by Qe7 — play 8... Nd3#!',
+          pl: 'Krok 6/6: Białe łakomie zbiły gońca (8. axb4??)! Pion e2 jest związany przez hetmana e7 — zagraj 8... Sd3#!'
+        }
+      ],
+      hint: {
+        en: 'Build pressure on e5 (Ng4, Nc6, Bb4+, Qe7), capture Ngxe5!, and jump to d3#!',
+        pl: 'Zbuduj nacisk na e5 (Sg4, Sc6, Gb4+, He7), zbij Sgxe5!, a po axb4?? wskocz na d3#!'
+      },
+      explanation: {
+        en: 'The Kieninger Trap in the Budapest Gambit uses the pin along the e-file (Qe7 vs Ke1) so 8... Nd3# cannot be captured by the e2-pawn!',
+        pl: 'Pułapka Kieningera w Gambicie Budapeszteńskim wykorzystuje związanie piona e2 po linii e przez hetmana na e7.'
+      }
+    },
+
+    // =========================================================================
+    // MEDIUM OPENING TRAPS (4 Courses)
+    // =========================================================================
+    {
+      id: 'op-05',
+      isOpeningTrap: true,
+      movesToMate: 7,
+      difficulty: 'medium',
+      openingFamily: 'philidor',
+      themes: ['sacrifice', 'attraction', 'kingHunt'],
+      fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+      solution: ['e2e4', 'e7e5', 'g1f3', 'd7d6', 'f1c4', 'c8g4', 'b1c3', 'g7g6', 'f3e5', 'g4d1', 'c4f7', 'e8e7', 'c3d5'],
+      title: {
+        en: "Légal's Immortal Mate (Queen Sacrifice in the Opening)",
+        pl: 'Mat Légala (Nieśmiertelna ofiara hetmana w debiucie)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/7: Open with 1. e4. Black replies 1... e5.',
+          pl: 'Krok 1/7: Rozpocznij partię ruchem 1. e4. Czarne odpowiadają 1... e5.'
+        },
+        {
+          en: 'Step 2/7: Develop with 2. Nf3 attacking e5. Black plays the solid Philidor Defense (2... d6).',
+          pl: 'Krok 2/7: Rozwiń skoczka 2. Sf3, atakując e5. Czarne wybierają Obronę Philidora (2... d6).'
+        },
+        {
+          en: 'Step 3/7: Play 3. Bc4 targeting f7. Black pins your knight with 3... Bg4.',
+          pl: 'Krok 3/7: Zagraj 3. Gc4, celując w f7. Czarne wiążą skoczka ruchem 3... Gg4.'
+        },
+        {
+          en: 'Step 4/7: Develop your second knight to c3 (4. Nc3). Black plays the passive 4... g6?!',
+          pl: 'Krok 4/7: Wyprowadź drugiego skoczka na c3 (4. Sc3). Czarne grają pasywne 4... g6?!'
+        },
+        {
+          en: 'Step 5/7: Unleash Légal’s Shocking Queen Sacrifice: 5. Nxe5!! Offering your queen on d1!',
+          pl: 'Krok 5/7: Uderz słynną ofiarą Légala: 5. Sxe5!! Poświęcając własnego hetmana na d1!'
+        },
+        {
+          en: 'Step 6/7: Black took your queen (5... Bxd1??)! Strike immediately with 6. Bxf7+! forcing 6... Ke7.',
+          pl: 'Krok 6/7: Czarne zbiły hetmana (5... Gxd1??)! Daj natychmiast szacha 6. Gxf7+!, wymuszając 6... Ke7.'
+        },
+        {
+          en: 'Step 7/7: Deliver checkmate in the middle of the board with 7. Nd5#!',
+          pl: 'Krok 7/7: Zamatuj króla w samym środku szachownicy skokiem 7. Sd5#!'
+        }
+      ],
+      hint: {
+        en: 'After 4. Nc3 g6?, break the relative pin with 5. Nxe5!! Bxd1 6. Bxf7+ Ke7 7. Nd5#!',
+        pl: 'Po 4. Sc3 g6? zerwij względne związanie ruchem 5. Sxe5!! Gxd1 6. Gxf7+ Ke7 7. Sd5#!'
+      },
+      explanation: {
+        en: 'Played by Sire de Légal in Paris (1750), 5. Nxe5!! proves that a relative pin on the queen can be broken when your minor pieces coordinate against f7 and d5!',
+        pl: 'Kombinacja Légala (Paryż 1750) pokazuje, że związanie hetmana jest tylko względne — trzy lekkie figury białych matują czarnego króla!'
+      }
+    },
+    {
+      id: 'op-06',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'medium',
+      openingFamily: 'italian',
+      themes: ['smothered', 'pin', 'sacrifice'],
+      fen: 'rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2',
+      solution: ['b8c6', 'f1c4', 'c6d4', 'f3e5', 'd8g5', 'e5f7', 'g5g2', 'h1f1', 'g2e4', 'c4e2', 'd4f3'],
+      title: {
+        en: 'Blackburne Shilling Gambit (7-Move Trap for Black)',
+        pl: 'Gambit Blackburne’a (Pułapka w 7 ruchach czarnymi)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6 (Black): After 1. e4 e5 2. Nf3, develop normally with 2... Nc6. White plays 3. Bc4.',
+          pl: 'Krok 1/6 (Czarne): Po 1. e4 e5 2. Sf3 rozwiń skoczka 2... Sc6. Białe grają włoskie 3. Gc4.'
+        },
+        {
+          en: 'Step 2/6: Spring the Blackburne Shilling Gambit with 3... Nd4?! leaving the e5-pawn undefended as bait!',
+          pl: 'Krok 2/6: Zastaw pułapkę Blackburne’a skokiem 3... Sd4?! zostawiając piona e5 jako przynętę!'
+        },
+        {
+          en: 'Step 3/6: White took the bait (4. Nxe5?)! Counterattack immediately with 4... Qg5! hitting e5 and g2.',
+          pl: 'Krok 3/6: Białe połknęły przynętę (4. Sxe5?)! Zaatakuj natychmiast hetmanem 4... Hg5! (grozi zbicie na e5 i g2).'
+        },
+        {
+          en: 'Step 4/6: White plays 5. Nxf7 (forking queen and rook). Ignore the rook and smash 5... Qxg2!!',
+          pl: 'Krok 4/6: Białe grają 5. Sxf7 (widełki na hetmana i wieżę). Zignoruj wieżę i uderz 5... Hxg2!!'
+        },
+        {
+          en: 'Step 5/6: White saves the rook with 6. Rf1. Now snatch the center pawn with check: 6... Qxe4+!',
+          pl: 'Krok 5/6: Białe ratują wieżę ruchem 6. Wf1. Zbij teraz centralnego piona z szachem: 6... Hxe4+!'
+        },
+        {
+          en: 'Step 6/6: White blocks with 7. Be2 (since 7. Qe2 loses the queen). The e2-bishop is pinned — play 7... Nf3#!',
+          pl: 'Krok 6/6: Białe zasłaniają 7. Ge2. Goniec na e2 jest związany przez hetmana — zagraj 7... Sf3#!'
+        }
+      ],
+      hint: {
+        en: 'Bait e5 with 3... Nd4, then invade with 4... Qg5, 5... Qxg2, 6... Qxe4+, and 7... Nf3#!',
+        pl: 'Podstaw piona ruchem 3... Sd4, a potem wtargnij hetmanem: 4... Hg5, 5... Hxg2, 6... Hxe4+ i 7... Sf3#!'
+      },
+      explanation: {
+        en: 'Joseph Henry Blackburne famously used this gambit to defeat amateurs: 7... Nf3# is a smothered mate because the e2-bishop is pinned by the queen on e4!',
+        pl: 'Joseph Henry Blackburne wielokrotnie wygrywał tym wariantem: 7... Sf3# to mat zaduszony, bo goniec e2 jest związany!'
+      }
+    },
+    {
+      id: 'op-07',
+      isOpeningTrap: true,
+      movesToMate: 7,
+      difficulty: 'medium',
+      openingFamily: 'italian',
+      themes: ['sacrifice', 'kingHunt', 'attraction'],
+      fen: 'r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4',
+      solution: ['f3g5', 'd7d5', 'e4d5', 'f6d5', 'g5f7', 'e8f7', 'd1f3', 'f7g8', 'c4d5', 'd8d5', 'f3d5', 'c8e6', 'd5e6'],
+      title: {
+        en: 'Italian Game: The Fried Liver Attack (Nxf7!)',
+        pl: 'Partia Włoska: Atak Fegatello (Ofiara Sxf7!)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/7: From the Two Knights Defense, leap forward with 4. Ng5! teaming up with your c4-bishop against f7.',
+          pl: 'Krok 1/7: W Obronie Dwóch Skoczków wskocz 4. Sg5!, atakując wspólnie z gońcem c4 punkt f7.'
+        },
+        {
+          en: 'Step 2/7: Black blocks the diagonal with 4... d5. Capture it with 5. exd5!',
+          pl: 'Krok 2/7: Czarne przesłaniają przekątną ruchem 4... d5. Zbij piona: 5. exd5!'
+        },
+        {
+          en: 'Step 3/7: Black recaptured with 5... Nxd5?! instead of 5... Na5! Unleash the Fried Liver sacrifice: 6. Nxf7!!',
+          pl: 'Krok 3/7: Czarne odbiły 5... Sxd5?! zamiast 5... Sa5! Poświęć skoczka w stylu Fegatello: 6. Sxf7!!'
+        },
+        {
+          en: 'Step 4/7: After 6... Kxf7, bring out the queen with check (7. Qf3+!), double-attacking the king and d5-knight!',
+          pl: 'Krok 4/7: Po 6... Kxf7 wyprowadź hetmana z szachem (7. Hf3+!), atakując jednocześnie króla i skoczka d5!'
+        },
+        {
+          en: 'Step 5/7: Black retreated 7... Kg8?? instead of 7... Ke6. Capture on d5 with check: 8. Bxd5+!',
+          pl: 'Krok 5/7: Czarne cofnęły króla 7... Kg8?? zamiast 7... Ke6. Zbij na d5 z szachem: 8. Gxd5+!'
+        },
+        {
+          en: 'Step 6/7: Black had to give up the queen (8... Qxd5). Recapture with check: 9. Qxd5+!',
+          pl: 'Krok 6/7: Czarne musiały oddać hetmana (8... Hxd5). Odbij hetmanem z szachem: 9. Hxd5+!'
+        },
+        {
+          en: 'Step 7/7: Black blocks with 9... Be6. Capture the bishop (10. Qxe6#) for checkmate!',
+          pl: 'Krok 7/7: Czarne zasłaniają się gońcem 9... Ge6. Zbij gońca (10. Hxe6#) i daj mata!'
+        }
+      ],
+      hint: {
+        en: 'Play 4. Ng5 d5 5. exd5 Nxd5 6. Nxf7! Kxf7 7. Qf3+ Kg8 8. Bxd5+ Qxd5 9. Qxd5+ Be6 10. Qxe6#.',
+        pl: 'Zagraj 4. Sg5 d5 5. exd5 Sxd5 6. Sxf7! Kxf7 7. Hf3+ Kg8 8. Gxd5+ Hxd5 9. Hxd5+ Ge6 10. Hxe6#.'
+      },
+      explanation: {
+        en: 'The Fried Liver Attack (6. Nxf7!!) dates back to 1610 (Polerio). If Black retreats 7... Kg8??, it leads to a forced checkmate!',
+        pl: 'Atak Fegatello (6. Sxf7!!) znany jest od 1610 roku. Odejście 7... Kg8?? przegrywa forsownie z uwagi na przekątną a2-g8!'
+      }
+    },
+    {
+      id: 'op-08',
+      isOpeningTrap: true,
+      movesToMate: 8,
+      difficulty: 'medium',
+      openingFamily: 'englund',
+      themes: ['pin', 'deflection', 'backRank'],
+      fen: 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1',
+      solution: ['e7e5', 'd4e5', 'b8c6', 'g1f3', 'd8e7', 'c1f4', 'e7b4', 'f4d2', 'b4b2', 'd2c3', 'f8b4', 'd1d2', 'b4c3', 'd2c3', 'b2c1'],
+      title: {
+        en: 'Englund Gambit Trap (Black Queen Invasion)',
+        pl: 'Gambit Englunda (Pułapka hetmańska czarnymi)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/8 (Black): Against 1. d4, challenge immediately with the Englund Gambit: 1... e5!',
+          pl: 'Krok 1/8 (Czarne): Przeciwko 1. d4 rzuć wyzwanie Gambitem Englunda: 1... e5!'
+        },
+        {
+          en: 'Step 2/8: After 2. dxe5, develop 2... Nc6 attacking the e5-pawn.',
+          pl: 'Krok 2/8: Po 2. dxe5 rozwiń skoczka 2... Sc6, atakując piona e5.'
+        },
+        {
+          en: 'Step 3/8: White defends with 3. Nf3. Add a second attacker with 3... Qe7!',
+          pl: 'Krok 3/8: Białe bronią piona ruchem 3. Sf3. Dołóż drugiego atakującego: 3... He7!'
+        },
+        {
+          en: 'Step 4/8: White plays the natural 4. Bf4. Spring the double attack: 4... Qb4+! (checks the king, attacks f4 and b2!).',
+          pl: 'Krok 4/8: Białe grają naturalne 4. Gf4. Uderz podwójnym atakiem: 4... Hb4+! (szach oraz atak na f4 i b2!).'
+        },
+        {
+          en: 'Step 5/8: White retreats 5. Bd2 to save the bishop. Capture the poisoned b2-pawn: 5... Qxb2!',
+          pl: 'Krok 5/8: Białe cofają gońca 5. Gd2. Zbij piona b2 hetmanem: 5... Hxb2! (atakując wieżę a1).'
+        },
+        {
+          en: 'Step 6/8: White plays 6. Bc3?? thinking it traps your queen and defends a1! Pin the bishop with 6... Bb4!!',
+          pl: 'Krok 6/8: Białe grają 6. Gc3?? myśląc, że bronią wieży a1! Zwiąż gońca ruchem 6... Gb4!!'
+        },
+        {
+          en: 'Step 7/8: White defends c3 with 7. Qd2. Eliminate the defender of c1: 7... Bxc3!',
+          pl: 'Krok 7/8: Białe bronią c3 hetmanem 7. Hd2. Zbij gońca odciągając białego hetmana od pierwszej linii: 7... Gxc3!'
+        },
+        {
+          en: 'Step 8/8: After 8. Qxc3??, the 1st rank is unguarded! Swoop in with 8... Qc1#!',
+          pl: 'Krok 8/8: Po 8. Hxc3?? pierwsza linia została bez obrony! Zamatuj ruchem 8... Hc1#!'
+        }
+      ],
+      hint: {
+        en: 'Play 1... e5 2. dxe5 Nc6 3. Nf3 Qe7 4. Bf4 Qb4+! 5. Bd2 Qxb2 6. Bc3 Bb4! 7. Qd2 Bxc3 8. Qxc3 Qc1#.',
+        pl: 'Zagraj 1... e5 2. dxe5 Sc6 3. Sf3 He7 4. Gf4 Hb4+! 5. Gd2 Hxb2 6. Gc3 Gb4! 7. Hd2 Gxc3 8. Hxc3 Hc1#.'
+      },
+      explanation: {
+        en: 'The Englund Gambit Trap punishes automatic development (4. Bf4? and 6. Bc3?) with a brilliant pin (6... Bb4!) and deflection onto c3.',
+        pl: 'Pułapka w Gambicie Englunda karze rutynowy rozwój figur (4. Gf4? i 6. Gc3?) wiążącym uderzeniem 6... Gb4! i odciągnięciem hetmana.'
+      }
+    },
+
+    // =========================================================================
+    // HARD OPENING TRAPS & TACTICAL COURSES (4 Courses)
+    // =========================================================================
+    {
+      id: 'op-09',
+      isOpeningTrap: true,
+      movesToMate: 7,
+      difficulty: 'hard',
+      openingFamily: 'french',
+      themes: ['sacrifice', 'kingHunt', 'attraction'],
+      fen: 'r1bq1rk1/ppp1bppp/2n1p3/3pP3/3P4/2PB1N2/PP3PPP/RNBQK2R w KQ - 0 1',
+      solution: ['d3h7', 'g8h7', 'f3g5', 'h7g8', 'd1h5', 'f8e8', 'h5f7', 'g8h8', 'f7h5', 'h8g8', 'h5h7', 'g8f8', 'h7h8'],
+      title: {
+        en: 'The Classical Greek Gift Sacrifice (Bxh7+!)',
+        pl: 'Klasyczna Ofiara Grecka (Gxh7+! w Obronie Francuskiej)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/7: Black castled kingside without a knight on f6 and your e5-pawn blocks defenders. Sacrifice with 1. Bxh7+!!',
+          pl: 'Krok 1/7: Czarne zrobiły roszadę bez skoczka na f6, a pion e5 blokuje obronę. Poświęć gońca: 1. Gxh7+!!'
+        },
+        {
+          en: 'Step 2/7: After 1... Kxh7, jump in with the knight (2. Ng5+!) to open the d1-h5 diagonal for your queen.',
+          pl: 'Krok 2/7: Po 1... Kxh7 wskocz skoczkiem z szachem (2. Sg5+!), otwierając przekątną dla hetmana.'
+        },
+        {
+          en: 'Step 3/7: Black retreats 2... Kg8. Bring the queen to h5 (3. Qh5!) threatening 4. Qh7#.',
+          pl: 'Krok 3/7: Czarne cofają się 2... Kg8. Wprowadź hetmana na h5 (3. Hh5!) z groźbą mata na h7.'
+        },
+        {
+          en: 'Step 4/7: Black plays 3... Re8 to make flight room on f8. Capture f7 with check (4. Qxf7+!) to seal f8!',
+          pl: 'Krok 4/7: Czarne grają 3... We8, robiąc miejsce ucieczki na f8. Zbij na f7 z szachem (4. Hxf7+!), zabierając pole f8!'
+        },
+        {
+          en: 'Step 5/7: After 4... Kh8, return the queen to h5 with check (5. Qh5+!) forcing the king back to g8.',
+          pl: 'Krok 5/7: Po 4... Kh8 wróć hetmanem na h5 z szachem (5. Hh5+!), zmuszając króla do powrotu na g8.'
+        },
+        {
+          en: 'Step 6/7: Now that f7 is gone, check on h7 (6. Qh7+!) driving the king to f8.',
+          pl: 'Krok 6/7: Teraz gdy nie ma już piona f7, daj szacha na h7 (6. Hh7+!), spychając króla na f8.'
+        },
+        {
+          en: 'Step 7/7: Finish the king hunt with 7. Qh8#! (The g5-knight covers e6 and f7!)',
+          pl: 'Krok 7/7: Zakończ polowanie na króla ruchem 7. Hh8#! (Skoczek z g5 odcina pola e6 oraz f7!)'
+        }
+      ],
+      hint: {
+        en: 'Execute the textbook Greek Gift: 1. Bxh7+! Kxh7 2. Ng5+ Kg8 3. Qh5 Re8 4. Qxf7+ Kh8 5. Qh5+ Kg8 6. Qh7+ Kf8 7. Qh8#.',
+        pl: 'Wykonaj podręcznikową Ofiarę Grecką: 1. Gxh7+! Kxh7 2. Sg5+ Kg8 3. Hh5 We8 4. Hxf7+ Kh8 5. Hh5+ Kg8 6. Hh7+ Kf8 7. Hh8#.'
+      },
+      explanation: {
+        en: 'The Greek Gift (Bxh7+!) is one of the most important attacking patterns in chess. Notice why 4. Qxf7+! is essential before 6. Qh7+ — it eliminates the f7-pawn so the king cannot escape via e6!',
+        pl: 'Ofiara Grecka (Gxh7+!) to jeden z najważniejszych wzorców ataku w szachach. Zwróć uwagę na wtrącenie 4. Hxf7+! — likwiduje piona f7 i sprawia, że skoczek kontroluje pole e6!'
+      }
+    },
+    {
+      id: 'op-10',
+      isOpeningTrap: true,
+      movesToMate: 4,
+      difficulty: 'hard',
+      openingFamily: 'stafford',
+      themes: ['sacrifice', 'attraction', 'kingHunt'],
+      fen: 'r1bqkb1r/ppp2ppp/2p2n2/8/4P3/3P4/PPP2PPP/RNBQKB1R b KQkq - 0 5',
+      solution: ['f8c5', 'c1g5', 'f6e4', 'g5d8', 'c5f2', 'e1e2', 'c8g4'],
+      title: {
+        en: 'Stafford Gambit: Queen Sacrifice on d8 (Black)',
+        pl: 'Gambit Stafforda: Ofiara hetmana na d8 (Czarne)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/4 (Black): In the Stafford Gambit, develop your bishop to c5 (5... Bc5!) eyeing f2.',
+          pl: 'Krok 1/4 (Czarne): W Gambicie Stafforda wyprowadź gońca na c5 (5... Gc5!), celując w punkt f2.'
+        },
+        {
+          en: 'Step 2/4: White pins your knight with 6. Bg5?! Break the pin and offer your queen with 6... Nxe4!!',
+          pl: 'Krok 2/4: Białe wiążą skoczka ruchem 6. Gg5?! Zerwij związanie i poświęć hetmana skokiem 6... Sxe4!!'
+        },
+        {
+          en: 'Step 3/4: White captured your queen (7. Bxd8??)! Strike f2 with check: 7... Bxf2+!',
+          pl: 'Krok 3/4: Białe zbiły hetmana (7. Gxd8??)! Uderz na f2 z szachem: 7... Gxf2+!'
+        },
+        {
+          en: 'Step 4/4: White’s king is forced up to e2 (8. Ke2). Deliver checkmate with 8... Bg4#!',
+          pl: 'Krok 4/4: Biały król musiał wyjść na e2 (8. Ke2). Zamatuj go drugim gońcem: 8... Gg4#!'
+        }
+      ],
+      hint: {
+        en: 'Play 5... Bc5 6. Bg5 Nxe4!! 7. Bxd8 Bxf2+! 8. Ke2 Bg4#.',
+        pl: 'Zagraj 5... Gc5 6. Gg5 Sxe4!! 7. Gxd8 Gxf2+! 8. Ke2 Gg4#.'
+      },
+      explanation: {
+        en: 'The Stafford Gambit is famous for this venomous trap: two bishops and a knight weave a mating net around White’s king on e2.',
+        pl: 'Gambit Stafforda słynie z tej jadowitej pułapki: dwa gońce i skoczek tworzą nieuchronną sieć matową wokół króla na e2.'
+      }
+    },
+    {
+      id: 'op-11',
+      isOpeningTrap: true,
+      movesToMate: 5,
+      difficulty: 'hard',
+      openingFamily: 'ruyLopez',
+      themes: ['sacrifice', 'clearance', 'battery'],
+      fen: 'r1bqkb1r/pppp1ppp/2n2n2/1B2p3/4P3/5N2/PPPP1PPP/RNBQ1RK1 b kq - 5 4',
+      solution: ['f6g4', 'h2h3', 'h7h5', 'h3g4', 'h5g4', 'f3e5', 'd8h4', 'e5g4', 'h4h1'],
+      title: {
+        en: 'Ruy Lopez: The Fishing Pole Trap (Black)',
+        pl: 'Partia Hiszpańska: Pułapka "Wędki" (Fishing Pole)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/5 (Black): After White castles in the Ruy Lopez, jump your knight to g4 (4... Ng4!).',
+          pl: 'Krok 1/5 (Czarne): Po krótkiej roszadzie białych w Partii Hiszpańskiej wskocz skoczkiem na g4 (4... Sg4!).'
+        },
+        {
+          en: 'Step 2/5: White kicks the knight with 5. h3. Cast the "Fishing Pole" bait with 5... h5!! leaving the knight en prise!',
+          pl: 'Krok 2/5: Białe przeganiają skoczka ruchem 5. h3. Zarzuć "wędkę" ruchem 5... h5!! zostawiając skoczka pod biciem!'
+        },
+        {
+          en: 'Step 3/5: White took the bait (6. hxg4?)! Recapture 6... hxg4! opening the h-file for your h8-rook and attacking f3.',
+          pl: 'Krok 3/5: Białe wzięły przynętę (6. hxg4?)! Odbij 6... hxg4!, otwierając linię h dla wieży h8 i atakując skoczka f3.'
+        },
+        {
+          en: 'Step 4/5: White moves the knight to e5 (7. Nxe5). Bring your queen to the open h-file: 7... Qh4!',
+          pl: 'Krok 4/5: Białe odchodzą skoczkiem 7. Sxe5. Wprowadź hetmana na otwartą linię h: 7... Hh4!'
+        },
+        {
+          en: 'Step 5/5: After 8. Nxg4, deliver checkmate on h1 (8... Qh1#) backed by the h8-rook!',
+          pl: 'Krok 5/5: Po 8. Sxg4 zamatuj na h1 (8... Hh1#) ze wsparciem wieży z h8!'
+        }
+      ],
+      hint: {
+        en: 'Set the Fishing Pole bait with 4... Ng4 and 5... h5!, recapture 6... hxg4, and invade with 7... Qh4 and 8... Qh1#!',
+        pl: 'Zarzuć "wędkę" ruchami 4... Sg4 oraz 5... h5!, odbij 6... hxg4 i wtargnij hetmanem 7... Hh4 oraz 8... Hh1#!'
+      },
+      explanation: {
+        en: 'The Fishing Pole Trap uses the knight on g4 as bait to pry open the h-file against a castled king.',
+        pl: 'Motyw "Wędki" (Fishing Pole) wykorzystuje skoczka na g4 jako przynętę do otwarcia linii h przeciwko roszadzie.'
+      }
+    },
+    {
+      id: 'op-12',
+      isOpeningTrap: true,
+      movesToMate: 5,
+      difficulty: 'hard',
+      openingFamily: 'philidor',
+      themes: ['opera', 'sacrifice', 'deflection'],
+      fen: '3rkb1r/p2n1ppp/1q3n2/1B2p1B1/4P3/1Q6/PPP2PPP/2KR3R w k - 0 13',
+      solution: ['d1d7', 'd8d7', 'h1d1', 'b6e6', 'b5d7', 'f6d7', 'b3b8', 'd7b8', 'd1d8'],
+      title: {
+        en: 'Morphy’s Full Opera Game Combination (5 Moves)',
+        pl: 'Pełna Kombinacja Morphy’ego z Partii Operowej (5 ruchów)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/5: Black’s knight on d7 is pinned and overloaded. Sacrifice the exchange with 1. Rxd7!!',
+          pl: 'Krok 1/5: Skoczek czarnych na d7 jest związany i przeciążony. Poświęć jakość ruchem 1. Wxd7!!'
+        },
+        {
+          en: 'Step 2/5: After 1... Rxd7, bring your last reserve piece into the attack: 2. Rd1! pinning the d7-rook.',
+          pl: 'Krok 2/5: Po 1... Wxd7 wprowadź ostatnią figurę do ataku: 2. Wd1!, wiążąc wieżę d7.'
+        },
+        {
+          en: 'Step 3/5: Black plays 2... Qe6 to unpin and offer a queen trade. Refuse the trade and play 3. Bxd7+!!',
+          pl: 'Krok 3/5: Czarne grają 2... He6, proponując wymianę hetmanów. Odrzuć wymianę i uderz 3. Gxd7+!!'
+        },
+        {
+          en: 'Step 4/5: After 3... Nxd7, deflect the knight from guarding d8 with the immortal queen sacrifice: 4. Qb8+!!',
+          pl: 'Krok 4/5: Po 3... Sxd7 odciągnij skoczka od obrony pola d8 nieśmiertelną ofiarą hetmana: 4. Hb8+!!'
+        },
+        {
+          en: 'Step 5/5: After 4... Nxb8, finish the masterpiece with 5. Rd8#!',
+          pl: 'Krok 5/5: Po 4... Sxb8 zakończ arcydzieło ruchem 5. Wd8#!'
+        }
+      ],
+      hint: {
+        en: 'Play Morphy’s full sequence: 1. Rxd7! Rxd7 2. Rd1! Qe6 3. Bxd7+! Nxd7 4. Qb8+! Nxb8 5. Rd8#.',
+        pl: 'Zagraj pełną sekwencję Morphy’ego: 1. Wxd7! Wxd7 2. Wd1! He6 3. Gxd7+! Sxd7 4. Hb8+! Sxb8 5. Wd8#.'
+      },
+      explanation: {
+        en: 'Paul Morphy’s 5-move finale (Paris 1858) teaches every core principle of tactical chess: brings all pieces to the attack (Rd1), sacrifices material to destroy defenders (Rxd7, Bxd7+), and finishes with deflection (Qb8+! Nxb8 Rd8#).',
+        pl: 'Finał Partii Operowej Paula Morphy’ego (Paryż 1858) uczy najważniejszych zasad taktyki: wprowadzenia wszystkich figur do gry (Wd1), likwidacji obrońców (Wxd7, Gxd7+) oraz odciągnięcia (Hb8+!).'
+      }
+    }
+  ];
+
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { PUZZLES, PUZZLE_THEMES };
+    module.exports = { PUZZLES, PUZZLE_THEMES, OPENING_TRAPS, OPENING_FAMILIES };
   } else {
     global.PUZZLES = PUZZLES;
     global.PUZZLE_THEMES = PUZZLE_THEMES;
+    global.OPENING_TRAPS = OPENING_TRAPS;
+    global.OPENING_FAMILIES = OPENING_FAMILIES;
   }
 })(typeof window !== 'undefined' ? window : globalThis);
