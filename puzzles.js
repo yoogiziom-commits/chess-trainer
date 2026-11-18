@@ -2447,11 +2447,1051 @@
         en: '24. Rxd4!! cxd4 25. Re7+! Kb6 26. Qxd4+! Kxa5 27. b4+! Ka4 drags the black king from a7 all the way down to d1 in the most famous game of the modern era.',
         pl: '24. Wxd4!! cxd4 25. We7+! Kb6 26. Hxd4+! Kxa5 27. b4+! Ka4 wyciąga czarnego króla z a7 aż na pole d1 w najsłynniejszej partii współczesnych szachów.'
       }
+    },
+    {
+      id: "fg-13",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: "easy",
+      players: {
+        en: "Morphy vs. Duke of Brunswick & Count Isouard (Paris, 1858)",
+        pl: "Morphy – Książę Brunszwiku i Hrabia Isouard (Paryż, 1858)"
+      },
+      themes: ["opera","sacrifice","backRank","pin"],
+      fen: "4kb1r/p2n1ppp/4q3/4p1B1/4P3/1Q6/PPP2PPP/2KR4 w k - 0 16",
+      solution: ["b3b8","d7b8","d1d8"],
+      title: {
+        en: "The Opera Game: Queen Sacrifice & Back-Rank Mate",
+        pl: "Partia Operowa: Ofiara hetmana i mat na ostatniej linii"
+      },
+      hint: {
+        en: "Paul Morphy pins the black knight on d7 with his bishop on g5. Deflect the knight with a shocking queen sacrifice on the back rank!",
+        pl: "Paul Morphy wiąże czarnego skoczka d7 gońcem z g5. Odciągnij skoczka szokującą ofiarą hetmana na ostatniej linii!"
+      },
+      explanation: {
+        en: "16. Qb8+!! Nxb8 17. Rd8# is the breathtaking conclusion to the most famous chess game ever played. The bishop on g5 keeps d7 pinned until the queen deflects the knight, allowing the rook to deliver checkmate.",
+        pl: "16. Hb8+!! Sxb8 17. Wd8# to olśniewający finał najsłynniejszej partii w historii szachów. Goniec z g5 wiąże obrońcę, po czym ofiara hetmana zmusza skoczka do odejścia, a wieża daje mata."
+      }
+    },
+    {
+      id: "fg-14",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: "easy",
+      players: {
+        en: "Sire de Légal vs. Saint Brie (Paris, 1750)",
+        pl: "Sire de Légal – Saint Brie (Paryż, 1750)"
+      },
+      themes: ["sacrifice","fork","discovered"],
+      fen: "rn1qkbnr/ppp2p1p/3p2p1/4p3/2B1P1b1/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 0 5",
+      solution: ["f3e5","g4d1","c4f7","e8e7","c3d5"],
+      title: {
+        en: "Légal’s Mate: Breaking the Relative Pin",
+        pl: "Mat Légala: Przełamanie pozornego związania"
+      },
+      hint: {
+        en: "The black bishop pins your f3 knight against your queen. Ignore the pin and capture on e5 with your knight!",
+        pl: "Czarny goniec wiąże Twojego skoczka f3 z hetmanem. Zignoruj związanie i zbij pionka e5 skoczkiem!"
+      },
+      explanation: {
+        en: "5. Nxe5! leaves the white queen hanging, but 5... Bxd1? falls into 6. Bxf7+ Ke7 7. Nd5# — the classic minor piece checkmate in the center.",
+        pl: "5. Sxe5! pozostawia białego hetmana pod biciem, lecz 5... Gxd1? prowadzi do 6. Gxf7+ Ke7 7. Sd5# — klasycznego mata trzema lekkimi figurami w centrum."
+      }
+    },
+    {
+      id: "fg-15",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: "easy",
+      players: {
+        en: "Amateur vs. Boris Kostić (Cologne, 1911)",
+        pl: "Amator – Boris Kostić (Kolonia, 1911)"
+      },
+      themes: ["smothered","pin","fork"],
+      fen: "r1b1kbnr/pppp1Npp/8/6q1/2BnP3/8/PPPP1PPP/RNBQK2R b KQkq - 0 5",
+      solution: ["g5g2","h1f1","g2e4","c4e2","d4f3"],
+      title: {
+        en: "Blackburne Shilling Gambit: Smothered Mate",
+        pl: "Gambit Blackburne-Shilling: Mat zduszony"
+      },
+      hint: {
+        en: "White greedily forks your queen and rook with 5. Nxf7. Counter-attack the g2 pawn, pick up e4 with check, and conclude with a smothered mate!",
+        pl: "Białe zachłannie widłują hetmana i wieżę ruchem 5. Sxf7. Zaatakuj pionka g2, odbierz e4 z szachem i zakończ matem zduszonym!"
+      },
+      explanation: {
+        en: "5... Qxg2! 6. Rf1 Qxe4+ 7. Be2 Nf3# delivers a lightning smothered checkmate because the e2 bishop is pinned to the white king.",
+        pl: "5... Hxg2! 6. Wf1 Hxe4+ 7. Ge2 Sf3# daje błyskawicznego mata zduszonego, wykorzystując absolutne związanie gońca e2."
+      }
+    },
+    {
+      id: "fg-16",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: "easy",
+      players: {
+        en: "Esteban Canal vs. Amateur (Budapest, 1934)",
+        pl: "Esteban Canal – Amator (Budapeszt, 1934)"
+      },
+      themes: ["boden","sacrifice","deflection"],
+      fen: "2kr2nr/pp1n1ppp/2p1p3/8/1P1P1B2/2N2Q1P/1PPKBPP1/7q w - - 0 13",
+      solution: ["f3c6","b7c6","e2a6"],
+      title: {
+        en: "The Peruvian Immortal: Boden’s Mate Finale",
+        pl: "Peruwiańska Nieśmiertelna: Finałowy Mat Bodena"
+      },
+      hint: {
+        en: "After sacrificing both rooks on the wings, finish the game with a majestic queen sacrifice that opens the diagonal for your light-squared bishop!",
+        pl: "Po poświęceniu obu skrajnych wież, zakończ partię ofiarą hetmana na c6, otwierając przekątną dla jasnopolowego gońca!"
+      },
+      explanation: {
+        en: "13. Qxc6+!! bxc6 14. Ba6# is the stunning climax of the Peruvian Immortal. The two criss-crossing bishops cut off all escape squares around the black king.",
+        pl: "13. Hxc6+!! bxc6 14. Ga6# to oszałamiający punkt kulminacyjny Peruwiańskiej Nieśmiertelnej. Dwa krzyżujące się gońce odcinają wszystkie ucieczki czarnego monarchy."
+      }
+    },
+    {
+      id: "fg-17",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: "easy",
+      players: {
+        en: "R. Schulder vs. Samuel Boden (London, 1853)",
+        pl: "R. Schulder – Samuel Boden (Londyn, 1853)"
+      },
+      themes: ["boden","sacrifice","deflection"],
+      fen: "2k1rb1r/ppp3pp/2n2q2/3B1b2/5P2/2P1BQ2/PP1N1P1P/2KR3R b - - 0 14",
+      solution: ["f6c3","b2c3","f8a3"],
+      title: {
+        en: "The Original Boden’s Mate: Criss-Crossing Bishops",
+        pl: "Pierwowzór Mata Bodena: Krzyżujące się gońce"
+      },
+      hint: {
+        en: "Samuel Boden noticed White’s pawn on b2 is all that protects the long diagonal to a3. Destroy that shield with a magnificent queen sacrifice!",
+        pl: "Samuel Boden zauważył, że pion b2 to jedyna tarcza pola a3. Zniszcz tę osłonę wspaniałą ofiarą hetmana na c3!"
+      },
+      explanation: {
+        en: "14... Qxc3+!! 15. bxc3 Ba3# introduced Boden’s Mate to chess history. The dark-squared bishop on f5 controls c2 and d1, while the light-squared bishop delivers checkmate.",
+        pl: "14... Hxc3+!! 15. bxc3 Ga3# przeszło do historii jako Mat Bodena. Ciemnopolowy goniec f5 kontroluje ucieczki na c2 i d1, podczas gdy jasnopolowy goniec zadaje śmiertelny cios."
+      }
+    },
+    {
+      id: "fg-18",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: "medium",
+      players: {
+        en: "Englund Gambit: Back-Rank Miniature",
+        pl: "Gambit Englunda: Miniatura z matem na pierwszej linii"
+      },
+      themes: ["pin","deflection","backRank"],
+      fen: "r1b1kbnr/pppp1ppp/2n5/4P3/8/2B2N2/PqP1PPPP/RN1QKB1R b KQkq - 1 6",
+      solution: ["f8b4","d1d2","b4c3","d2c3","b2c1"],
+      title: {
+        en: "Englund Gambit: The Overloaded Bishop & Back-Rank Mate",
+        pl: "Gambit Englunda: Przeciążony goniec i mat na bandzie"
+      },
+      hint: {
+        en: "White defended the a1 rook and attacked your queen with 6. Bc3. Pin the bishop to the white king with 6... Bb4!, trade on c3, and deliver back-rank mate!",
+        pl: "Białe obroniły wieżę a1 i zaatakowały hetmana ruchem 6. Gc3. Zwiąż gońca z królem ruchem 6... Gb4!, wymień na c3 i zamatuj na c1!"
+      },
+      explanation: {
+        en: "6... Bb4! 7. Qd2 Bxc3 8. Qxc3 Qc1# completely overwhelms White’s defenses. White cannot defend both the c3 bishop and the back rank.",
+        pl: "6... Gb4! 7. Hd2 Gxc3 8. Hxc3 Hc1# kompletnie rozbija szyki białych, które nie są w stanie jednocześnie obronić gońca c3 i pierwszej linii."
+      }
+    },
+    {
+      id: "fg-19",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: "medium",
+      players: {
+        en: "Aron Nimzowitsch vs. Semion Alapin (Riga, 1914)",
+        pl: "Aron Nimzowitsch – Siemion Ałapin (Ryga, 1914)"
+      },
+      themes: ["opera","sacrifice","backRank","pin"],
+      fen: "r1b2k1r/1p2bppp/p1B2q2/8/8/8/PPPQ1P1P/2KRR3 w - - 1 17",
+      solution: ["d2d8","e7d8","e1e8"],
+      title: {
+        en: "Nimzowitsch’s Opera-Style Queen Deflection",
+        pl: "Operowe Odciągnięcie Nimzowitscha"
+      },
+      hint: {
+        en: "Aron Nimzowitsch echoes Morphy’s Opera Game: sacrifice your queen on d8 to deflect Black’s defending bishop away from e8!",
+        pl: "Aron Nimzowitsch nawiązuje do Partii Operowej Morphy'ego: poświęć hetmana na d8, aby odciągnąć broniącego gońca od pola e8!"
+      },
+      explanation: {
+        en: "17. Qd8+!! Bxd8 18. Re8# echoes Morphy’s immortal geometry, using the c6 bishop’s pin and diagonal control to deliver a back-rank mate with the rook.",
+        pl: "17. Hd8+!! Gxd8 18. We8# nawiązuje do nieśmiertelnej geometrii Morphy'ego — goniec c6 kontroluje pole ucieczki, a wieża bezlitośnie matuje na ostatniej linii."
+      }
+    },
+    {
+      id: "fg-20",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: "medium",
+      players: {
+        en: "Magnus Carlsen vs. Sergey Karjakin (New York, 2016)",
+        pl: "Magnus Carlsen – Siergiej Kariakin (Nowy Jork, 2016)"
+      },
+      themes: ["sacrifice","deflection","attraction"],
+      fen: "2R5/4bppk/1p1p4/5R1P/4PQ2/5P2/r4q1P/7K w - - 5 50",
+      solution: ["f4h6","h7h6","c8h8"],
+      title: {
+        en: "World Championship Clincher: 50. Qh6+!!",
+        pl: "Cios na Wagę Korony Świata: 50. Hh6+!!"
+      },
+      hint: {
+        en: "Black threatens mate on g2 and f1. Crown your World Championship match by sacrificing your queen on h6 with check!",
+        pl: "Czarne grożą matem na g2 i f1. Zwieńcz mecz o Mistrzostwo Świata genialną ofiarą hetmana na h6 z szachem!"
+      },
+      explanation: {
+        en: "50. Qh6+!! forced Karjakin’s immediate resignation in Game 4 of the tie-break: 50... Kxh6 51. Rh8# (or 50... gxh6 51. Rxf7#) retained Magnus Carlsen’s World Championship title in breathtaking style.",
+        pl: "50. Hh6+!! zmusiło Kariakina do natychmiastowej kapitulacji w dogrywce meczu o tytuł: 50... Kxh6 51. Wh8# (lub 50... gxh6 51. Wxf7#) przypieczętowało obronę korony przez Magnusa Carlsena w genialnym stylu."
+      }
+    },
+    {
+      id: "fg-21",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Glucksberg vs. Miguel Najdorf (Warsaw, 1929)",
+        pl: "Glucksberg – Mieczysław Najdorf (Warszawa, 1929)"
+      },
+      themes: ["sacrifice","kingHunt","discovered"],
+      fen: "r1b2rk1/pp4pp/2p3n1/3p2N1/2P2P2/3B1KP1/PP5q/R1BQ1RN1 b - - 0 20",
+      solution: ["c8g4","f3g4","g6e5","f4e5","h7h5"],
+      title: {
+        en: "The Polish Immortal: The 4-Piece Sacrifice Checkmate",
+        pl: "Polska Nieśmiertelna: Mat po ofierze czterech lekkich figur"
+      },
+      hint: {
+        en: "Miguel Najdorf has already given up three minor pieces. Drag White’s king deeper into your net: sacrifice the c8 bishop, then the g6 knight, and deliver mate with a pawn!",
+        pl: "Mieczysław Najdorf poświęcił już trzy lekkie figury. Wciągnij króla białych w sieć: poświęć gońca c8, następnie skoczka g6 i zamatuj pionkiem!"
+      },
+      explanation: {
+        en: "20... Bg4+!! 21. Kxg4 Ne5+!! 22. fxe5 h5# caps Najdorf’s legendary Polish Immortal in Warsaw (1929), sacrificing all four minor pieces to mate White’s exposed king with a pawn.",
+        pl: "20... Gg4+!! 21. Kxg4 Se5+!! 22. fxe5 h5# wieńczy legendarną Polską Nieśmiertelną Najdorfa w Warszawie (1929) — ofiara wszystkich czterech lekkich figur kończy się matem z ręki skromnego piona."
+      }
+    },
+    {
+      id: "fg-22",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 5,
+      difficulty: "hard",
+      players: {
+        en: "Mikhail Botvinnik vs. José Raúl Capablanca (AVRO, 1938)",
+        pl: "Michaił Botwinnik – José Raúl Capablanca (AVRO, 1938)"
+      },
+      themes: ["sacrifice","deflection","promotion"],
+      fen: "8/p3q1kp/1p2Pnp1/3pQ3/2pP4/1nP3N1/1B4PP/6K1 w - - 5 30",
+      solution: ["b2a3","e7a3","g3h5","g6h5","e5g5","g7f8","g5f6","f8g8","e6e7"],
+      title: {
+        en: "AVRO 1938 Masterpiece: Botvinnik’s Double Deflection",
+        pl: "Arcydzieło AVRO 1938: Podwójne odciągnięcie Botwinnika"
+      },
+      hint: {
+        en: "Deflect the black queen from defending the e8 square with 30. Ba3!!, sacrifice your knight on h5 to shatter the king’s shelter, and push your passed pawn to e7!",
+        pl: "Odciągnij czarnego hetmana od kontroli pola e8 ruchem 30. Ga3!!, poświęć skoczka na h5 rozbijając osłonę króla i pchnij piona na e7!"
+      },
+      explanation: {
+        en: "30. Ba3!! Qxa3 31. Nh5+!! gxh5 32. Qg5+ Kf8 33. Qxf6+ Kg8 34. e7! is hailed as one of the greatest combinations in chess history, neutralizing the former World Champion.",
+        pl: "30. Ga3!! Hxa3 31. Sh5+!! gxh5 32. Hg5+ Kf8 33. Hxf6+ Kg8 34. e7! to jedna z najgenialniejszych kombinacji w historii szachów, paraliżująca byłego mistrza świata."
+      }
+    },
+    {
+      id: "fg-23",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: "easy",
+      players: {
+        en: "Italian Game Analysis — Fried Liver Attack (Fegatello)",
+        pl: "Analiza Partii Włoskiej — Atak Fried Liver (Fegatello)"
+      },
+      themes: ["fork","pin","sacrifice"],
+      fen: "r1b2bkr/ppp3pp/2n5/3qp3/8/5Q2/PPPP1PPP/RNB1K2R w KQ - 0 9",
+      solution: ["f3d5","c8e6","d5e6"],
+      title: {
+        en: "Fried Liver Attack: The King Hunt Checkmate",
+        pl: "Atak Fried Liver: Polowanie na króla i mat"
+      },
+      hint: {
+        en: "Black’s king walked into the center. Capture the queen with check (8. Qxd5+!), then deliver checkmate on e6!",
+        pl: "Czarny król wyszedł do centrum. Zbij hetmana z szachem (8. Hxd5+!), a następnie postaw mata na polu e6!"
+      },
+      explanation: {
+        en: "8. Qxd5+! Be6 9. Qxe6# crushes Black’s defense immediately, demonstrating why opening lines against an exposed king in the Fried Liver are lethal.",
+        pl: "8. Hxd5+! Ge6 9. Hxe6# natychmiast rozbija obronę czarnych, pokazując siłę ataku na odsłoniętego króla w wariancie Fegatello."
+      }
+    },
+    {
+      id: "fg-24",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 4,
+      difficulty: "medium",
+      players: {
+        en: "Gioachino Greco vs. NN (Rome, 1620)",
+        pl: "Gioachino Greco – NN (Rzym, 1620)"
+      },
+      themes: ["sacrifice","attraction","kingHunt"],
+      fen: "r1bq1r2/pppp1ppk/2n1p3/3nP1b1/3P3P/8/PPP2PP1/RNBQK2R w KQ - 0 9",
+      solution: ["h4g5","h7g8","d1h5","f7f6","g5g6","f6e5","h5h8"],
+      title: {
+        en: "Greco’s Greek Gift: The Classic Checkmate Walk",
+        pl: "Grecki Dar Greco: Klasyczny mat na bandzie"
+      },
+      hint: {
+        en: "You have opened the h-file with 9. hxg5+! Drive Black’s king into the corner with 10. Qh5! and wedge with 11. g6! to force mate on h8!",
+        pl: "Otworzyłeś linię h ruchem 9. hxg5+! Zapędź króla w róg ruchem 10. Hh5! i wbij klin 11. g6!, dając mata na h8!"
+      },
+      explanation: {
+        en: "9. hxg5+! Kg8 10. Qh5! f6 11. g6! fxe5 12. Qh8# is Gioachino Greco’s original 1620 masterpiece showing the full execution of the Greek Gift bishop sacrifice.",
+        pl: "9. hxg5+! Kg8 10. Hh5! f6 11. g6! fxe5 12. Hh8# to oryginalne dzieło Gioachino Greco z 1620 roku ukazujące bezwzględny finał ofiary gońca na h7."
+      }
+    },
+    {
+      id: "fg-25",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: "easy",
+      players: {
+        en: "Gioachino Greco vs. NN (Europe, 1620)",
+        pl: "Gioachino Greco – NN (Europa, 1620)"
+      },
+      themes: ["sacrifice","backRank","pin"],
+      fen: "r2q1k1r/ppp1n1pp/4Bb2/3p2B1/8/5Q2/P4PPP/5RK1 w - - 2 18",
+      solution: ["g5f6","g7f6","f3f6","f8e8","f6f7"],
+      title: {
+        en: "Greco’s Italian Tempest: Decisive Queen Invasion",
+        pl: "Włoska Burza Greco: Decydująca inwazja hetmana"
+      },
+      hint: {
+        en: "Destroy the f6 pawn shield with 18. Bxf6!, invade with 19. Qxf6+, and checkmate the trapped black king on f7!",
+        pl: "Zniszcz osłonę f6 ruchem 18. Gxf6!, wtargnij hetmanem 19. Hxf6+ i zamatuj osaczonego czarnego króla na f7!"
+      },
+      explanation: {
+        en: "18. Bxf6! gxf6 19. Qxf6+ Ke8 20. Qf7# tears open the f-file and wraps up Greco’s historic Italian Game miniature.",
+        pl: "18. Gxf6! gxf6 19. Hxf6+ Ke8 20. Hf7# rozrywa linię f i pieczętuje historyczną miniaturę partii włoskiej Greco."
+      }
+    },
+    {
+      id: "fg-26",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 2,
+      difficulty: "hard",
+      players: {
+        en: "Eduard Gufeld vs. Lubomir Kavalek (Mariánské Lázně, 1962)",
+        pl: "Eduard Gufeld – Lubomir Kavalek (Mariańskie Łaźnie, 1962)"
+      },
+      themes: ["sacrifice","clearance","fork"],
+      fen: "8/ppp4p/1bp1k3/2B3r1/1P2pp2/2P5/P2K1p1P/R4R2 b - - 2 27",
+      solution: ["g5c5","b4c5","b6c5"],
+      title: {
+        en: "The Kavalanche: Double Exchange Sacrifice (27... Rxc5!)",
+        pl: "Kawalana: Podwójna ofiara jakości (27... Wxc5!)"
+      },
+      hint: {
+        en: "Lubomir Kavalek sacrifices a second exchange on c5 to eliminate White’s bishop and let Black’s central pawns roll unstoppable!",
+        pl: "Lubomir Kavalek składa drugą ofiarę jakości na c5, likwidując gońca i otwierając drogę dla marszu potężnych wolnych pionów!"
+      },
+      explanation: {
+        en: "27... Rxc5! 28. bxc5 Bxc5 strips White of all piece coordination, enabling Black’s central avalanche of pawns (dubbed the 'Kavalanche') to decide the game.",
+        pl: "27... Wxc5! 28. bxc5 Gxc5 pozbawia białe obrony, pozwalając lawinie centralnych pionów (zwanej 'Kawalaną') bezapelacyjnie rozstrzygnąć partię."
+      }
+    },
+    {
+      id: "fg-27",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Yuri Averbakh vs. Alexander Kotov (Zurich, 1953)",
+        pl: "Jurij Awerbach – Aleksander Kotow (Zurych, 1953)"
+      },
+      themes: ["sacrifice","kingHunt","attraction"],
+      fen: "1r4nk/1p1qb2p/3p1r2/p1pPp3/2P1Pp2/5P1P/PP1QNBRK/5R2 b - - 3 30",
+      solution: ["d7h3","h2h3","f6h6","h3g4","g8f6"],
+      title: {
+        en: "Kotov’s Zurich Immortal: The Queen Sacrifice (30... Qxh3+!!)",
+        pl: "Zurychskie Arcydzieło Kotowa: Ofiara hetmana (30... Hxh3+!!)"
+      },
+      hint: {
+        en: "Alexander Kotov stuns the chess world! Sacrifice your queen on h3 (30... Qxh3+!!), check along the h-file with 31... Rh6+!, and drive the king out with 32... Nf6+!",
+        pl: "Aleksander Kotow szokuje szachowy świat! Poświęć hetmana na h3 (30... Hxh3+!!), zaszachuj wieżą 31... Wh6+! i wyciągnij króla skoczkiem 32... Sf6+!"
+      },
+      explanation: {
+        en: "30... Qxh3+!! 31. Kxh3 Rh6+ 32. Kg4 Nf6+ 33. Kf5 Nd7! drags Yuri Averbakh’s king all the way to f5 in one of the greatest attacking gems from the Zurich 1953 Candidates.",
+        pl: "30... Hxh3+!! 31. Kxh3 Wh6+ 32. Kg4 Sf6+ 33. Kf5 Sd7! wyciąga króla Awerbacha na środek szachownicy w najsłynniejszej partii Turnieju Pretendentów w Zurychu (1953)."
+      }
+    },
+    {
+      id: "fg-28",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 1,
+      difficulty: "easy",
+      players: {
+        en: "Amédée Gibaud vs. Frédéric Lazard (Paris, 1924)",
+        pl: "Amédée Gibaud – Frédéric Lazard (Paryż, 1924)"
+      },
+      themes: ["fork","pin"],
+      fen: "rnbqkb1r/pppp1ppp/8/4P3/6n1/7P/PPPNPPP1/R1BQKBNR b KQkq - 0 4",
+      solution: ["g4e3"],
+      title: {
+        en: "Lazard’s 4-Move Miniature: Trapping the Queen (4... Ne3!!)",
+        pl: "4-Ruchowa Miniatura Lazarda: Usidlenie hetmana (4... Se3!!)"
+      },
+      hint: {
+        en: "White played 4. h3?? without realizing their queen has zero escape squares. Invade with your knight to e3!",
+        pl: "Białe zagrały 4. h3?? nie zauważając, że ich hetman nie ma ani jednego pola ucieczki. Wtargnij skoczkiem na e3!"
+      },
+      explanation: {
+        en: "4... Ne3!! attacks White’s trapped queen. If White takes 5. fxe3??, Black checkmates on the spot with 5... Qh4+ 6. g3 Qxg3# — forcing White’s immediate resignation on move 4!",
+        pl: "4... Se3!! atakuje usidloną królową białych. Jeśli białe zbiją 5. fxe3??, czarne natychmiast matują 5... Hh4+ 6. g3 Hxg3# — białe poddały się po 4 posunięciach!"
+      }
+    },
+    {
+      id: "fg-29",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 1,
+      difficulty: "easy",
+      players: {
+        en: "Leo Godai vs. Georg Kieninger (Vienna, 1925)",
+        pl: "Leo Godai – Georg Kieninger (Wiedeń, 1925)"
+      },
+      themes: ["smothered","pin"],
+      fen: "r1b1k2r/ppppqppp/2n5/4n3/1PP2B2/5N2/1P1NPPPP/R2QKB1R b KQkq - 0 8",
+      solution: ["e5d3"],
+      title: {
+        en: "Budapest Gambit: The Kieninger Smothered Trap (8... Nd3#)",
+        pl: "Gambit Budapeszteński: Mat zduszony Kieningera (8... Sd3#)"
+      },
+      hint: {
+        en: "White greedily played 8. axb4??, forgetting that the c2 pawn is pinned to their king by your queen on e7. Deliver smothered mate!",
+        pl: "Białe zachłannie zbiły 8. axb4??, zapominając, że pion c2 jest związany z królem przez hetmana e7. Zadaj mata zduszonego!"
+      },
+      explanation: {
+        en: "8... Nd3# is a legendary miniature finish in the Budapest Gambit: the c2 pawn cannot capture the knight due to the pin on the e-file.",
+        pl: "8... Sd3# to kultowy mat zduszony w Gambicie Budapeszteńskim: pionek c2 nie może zbić skoczka z powodu bezwzględnego związania na linii e."
+      }
+    },
+    {
+      id: "fg-30",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 2,
+      difficulty: "easy",
+      players: {
+        en: "Budapest Gambit: Fajarowicz Trap (After Wiesbaden, 1928)",
+        pl: "Gambit Budapeszteński: Pułapka Fajarowicza (po Wiesbaden, 1928)"
+      },
+      themes: ["discovered","fork"],
+      fen: "rnbqk2r/ppp2ppp/3b4/8/2P5/5NP1/PP2PK1P/RNBQ1B1R b kq - 0 7",
+      solution: ["d6g3","f2g3","d8d1"],
+      title: {
+        en: "Fajarowicz Trap: Discovered Attack Queen Win",
+        pl: "Pułapka Fajarowicza: Atak z odsłonięcia na hetmana"
+      },
+      hint: {
+        en: "White just recaptured on f2 with 7. Kxf2. Unmask your queen’s laser beam on d1 with a discovered check from your bishop!",
+        pl: "Białe właśnie zbiły na f2 ruchem 7. Kxf2. Odsłoń atak hetmana na d1, dając szacha gońcem na g3!"
+      },
+      explanation: {
+        en: "7... Bxg3+! 8. Kxg3 Qxd1 wins White’s queen cleanly in the opening via a textbook discovered check.",
+        pl: "7... Gxg3+! 8. Kxg3 Hxd1 zdobywa hetmana w debiucie dzięki podręcznikowemu szachowi z odsłonięcia."
+      }
+    },
+    {
+      id: "fg-31",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "easy",
+      players: {
+        en: "Carl Mayet vs. Daniel Harrwitz (Berlin, 1848)",
+        pl: "Carl Mayet – Daniel Harrwitz (Berlin, 1848)"
+      },
+      themes: ["pin","discovered"],
+      fen: "r1bqkb1r/pppn1ppp/5n2/3N2B1/3P4/8/PP2PPPP/R2QKBNR b KQkq - 0 6",
+      solution: ["f6d5","g5d8","f8b4","d1d2","e8d8"],
+      title: {
+        en: "The Elephant Trap: Countering the Queen Trap",
+        pl: "Pułapka Słonia: Odbicie poświęconego hetmana"
+      },
+      hint: {
+        en: "White fell for the Elephant Trap by capturing your queen with 7. Bxd8? Check with 7... Bb4+!, trade on d2, and recapture their bishop on d8!",
+        pl: "Białe wpadły w Pułapkę Słonia bijąc hetmana 7. Gxd8? Zaszachuj 7... Gb4+!, wymień na d2 i odbierz gońca d8!"
+      },
+      explanation: {
+        en: "7... Bb4+! 8. Qd2 Bxd2+ 9. Kxd2 Kxd8 leaves Black ahead a full minor piece, turning White’s apparent queen grab into an opening disaster.",
+        pl: "7... Gb4+! 8. Hd2 Gxd2+ 9. Kxd2 Kxd8 pozostawia czarne z całą figurą przewagi, demaskując rzekomą zdobycz białych."
+      }
+    },
+    {
+      id: "fg-32",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: "easy",
+      players: {
+        en: "Stafford Gambit Trap (After Lowens vs. Stafford, 1950)",
+        pl: "Pułapka Gambitu Stafforda (wg Lowens – Stafford, 1950)"
+      },
+      themes: ["sacrifice","pin"],
+      fen: "r1bBk2r/ppp2ppp/2p5/2b5/4n3/3P4/PPP2PPP/RN1QKB1R b KQkq - 0 7",
+      solution: ["c5f2","e1e2","c8g4"],
+      title: {
+        en: "Stafford Gambit: The 8-Move Bishop Checkmate",
+        pl: "Gambit Stafforda: 8-Ruchowy mat gońcami"
+      },
+      hint: {
+        en: "White took your queen with 7. Bxd8? Retaliate with 7... Bxf2+!, force White’s king to e2, and deliver checkmate with your light-squared bishop on g4!",
+        pl: "Białe połakomiły się na hetmana ruchem 7. Gxd8? Odpowiedz 7... Gxf2+!, zmuszając króla do wejścia na e2, i zamatuj gońcem na g4!"
+      },
+      explanation: {
+        en: "7... Bxf2+! 8. Ke2 Bg4# concludes the viral Stafford Gambit trap: the two active black bishops coordinate with the knight to deliver pure checkmate.",
+        pl: "7... Gxf2+! 8. Ke2 Gg4# wieńczy słynną pułapkę Gambitu Stafforda: dwa aktywne czarne gońce w asyście skoczka dają eleganckiego mata."
+      }
+    },
+    {
+      id: "fg-33",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "easy",
+      players: {
+        en: "Irving Chernev vs. Herman Hahlbohm (New York, 1942)",
+        pl: "Irving Chernev – Herman Hahlbohm (Nowy Jork, 1942)"
+      },
+      themes: ["sacrifice","fork"],
+      fen: "r1b1r1k1/pp3ppp/1qn5/2bnp3/8/1NPB1N2/PP2QPPP/R1B2RK1 w - - 2 13",
+      solution: ["d3h7","g8h7","e2e4","h7g8","e4d5"],
+      title: {
+        en: "Colle System: Greek Gift & Royal Queen Fork",
+        pl: "System Colle: Grecki dar i podwójne uderzenie hetmanem"
+      },
+      hint: {
+        en: "Irving Chernev executes the Colle breakthrough: sacrifice on h7 (13. Bxh7+!), fork king and knight with 14. Qe4+!, and capture the knight on d5!",
+        pl: "Irving Chernev realizuje przełom w Systemie Colle: poświęć na h7 (13. Gxh7+!), uderz widłami hetmana 14. He4+! i zbij skoczka d5!"
+      },
+      explanation: {
+        en: "13. Bxh7+! Kxh7 14. Qe4+! Kg8 15. Qxd5 wins a crucial central piece and shatters Black’s kingside shelter completely.",
+        pl: "13. Gxh7+! Kxh7 14. He4+! Kg8 15. Hxd5 zdobywa kluczową figurę w centrum i całkowicie demoluje pozycję czarnego monarchy."
+      }
+    },
+    {
+      id: "fg-34",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Henry Edward Bird vs. Paul Morphy (London, 1858)",
+        pl: "Henry Edward Bird – Paul Morphy (Londyn, 1858)"
+      },
+      themes: ["sacrifice","kingHunt"],
+      fen: "1rb2rk1/p1p3pp/2pb4/3p4/3Pp3/4B2q/PPPQBP1P/2KR3R b - - 3 17",
+      solution: ["f8f2","e3f2","h3a3","c2c3","a3a2"],
+      title: {
+        en: "Bird vs. Morphy: The Immortal Rook Sacrifice (17... Rxf2!!)",
+        pl: "Bird – Morphy: Nieśmiertelna ofiara wieży (17... Wxf2!!)"
+      },
+      hint: {
+        en: "Paul Morphy shatters White’s defenses! Sacrifice your rook on f2 (17... Rxf2!!), penetrate with 18... Qa3!, and capture on a2!",
+        pl: "Paul Morphy rozbija obronę białych! Poświęć wieżę na f2 (17... Wxf2!!), wtargnij hetmanem 18... Ha3! i zbij pionka a2!"
+      },
+      explanation: {
+        en: "17... Rxf2!! 18. Bxf2 Qa3! 19. c3 Qxa2 is Paul Morphy’s famous attacking brilliancy in London (1858), rendering Henry Bird completely helpless against the incoming queen invasion.",
+        pl: "17... Wxf2!! 18. Gxf2 Ha3! 19. c3 Hxa2 to słynne arcydzieło ataku Paula Morphy’ego w Londynie (1858), paraliżujące obronę Henry’ego Birda."
+      }
+    },
+    {
+      id: "fg-35",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 1,
+      difficulty: "medium",
+      players: {
+        en: "Anatoly Karpov vs. Garry Kasparov (Moscow, 1985 — Game 16)",
+        pl: "Anatolij Karpow – Garri Kasparow (Moskwa, 1985, Partia 16)"
+      },
+      themes: ["fork","pin"],
+      fen: "r2qr1k1/5ppp/p4n2/1pbP1bB1/1n6/N1N2B2/PP1Q1PPP/3R1RK1 b - - 1 16",
+      solution: ["b4d3"],
+      title: {
+        en: "Karpov vs. Kasparov 1985: The Octopus Knight (16... Nd3!)",
+        pl: "Karpow – Kasparow 1985: Ośmiornica na d3 (16... Sd3!)"
+      },
+      hint: {
+        en: "Garry Kasparov plants his knight on d3, where its tentacles control every key square in Karpov’s camp. Make the immortal knight move!",
+        pl: "Garry Kasparow instaluje skoczka na d3, skąd jego macki kontrolują kluczowe punkty w obozie Karpowa. Zagraj ten nieśmiertelny ruch!"
+      },
+      explanation: {
+        en: "16... Nd3! established Kasparov’s legendary 'Octopus Knight' in Game 16 of the 1985 World Championship — widely regarded as one of the most dominant minor piece outposts ever achieved.",
+        pl: "16... Sd3! wprowadziło legendarnego 'skoczka-ośmiornicę' w 16. partii Meczu o Mistrzostwo Świata (1985) — jeden z najbardziej dominujących posterunków w historii szachów."
+      }
+    },
+    {
+      id: "fg-36",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Mikhail Botvinnik vs. Mikhail Tal (Moscow, 1960, Game 6)",
+        pl: "Michaił Botwinnik – Michaił Tal (Moskwa, 1960, Partia 6)"
+      },
+      themes: ["sacrifice","fork"],
+      fen: "2r3k1/pp4bp/3p2p1/3Ppb1n/1qr5/2N1B1PP/PP2QPBK/R1R5 b - - 1 21",
+      solution: ["h5f4","g3f4","e5f4","e3d2","b4b2"],
+      title: {
+        en: "Botvinnik vs. Tal 1960: Fearless Knight Sacrifice (21... Nf4!!)",
+        pl: "Botwinnik – Tal 1960: Nieustraszona ofiara skoczka (21... Sf4!!)"
+      },
+      hint: {
+        en: "Mikhail Tal hurls his knight into the hornet’s nest! Play 21... Nf4!!, recapture with 22... exf4, and snatch the b2 pawn with your queen!",
+        pl: "Michaił Tal wrzuca skoczka w samo gniazdo os! Zagraj 21... Sf4!!, odbij pionem 22... exf4 i zgarnij piona b2 hetmanem!"
+      },
+      explanation: {
+        en: "21... Nf4!! 22. gxf4 exf4 23. Bd2 Qxb2 unleashed total chaos in Game 6 of the 1960 World Championship, propelling the 23-year-old 'Magician from Riga' toward the world crown.",
+        pl: "21... Sf4!! 22. gxf4 exf4 23. Gd2 Hxb2 wywołało na szachownicy totalny chaos w 6. partii Meczu o MŚ (1960), prowadząc 'Czarodzieja z Rygi' prosto po koronę."
+      }
+    },
+    {
+      id: "fg-37",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "medium",
+      players: {
+        en: "Boris Spassky vs. Tigran Petrosian (Moscow, 1969, Game 19)",
+        pl: "Boris Spasski – Tigran Petrosjan (Moskwa, 1969, Partia 19)"
+      },
+      themes: ["pin","battery"],
+      fen: "r1b1rbk1/1p3pp1/p2ppn1p/q7/3NPP2/1BN5/PPPQ2PP/1K1RR3 w - - 5 15",
+      solution: ["g2g4","f6g4","d2g2","g4f6","e1g1"],
+      title: {
+        en: "Spassky vs. Petrosian 1969: Kingside Storm (19. g4!)",
+        pl: "Spasski – Petrosjan 1969: Szturm na skrzydle królewskim (19. g4!)"
+      },
+      hint: {
+        en: "Boris Spassky launches his championship offensive: push 19. g4!, regroup with 20. Qg2!, and pin along the g-file with 21. Rg1!",
+        pl: "Boris Spasski rusza do mistrzowskiego ataku: pchnij 19. g4!, przegrupuj się 20. Hg2! i stwórz baterię na linii g ruchem 21. Wg1!"
+      },
+      explanation: {
+        en: "19. g4! Nxg4 20. Qg2 Nf6 21. Rg1 shattered 'Iron Tigran' Petrosian’s defensive fortress in Game 19, sealing Spassky’s victory for the World Championship.",
+        pl: "19. g4! Sxg4 20. Hg2 Sf6 21. Wg1 rozbiło żelazną twierdzę Tigrana Petrosjana w 19. partii meczu o tron szachowy, dając Spasskiemu upragnione mistrzostwo."
+      }
+    },
+    {
+      id: "fg-38",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Levon Aronian vs. Viswanathan Anand (Wijk aan Zee, 2013)",
+        pl: "Levon Aronian – Viswanathan Anand (Wijk aan Zee, 2013)"
+      },
+      themes: ["sacrifice","discovered"],
+      fen: "2rq1rk1/pb1n1ppN/4p3/1pb5/3P1Pn1/P1N5/1PQ1B1PP/R1B2RK1 b - - 2 16",
+      solution: ["d7e5","e2g4","c5d4","g1h1","e5g4"],
+      title: {
+        en: "Anand’s Immortal: Double Knight Breakthrough (16... Nde5!)",
+        pl: "Nieśmiertelna Partia Ananda: Przełom dwoma skoczkami (16... Sde5!)"
+      },
+      hint: {
+        en: "Viswanathan Anand sacrifices both knights! Play 16... Nde5!, deliver the bishop check 17... Bxd4+!, and recapture on g4 with your knight!",
+        pl: "Viswanathan Anand składa ofiarę z obu skoczków! Zagraj 16... Sde5!, zaszachuj gońcem 17... Gxd4+! i zbij na g4 skoczkiem!"
+      },
+      explanation: {
+        en: "16... Nde5! 17. Bxg4 Bxd4+ 18. Kh1 Nxg4 is the sensational tactical heart of Anand’s 2013 masterpiece against Levon Aronian in Wijk aan Zee.",
+        pl: "16... Sde5! 17. Gxg4 Gxd4+ 18. Kh1 Sxg4 to sensacyjne taktyczne serce partii Ananda przeciwko Levonowi Aronianowi w Wijk aan Zee (2013)."
+      }
+    },
+    {
+      id: "fg-39",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "medium",
+      players: {
+        en: "Boris Spassky vs. David Bronstein (Leningrad, 1960)",
+        pl: "Boris Spasski – Dawid Bronstein (Leningrad, 1960)"
+      },
+      themes: ["sacrifice","fork"],
+      fen: "r1bqr1k1/pppnbpp1/7p/2P5/3PN3/3Q1N2/PPB1p1PP/R4RK1 w - - 0 15",
+      solution: ["e4d6","d7f8","d6f7","e2f1q","a1f1"],
+      title: {
+        en: "Spassky vs. Bronstein 1960: King’s Gambit Knight Invasion",
+        pl: "Spasski – Bronstein 1960: Inwazja skoczka w Gambicie Królewskim"
+      },
+      hint: {
+        en: "Invade with 15. Nd6!, fork the black forces on f7 (16. Nxf7!), and recapture on f1 with your rook!",
+        pl: "Zainstaluj skoczka na 15. Sd6!, zbij na f7 (16. Sxf7!) i odbij na f1 wieżą!"
+      },
+      explanation: {
+        en: "15. Nd6! Nf8 16. Nxf7 exf1=Q+ 17. Rxf1 is Boris Spassky’s brilliant romantic miniature against David Bronstein (featured in the James Bond film 'From Russia with Love').",
+        pl: "15. Sd6! Sf8 16. Sxf7 exf1=H+ 17. Wxf1 to słynna partia Spasskiego z Bronsteinem (uwieczniona w filmie o Jamesie Bondzie 'Pozdrowienia z Rosji')."
+      }
+    },
+    {
+      id: "fg-40",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 2,
+      difficulty: "hard",
+      players: {
+        en: "Rashid Nezhmetdinov vs. Oleg Chernikov (Rostov-on-Don, 1962)",
+        pl: "Raszid Nieżmietdinow – Oleg Czernikow (Rostów nad Donem, 1962)"
+      },
+      themes: ["sacrifice","pin"],
+      fen: "r1b2rk1/pp1ppp1p/5bp1/q7/3nP2Q/1BN1B3/PPP2PPP/R4RK1 w - - 4 12",
+      solution: ["h4f6","d4e2","c3e2"],
+      title: {
+        en: "Nezhmetdinov’s Positional Queen Sacrifice (12. Qxf6!!)",
+        pl: "Pozycyjna Ofiara Hetmana Neżmetdinowa (12. Hxf6!!)"
+      },
+      hint: {
+        en: "Rashid Nezhmetdinov sacrifices his queen for two minor pieces! Play 12. Qxf6!! and recapture Black’s knight on e2!",
+        pl: "Raszyt Neżmetdinow oddaje hetmana za dwie lekkie figury! Zagraj 12. Hxf6!! i zbij skoczka czarnych na e2!"
+      },
+      explanation: {
+        en: "12. Qxf6!! Ne2+ 13. Nxe2 is Rashid Nezhmetdinov’s legendary positional queen sacrifice against Oleg Chernikov in Rostov-on-Don (1962), taking total control of the light squares.",
+        pl: "12. Hxf6!! Se2+ 13. Sxe2 to legendarna pozycyjna ofiara hetmana Raszyta Neżmetdinowa przeciwko Czernikowowi (Rostów, 1962), dająca totalną dominację na jasnych polach."
+      }
+    },
+    {
+      id: "fg-41",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Lev Polugaevsky vs. Rashid Nezhmetdinov (Sochi, 1958)",
+        pl: "Lew Poługajewski – Raszid Nieżmietdinow (Soczi, 1958)"
+      },
+      themes: ["sacrifice","kingHunt"],
+      fen: "r5k1/ppp2r1p/3p3b/3Pn3/1n2PPp1/1P2K1P1/PBB1N2q/R2Q3R b - - 2 24",
+      solution: ["f7f4","h1h2","f4f3","e3d4","h6g7"],
+      title: {
+        en: "Nezhmetdinov’s Immortal King Hunt (24... Rxf4!!)",
+        pl: "Nieśmiertelne Polowanie Neżmetdinowa (24... Wxf4!!)"
+      },
+      hint: {
+        en: "Sacrifice your rook on f4 (24... Rxf4!!), check with 25... Rf3+!, and bring your bishop into the mating net with 26... Bg7!",
+        pl: "Poświęć wieżę na f4 (24... Wxf4!!), zaszachuj 25... Wf3+! i włącz gońca do sieci matowej ruchem 26... Gg7!"
+      },
+      explanation: {
+        en: "24... Rxf4!! 25. Rxh2 Rf3+ 26. Kd4 Bg7! dragged Lev Polugaevsky’s king across the entire board in one of the most astonishing tactical spectacles in Soviet chess history.",
+        pl: "24... Wxf4!! 25. Wxh2 Wf3+ 26. Kd4 Gg7! wyciągnęło króla Lwa Poługajewskiego przez całą planszę w jednym z najbardziej spektakularnych ataków w historii szachów."
+      }
+    },
+    {
+      id: "fg-42",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 2,
+      difficulty: "medium",
+      players: {
+        en: "Mikhail Tal vs. Bent Larsen (Bled, 1965, Game 10)",
+        pl: "Michaił Tal – Bent Larsen (Bled, 1965, Partia 10)"
+      },
+      themes: ["sacrifice","pin"],
+      fen: "rqb2rk1/3nbppp/p2pp3/6P1/1p1BPP2/2NB1Q2/PPP4P/2KR3R w - - 0 16",
+      solution: ["c3d5","e6d5","e4d5"],
+      title: {
+        en: "Tal vs. Larsen 1965: Sicilian Knight Sacrifice (16. Nd5!!)",
+        pl: "Tal – Larsen 1965: Ofiara skoczka na d5 w Sycylijce (16. Sd5!!)"
+      },
+      hint: {
+        en: "Mikhail Tal blows open the center against Bent Larsen: sacrifice your knight on d5 (16. Nd5!!) and recapture with your e-pawn!",
+        pl: "Michaił Tal wysadza w powietrze centrum Larsena: poświęć skoczka na d5 (16. Sd5!!) i odbij pionem e!"
+      },
+      explanation: {
+        en: "16. Nd5!! exd5 17. exd5 is Mikhail Tal’s decisive match-winning piece sacrifice in Game 10 of the 1965 Candidates Semi-Final, ripping open the e-file against Black’s uncastled king.",
+        pl: "16. Sd5!! exd5 17. exd5 to decydująca ofiara figury Michaiła Tala w 10. partii Półfinału Meczów Pretendentów (1965), rozrywająca centrum przeciwko niezoroszowanemu królowi."
+      }
+    },
+    {
+      id: "fg-43",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Bobby Fischer vs. Pal Benko (New York, 1963/64)",
+        pl: "Bobby Fischer – Pal Benko (Nowy Jork, 1963/64)"
+      },
+      themes: ["clearance","pin"],
+      fen: "r3qr1k/pp3pbp/2pn4/7Q/3pP3/2NB3P/PPP3P1/R4RK1 w - - 0 19",
+      solution: ["f1f6","h8g8","e4e5","h7h6","c3e2"],
+      title: {
+        en: "Fischer’s 11/11 Gem: The Blockade Move (19. Rf6!!)",
+        pl: "Diament Fischera 11/11: Blokada wieżą (19. Wf6!!)"
+      },
+      hint: {
+        en: "Bobby Fischer stops Black’s f-pawn dead in its tracks: play the immortal interference move 19. Rf6!!, push 20. e5!, and reroute your knight with 21. Ne2!",
+        pl: "Bobby Fischer paraliżuje piona f czarnych: zagraj genialne posunięcie przesłaniające 19. Wf6!!, pchnij 20. e5! i przerzuć skoczka 21. Se2!"
+      },
+      explanation: {
+        en: "19. Rf6!! Kg8 20. e5 h6 21. Ne2 completely paralyzed Pal Benko during Fischer’s historic 11-0 sweep at the 1963/64 US Championship.",
+        pl: "19. Wf6!! Kg8 20. e5 h6 21. Se2 kompletnie sparaliżowało Pala Benko podczas historycznego wyniku Fischera 11-0 w Mistrzostwach USA (1963/64)."
+      }
+    },
+    {
+      id: "fg-44",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Robert Byrne vs. Bobby Fischer (New York, 1963/64)",
+        pl: "Robert Byrne – Bobby Fischer (Nowy Jork, 1963/64)"
+      },
+      themes: ["sacrifice","fork","discovered"],
+      fen: "r2qr1k1/p4pbp/bp3np1/3p4/8/BPNnP1P1/P1Q1NPBP/R2R2K1 b - - 3 15",
+      solution: ["d3f2","g1f2","f6g4","f2g1","g4e3"],
+      title: {
+        en: "Byrne vs. Fischer 1963: Knight Sacrifice Breakthrough (15... Nxf2!!)",
+        pl: "Byrne – Fischer 1963: Piorunujące uderzenie skoczkiem (15... Sxf2!!)"
+      },
+      hint: {
+        en: "Bobby Fischer unleashes a thunderbolt: sacrifice your knight on f2 (15... Nxf2!!), check with 16... Ng4+!, and capture on e3!",
+        pl: "Bobby Fischer uderza jak grom z jasnego nieba: poświęć skoczka na f2 (15... Sxf2!!), zaszachuj 16... Sg4+! i zgarnij gońca e3!"
+      },
+      explanation: {
+        en: "15... Nxf2!! 16. Kxf2 Ng4+ 17. Kg1 Nxe3 completely shattered Robert Byrne’s position, leading grandmasters watching the game to marvel at Fischer’s tactical foresight.",
+        pl: "15... Sxf2!! 16. Kxf2 Sg4+ 17. Kg1 Sxe3 całkowicie zdemolowało pozycję Roberta Byrne'a, budząc bezgraniczny podziw arcymistrzów komentujących partię."
+      }
+    },
+    {
+      id: "fg-45",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Johannes Zukertort vs. Joseph Henry Blackburne (London, 1883)",
+        pl: "Johannes Zukertort – Joseph Henry Blackburne (Londyn, 1883)"
+      },
+      themes: ["sacrifice","deflection","pin"],
+      fen: "2r4k/pb2q2P/1p6/3Pp3/4p3/1P2R3/PBrQ2PP/5RK1 w - - 0 28",
+      solution: ["d2b4","c8c5","f1f8","h8h7","b4e4"],
+      title: {
+        en: "Zukertort’s Immortal: Double Queen & Rook Deflection (28. Qb4!!)",
+        pl: "Nieśmiertelna Partia Zukertorta: Podwójne odciągnięcie (28. Hb4!!)"
+      },
+      hint: {
+        en: "Johannes Zukertort plays the move of the century! Place your queen on b4 where it is attacked (28. Qb4!!), deflect the king with 29. Rf8+!, and capture e4 with check!",
+        pl: "Jan Zukertort gra ruch stulecia! Postaw hetmana pod bicie na b4 (28. Hb4!!), odciągnij króla ofiarą wieży 29. Wf8+! i zbij na e4 z szachem!"
+      },
+      explanation: {
+        en: "28. Qb4!! R8c5 29. Rf8+! Kxh7 30. Qxe4+ is hailed by Wilhelm Steinitz as one of the finest combinations ever conceived in chess history.",
+        pl: "28. Hb4!! W8c5 29. Wf8+! Kxh7 30. Hxe4+ to według Wilhelma Steinitza jedna z najwspanialszych kombinacji, jakie kiedykolwiek powstały na szachownicy."
+      }
+    },
+    {
+      id: "fg-46",
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: "medium",
+      players: {
+        en: "Harry Nelson Pillsbury vs. Siegbert Tarrasch (Hastings, 1895)",
+        pl: "Harry Nelson Pillsbury – Siegbert Tarrasch (Hastings, 1895)"
+      },
+      themes: ["battery","attraction"],
+      fen: "8/3n3p/7k/6p1/1p1PpQ2/1rp1P2P/8/7K w - - 0 50",
+      solution: ["f4d6","h6h5","d6d7","c3c2","d7h7"],
+      title: {
+        en: "Pillsbury’s Attack: Hastings 1895 Checkmate Finale",
+        pl: "Atak Pillsbury'ego: Finałowy mat w Hastings 1895"
+      },
+      hint: {
+        en: "Harry Pillsbury crowns his Kingside assault: check with 50. Qd6+!, capture on d7 with 51. Qxd7, and deliver checkmate with 52. Qxh7#!",
+        pl: "Harry Pillsbury wieńczy szturm na skrzydle królewskim: zaszachuj 50. Hd6+!, zbij na d7 ruchem 51. Hxd7 i zamatuj 52. Hxh7#!"
+      },
+      explanation: {
+        en: "50. Qd6+! Kh5 51. Qxd7 c2 52. Qxh7# was the glorious climax of Pillsbury’s monumental victory over Siegbert Tarrasch at Hastings 1895.",
+        pl: "50. Hd6+! Kh5 51. Hxd7 c2 52. Hxh7# było wspaniałym finałem monumentalnego zwycięstwa Pillsbury'ego nad Tarraschem w Hastings 1895."
+      }
+    },
+    {
+      id: "fg-47",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 4,
+      difficulty: "hard",
+      players: {
+        en: "Nigel Short vs. Jan Timman (Tilburg, 1991)",
+        pl: "Nigel Short – Jan Timman (Tilburg, 1991)"
+      },
+      themes: ["kingHunt","clearance"],
+      fen: "4rrk1/1bpR1p2/1pq1pQp1/p3P2p/P1PR3P/5N2/2P2PP1/6K1 w - h6 0 31",
+      solution: ["g1h2","e8c8","h2g3","c8e8","g3f4","b7c8","f4g5"],
+      title: {
+        en: "Nigel Short’s Immortal King Walk: Kh2 – Kg3 – Kf4 – Kg5!",
+        pl: "Nieśmiertelny Marsz Króla Nigela Shorta: Kh2 – Kg3 – Kf4 – Kg5!"
+      },
+      hint: {
+        en: "March your king all the way up the board to create an inescapable mating net: play 31. Kh2!, 32. Kg3!, 33. Kf4!, and 34. Kg5!",
+        pl: "Poprowadź swojego króla przez całą szachownicę, by osobiście asystował w macie: zagraj 31. Kh2!, 32. Kg3!, 33. Kf4! i 34. Kg5!"
+      },
+      explanation: {
+        en: "31. Kh2! Rc8 32. Kg3! Rce8 33. Kf4! Bc8 34. Kg5! is the legendary king walk that forced Jan Timman’s resignation, as 35. Kh6 followed by mate on g7 is unstoppable.",
+        pl: "31. Kh2! Wc8 32. Kg3! Wce8 33. Kf4! Gc8 34. Kg5! to legendarny marsz monarchy, który zmusił Jana Timmana do kapitulacji wobec nieuchronnego mata po 35. Kh6 i 36. Hg7#."
+      }
+    },
+    {
+      id: "fg-48",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Jinshi Bai vs. Ding Liren (Chinese League, 2017)",
+        pl: "Jinshi Bai – Ding Liren (Liga Chińska, 2017)"
+      },
+      themes: ["sacrifice","kingHunt"],
+      fen: "r1br2k1/pp3p2/2n4p/4N1p1/1bP5/2n1PKB1/P1Q2PPP/5B1R b - - 4 20",
+      solution: ["d8d4","h2h3","h6h5","g3h2","g5g4"],
+      title: {
+        en: "Ding Liren’s Chinese Immortal: Central Rook Sacrifice (20... Rd4!!)",
+        pl: "Chińska Nieśmiertelna Ding Lirena: Ofiara wieży w centrum (20... Wd4!!)"
+      },
+      hint: {
+        en: "Future World Champion Ding Liren sacrifices his rook in the center: play 20... Rd4!!, support the pawn storm with 21... h5!, and push 22... g4+!",
+        pl: "Przyszły Mistrz Świata Ding Liren składa ofiarę z wieży w centrum: zagraj 20... Wd4!!, wesprzyj natarcie ruchem 21... h5! i pchnij 22... g4+!"
+      },
+      explanation: {
+        en: "20... Rd4!! 21. h3 h5 22. Bh2 g4+ launched Ding Liren’s cross-board king hunt, universally celebrated as the greatest attacking masterpiece by a Chinese grandmaster.",
+        pl: "20... Wd4!! 21. h3 h5 22. Gh2 g4+ zapoczątkowało pościg za białym królem w najsłynniejszej partii chińskiego arcymistrza."
+      }
+    },
+    {
+      id: "fg-49",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 2,
+      difficulty: "hard",
+      players: {
+        en: "Wei Yi vs. Lázaro Bruzón Batista (Danzhou, 2015)",
+        pl: "Wei Yi – Lázaro Bruzón Batista (Danzhou, 2015)"
+      },
+      themes: ["sacrifice","kingHunt"],
+      fen: "3qr1k1/1b1rbp2/p2p2p1/1p1np3/4P3/P2BB2Q/1PP3PP/4RR1K w - - 0 22",
+      solution: ["f1f7","g8f7","h3h7"],
+      title: {
+        en: "Wei Yi’s 21st-Century Immortal: Rook Sacrifice (21. Rxf7!!)",
+        pl: "Nieśmiertelna Partia XXI Wieku Wei Yi: Ofiara wieży (21. Wxf7!!)"
+      },
+      hint: {
+        en: "16-year-old Wei Yi detonates Black’s fortress: sacrifice your rook on f7 (21. Rxf7!!) and invade with 22. Qh7+!",
+        pl: "16-letni Wei Yi detonuje twierdzę czarnych: poświęć wieżę na f7 (21. Wxf7!!) i wtargnij hetmanem 22. Hh7+!"
+      },
+      explanation: {
+        en: "21. Rxf7!! Kxf7 22. Qh7+ dragged Lazaro Bruzon’s king all the way to h3, earning Wei Yi’s 2015 creation the title of the '21st Century Immortal Game'.",
+        pl: "21. Wxf7!! Kxf7 22. Hh7+ wyciągnęło króla Bruzona aż na pole h3, zapewniając partii Wei Yi miano 'Nieśmiertelnej Partii XXI Wieku'."
+      }
+    },
+    {
+      id: "fg-50",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Veselin Topalov vs. Alexei Shirov (Linares, 1998)",
+        pl: "Veselin Topalov – Alexei Shirov (Linares, 1998)"
+      },
+      themes: ["sacrifice","clearance"],
+      fen: "8/8/4kpp1/3p1b2/p6P/2B5/6P1/6K1 b - - 2 47",
+      solution: ["f5h3","g2h3","e6f5","g1f2","f5e4"],
+      title: {
+        en: "Topalov vs. Shirov 1998: The Greatest Endgame Move (47... Bh3!!)",
+        pl: "Topałow – Szirow 1998: Najgenialniejszy ruch w końcówce (47... Gh3!!)"
+      },
+      hint: {
+        en: "Alexei Shirov plays the most jaw-dropping bishop sacrifice in chess history! Give away your bishop on h3 (47... Bh3!!), march your king to f5, and invade e4!",
+        pl: "Aleksiej Szirow gra najbardziej zdumiewającą ofiarę gońca w historii szachów! Oddaj gońca na h3 (47... Gh3!!), wkrocz królem na f5 i wejdź na e4!"
+      },
+      explanation: {
+        en: "47... Bh3!! 48. gxh3 Kf5 49. Kf2 Ke4 is universally considered the most sublime endgame move ever played, gaining the decisive tempo for the black king to shepherd the passed pawns to victory.",
+        pl: "47... Gh3!! 48. gxh3 Kf5 49. Kf2 Ke4 to powszechnie uznany za najgenialniejszy ruch końcówkowy w historii, zyskujący kluczowe tempo dla marszu króla po zwycięstwo."
+      }
+    },
+    {
+      id: "fg-51",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Alexei Shirov vs. Judit Polgár (Buenos Aires, 1994)",
+        pl: "Alexei Shirov – Judit Polgár (Buenos Aires, 1994)"
+      },
+      themes: ["fork","pin","sacrifice"],
+      fen: "r3kb1r/1b3p2/p2pp3/N3nnqP/1p2P3/8/PPP1NBQP/R3KB1R b KQkq - 1 16",
+      solution: ["f5e3","g2g3","g5g3","e2g3","e3c2"],
+      title: {
+        en: "Shirov vs. Judit Polgár 1994: Sicilian Knight Infiltration (16... Ne3!!)",
+        pl: "Szirow – Judit Polgár 1994: Infiltracja skoczkiem (16... Se3!!)"
+      },
+      hint: {
+        en: "Judit Polgár invades Shirov’s camp: plunge your knight to e3 (16... Ne3!!), trade queens, and deliver a devastating royal knight fork on c2!",
+        pl: "Judit Polgár wkracza w obóz Szirowa: wbij skoczka na e3 (16... Se3!!), wymień hetmany i zadaj niszczycielskie widły skoczkiem na c2!"
+      },
+      explanation: {
+        en: "16... Ne3!! 17. Qg3 Qxg3 18. Nxg3 Nxc2+ dismantled Alexei Shirov’s position in Buenos Aires (1994), cementing Judit Polgár’s reputation as one of the fiercest attacking players of all time.",
+        pl: "16... Se3!! 17. Hg3 Hxg3 18. Sxg3 Sxc2+ zdemolowało pozycję Szirowa w Buenos Aires (1994), potwierdzając kunszt ataku Judit Polgár."
+      }
+    },
+    {
+      id: "fg-52",
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: "hard",
+      players: {
+        en: "Louis Paulsen vs. Paul Morphy (New York, 1857)",
+        pl: "Louis Paulsen – Paul Morphy (Nowy Jork, 1857)"
+      },
+      themes: ["sacrifice","kingHunt","doubleCheck"],
+      fen: "4r1k1/p1pb1ppp/Qbp1r3/8/1P6/2Pq1B2/R2P1PPP/2B2RK1 b - - 4 17",
+      solution: ["d3f3","g2f3","e6g6","g1h1","d7h3"],
+      title: {
+        en: "Paulsen vs. Morphy 1857: The Immortal Queen Sacrifice (17... Qxf3!!)",
+        pl: "Paulsen – Morphy 1857: Nieśmiertelna ofiara hetmana (17... Hxf3!!)"
+      },
+      hint: {
+        en: "Paul Morphy unleashes his most famous combination! Sacrifice your queen on f3 (17... Qxf3!!), check along the g-file (18... Rg6+!), and penetrate with 19... Bh3!",
+        pl: "Paul Morphy odpala swoją najsłynniejszą kombinację! Poświęć hetmana na f3 (17... Hxf3!!), zaszachuj po linii g (18... Wg6+!) i wejdź gońcem 19... Gh3!"
+      },
+      explanation: {
+        en: "17... Qxf3!! 18. gxf3 Rg6+ 19. Kh1 Bh3 initiated Morphy’s legendary windmill-style attack in New York (1857), leaving White completely defenseless against the two bishops and rook.",
+        pl: "17... Hxf3!! 18. gxf3 Wg6+ 19. Kh1 Gh3 zapoczątkowało legendarny atak Morphy’ego w Nowym Jorku (1857), pozostawiając białe bezbronnymi wobec pary zabójczych gońców i wieży."
+      }
     }
   ];
 
   // =========================================================================
-  // BATTLE ANALYSES (6 Full Interactive Annotated Battles — Move-by-Move + SVG Targeting)
+  // BATTLE ANALYSES (62 Full Interactive Annotated Battles — Move-by-Move + SVG Targeting)
   // =========================================================================
   // HOW TO ADD A FUTURE MATCH:
   // 1. Add an object to `BATTLE_ANALYSES` below.
@@ -3659,6 +4699,4442 @@
           text: {
             en: 'Checkmate! Rook, both bishops, and knight participate in a picture-perfect mating net on c2.',
             pl: 'Mat! Wieża, para gońców oraz skoczek tworzą podręcznikową sieć matową wokół białego króla na c1.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-13',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'deflection', 'attraction', 'battery'],
+      players: {
+        en: 'Georg Rotlewi vs. Akiba Rubinstein (Łódź, 1907)',
+        pl: 'Georg Rotlewi – Akiba Rubinstein (Łódź, 1907)'
+      },
+      title: {
+        en: 'Rubinstein’s Immortal: Double-Rook & Queen Sacrifice',
+        pl: 'Nieśmiertelna Partia Rubinsteina: Podwójna ofiara wież i hetmana'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Akiba Rubinstein sacrifices his queen on h4 and both rooks (`22... Rxc3!!` and `23... Rd2!!`) to unleash his bishop pair along the long diagonals against h1.',
+        pl: 'Widok z perspektywy czarnych! Akiba Rubinstein zostawia hetmana na h4 pod biciem i poświęca obie wieże (`22... Wxc3!!`, `23... Wd2!!`), by uwolnić zabójczą parę gońców na przekątnych przeciwko królowi na h1.'
+      },
+      moves: [
+        'd4', 'd5', 'Nf3', 'e6', 'e3', 'c5', 'c4', 'Nc6', 'Nc3', 'Nf6',
+        'dxc5', 'Bxc5', 'a3', 'a6', 'b4', 'Bd6', 'Bb2', 'O-O', 'Qd2', 'Qe7',
+        'Bd3', 'dxc4', 'Bxc4', 'b5', 'Bd3', 'Rd8', 'Qe2', 'Bb7', 'O-O', 'Ne5',
+        'Nxe5', 'Bxe5', 'f4', 'Bc7', 'e4', 'Rac8', 'e5', 'Bb6+', 'Kh1', 'Ng4',
+        'Be4', 'Qh4', 'g3', 'Rxc3', 'gxh4', 'Rd2', 'Qxd2', 'Bxe4+', 'Qg2', 'Rh3'
+      ],
+      annotations: {
+        '19... Bb6+': {
+          badge: '⚔️',
+          arrows: ['b6->g1:red', 'f6->g4:green'],
+          targets: ['g1', 'b6'],
+          text: {
+            en: 'Launching the kingside storm! The check on the a7–g1 diagonal forces White’s king into the corner (`Kh1`), setting up immediate targets on h2.',
+            pl: 'Początek burzy na skrzydle królewskim! Szach po przekątnej a7–g1 spycha białego króla do rogu (`Kh1`), wystawiając punkt h2 na atak.'
+          }
+        },
+        '20... Ng4': {
+          badge: '!',
+          arrows: ['g4->h2:red', 'e7->h4:green'],
+          targets: ['h2', 'e4'],
+          text: {
+            en: 'Direct mate threat on h2! White plays `21. Be4` to block the b7 bishop and cover h2, unknowingly aligning pieces for tactical fireworks.',
+            pl: 'Bezpośrednia groźba mata na h2! Białe grają `21. Ge4`, aby zasłonić gońca b7 i obronić h2, nie przeczuwając nadchodzącej kombinacji.'
+          }
+        },
+        '21... Qh4': {
+          badge: '!',
+          arrows: ['h4->h2:red', 'g4->h2:red', 'b6->g1:amber'],
+          targets: ['h2'],
+          text: {
+            en: 'Queen and knight battery on h2! White tries to repel the attack with `22. g3`, fatally weakening the long a8–h1 diagonal.',
+            pl: 'Bateria hetmana i skoczka na h2! Białe próbują odeprzeć atak ruchem `22. g3`, śmiertelnie osłabiając wielką przekątną a8–h1.'
+          }
+        },
+        '22... Rxc3': {
+          badge: '!!',
+          arrows: ['c3->e4:red', 'b7->h1:red', 'g3->h4:blue'],
+          targets: ['c3', 'h4', 'e4'],
+          text: {
+            en: 'Immortal Sacrifice! Rubinstein leaves his queen on h4 en prise to eliminate the c3 defender of e4; note `23. Bxc3 Qxh2#` is instant mate!',
+            pl: 'Nieśmiertelna ofiara! Rubinstein zostawia hetmana h4 pod biciem, by zbić skoczka broniącego e4 — po `23. Gxc3` następuje natychmiastowy mat `23... Hxh2#`!'
+          }
+        },
+        '23... Rd2': {
+          badge: '!!',
+          arrows: ['d2->e2:red', 'd2->h2:red', 'b7->e4:amber'],
+          targets: ['d2', 'e2', 'h2'],
+          text: {
+            en: 'Second Rook Sacrifice! After `23. gxh4`, Black deflects the queen from protecting e4 (while `24. Bxb7` allows `24... Rxh2#`).',
+            pl: 'Ofiara drugiej wieży! Po `23. gxh4` czarne odciągają białego hetmana od obrony pola e4 (a po `24. Gxb7` czarne matują `24... Wxh2#`).'
+          }
+        },
+        '24... Bxe4+': {
+          badge: '!',
+          arrows: ['e4->h1:red', 'c3->h3:green'],
+          targets: ['h1', 'g2'],
+          text: {
+            en: 'Check along the opened diagonal! White must block with `25. Qg2`, leaving the queen completely pinned to the king on h1.',
+            pl: 'Szach po otwartej przekątnej! Białe muszą zasłonić się ruchem `25. Hg2`, po czym hetman jest bezwzględnie związany z królem h1.'
+          }
+        },
+        '25... Rh3': {
+          badge: '🏆',
+          arrows: ['h3->h2:red', 'g4->h2:red', 'e4->h1:amber', 'b6->g1:amber'],
+          targets: ['h2', 'h1'],
+          text: {
+            en: 'Quiet killer move! Because `Qg2` is pinned to h1, White cannot play `Qxg4`, and `Qxe4` allows `Rxh2#`. Rotlewi resigned facing unstoppable mate.',
+            pl: 'Cichy cios końcowy! Ponieważ `Hg2` jest związany z królem h1, bicie `Hxg4` jest nielegalne, a `Hxe4` pozwala na `Wxh2#`. Rotlewi poddał partię.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-14',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'kingHunt', 'attraction', 'clearance'],
+      players: {
+        en: 'Garry Kasparov vs. Veselin Topalov (Wijk aan Zee, 1999)',
+        pl: 'Garri Kasparow – Weselin Topałow (Wijk aan Zee, 1999)'
+      },
+      title: {
+        en: 'Kasparov’s Immortal: 24. Rxd4!! & Cross-Board King Hunt',
+        pl: 'Nieśmiertelna Partia Kasparowa: 24. Wxd4!! i pościg przez całą deskę'
+      },
+      overview: {
+        en: 'Garry Kasparov sacrifices a rook on d4 (`24. Rxd4!!`) to yank Topalov’s king out of its queenside shelter, hunting it all the way from a7 down to d1 in a masterclass of deep calculation.',
+        pl: 'Garri Kasparow poświęca wieżę na d4 (`24. Wxd4!!`), wyciągając czarnego króla z twierdzy na skrzydle hetmańskim i ścigając go od pola a7 aż po d1 w popisowej lekcji głębokiego liczenia.'
+      },
+      moves: [
+        'e4', 'd6', 'd4', 'Nf6', 'Nc3', 'g6', 'Be3', 'Bg7', 'Qd2', 'c6',
+        'f3', 'b5', 'Nge2', 'Nbd7', 'Bh6', 'Bxh6', 'Qxh6', 'Bb7', 'a3', 'e5',
+        'O-O-O', 'Qe7', 'Kb1', 'a6', 'Nc1', 'O-O-O', 'Nb3', 'exd4', 'Rxd4', 'c5',
+        'Rd1', 'Nb6', 'g3', 'Kb8', 'Na5', 'Ba8', 'Bh3', 'd5', 'Qf4+', 'Ka7',
+        'Rhe1', 'd4', 'Nd5', 'Nbxd5', 'exd5', 'Qd6', 'Rxd4', 'cxd4', 'Re7+', 'Kb6',
+        'Qxd4+', 'Kxa5', 'b4+', 'Ka4', 'Qc3', 'Qxd5', 'Ra7', 'Bb7', 'Rxb7', 'Qc4',
+        'Qxf6', 'Kxa3', 'Qxa6+', 'Kxb4', 'c3+', 'Kxc3', 'Qa1+', 'Kd2', 'Qb2+', 'Kd1',
+        'Bf1', 'Rd2', 'Rd7', 'Rxd7', 'Bxc4', 'bxc4', 'Qxh8', 'Rd3', 'Qa8', 'c3',
+        'Qa4+', 'Ke1', 'f4', 'f5', 'Kc1', 'Rd2', 'Qa7'
+      ],
+      annotations: {
+        '24. Rxd4': {
+          badge: '!!',
+          arrows: ['d4->d6:red', 'e1->e7:red', 'f4->d4:amber'],
+          targets: ['d4', 'a7', 'e7'],
+          text: {
+            en: 'Kasparov’s Immortal Rook Sacrifice! Ripping open the d4–a7 diagonal and e-file so Black’s king cannot escape the oncoming checks.',
+            pl: 'Nieśmiertelna ofiara wieży Kasparowa! Rozbija centrum oraz otwiera linię e i przekątną d4–a7, odcinając królowi bezpieczny odwrót.'
+          }
+        },
+        '25. Re7+': {
+          badge: '!',
+          arrows: ['e7->a7:red', 'f4->d4:green'],
+          targets: ['a7', 'b6'],
+          text: {
+            en: 'Invading the 7th rank with check! Taking the rook (`25... Qxe7`) loses quickly after `26. Qxd4+`, so Black’s king must step out to b6.',
+            pl: 'Wtargnięcie na 7. linię z szachem! Zbicie wieży (`25... Hxe7`) przegrywa po `26. Hxd4+`, więc król musi wyjść na pole b6.'
+          }
+        },
+        '26. Qxd4+': {
+          badge: '!',
+          arrows: ['d4->b6:red', 'd4->h8:amber'],
+          targets: ['b6', 'a5'],
+          text: {
+            en: 'Forcing the king onward! Since `26... Qc5` drops the f6 knight with check (`27. Qxf6+`), Black has no choice but to capture on a5.',
+            pl: 'Zmuszenie króla do marszu! Ponieważ `26... Hc5` oddaje skoczka f6 z szachem (`27. Hxf6+`), czarne muszą zbić skoczka na a5.'
+          }
+        },
+        '27. b4+': {
+          badge: '!',
+          arrows: ['b4->a5:red', 'd4->c3:green'],
+          targets: ['a5', 'a4'],
+          text: {
+            en: 'Pawn check drives the king to a4, allowing White to play the calm `28. Qc3!` and weave a deadly net around the marooned monarch.',
+            pl: 'Szach pionem spycha króla na a4, pozwalając białym na spokojne `28. Hc3!` i zaciśnięcie sieci wokół osamotnionego króla.'
+          }
+        },
+        '33. c3+': {
+          badge: '!',
+          arrows: ['c3->b4:red', 'a6->a1:green'],
+          targets: ['b4', 'c3'],
+          text: {
+            en: 'Clearance sacrifice! White lures the king onto c3 so the queen can swing to a1 (`34. Qa1+`) and force the king all the way down to d1.',
+            pl: 'Ofiara oczyszczająca! Białe wciągają króla na c3, by hetman mógł przejść na a1 (`34. Ha1+`) i zapędzić króla aż na pierwszą linię.'
+          }
+        },
+        '36. Bf1': {
+          badge: '!!',
+          arrows: ['f1->c4:red', 'b7->d7:green'],
+          targets: ['c4', 'd1'],
+          text: {
+            en: 'Finishing tactic! Attacking Black’s queen forces `36... Rd2 37. Rd7!`, deflecting the rook and winning Black’s queen cleanly (`38. Bxc4`).',
+            pl: 'Cios kończący! Atak na hetmana wymusza `36... Wd2 37. Wd7!`, co odciąga wieżę i pozwala zdobyć czarnego hetmana (`38. Gxc4`).'
+          }
+        },
+        '44. Qa7': {
+          badge: '🏆',
+          arrows: ['a7->g1:red', 'a7->e3:red', 'c1->d2:blue'],
+          targets: ['e1', 'd2'],
+          text: {
+            en: 'Up a decisive queen and attacking along the a7–g1 diagonal (`45. Qg1+` or `45. Qe3+` looms), Kasparov forces Topalov’s resignation.',
+            pl: 'Z przewagą hetmana i decydującym atakiem po przekątnej a7–g1 (grozi `45. Hg1+` lub `45. He3+`), Kasparow zmusza Topałowa do poddania.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-15',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'pin', 'kingHunt', 'backRank'],
+      players: {
+        en: 'Wilhelm Steinitz vs. Curt von Bardeleben (Hastings, 1895)',
+        pl: 'Wilhelm Steinitz – Curt von Bardeleben (Hastings, 1895)'
+      },
+      title: {
+        en: 'Battle of Hastings: Steinitz’s Immortal Rook Walk (22. Rxe7+!!)',
+        pl: 'Bitwa pod Hastings: Nieśmiertelny marsz wieży Steinitza (22. Wxe7+!!)'
+      },
+      overview: {
+        en: 'The first World Champion leaves every White piece hanging to launch a breathtaking rook rampage along the 7th rank (`22. Rxe7+!!` to `25. Rxh7+!`)—where Black can never capture the checking rook.',
+        pl: 'Pierwszy mistrz świata zostawia niemal wszystkie figury pod biciem, by uruchomić legendarny marsz wieży po 7. linii (`22. Wxe7+!!` aż do `25. Wxh7+!`) — czarne ani razu nie mogą jej zbić.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'c3', 'Nf6', 'd4', 'exd4',
+        'cxd4', 'Bb4+', 'Nc3', 'd5', 'exd5', 'Nxd5', 'O-O', 'Be6', 'Bg5', 'Be7',
+        'Bxd5', 'Bxd5', 'Nxd5', 'Qxd5', 'Bxe7', 'Nxe7', 'Re1', 'f6', 'Qe2', 'Qd7',
+        'Rac1', 'c6', 'd5', 'cxd5', 'Nd4', 'Kf7', 'Ne6', 'Rhc8', 'Qg4', 'g6',
+        'Ng5+', 'Ke8', 'Rxe7+', 'Kf8', 'Rf7+', 'Kg8', 'Rg7+', 'Kh8', 'Rxh7+'
+      ],
+      annotations: {
+        '17. d5': {
+          badge: '⚔️',
+          arrows: ['d5->c6:red', 'f3->d4:green', 'e1->e7:amber'],
+          targets: ['d4', 'e7'],
+          text: {
+            en: 'Pawn sacrifice for a central outpost! Clearing d4 lets White’s knight invade e6 while Black’s king remains stuck in the center.',
+            pl: 'Ofiara piona za centralną placówkę! Oczyszczenie pola d4 pozwala białemu skoczkowi wedrzeć się na e6, gdy czarny król tkwi w centrum.'
+          }
+        },
+        '19. Ne6': {
+          badge: '!',
+          arrows: ['e6->c7:red', 'e6->g7:red', 'c1->c8:amber'],
+          targets: ['e6', 'f7'],
+          text: {
+            en: 'Octopus knight on e6! Paralyzing Black’s rooks and cutting off the king’s flight while White’s queen shifts to g4.',
+            pl: 'Potężny skoczek na e6! Paraliżuje czarne wieże i odcina króla, podczas gdy biały hetman przygotowuje wejście na g4.'
+          }
+        },
+        '21. Ng5+': {
+          badge: '!',
+          arrows: ['g5->f7:red', 'g4->g7:amber', 'e1->e7:red'],
+          targets: ['f7', 'e8'],
+          text: {
+            en: 'Forcing the king back to e8! White leaves the g5 knight and c1 rook unguarded, setting up a devastating battery on the e-file.',
+            pl: 'Zmuszenie króla do powrotu na e8! Białe ignorują bicie skoczka i wieży, przygotowując nokautujące uderzenie na linii e.'
+          }
+        },
+        '22. Rxe7+': {
+          badge: '!!',
+          arrows: ['e7->e8:red', 'c1->c8:amber', 'g4->d7:amber'],
+          targets: ['e7', 'e8', 'c8'],
+          text: {
+            en: 'The Immortal Rook Walk begins! Black cannot take: `22... Qxe7` loses to `23. Rxc8+`, and `22... Kxe7` drops the queen (`23. Re1+`).',
+            pl: 'Początek nieśmiertelnego marszu wieży! Zbicie przegrywa: `22... Hxe7` prowadzi do `23. Wxc8+`, a `22... Kxe7` traci hetmana po `23. We1+`.'
+          }
+        },
+        '23. Rf7+': {
+          badge: '!',
+          arrows: ['f7->f8:red', 'g4->d7:amber', 'c1->c8:amber'],
+          targets: ['f8', 'd7'],
+          text: {
+            en: 'Still untouchable! Capturing `23... Kxf7` allows `24. Qxd7+` with check, forcing Black’s king into the corner.',
+            pl: 'Wieża wciąż nietykalna! Po `23... Kxf7` białe biją `24. Hxd7+` z szachem, spychając więc czarnego króla w kierunku rogu.'
+          }
+        },
+        '24. Rg7+': {
+          badge: '!',
+          arrows: ['g7->g8:red', 'g4->d7:amber'],
+          targets: ['g8', 'h8'],
+          text: {
+            en: 'Step three down the 7th rank! Again `24... Kxg7` walks into `25. Qxd7+`, driving the king onto h8.',
+            pl: 'Trzeci krok po 7. linii! Ponownie `24... Kxg7` przegrywa po `25. Hxd7+`, zmuszając króla do wejścia na pole h8.'
+          }
+        },
+        '25. Rxh7+': {
+          badge: '🏆',
+          arrows: ['h7->h8:red', 'g4->h4:green', 'h7->d7:amber'],
+          targets: ['h8', 'd7'],
+          text: {
+            en: 'Here von Bardeleben famously walked out of the tournament hall to let his clock expire, as `25... Kg8 26. Rg7+ Kh8 27. Qh4+!` forces mate in 10.',
+            pl: 'W tym momencie von Bardeleben słynnie opuścił salę gry bez poddania partii — po `25... Kg8 26. Wg7+ Kh8 27. Hh4+!` białe dają forsownego mata w 10 ruchach.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-16',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['sacrifice', 'fork', 'attraction', 'pin'],
+      players: {
+        en: 'Stepan Levitsky vs. Frank Marshall (Breslau, 1912)',
+        pl: 'Stepan Lewicki – Frank Marshall (Wrocław, 1912)'
+      },
+      title: {
+        en: 'The Gold Coins Game: 23... Qg3!! Triple-Hanging Queen',
+        pl: 'Partia Złotych Monet: 23... Hg3!! pod potrójnym biciem'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! In Wrocław 1912, Frank Marshall sacrificed his rook on h3 and placed his queen on g3 (`23... Qg3!!`) where three White pieces could capture it—every single capture losing instantly!',
+        pl: 'Widok z perspektywy czarnych! We Wrocławiu w 1912 roku Frank Marshall poświęcił wieżę na h3 i postawił hetmana na g3 (`23... Hg3!!`) pod potrójnym biciem — każde z nich przegrywa natychmiast!'
+      },
+      moves: [
+        'd4', 'e6', 'e4', 'd5', 'Nc3', 'c5', 'Nf3', 'Nc6', 'exd5', 'exd5',
+        'Be2', 'Nf6', 'O-O', 'Be7', 'Bg5', 'O-O', 'dxc5', 'Be6', 'Nd4', 'Bxc5',
+        'Nxe6', 'fxe6', 'Bg4', 'Qd6', 'Bh3', 'Rae8', 'Qd2', 'Bb4', 'Bxf6', 'Rxf6',
+        'Rad1', 'Qc5', 'Qe2', 'Bxc3', 'bxc3', 'Qxc3', 'Rxd5', 'Nd4', 'Qh5', 'Ref8',
+        'Re5', 'Rh6', 'Qg5', 'Rxh3', 'Rc5', 'Qg3'
+      ],
+      annotations: {
+        '18... Qxc3': {
+          badge: '⚔️',
+          arrows: ['c3->h3:red', 'c3->c2:red'],
+          targets: ['c3', 'h3'],
+          text: {
+            en: 'Counterattack on the queenside! Marshall snatches c3 and targets the isolated h3 bishop rather than defending d5 passively.',
+            pl: 'Kontratak na skrzydle hetmańskim! Marshall zdobywa piona c3 i bierze na celownik samotnego gońca h3 zamiast biernie bronić d5.'
+          }
+        },
+        '19... Nd4': {
+          badge: '!',
+          arrows: ['d4->e2:red', 'd4->c2:red', 'c3->h3:red'],
+          targets: ['e2', 'c2', 'h3'],
+          text: {
+            en: 'Centralizing with tempo! Attacking the e2 queen while eyeing deadly knight jumps to f3 and e2.',
+            pl: 'Centralizacja z tempem! Skoczek atakuje hetmana e2 i przygotowuje zabójcze skoki na f3 oraz e2.'
+          }
+        },
+        '21... Rh6': {
+          badge: '!',
+          arrows: ['h6->h5:red', 'h6->h3:red'],
+          targets: ['h5', 'h3'],
+          text: {
+            en: 'Rook swing to the h-file! Chasing the white queen while lining up directly against the unprotected bishop on h3.',
+            pl: 'Przerzut wieży na linię h! Przepędza białego hetmana i bezpośrednio namierza niebronionego gońca na h3.'
+          }
+        },
+        '22. Qg5': {
+          badge: '?',
+          arrows: ['g5->h6:blue', 'g5->g7:blue', 'h6->h3:red'],
+          targets: ['h6', 'h3'],
+          text: {
+            en: 'Levitsky tries to defend h3 indirectly by attacking the rook and pinning g7, overlooking a stunning tactical blow.',
+            pl: 'Lewicki próbuje pośrednio bronić h3, atakując wieżę i wiążąc piona g7, ale przeocza miażdżący zwrot taktyczny.'
+          }
+        },
+        '22... Rxh3': {
+          badge: '!!',
+          arrows: ['h3->h2:red', 'd4->f3:amber', 'f8->f2:red'],
+          targets: ['h3', 'h2'],
+          text: {
+            en: 'Rook Sacrifice! Capturing `23. gxh3` walks straight into `23... Nf3+`, forking White’s king and queen!',
+            pl: 'Ofiara wieży! Bicie `23. gxh3` wpada prosto pod widełki `23... Sf3+` na białego króla i hetmana!'
+          }
+        },
+        '23... Qg3': {
+          badge: '🏆',
+          arrows: ['g3->g2:red', 'g3->f2:red', 'g3->h2:red', 'd4->e2:amber'],
+          targets: ['g3', 'g2', 'e2'],
+          text: {
+            en: 'The legendary "Gold Coins" move! `24. hxg3` allows `Ne2#`, `24. fxg3` allows `Ne2+ 25. Kh1 Rxf1#`, and `24. Qxg3` loses to `Ne2+` winning a rook. White resigned!',
+            pl: 'Legendarny ruch "Złotych Monet"! `24. hxg3` daje `Se2#`, `24. fxg3` pozwala na `Se2+ 25. Kh1 Wxf1#`, a `24. Hxg3` przegrywa wieżę po `Se2+`. Białe poddały się!'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-17',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'clearance', 'kingHunt', 'battery'],
+      players: {
+        en: 'Emanuel Lasker vs. Johann Hermann Bauer (Amsterdam, 1889)',
+        pl: 'Emanuel Lasker – Johann Hermann Bauer (Amsterdam, 1889)'
+      },
+      title: {
+        en: 'Lasker’s Classic Double-Bishop Sacrifice (Bxh7+ & Bxg7!)',
+        pl: 'Klasyczna Ofiara Dwóch Gońców Laskera (Gxh7+ i Gxg7!)'
+      },
+      overview: {
+        en: 'The archetypal Double-Bishop Sacrifice! Emanuel Lasker sacrifices both bishops on h7 and g7 (`15. Bxh7+!` & `17. Bxg7!!`) to tear away the black king’s pawn cover, forcing Bauer to give up his queen against `Rf3–h3`.',
+        pl: 'Historyczny wzorzec ofiary dwóch gońców! Emanuel Lasker poświęca oba gońce na h7 i g7 (`15. Gxh7+!` i `17. Gxg7!!`), by całkowicie obnażyć czarnego króla i wymusić oddanie hetmana przed matem po linii h.'
+      },
+      moves: [
+        'f4', 'd5', 'e3', 'Nf6', 'b3', 'e6', 'Bb2', 'Be7', 'Bd3', 'b6',
+        'Nc3', 'Bb7', 'Nf3', 'Nbd7', 'O-O', 'O-O', 'Ne2', 'c5', 'Ng3', 'Qc7',
+        'Ne5', 'Nxe5', 'Bxe5', 'Qc6', 'Qe2', 'a6', 'Nh5', 'Nxh5', 'Bxh7+', 'Kxh7',
+        'Qxh5+', 'Kg8', 'Bxg7', 'Kxg7', 'Qg4+', 'Kh7', 'Rf3', 'e5', 'Rh3+', 'Qh6',
+        'Rxh6+', 'Kxh6', 'Qd7', 'Bf6', 'Qxb7', 'Kg7', 'Rf1', 'Rab8', 'Qd7', 'Rfd8',
+        'Qg4+', 'Kf8', 'fxe5', 'Bg7', 'e6', 'Rb7', 'Qg6', 'f6', 'Rxf6+', 'Bxf6',
+        'Qxf6+', 'Ke8', 'Qh8+', 'Ke7', 'Qg7+', 'Kxe6', 'Qxb7', 'Rd6', 'Qxa6', 'd4',
+        'exd4', 'cxd4', 'h4', 'd3', 'Qxd3'
+      ],
+      annotations: {
+        '14. Nh5': {
+          badge: '⚔️',
+          arrows: ['h5->f6:red', 'e5->g7:red', 'd3->h7:red'],
+          targets: ['f6', 'h7', 'g7'],
+          text: {
+            en: 'Removing the key defender! Trading off Black’s f6 knight exposes h7 and g7 to the full force of White’s bishop pair.',
+            pl: 'Usunięcie głównego obrońcy! Wymiana skoczka f6 otwiera punkty h7 oraz g7 na połączony ogień obu białych gońców.'
+          }
+        },
+        '15. Bxh7+': {
+          badge: '!!',
+          arrows: ['h7->g8:red', 'e2->h5:green'],
+          targets: ['h7', 'g8'],
+          text: {
+            en: 'First Bishop Sacrifice! Attracting the king to h7 allows White’s queen to enter the attack with check on h5.',
+            pl: 'Pierwsza ofiara gońca! Zaciągnięcie króla na h7 pozwala białemu hetmanowi wejść do ataku z szachem na pole h5.'
+          }
+        },
+        '17. Bxg7': {
+          badge: '!!',
+          arrows: ['g7->f8:red', 'h5->g4:green'],
+          targets: ['g7', 'h7'],
+          text: {
+            en: 'Second Bishop Sacrifice! Now the black king has no pawn shield left—`17... Kxg7 18. Qg4+ Kh7` leaves the path open for White’s rook.',
+            pl: 'Druga ofiara gońca! Król czarnych zostaje bez jakiejkolwiek osłony pionowej — po `17... Kxg7 18. Hg4+ Kh7` do akcji wkracza biała wieża.'
+          }
+        },
+        '19. Rf3': {
+          badge: '!',
+          arrows: ['f3->h3:red', 'g4->h3:amber'],
+          targets: ['h3', 'h7'],
+          text: {
+            en: 'Deadly Rook Lift! Threatening `20. Rh3#`, which forces Black to interpose the queen on h6 (`19... e5 20. Rh3+ Qh6`) at a ruinous cost.',
+            pl: 'Zabójczy przerzut wieży! Groźba `20. Wh3#` zmusza czarne do oddania hetmana na h6 (`19... e5 20. Wh3+ Hh6`), by uniknąć natychmiastowego mata.'
+          }
+        },
+        '21. Rxh6+': {
+          badge: '!',
+          arrows: ['h6->h7:red', 'g4->d7:green'],
+          targets: ['h6', 'b7'],
+          text: {
+            en: 'Cashing in the attack! White wins the queen for two bishops and immediately forks the two loose black bishops (`22. Qd7`, `23. Qxb7`).',
+            pl: 'Realizacja przewagi! Białe zdobywają hetmana za parę gońców, po czym natychmiast zgarniają kolejnego gońca podwójnym uderzeniem (`22. Hd7`, `23. Hxb7`).'
+          }
+        },
+        '30. Rxf6+': {
+          badge: '!',
+          arrows: ['f6->f8:red', 'g6->f6:amber'],
+          targets: ['f6', 'd8'],
+          text: {
+            en: 'Clean exchange sacrifice to finish resistance! Smashing f6 exposes Black’s king to a decisive queen check and rook harvest (`33. Qg7+`).',
+            pl: 'Czysta ofiara jakości na dobicie! Rozbicie punktu f6 wystawia króla na decydujące szachy hetmanem i zdobycie drugiej wieży (`33. Hg7+`).'
+          }
+        },
+        '38. Qxd3': {
+          badge: '🏆',
+          arrows: ['d3->d6:red'],
+          targets: ['d6', 'e6'],
+          text: {
+            en: 'Halting Black’s last pawn push cleanly. Up a queen and a battalion of passed pawns against a single rook, Lasker forced resignation.',
+            pl: 'Zatrzymanie ostatniej próby kontrgry. Mając hetmana i wolne piony przeciwko samotnej wieży, Lasker zmusił Bauera do kapitulacji.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-18',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['deflection', 'backRank', 'sacrifice', 'pin'],
+      players: {
+        en: 'Edwin Ziegler Adams vs. Carlos Torre (New Orleans, 1920)',
+        pl: 'Edwin Ziegler Adams – Carlos Torre (Nowy Orlean, 1920)'
+      },
+      title: {
+        en: 'Adams vs. Torre: The Back-Rank Queen Walk (18. Qg4 – 21. a4!!)',
+        pl: 'Adams – Torre: Najsłynniejszy "Spacer Hetmana" na ostatniej linii'
+      },
+      overview: {
+        en: 'One of chess’s most famous queen maneuvers! Exploiting a fatal back-rank weakness on e8, White’s queen repeatedly offers herself for capture (`18. Qg4!`, `19. Qc4!`, `20. Qc7!`) before `21. a4!!` overloads Black’s defense.',
+        pl: 'Jeden z najsłynniejszych manewrów hetmana w dziejach szachów! Wykorzystując śmiertelną słabość 8. linii na e8, biały hetman wielokrotnie wystawia się pod bicie (`18. Hg4!`, `19. Hc4!`, `20. Hc7!`), aż ruch `21. a4!!` przełamuje obronę.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'd6', 'd4', 'exd4', 'Qxd4', 'Nc6', 'Bb5', 'Bd7',
+        'Bxc6', 'Bxc6', 'Nc3', 'Nf6', 'O-O', 'Be7', 'Nd5', 'Bxd5', 'exd5', 'O-O',
+        'Bg5', 'c6', 'c4', 'cxd5', 'cxd5', 'Re8', 'Rfe1', 'a5', 'Re2', 'Rc8',
+        'Rae1', 'Qd7', 'Bxf6', 'Bxf6', 'Qg4', 'Qb5', 'Qc4', 'Qd7', 'Qc7', 'Qb5',
+        'a4', 'Qxa4', 'Re4', 'Qb5', 'Qxb7'
+      ],
+      annotations: {
+        '15. Re2': {
+          badge: '📖',
+          arrows: ['e2->e8:amber', 'a1->e1:green'],
+          targets: ['e8', 'e7'],
+          text: {
+            en: 'Doubling rooks on the e-file! White sets up relentless back-rank pressure that will tie Black’s queen down to protecting e8.',
+            pl: 'Zdwojenie wież na linii e! Białe tworzą potężny nacisk na 8. linię, który wkrótce przykuje czarnego hetmana do obrony pola e8.'
+          }
+        },
+        '18. Qg4': {
+          badge: '!',
+          arrows: ['g4->d7:red', 'g4->c8:amber', 'g4->g7:red'],
+          targets: ['d7', 'c8'],
+          text: {
+            en: 'The Queen Walk begins! Black cannot take (`18... Qxg4`) because `19. Rxe8+ Rxe8 20. Rxe8#` is back-rank checkmate.',
+            pl: 'Początek "Spaceru Hetmana"! Czarne nie mogą bić `18... Hxg4`, ponieważ `19. Wxe8+ Wxe8 20. Wxe8#` daje mata na ostatniej linii.'
+          }
+        },
+        '19. Qc4': {
+          badge: '!!',
+          arrows: ['c4->c8:red', 'c4->b5:red', 'e2->e8:amber'],
+          targets: ['c8', 'b5'],
+          text: {
+            en: 'Second deflection offer! Again `19... Qxc4` allows `20. Rxe8#`, and `19... Rxe2` drops the rook on c8 (`20. Qxc8+!`), forcing `19... Qd7`.',
+            pl: 'Druga prowokacja! Ponownie `19... Hxc4` pozwala na `20. Wxe8#`, a `19... Wxe2` traci wieżę z matem po `20. Hxc8+!`, więc hetman musi wrócić na d7.'
+          }
+        },
+        '20. Qc7': {
+          badge: '!!',
+          arrows: ['c7->c8:red', 'c7->d7:red', 'c7->b7:red'],
+          targets: ['c8', 'd7', 'b7'],
+          text: {
+            en: 'Pushing deeper! Neither `20... Qxc7` (`21. Rxe8+`) nor `20... Rxe2` (`21. Qxd7`) works, keeping Black’s queen chained to b5.',
+            pl: 'Kolejny krok! Ani `20... Hxc7` (`21. Wxe8+`), ani `20... Wxe2` (`21. Hxd7`) nie ratuje czarnych — hetman musi zostać na b5.'
+          }
+        },
+        '21. a4': {
+          badge: '!!',
+          arrows: ['a4->b5:red', 'e2->e8:amber', 'c7->b7:red'],
+          targets: ['b5', 'a4', 'e8'],
+          text: {
+            en: 'The killer pawn nudge! Black’s queen must stay on the a4–e8 diagonal to cover e8 and guard e2—forcing `21... Qxa4` off the vital diagonal.',
+            pl: 'Zabójcze pchnięcie piona! Czarny hetman musi jednocześnie bronić wieży e2 oraz pola e8 na przekątnej a4–e8, więc bicie `21... Hxa4` zrywa obronę.'
+          }
+        },
+        '23. Qxb7': {
+          badge: '🏆',
+          arrows: ['b7->b5:red', 'b7->c8:red', 'e4->e8:red'],
+          targets: ['b5', 'c8', 'e8'],
+          text: {
+            en: 'Overloaded! After `22. Re4! Qb5 23. Qxb7`, Black cannot guard b5, c8, and e8 at once (`23... Qxb7 24. Rxe8#`). Black resigned.',
+            pl: 'Przeciążenie! Po `22. We4! Hb5 23. Hxb7` czarne nie mogą jednocześnie obronić hetmana, wieży c8 oraz pola e8 (`23... Hxb7 24. Wxe8#`). Czarne poddały się.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-19',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'medium',
+      themes: ['sacrifice', 'kingHunt', 'attraction', 'discovered'],
+      players: {
+        en: 'Glucksberg vs. Miguel Najdorf (Warsaw, 1929)',
+        pl: 'Glucksberg – Mieczysław Najdorf (Warszawa, 1929)'
+      },
+      title: {
+        en: 'The Polish Immortal: Sacrificing All Four Minor Pieces',
+        pl: 'Polska Nieśmiertelna: Ofiara wszystkich czterech lekkich figur'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! In Warsaw 1929, Miguel Najdorf unleashed a breathtaking Romantic storm, sacrificing both bishops and both knights (`9... Bxh2+`, `13... Bg1!`, `16... Ndxe5+`, `20... Bg4+!`) before delivering checkmate with a pawn (`22... h5#`).',
+        pl: 'Widok z perspektywy czarnych! W Warszawie w 1929 roku Mieczysław Najdorf przeprowadził legendarną burzę taktyczną, poświęcając oba gońce i oba skoczki (`9... Gxh2+`, `13... Gg1!`, `16... Sdxe5+`, `20... Gg4+!`), by dać mata pionem (`22... h5#`).'
+      },
+      moves: [
+        'd4', 'f5', 'c4', 'Nf6', 'Nc3', 'e6', 'Nf3', 'd5', 'e3', 'c6',
+        'Bd3', 'Bd6', 'O-O', 'O-O', 'Ne2', 'Nbd7', 'Ng5', 'Bxh2+', 'Kh1', 'Ng4',
+        'f4', 'Qe8', 'g3', 'Qh5', 'Kg2', 'Bg1', 'Nxg1', 'Qh2+', 'Kf3', 'e5',
+        'dxe5', 'Ndxe5+', 'fxe5', 'Nxe5+', 'Kf4', 'Ng6+', 'Kf3', 'f4', 'exf4', 'Bg4+',
+        'Kxg4', 'Ne5+', 'fxe5', 'h5#'
+      ],
+      annotations: {
+        '9... Bxh2+': {
+          badge: '⚔️',
+          arrows: ['h2->g1:red', 'f6->g4:green'],
+          targets: ['h2', 'g1'],
+          text: {
+            en: 'Sacrifice #1! Najdorf opens the kingside with `9... Bxh2+` (`10. Kh1 Ng4`), immediately targeting h2 and trapping White’s king.',
+            pl: 'Ofiara nr 1! Najdorf rozbija osłonę króla ruchem `9... Gxh2+` (`10. Kh1 Sg4`), natychmiast kierując figury na pole h2.'
+          }
+        },
+        '12... Qh5': {
+          badge: '!',
+          arrows: ['h5->h2:red', 'h2->g1:amber', 'g4->f2:red'],
+          targets: ['h2', 'g5'],
+          text: {
+            en: 'The queen joins the assault! Threatening `...Qh2#` forces White’s king onto `g2` to reinforce h2.',
+            pl: 'Hetman wkracza do szturmu! Groźba `...Hh2#` zmusza białego króla do wyjścia na `g2` dla obrony punktu h2.'
+          }
+        },
+        '13... Bg1': {
+          badge: '!!',
+          arrows: ['g1->f2:red', 'h5->h2:red'],
+          targets: ['g1', 'h2'],
+          text: {
+            en: 'Sacrifice #2! Clearing the h2 square with tempo (`14. Kxg1 Qh2#` is mate!), forcing `14. Nxg1 Qh2+ 15. Kf3` into the open.',
+            pl: 'Ofiara nr 2! Oczyszcza pole h2 z tempem (po `14. Kxg1` następuje `14... Hh2#`!), zmuszając białego króla do wyjścia na `f3`.'
+          }
+        },
+        '15... e5': {
+          badge: '!',
+          arrows: ['e5->d4:red', 'c8->g4:green'],
+          targets: ['e5', 'f4'],
+          text: {
+            en: 'Breaking open the center! Advancing e5 clears the c8–h3 diagonal for the dark-squared bishop to enter the king hunt.',
+            pl: 'Rozbicie centrum! Ruch e5 otwiera przekątną c8–h3 dla drugiego gońca, włączając ostatnie rezerwy do polowania na króla.'
+          }
+        },
+        '16... Ndxe5+': {
+          badge: '!!',
+          arrows: ['e5->f3:red', 'g4->e5:green'],
+          targets: ['e5', 'f3'],
+          text: {
+            en: 'Sacrifice #3! Two knights leap onto e5 in succession (`17. fxe5 Nxe5+`), yanking White’s king forward onto f4.',
+            pl: 'Ofiara nr 3! Dwa czarne skoczki po kolei poświęcają się na e5 (`17. fxe5 Sxe5+`), wyciągając białego króla w głąb pola walki na f4.'
+          }
+        },
+        '20... Bg4+': {
+          badge: '!!',
+          arrows: ['g4->f3:red', 'g6->e5:green'],
+          targets: ['g4', 'f3'],
+          text: {
+            en: 'Sacrifice #4! Black gives up his fourth and final minor piece (`21. Kxg4 Ne5+`) to lure the king onto the fatal g4 square.',
+            pl: 'Ofiara nr 4! Czarne oddają czwartą i ostatnią lekką figurę (`21. Kxg4 Se5+`), wciągając króla na zgubne pole g4.'
+          }
+        },
+        '22... h5#': {
+          badge: '🏆',
+          arrows: ['h5->g4:red', 'h2->g2:amber', 'h2->f4:amber'],
+          targets: ['g4', 'h5'],
+          text: {
+            en: 'Checkmate with a pawn! After sacrificing all four minor pieces, Najdorf crowns the "Polish Immortal" with `22... h5#`.',
+            pl: 'Mat pionem! Po poświęceniu wszystkich czterech lekkich figur Najdorf wieńczy "Polską Nieśmiertelną" ruchem `22... h5#`.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-20',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'medium',
+      themes: ['sacrifice', 'promotion', 'pin', 'kingHunt'],
+      players: {
+        en: 'Eduard Gufeld vs. Lubomir Kavalek (Mariánské Lázně, 1962)',
+        pl: 'Eduard Gufeld – Lubomir Kavalek (Mariańskie Łaźnie, 1962)'
+      },
+      title: {
+        en: 'Kavalek’s Pawn Avalanche: Double Exchange Sacrifice ("Kavalanche")',
+        pl: 'Lawina pionów Kavalka: Podwójna ofiara jakości w Mariańskich Łaźniach'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Lubomir Kavalek jams a wedge into e3 (`7... e3!`), sacrifices both exchanges (`23... Rxd2+!`, `27... Rxc5!`), and marches a terrifying central pawn phalanx alongside his king to crush Gufeld.',
+        pl: 'Widok z perspektywy czarnych! Lubomir Kavalek wbija klin na e3 (`7... e3!`), poświęca obie wieże za lekkie figury (`23... Wxd2+!`, `27... Wxc5!`) i prowadzi niszczycielską lawinę centralnych pionów wraz z królem.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'Bc5', 'c3', 'f5', 'd4', 'fxe4',
+        'Ng5', 'Bb6', 'd5', 'e3', 'Ne4', 'Qh4', 'Qf3', 'Nf6', 'Nxf6+', 'gxf6',
+        'dxc6', 'exf2+', 'Kd1', 'dxc6', 'Be2', 'Be6', 'Qh5+', 'Qxh5', 'Bxh5+', 'Ke7',
+        'b3', 'Bd5', 'Ba3+', 'Ke6', 'Bg4+', 'f5', 'Bh3', 'Rhg8', 'Nd2', 'Bxg2',
+        'Bxg2', 'Rxg2', 'Rf1', 'Rd8', 'Ke2', 'Rxd2+', 'Kxd2', 'e4', 'Bf8', 'f4',
+        'b4', 'Rg5', 'Bc5', 'Rxc5', 'bxc5', 'Bxc5', 'Rab1', 'f3', 'Rb4', 'Kf5',
+        'Rd4', 'Bxd4', 'cxd4', 'Kf4'
+      ],
+      annotations: {
+        '7... e3': {
+          badge: '⚔️',
+          arrows: ['e3->f2:red', 'd8->h4:green'],
+          targets: ['e3', 'f2'],
+          text: {
+            en: 'Dynamic pawn wedge! Instead of retreating the attacked knight, Kavalek drives a pawn to e3, targeting f2 with `8... Qh4`.',
+            pl: 'Dynamiczny klin pionowy! Zamiast cofać zaatakowanego skoczka, Kavalek pcha piona na e3, szykując atak na punkt f2 ruchem `8... Hh4`.'
+          }
+        },
+        '11... exf2+': {
+          badge: '!',
+          arrows: ['f2->e1:red', 'd7->c6:green'],
+          targets: ['f2', 'd1'],
+          text: {
+            en: 'Stripping castling rights! This intermediate check strands White’s king on d1 and locks the h1 rook out of play.',
+            pl: 'Pozbawienie prawa do roszady! Ten szach więzi białego króla na d1 i na długo wyłącza z gry wieżę h1.'
+          }
+        },
+        '16... Bd5': {
+          badge: '!',
+          arrows: ['d5->g2:red', 'd5->h1:amber', 'h8->g8:green'],
+          targets: ['g2', 'd5'],
+          text: {
+            en: 'Eyeing the kingside! Even with queens traded, Black’s bishop pair and mobile pawns target g2 while White’s pieces remain tangled.',
+            pl: 'Celownik na skrzydło królewskie! Nawet bez hetmanów para gońców czarnych i wolne piony biorą na cel punkt g2.'
+          }
+        },
+        '20... Bxg2': {
+          badge: '!!',
+          arrows: ['g2->h1:red', 'g8->g2:amber'],
+          targets: ['g2', 'h1'],
+          text: {
+            en: 'Breaking open the g-file! After `21. Bxg2 Rxg2`, Black’s rook dominates the 2nd rank alongside the menacing passed f2 pawn.',
+            pl: 'Otwarcie linii g! Po `21. Gxg2 Wxg2` czarna wieża opanowuje 2. linię we współpracy z groźnym wolnym pionem f2.'
+          }
+        },
+        '23... Rxd2+': {
+          badge: '!!',
+          arrows: ['d2->e2:red', 'e5->e4:green', 'f5->f4:green'],
+          targets: ['d2', 'e4', 'f4'],
+          text: {
+            en: 'First Exchange Sacrifice! Removing the d2 knight clears the runway for Black’s connected passed pawns (`e4`, `f4`) to storm down the board.',
+            pl: 'Pierwsza ofiara jakości! Usunięcie skoczka d2 otwiera autostradę dla fali powiązanych wolnych pionów (`e4`, `f4`).'
+          }
+        },
+        '27... Rxc5': {
+          badge: '!!',
+          arrows: ['c5->c3:amber', 'b6->c5:green', 'f4->f3:green'],
+          targets: ['c5', 'f3'],
+          text: {
+            en: 'Second Exchange Sacrifice! Returning a rook for a bishop leaves Black with an unstoppable phalanx of three connected pawns (`f2`, `f3`, `e4`).',
+            pl: 'Druga ofiara jakości! Oddanie wieży za gońca daje czarnym niepowstrzymaną falangę trzech powiązanych pionów (`f2`, `f3`, `e4`).'
+          }
+        },
+        '32... Kf4': {
+          badge: '🏆',
+          arrows: ['f4->e3:green', 'f3->f2:red', 'e4->e3:red'],
+          targets: ['f2', 'f4'],
+          text: {
+            en: 'After giving back his bishop on d4, Kavalek’s king marches up to support the unstoppable pawns (`...e3` / `...Kg3` promotes). Gufeld resigned!',
+            pl: 'Po oddaniu gońca na d4 król Kavalka osobiście wspiera marsz pionów ku promocji (`...e3` i `...Kg3`). Gufeld poddał partię!'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-21',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'fork', 'promotion', 'discovered'],
+      players: {
+        en: 'Max Euwe vs. Alexander Alekhine (Zandvoort, 1935)',
+        pl: 'Max Euwe – Aleksander Alechin (Zandvoort, 1935)'
+      },
+      title: {
+        en: 'The Pearl of Zandvoort: Euwe’s Piece Sacrifice & Central Avalanche',
+        pl: 'Perła z Zandvoort: Ofiara figury Euwego i centralna lawina'
+      },
+      overview: {
+        en: 'Game 26 of the 1935 World Championship match! Max Euwe sacrifices a knight on f5 (`21. Nxf5!!`) for three central pawns, driving an unstoppable pawn wedge up the board before sealing victory with a knight fork (`47. Ne4+`).',
+        pl: '26. partia meczu o mistrzostwo świata w 1935 roku! Max Euwe poświęca skoczka na f5 (`21. Sxf5!!`) za trzy piony, tworząc miażdżącą centralną falangę i kończąc pojedynek widłami `47. Se4+`.'
+      },
+      moves: [
+        'd4', 'e6', 'c4', 'f5', 'g3', 'Bb4+', 'Bd2', 'Be7', 'Bg2', 'Nf6',
+        'Nc3', 'O-O', 'Nf3', 'Ne4', 'O-O', 'b6', 'Qc2', 'Bb7', 'Ne5', 'Nxc3',
+        'Bxc3', 'Bxg2', 'Kxg2', 'Qc8', 'd5', 'd6', 'Nd3', 'e5', 'Kh1', 'c6',
+        'Qb3', 'Kh8', 'f4', 'e4', 'Nb4', 'c5', 'Nc2', 'Nd7', 'Ne3', 'Bf6',
+        'Nxf5', 'Bxc3', 'Nxd6', 'Qb8', 'Nxe4', 'Bf6', 'Nd2', 'g5', 'e4', 'gxf4',
+        'gxf4', 'Bd4', 'e5', 'Qe8', 'e6', 'Rg8', 'Nf3', 'Qg6', 'Rg1', 'Bxg1',
+        'Rxg1', 'Qf6', 'Ng5', 'Rg7', 'exd7', 'Rxd7', 'Qe3', 'Re7', 'Ne6', 'Rf8',
+        'Qe5', 'Qxe5', 'fxe5', 'Rf5', 'Re1', 'h6', 'Nd8', 'Rf2', 'e6', 'Rd2',
+        'Nc6', 'Re8', 'e7', 'b5', 'Nd8', 'Kg7', 'Nb7', 'Kf6', 'Re6+', 'Kg5',
+        'Nd6', 'Rxe7', 'Ne4+'
+      ],
+      annotations: {
+        '21. Nxf5': {
+          badge: '!!',
+          arrows: ['f5->g7:red', 'f5->d6:red', 'f6->c3:blue'],
+          targets: ['f5', 'd6', 'c3'],
+          text: {
+            en: 'The Pearl of Zandvoort! Euwe sacrifices a full piece (`21... Bxc3 22. Nxd6 Qb8 23. Nxe4`) to collect three pawns and create a mobile central mass.',
+            pl: 'Perła z Zandvoort! Euwe poświęca figurę (`21... Gxc3 22. Sxd6 Hb8 23. Sxe4`), aby zdobyć trzy piony i uruchomić potężne centrum.'
+          }
+        },
+        '25. e4': {
+          badge: '!',
+          arrows: ['e4->e5:green', 'd5->d6:green', 'f4->f5:green'],
+          targets: ['e4', 'e5'],
+          text: {
+            en: 'Building the pawn roller! After `25... gxf4 26. gxf4`, White’s connected d-, e-, and f-pawns are ready to march down the board.',
+            pl: 'Budowa centralnego walca! Po `25... gxf4 26. gxf4` połączone białe piony d, e i f są gotowe do decydującego marszu.'
+          }
+        },
+        '28. e6': {
+          badge: '!',
+          arrows: ['e6->d7:red', 'e6->e7:green'],
+          targets: ['e6', 'd7'],
+          text: {
+            en: 'Driving a passed pawn onto the 6th rank! It hits the d7 knight and cramps Black’s pieces while White switches focus to the g-file.',
+            pl: 'Wbicie wolnego piona na 6. linię! Atakuje skoczka d7 i paraliżuje obronę, podczas gdy białe przenoszą ciężar gry na linię g.'
+          }
+        },
+        '30. Rg1': {
+          badge: '!',
+          arrows: ['g1->g6:red', 'g1->g8:amber', 'f3->g5:green'],
+          targets: ['g6', 'g8'],
+          text: {
+            en: 'Seizing the open g-file! Trading on g1 (`30... Bxg1 31. Rxg1`) lets White’s knight invade g5 and e6 with devastating effect.',
+            pl: 'Opanowanie otwartej linii g! Wymiana na g1 (`30... Gxg1 31. Wxg1`) pozwala skoczkowi wedrzeć się na g5 oraz e6.'
+          }
+        },
+        '33. exd7': {
+          badge: '!',
+          arrows: ['d7->e8:red', 'e3->e6:green'],
+          targets: ['d7', 'e6'],
+          text: {
+            en: 'Winning back the sacrificed piece! Euwe restores material equality while retaining two powerful passed pawns and a monster knight on e6.',
+            pl: 'Odzyskanie poświęconej figury! Euwe wyrównuje materiał, zachowując dwa groźne wolne piony i dominującego skoczka na e6.'
+          }
+        },
+        '41. Nc6': {
+          badge: '!',
+          arrows: ['c6->e7:red', 'e6->e7:green', 'e1->e7:amber'],
+          targets: ['e7', 'd8'],
+          text: {
+            en: 'Precision knight coordination! Attacking e7 forces Black’s rook back (`41... Re8`), allowing `42. e7` right to the doorstep of promotion.',
+            pl: 'Precyzyjna współpraca skoczka z pionem! Atak na e7 zmusza wieżę do odwrotu (`41... We8`), dzięki czemu pion wchodzi na `42. e7`.'
+          }
+        },
+        '47. Ne4+': {
+          badge: '🏆',
+          arrows: ['e4->g5:red', 'e4->d2:red', 'e7->e8:green'],
+          targets: ['g5', 'd2'],
+          text: {
+            en: 'Royal Knight Fork! Forking Alekhine’s king on g5 and rook on d2 wins a full rook and clinches one of Euwe’s greatest championship wins.',
+            pl: 'Królewskie widełki! Jednoczesny atak na króla na g5 i wieżę na d2 zdobywa całą wieżę i zapewnia Euwemu jedno z najsłynniejszych zwycięstw.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-22',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'kingHunt', 'attraction', 'pin'],
+      players: {
+        en: 'Yuri Averbakh vs. Alexander Kotov (Zurich, 1953)',
+        pl: 'Jurij Awerbach – Aleksander Kotow (Zurych, 1953)'
+      },
+      title: {
+        en: 'Kotov’s Masterpiece: 30... Qxh3+!! & 20-Move King Hunt',
+        pl: 'Arcydzieło Kotowa: Ofiara hetmana 30... Hxh3+!! i 20-ruchowe polowanie'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Winner of the Zurich 1953 Brilliancy Prize: Alexander Kotov sacrifices his queen on h3 (`30... Qxh3+!!`) for a single pawn, dragging White’s king across the board in a relentless rook-and-minor-piece hunt.',
+        pl: 'Widok z perspektywy czarnych! Nagroda za najpiękniejszą partię turnieju w Zurychu 1953: Aleksander Kotow poświęca hetmana na h3 (`30... Hxh3+!!`) za jednego piona, goniąc białego króla po całej szachownicy.'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'd6', 'Nf3', 'Nbd7', 'Nc3', 'e5', 'e4', 'Be7',
+        'Be2', 'O-O', 'O-O', 'c6', 'Qc2', 'Re8', 'Rd1', 'Bf8', 'Rb1', 'a5',
+        'd5', 'Nc5', 'Be3', 'Qc7', 'h3', 'Bd7', 'Rbc1', 'g6', 'Nd2', 'Rab8',
+        'Nb3', 'Nxb3', 'Qxb3', 'c5', 'Kh2', 'Kh8', 'Qc2', 'Ng8', 'Bg4', 'Nh6',
+        'Bxd7', 'Qxd7', 'Qd2', 'Ng8', 'g4', 'f5', 'f3', 'Be7', 'Rg1', 'Rf8',
+        'Rcf1', 'Rf7', 'gxf5', 'gxf5', 'Rg2', 'f4', 'Bf2', 'Rf6', 'Ne2', 'Qxh3+',
+        'Kxh3', 'Rh6+', 'Kg4', 'Nf6+', 'Kf5', 'Nd7', 'Rg5', 'Rf8+', 'Kg4', 'Nf6+',
+        'Kf5', 'Ng8+', 'Kg4', 'Nf6+', 'Kf5', 'Nxd5+', 'Kg4', 'Nf6+', 'Kf5', 'Ng8+',
+        'Kg4', 'Nf6+', 'Kf5', 'Ng8+', 'Kg4', 'Bxg5', 'Kxg5', 'Rf7', 'Bh4', 'Rg6+',
+        'Kh5', 'Rfg7', 'Bg5', 'Rxg5+', 'Kh4', 'Nf6', 'Ng3', 'Rxg3', 'Qxd6', 'R3g6',
+        'Qb8+', 'Rg8'
+      ],
+      annotations: {
+        '28... f4': {
+          badge: '⚔️',
+          arrows: ['f4->e3:red', 'f7->f6:green'],
+          targets: ['e3', 'h3'],
+          text: {
+            en: 'Locking the kingside! Black drives White’s bishop back to f2 and prepares the decisive rook swing `29... Rf6` aimed at h6.',
+            pl: 'Zablokowanie skrzydła królewskiego! Czarne spychają gońca na f2 i przygotowują decydujący przerzut wieży `29... Wf6` na h6.'
+          }
+        },
+        '30... Qxh3+': {
+          badge: '!!',
+          arrows: ['h3->h2:red', 'f6->h6:green', 'g8->f6:green'],
+          targets: ['h3', 'h2'],
+          text: {
+            en: 'The Intuitive Queen Sacrifice! Giving up the queen for one pawn strips White’s fortress (`31. Kxh3 Rh6+ 32. Kg4 Nf6+ 33. Kf5`).',
+            pl: 'Intuicyjna ofiara hetmana! Oddanie hetmana za zaledwie jednego piona burzy twierdzę białych (`31. Kxh3 Wh6+ 32. Kg4 Sf6+ 33. Kf5`).'
+          }
+        },
+        '33... Nd7': {
+          badge: '!!',
+          arrows: ['b8->f8:green', 'd7->f6:green', 'h6->h5:red'],
+          targets: ['f5', 'f8'],
+          text: {
+            en: 'Quiet killer move! Black clears the f-file for `34... Rf8+`, forcing White to block his own king’s flight with `34. Rg5`.',
+            pl: 'Cichy zabójczy ruch! Czarne otwierają linię f pod `34... Wf8+`, zmuszając białe do zastawienia drogi odwrotu ruchem `34. Wg5`.'
+          }
+        },
+        '38... Nxd5+': {
+          badge: '!',
+          arrows: ['d5->f5:amber', 'h6->f6:red'],
+          targets: ['d5', 'f5'],
+          text: {
+            en: 'Winning material with discovered check! Repeating moves to pass the time control while keeping White’s king caged on f5 and g4.',
+            pl: 'Zdobycie piona z szachem z odsłonięcia! Powtórzenie posunięć przed kontrolą czasu utrzymuje białego króla w śmiertelnej klatce na f5 i g4.'
+          }
+        },
+        '43... Bxg5': {
+          badge: '!',
+          arrows: ['g5->f4:amber', 'f8->f7:green', 'h6->g6:green'],
+          targets: ['g5', 'g4'],
+          text: {
+            en: 'Collecting the pinned rook! After `44. Kxg5 Rf7`, Black doubles rooks on the g-file (`...Rg6+`, `...Rfg7`) with lethal mating threats.',
+            pl: 'Zbicie związanej wieży! Po `44. Kxg5 Wf7` czarne zdwajają wieże na linii g (`...Wg6+`, `...Wfg7`), tworząc nieuchronne groźby matowe.'
+          }
+        },
+        '47... Rxg5+': {
+          badge: '!',
+          arrows: ['g5->h5:red', 'g8->f6:green'],
+          targets: ['g5', 'h5'],
+          text: {
+            en: 'Removing the final defender! Returning the exchange drags the king to h4, where `48... Nf6` and `49... Rxg3` seal the mating net.',
+            pl: 'Usunięcie ostatniego obrońcy! Oddanie jakości spycha króla na h4, gdzie `48... Sf6` oraz `49... Wxg3` zamykają klatkę.'
+          }
+        },
+        '51... Rg8': {
+          badge: '🏆',
+          arrows: ['g8->b8:red', 'g6->g4:red', 'f6->g4:red'],
+          targets: ['b8', 'h4'],
+          text: {
+            en: 'Blocking the desperate queen check cleanly! White has no defense left against Black’s mating threats on h4/g4 and resigned.',
+            pl: 'Spokojne zasłonięcie się od ostatniego szacha! Białe nie mają już żadnej obrony przed matem na h4 lub g4 i poddały partię.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-23',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['sacrifice', 'fork', 'pin', 'kingHunt'],
+      players: {
+        en: 'Amédée Gibaud vs. Frédéric Lazard (Paris, 1924)',
+        pl: 'Amédée Gibaud – Frédéric Lazard (Paryż, 1924)'
+      },
+      title: {
+        en: 'Lazard’s 4-Move Miniature: The 4... Ne3!! Queen Trap',
+        pl: '4-ruchowa miniatura Lazarda: Pułapka na hetmana 4... Se3!!'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Widely celebrated as the shortest decisive master game ever recorded: after `1. d4 Nf6 2. Nd2 e5 3. dxe5 Ng4 4. h3?`, Frédéric Lazard lands `4... Ne3!!`—trapping the queen or forcing instant checkmate.',
+        pl: 'Widok z perspektywy czarnych! Najsłynniejsza 4-posunięciowa miniatura mistrzowska: po `1. d4 Sf6 2. Sd2 e5 3. dxe5 Sg4 4. h3?`, Frédéric Lazard gra `4... Se3!!` — białe tracą hetmana lub dostają mata.'
+      },
+      moves: [
+        'd4', 'Nf6', 'Nd2', 'e5', 'dxe5', 'Ng4', 'h3', 'Ne3'
+      ],
+      annotations: {
+        '2. Nd2': {
+          badge: '📖',
+          arrows: ['d2->e4:blue', 'e7->e5:red'],
+          targets: ['e5', 'd4'],
+          text: {
+            en: 'An awkward move order! `2. Nd2` blocks White’s queen and dark-squared bishop, leaving the e3 and f2 squares dangerously weak.',
+            pl: 'Niezręczna kolejność ruchów! `2. Sd2` blokuje własnego hetmana i gońca c1, niebezpiecznie osłabiając pola e3 oraz f2.'
+          }
+        },
+        '2... e5': {
+          badge: '⚔️',
+          arrows: ['e5->d4:red', 'f8->c5:green'],
+          targets: ['d4', 'e5'],
+          text: {
+            en: 'The Lazard Gambit! Black immediately challenges the center, tempting White to open the diagonal toward the king.',
+            pl: 'Gambit Lazarda! Czarne natychmiast uderzają w centrum, prowokując otwarcie przekątnych w stronę białego króla.'
+          }
+        },
+        '3... Ng4': {
+          badge: '!',
+          arrows: ['g4->e5:red', 'g4->f2:red', 'g4->e3:green'],
+          targets: ['e5', 'e3'],
+          text: {
+            en: 'Provoking a fatal reflex! The knight attacks e5 while quietly eyeing the defenseless e3 outpost.',
+            pl: 'Zastawienie pułapki! Skoczek atakuje piona e5, jednocześnie czyhając na bezbronne pole e3.'
+          }
+        },
+        '4. h3': {
+          badge: '??',
+          arrows: ['h3->g4:blue', 'g4->e3:red', 'd8->h4:red'],
+          targets: ['g4', 'e3'],
+          text: {
+            en: 'A 4-move blunder! Assuming the knight must retreat, White actually pushes it straight onto the lethal e3 square (`4. Ngf3` was needed).',
+            pl: 'Błąd w 4. ruchu! Białe chcą przegonić skoczka, ale w rzeczywistości wpychają go prosto na pole e3 (konieczne było `4. Sgf3`).'
+          }
+        },
+        '4... Ne3': {
+          badge: '🏆',
+          arrows: ['e3->d1:red', 'e3->f1:red', 'd8->h4:amber'],
+          targets: ['e3', 'd1', 'h4'],
+          text: {
+            en: 'Masterpiece in 4 moves! The knight traps the queen on d1 because capturing (`5. fxe3`) allows `5... Qh4+ 6. g3 Qxg3#`! White resigned on the spot.',
+            pl: 'Nokaut w 4 ruchach! Skoczek łapie hetmana d1, bo bicie `5. fxe3` prowadzi do `5... Hh4+ 6. g3 Hxg3#`! Białe poddały partię natychmiast.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-24',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['smothered', 'pin', 'sacrifice'],
+      players: {
+        en: 'Leo Godai vs. Georg Kieninger (Vienna, 1925)',
+        pl: 'Leo Godai – Georg Kieninger (Wiedeń, 1925)'
+      },
+      title: {
+        en: 'Budapest Gambit: The Kieninger Smothered Trap (8... Nd3#)',
+        pl: 'Gambit Budapeszteński: Pułapka Kieningera w 8 ruchach (8... Sd3#)'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! One of the cleanest 8-move traps in opening theory: Georg Kieninger aligns his queen on e7 along the e-file (`6... Qe7!`), leaves his b4 bishop as bait, and delivers a stunning pinned smothered mate (`8... Nd3#`).',
+        pl: 'Widok z perspektywy czarnych! Jedna z najczystszych pułapek debiutowych w historii: Georg Kieninger ustawia hetmana na linii e (`6... He7!`), wystawia gońca b4 na przynętę i daje mata ze związaniem (`8... Sd3#`).'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'e5', 'dxe5', 'Ng4', 'Bf4', 'Nc6', 'Nf3', 'Bb4+',
+        'Nbd2', 'Qe7', 'a3', 'Ngxe5', 'axb4', 'Nd3#'
+      ],
+      annotations: {
+        '2... e5': {
+          badge: '📖',
+          arrows: ['e5->d4:red', 'f6->g4:green'],
+          targets: ['d4', 'e5'],
+          text: {
+            en: 'The Budapest Gambit! Black sacrifices a pawn to seize quick development and dark-square tactical chances.',
+            pl: 'Gambit Budapeszteński! Czarne poświęcają piona w zamian za błyskawiczny rozwój figur i grę po czarnych polach.'
+          }
+        },
+        '5... Bb4+': {
+          badge: '⚔️',
+          arrows: ['b4->e1:red', 'd8->e7:green'],
+          targets: ['e1', 'd2'],
+          text: {
+            en: 'Developing check forces `6. Nbd2`, blocking White’s queen from defending d3 and setting up an X-ray along the e-file.',
+            pl: 'Rozwijający szach wymusza `6. Sbd2`, co zasłania białemu hetmanowi obronę pola d3 i przygotowuje rentgen po linii e.'
+          }
+        },
+        '6... Qe7': {
+          badge: '🎯',
+          arrows: ['e7->e5:red', 'e7->e1:amber'],
+          targets: ['e5', 'e2'],
+          text: {
+            en: 'Setting the Kieninger Trap! Piling a third attacker onto e5 while secretly pinning the e2 pawn against White’s king on e1.',
+            pl: 'Zastawienie Pułapki Kieningera! Trzeci atak na e5 i ciche związanie piona e2 z białym królem stojącym na e1.'
+          }
+        },
+        '7... Ngxe5': {
+          badge: '!!',
+          arrows: ['e5->d3:red', 'e7->e1:amber', 'a3->b4:blue'],
+          targets: ['d3', 'b4'],
+          text: {
+            en: 'Ignoring `7. a3`! Black leaves the b4 bishop en prise—White had to trade knights on e5 (`8. Nxe5`), as taking the bishop is fatal.',
+            pl: 'Zignorowanie ruchu `7. a3`! Czarne zostawiają gońca b4 pod biciem — białe musiały wymienić na e5 (`8. Sxe5`), bo zbicie gońca przegrywa.'
+          }
+        },
+        '8. axb4': {
+          badge: '??',
+          arrows: ['a3->b4:blue', 'e5->d3:red', 'e7->e2:amber'],
+          targets: ['b4', 'd3', 'e2'],
+          text: {
+            en: 'Springing the trap! White greedily captures the bishop, completely overlooking the absolute pin along the e-file.',
+            pl: 'Wpadnięcie w pułapkę! Białe łakomie biją gońca, zupełnie zapominając o bezwzględnym związaniu na linii e.'
+          }
+        },
+        '8... Nd3#': {
+          badge: '🏆',
+          arrows: ['d3->e1:red', 'e7->e2:amber', 'e2->e1:amber'],
+          targets: ['e1', 'e2', 'd3'],
+          text: {
+            en: 'Smothered Pin Mate! The e2 pawn cannot capture the d3 knight because it is pinned to White’s king by Black’s queen on e7!',
+            pl: 'Mat zaduszony ze związaniem! Pion e2 nie może zbić skoczka na d3, ponieważ jest bezwzględnie związany z królem przez czarnego hetmana z e7!'
+          }
+        }
+      }
+    },
+    // === FAST OPENING TRAPS & MINIATURES (ba-25..ba-32: 4 Easy, 4 Medium) ===
+    {
+      id: 'ba-25',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['sacrifice', 'discovered', 'attraction', 'deflection'],
+      players: {
+        en: 'Budapest Gambit: Fajarowicz Trap (After Wiesbaden, 1928)',
+        pl: 'Gambit Budapeszteński: Pułapka Fajarowicza (po Wiesbaden, 1928)'
+      },
+      title: {
+        en: 'Fajarowicz Gambit Trap: Winning the Queen in 8 Moves',
+        pl: 'Pułapka w Gambicie Fajarowicza: Zdobycie hetmana w 8 ruchach'
+      },
+      overview: {
+        en: 'Sammi Fajarowicz debuted 3... Ne4 at Wiesbaden in 1928, trading a pawn for lightning piece activity. Watch how a routine fianchetto (6. g3??) collapses to the explosive 6... Nxf2! and 7... Bxg3+! discovered attack against the d1 queen.',
+        pl: 'Sammi Fajarowicz wprowadził ruch 3... Se4 w Wiesbaden w 1928 roku, oddając piona za błyskawiczny rozwój figur. Zobacz, jak rutynowe fianchetto (6. g3??) rozpada się po ofierze 6... Sxf2! i ataku z odsłonięcia 7... Gxg3+! na hetmana d1.'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'e5', 'dxe5', 'Ne4', 'Nf3', 'd6', 'exd6', 'Bxd6',
+        'g3', 'Nxf2', 'Kxf2', 'Bxg3+', 'Kxg3', 'Qxd1'
+      ],
+      annotations: {
+        '3... Ne4': {
+          badge: '📖',
+          arrows: ['e4->f2:red', 'e4->c3:amber'],
+          targets: ['e4', 'f2'],
+          text: {
+            en: 'The Fajarowicz Variation! Instead of chasing the e5 pawn with 3... Ng4, Black leaps into the center to restrict White and eye f2.',
+            pl: 'Wariant Fajarowicza! Zamiast odbijać piona e5 ruchem 3... Sg4, czarne wskakują skoczkiem do centrum i biorą na celownik punkt f2.'
+          }
+        },
+        '5... Bxd6': {
+          badge: '🎯',
+          arrows: ['d6->h2:red', 'd8->d1:amber'],
+          targets: ['h2', 'd6'],
+          text: {
+            en: 'Rapid development! Black sacrifices a second pawn so the dark-squared bishop aims at h2 and the d-file opens behind it.',
+            pl: 'Błyskawiczny rozwój! Czarne oddają drugiego piona, aby czarnopolowy goniec celował w h2, a za nim otworzyła się linia d.'
+          }
+        },
+        '6. g3': {
+          badge: '??',
+          arrows: ['e4->f2:red', 'd6->g3:red', 'd8->d1:amber'],
+          targets: ['f2', 'g3', 'd1'],
+          text: {
+            en: 'Fatal blunder! Playing 6. g3 to blunt the d6 bishop leaves f2 and g3 fatally vulnerable (6. Nbd2 or 6. e3 was needed).',
+            pl: 'Krytyczny błąd! Ruch 6. g3 miał zasłonić przekątną gońca d6, ale fatalnie osłabia pola f2 i g3 (należało grać 6. Sbd2 lub 6. e3).'
+          }
+        },
+        '6... Nxf2': {
+          badge: '!!',
+          arrows: ['f2->d1:red', 'f2->h1:red', 'd6->g3:amber'],
+          targets: ['f2', 'd1', 'h1'],
+          text: {
+            en: 'Knight sacrifice! Forking queen and rook forces White’s king onto f2, lining up a deadly discovered attack along the d-file.',
+            pl: 'Ofiara skoczka! Widełki na hetmana d1 i wieżę h1 zmuszają białego króla do bicia na f2 i wejścia pod linię ataku.'
+          }
+        },
+        '7... Bxg3+': {
+          badge: '!!',
+          arrows: ['g3->f2:red', 'd8->d1:red'],
+          targets: ['f2', 'g3', 'd1'],
+          text: {
+            en: 'Discovered attack and attraction! Checking on g3 uncovers the black queen’s gaze down the d-file while dragging the king away from d1.',
+            pl: 'Atak z odsłonięcia i odciągnięcie! Szach gońcem na g3 otwiera drogę czarnemu hetmanowi po linii d i zmusza króla do opuszczenia obrony d1.'
+          }
+        },
+        '8... Qxd1': {
+          badge: '🏆',
+          arrows: ['d1->c1:red', 'd1->f1:amber', 'd1->h1:amber'],
+          targets: ['d1', 'c1', 'f1'],
+          text: {
+            en: 'White’s queen falls cleanly! Black emerges a full queen up for a bishop and knight with a completely winning position.',
+            pl: 'Biały hetman pada łupem! Czarne zdobywają hetmana za skoczka i gońca, uzyskując całkowicie wygraną pozycję.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-26',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['pin', 'deflection', 'sacrifice', 'zwischenzug'],
+      players: {
+        en: 'Carl Mayet vs. Daniel Harrwitz (Berlin, 1848)',
+        pl: 'Carl Mayet – Daniel Harrwitz (Berlin, 1848)'
+      },
+      title: {
+        en: 'The Elephant Trap: Breaking the Pin on f6',
+        pl: 'Pułapka Słonia: Złamanie związania na f6'
+      },
+      overview: {
+        en: 'The earliest recorded master example of the famous Queen’s Gambit Declined Elephant Trap. Watch how Harrwitz lures White into capturing the "poisoned" d5 pawn against a relative pin, then wins a piece with 6... Nxd5! and 7... Bb4+!',
+        pl: 'Najstarszy zapisany mistrzowski przykład słynnej „Pułapki Słonia” w Gambicie Hetmańskim. Zobacz, jak Harrwitz wykorzystuje pozorne związanie na f6 i po 6... Sxd5! oraz wtrąconym szachu 7... Gb4+! zdobywa całą figurę.'
+      },
+      moves: [
+        'd4', 'd5', 'c4', 'e6', 'Nc3', 'Nf6', 'Bg5', 'Nbd7', 'cxd5', 'exd5',
+        'Nxd5', 'Nxd5', 'Bxd8', 'Bb4+', 'Qd2', 'Kxd8'
+      ],
+      annotations: {
+        '4. Bg5': {
+          badge: '📖',
+          arrows: ['g5->f6:amber', 'f6->d8:amber'],
+          targets: ['f6', 'd8'],
+          text: {
+            en: 'White pins the f6 knight to the black queen on d8, putting apparent pressure on the d5 center.',
+            pl: 'Białe wiążą skoczka f6 na tle czarnego hetmana na d8, wywierając pozorny nacisk na centralne pole d5.'
+          }
+        },
+        '4... Nbd7': {
+          badge: '🎯',
+          arrows: ['d7->f6:green', 'f8->b4:blue'],
+          targets: ['d5', 'f6'],
+          text: {
+            en: 'A deceptive setup! Black bolsters f6 and quietly prepares the classic Elephant Trap if White gets greedy on d5.',
+            pl: 'Przebiegłe przygotowanie! Czarne wzmacniają skoczka f6 i zastawiają klasyczną Pułapkę Słonia, jeśli białe połakomią się na piona d5.'
+          }
+        },
+        '6. Nxd5': {
+          badge: '??',
+          arrows: ['d5->f6:red', 'g5->d8:amber', 'f6->d5:red'],
+          targets: ['d5', 'f6'],
+          text: {
+            en: 'Walking straight into the trap! White thinks the f6 knight is paralyzed by the pin — overlooking that Black’s queen sacrifice has a tactical sting.',
+            pl: 'Prosto w pułapkę! Białe sądzą, że skoczek f6 jest sparaliżowany związaniem — przeoczając taktyczny kontratak po oddaniu hetmana.'
+          }
+        },
+        '6... Nxd5': {
+          badge: '!!',
+          arrows: ['g5->d8:red', 'f8->b4:amber', 'd5->b4:green'],
+          targets: ['d5', 'd8'],
+          text: {
+            en: 'Breaking the relative pin! Harrwitz leaves the d8 queen en prise because White’s king has no flight square once the dark-squared bishop enters b4.',
+            pl: 'Złamanie względnego związania! Harrwitz oddaje hetmana d8 pod bicie, ponieważ biały król nie ma żadnego pola ucieczki przed szachem z b4.'
+          }
+        },
+        '7... Bb4+': {
+          badge: '!',
+          arrows: ['b4->e1:red', 'd1->d2:blue'],
+          targets: ['e1', 'd2'],
+          text: {
+            en: 'The devastating intermediate check! With White’s e2 pawn and c1/d1 pieces blocking flight, White must interpose the queen on d2.',
+            pl: 'Zabójczy szach! Biały król jest zablokowany przez własne figury, więc jedyną obroną przed matem jest zasłonięcie się hetmanem na d2.'
+          }
+        },
+        '8... Kxd8': {
+          badge: '🏆',
+          arrows: ['b4->e1:amber', 'b4->d2:red', 'd5->b4:green'],
+          targets: ['d8', 'd2', 'b4'],
+          text: {
+            en: 'White resigned! The d2 queen is pinned to e1 and b4 is guarded by the d5 knight (9. Qc3 fails to 9... Nxc3), leaving Black a clean piece ahead.',
+            pl: 'Białe poddały partię! Hetman na d2 jest związany z królem e1, a gońca b4 broni skoczek d5 (9. Hc3 przegrywa po 9... Sxc3), więc czarne zostają z czystą figurą przewagi.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-27',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['sacrifice', 'pin', 'attraction'],
+      players: {
+        en: 'Stafford Gambit Trap (After Lowens vs. Stafford, 1950)',
+        pl: 'Pułapka Gambitu Stafforda (wg Lowens – Stafford, 1950)'
+      },
+      title: {
+        en: 'Stafford Gambit: The Queen Sacrifice & Bishop Checkmate',
+        pl: 'Gambit Stafforda: Ofiara hetmana i mat dwoma gońcami'
+      },
+      overview: {
+        en: 'Popularized by Joseph Stafford in 1950, this hyper-sharp Petrov sideline trades a pawn for explosive diagonals. When White tries to pin the f6 knight with 6. Bg5??, Black unleashes 6... Nxe4!! — giving up the queen for a forced mate in 2!',
+        pl: 'Rozsławiony przez Josepha Stafforda w 1950 roku ostry wariant Obrony Petroffa poświęca piona za otwarte przekątne. Gdy białe próbują związać skoczka ruchem 6. Gg5??, czarne uderzają 6... Sxe4!! — oddając hetmana pod forsownego mata w 2 ruchach!'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nf6', 'Nxe5', 'Nc6', 'Nxc6', 'dxc6', 'd3', 'Bc5',
+        'Bg5', 'Nxe4', 'Bxd8', 'Bxf2+', 'Ke2', 'Bg4#'
+      ],
+      annotations: {
+        '3... Nc6': {
+          badge: '📖',
+          arrows: ['c6->e5:red', 'f8->c5:blue'],
+          targets: ['e5'],
+          text: {
+            en: 'The Stafford Gambit! Rather than immediately regaining the pawn with 3... d6, Black develops with tempo to open lines for both bishops.',
+            pl: 'Gambit Stafforda! Zamiast od razu odzyskiwać piona ruchem 3... d6, czarne poświęcają go, aby błyskawicznie otworzyć przekątne dla obu gońców.'
+          }
+        },
+        '5... Bc5': {
+          badge: '🎯',
+          arrows: ['c5->f2:red', 'f6->g4:green'],
+          targets: ['f2'],
+          text: {
+            en: 'Taking aim at f2! With the d-file open for Black’s queen and c8 bishop, f2 is already under dangerous pressure.',
+            pl: 'Celownik na punkt f2! Przy otwartej linii d dla hetmana i gońca c8 słaby punkt f2 znajduje się pod silnym ogniem.'
+          }
+        },
+        '6. Bg5': {
+          badge: '??',
+          arrows: ['g5->f6:amber', 'f6->d8:amber', 'c5->f2:red'],
+          targets: ['f6', 'd8'],
+          text: {
+            en: 'A fatal blunder! White assumes the pin against d8 immobilizes the f6 knight, overlooking that f2 is completely undefended.',
+            pl: 'Fatalny błąd! Białe sądzą, że związanie na tle hetmana d8 unieruchamia skoczka f6, zapominając o całkowicie niebronionym polu f2.'
+          }
+        },
+        '6... Nxe4': {
+          badge: '!!',
+          arrows: ['e4->g5:red', 'e4->f2:red', 'c5->f2:amber'],
+          targets: ['f2', 'd8'],
+          text: {
+            en: 'Brilliant queen sacrifice! Black breaks the relative pin and ignores the d8 queen. If White declines with 7. dxe4, 7... Qxg5 wins cleanly.',
+            pl: 'Genialna ofiara hetmana! Czarne zrywają związanie i ignorują groźbę bicia na d8. Po 7. dxe4 następuje 7... Hxg5 z wygraną figurą.'
+          }
+        },
+        '7... Bxf2+': {
+          badge: '!',
+          arrows: ['f2->e1:red', 'e4->d2:amber', 'c8->g4:green'],
+          targets: ['e1', 'e2'],
+          text: {
+            en: 'Snapping shut the trap! The bishop check forces White’s king onto the exposed e2 square, cutting off every retreat.',
+            pl: 'Zatrzaśnięcie pułapki! Szach gońcem na f2 zmusza białego króla do wyjścia na odkryte pole e2, skąd nie ma odwrotu.'
+          }
+        },
+        '8... Bg4#': {
+          badge: '🏆',
+          arrows: ['g4->e2:red', 'f2->e1:amber', 'e4->d2:amber'],
+          targets: ['e2', 'g4'],
+          text: {
+            en: 'Checkmate! White’s own d1 queen and f1 bishop box in the king while two black bishops and the e4 knight control every escape square.',
+            pl: 'Mat! Dwa gońce i skoczek e4 odcinają wszystkie pola ucieczki białemu królowi na e2, podczas gdy własne figury blokują go na d1 i f1.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-28',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'clearance', 'pin', 'kingHunt'],
+      players: {
+        en: 'Alexander Halprin vs. Harry Nelson Pillsbury (Munich, 1900)',
+        pl: 'Alexander Halprin – Harry Nelson Pillsbury (Monachium, 1900)'
+      },
+      title: {
+        en: 'Berlin Counterblast: Halprin’s Brilliant Double-Rook Attack',
+        pl: 'Błyskotliwa kombinacja w Monachium: Ofiara wieży 17. Wa3!'
+      },
+      overview: {
+        en: 'A wild tactical battle from the 1900 Munich Congress in the Ruy Lopez Berlin Defense. Facing the great Harry Nelson Pillsbury, Alexander Halprin sacrifices a knight (15. Nd5!), lifts his rook via 17. Ra3!, and sacrifices an exchange and bishop (20. Bh6! 21. Bxg7!) to force a brilliant perpetual-check draw.',
+        pl: 'Niezwykła bitwa taktyczna z turnieju w Monachium (1900) w wariancie berlińskim Partii Hiszpańskiej. Alexander Halprin poświęca skoczka (15. Sd5!), przerzuca wieżę przez trzecią linię (17. Wa3!) i oddaje gońca (20. Gh6! 21. Gxg7!), zmuszając wielkiego Pillsbury’ego do remisu przez wieczny szach.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'Nf6', 'O-O', 'Nxe4', 'd4', 'Nd6',
+        'dxe5', 'Nxb5', 'a4', 'd6', 'e6', 'fxe6', 'axb5', 'Ne7', 'Nc3', 'Ng6',
+        'Ng5', 'Be7', 'Qh5', 'Bxg5', 'Bxg5', 'Qd7', 'b6', 'cxb6', 'Nd5', 'exd5',
+        'Rfe1+', 'Kf8', 'Ra3', 'Ne5', 'Rxe5', 'dxe5', 'Rf3+', 'Kg8', 'Bh6', 'Qe7',
+        'Bxg7', 'Kxg7', 'Rg3+', 'Kf8', 'Rf3+', 'Kg7', 'Rg3+', 'Kf8'
+      ],
+      annotations: {
+        '8. e6': {
+          badge: '⚔️',
+          arrows: ['e6->f7:red', 'a4->b5:green'],
+          targets: ['e6', 'f7'],
+          text: {
+            en: 'Prying open the e-file! Before recapturing the b5 knight, White thrusts 8. e6 to wreck Black’s kingside pawn shield.',
+            pl: 'Otwarcie linii e! Zanim białe odbiją skoczka na b5, pchają piona na e6, aby rozbić strukturę skrzydła królewskiego czarnych.'
+          }
+        },
+        '12. Qh5': {
+          badge: '🎯',
+          arrows: ['h5->h7:red', 'h5->g6:red', 'h5->e8:amber'],
+          targets: ['h7', 'g6'],
+          text: {
+            en: 'Launching the kingside battery! White targets h7 and the g6 knight, forcing Black to give up the dark-squared bishop on g5.',
+            pl: 'Uderzenie na skrzydło królewskie! Hetman na h5 celuje w pola h7 oraz g6, zmuszając czarne do oddania czarnopolowego gońca.'
+          }
+        },
+        '15. Nd5': {
+          badge: '!!',
+          arrows: ['f1->e1:green', 'e1->e8:red', 'e6->d5:amber'],
+          targets: ['d5', 'e8'],
+          text: {
+            en: 'Dynamic knight sacrifice! White sacrifices the knight on d5 to clear the central e-file for the rook check while Black’s king is uncastled.',
+            pl: 'Dynamiczna ofiara skoczka! Białe oddają skoczka na d5, aby błyskawicznie otworzyć linię e dla wieży z f1 przeciwko królowi w centrum.'
+          }
+        },
+        '17. Ra3': {
+          badge: '!!',
+          arrows: ['a3->f3:green', 'f3->f8:red', 'a3->g3:green'],
+          targets: ['a3', 'f8'],
+          text: {
+            en: 'The iconic rook lift! With 17. Ra3, White swings the queenside rook straight into the attack via f3 and g3, ignoring material.',
+            pl: 'Słynny przerzut wieży! Ruchem 17. Wa3 białe włączają drugą wieżę do ataku przez pola f3 i g3, całkowicie ignorując straty materialne.'
+          }
+        },
+        '18. Rxe5': {
+          badge: '!',
+          arrows: ['e5->d5:red', 'a3->f3:green'],
+          targets: ['e5', 'f8'],
+          text: {
+            en: 'Exchange sacrifice! Eliminating Pillsbury’s defensive knight on e5 so the a3 rook can swing to f3 with check.',
+            pl: 'Ofiara jakości! Usunięcie kluczowego obrońcy e5 pozwala wieży z a3 wejść na linię f z szachem.'
+          }
+        },
+        '20. Bh6': {
+          badge: '!!',
+          arrows: ['h6->g7:red', 'f3->f8:amber'],
+          targets: ['g7', 'f8'],
+          text: {
+            en: 'Hammer blow! Attacking g7 while tying down the black king, White threatens Bxg7+ and Rf8+ mate.',
+            pl: 'Cios z zaskoczenia! Atakując punkt g7 przy zamkniętej wieży h8, białe grożą biciem na g7 i matem na f8.'
+          }
+        },
+        '24. Rg3+': {
+          badge: '🏆',
+          arrows: ['g3->g7:red', 'g3->f3:blue'],
+          targets: ['g7', 'f8'],
+          text: {
+            en: 'Perpetual check draw! After 21. Bxg7 Kxg7, White’s lone rook oscillates endlessly between f3 and g3 to seal a famous draw.',
+            pl: 'Remis przez wieczny szach! Po ofierze gońca 21. Gxg7 Kxg7 samotna biała wieża oscyluje między polami f3 i g3, ratując efektowny remis.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-29',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['fork', 'pin', 'deflection', 'backRank'],
+      players: {
+        en: 'Englund Gambit Trap (Eric Rosen vs. NN)',
+        pl: 'Pułapka Gambitu Englunda (Eric Rosen – NN)'
+      },
+      title: {
+        en: 'Englund Gambit: The 8-Move Back-Rank Checkmate',
+        pl: 'Gambit Englunda: Mat na ostatniej linii w 8 ruchach'
+      },
+      overview: {
+        en: 'The infamous Englund Gambit queen trap popularized by IM Eric Rosen. Black attacks the e5 pawn twice, uses a queen fork (4... Qb4+!) to grab b2, and pins the c3 bishop with 6... Bb4!! to deflect White’s queen away from guarding c1.',
+        pl: 'Słynna pułapka w Gambicie Englunda spopularyzowana przez IM Erica Rosena. Czarne dwukrotnie atakują piona e5, widełkami 4... Hb4+! zdobywają piona b2, a związaniem 6... Gb4!! odciągają białego hetmana od obrony pierwszej linii.'
+      },
+      moves: [
+        'd4', 'e5', 'dxe5', 'Nc6', 'Nf3', 'Qe7', 'Bf4', 'Qb4+', 'Bd2', 'Qxb2',
+        'Bc3', 'Bb4', 'Qd2', 'Bxc3', 'Qxc3', 'Qc1#'
+      ],
+      annotations: {
+        '3... Qe7': {
+          badge: '🎯',
+          arrows: ['e7->e5:red', 'c6->e5:red'],
+          targets: ['e5'],
+          text: {
+            en: 'Increasing pressure on e5! Developing the queen to e7 forces White to defend the extra pawn and baits 4. Bf4.',
+            pl: 'Podwójny atak na e5! Wyjście hetmanem na e7 zmusza białe do obrony piona i prowokuje naturalne 4. Gf4.'
+          }
+        },
+        '4... Qb4+': {
+          badge: '⚔️',
+          arrows: ['b4->e1:red', 'b4->f4:red', 'b4->b2:red'],
+          targets: ['e1', 'f4', 'b2'],
+          text: {
+            en: 'Triple fork! The queen checks the white king while simultaneously attacking the undefended f4 bishop and b2 pawn.',
+            pl: 'Potrójny atak! Hetman szachuje białego króla i jednocześnie atakuje niebronionego gońca f4 oraz piona b2.'
+          }
+        },
+        '5... Qxb2': {
+          badge: '!',
+          arrows: ['b2->a1:red', 'f8->b4:green'],
+          targets: ['a1', 'b2'],
+          text: {
+            en: 'Poisoned pawn grabbed! Black threatens the corner rook on a1, tempting White into the catastrophic 6. Bc3??.',
+            pl: 'Zbicie zatrutego piona! Czarne grożą wieżą a1, prowokując białe do pozornie wygrywającego ruchu 6. Gc3??.'
+          }
+        },
+        '6. Bc3': {
+          badge: '??',
+          arrows: ['c3->b2:blue', 'f8->b4:red'],
+          targets: ['b2', 'c3'],
+          text: {
+            en: 'A classic blunder! White believes the bishop on c3 shields a1 and chases the queen — walking straight into a lethal pin.',
+            pl: 'Klasyczny błąd! Białe wierzą, że goniec na c3 broni wieży a1 i odgania hetmana — wpadając prosto w śmiertelne związanie.'
+          }
+        },
+        '6... Bb4': {
+          badge: '!!',
+          arrows: ['b4->c3:red', 'b4->e1:amber', 'b2->c1:green'],
+          targets: ['c3', 'e1'],
+          text: {
+            en: 'Pinning the defender! Because the c3 bishop is pinned to the king on e1, White has to overprotect it with 7. Qd2 — stretching the queen too thin.',
+            pl: 'Zabójcze związanie! Goniec na c3 jest związany z królem e1, co zmusza białego hetmana do przejścia na d2 i przeciążenia obroną obu pól.'
+          }
+        },
+        '8... Qc1#': {
+          badge: '🏆',
+          arrows: ['c1->e1:red', 'c1->b1:amber', 'b2->c1:green'],
+          targets: ['c1', 'e1'],
+          text: {
+            en: 'Checkmate! White’s queen was deflected from d2 onto c3, leaving the c1 back-rank square completely undefended.',
+            pl: 'Mat! Odciągnięcie białego hetmana z d2 na c3 pozbawiło pierwszą linię obrony, dając błyskawicznego mata na c1.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-30',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'fork', 'battery', 'kingHunt'],
+      players: {
+        en: 'Irving Chernev vs. Herman Hahlbohm (New York, 1942)',
+        pl: 'Irving Chernev – Herman Hahlbohm (Nowy Jork, 1942)'
+      },
+      title: {
+        en: 'Colle System Brilliancy: Breaking Through with 13. Bxh7+!',
+        pl: 'Błyskotliwy atak w systemie Colle’a: Przełom 13. Gxh7+!'
+      },
+      overview: {
+        en: 'Featured as Game 21 in Chernev’s "Logical Chess: Move by Move". Watch how the quiet Colle System erupts on move 13 with a Greek Gift bishop sacrifice (13. Bxh7+!) that forks the black king and loose d5 knight (14. Qe4+), unleashing a decisive kingside storm.',
+        pl: 'Słynna partia nr 21 z książki Cherneva „Logical Chess: Move by Move”. Zobacz, jak spokojny system Colle’a wybucha w 13. ruchu ofiarą gońca (13. Gxh7+!), łącząc atak na króla z odbiciem skoczka d5 (14. He4+) i niszczycielskim szturmem na skrzydło królewskie.'
+      },
+      moves: [
+        'd4', 'd5', 'Nf3', 'e6', 'e3', 'c5', 'c3', 'Nf6', 'Bd3', 'Nc6',
+        'Nbd2', 'Be7', 'O-O', 'O-O', 'Qe2', 'Re8', 'dxc5', 'Bxc5', 'e4', 'e5',
+        'exd5', 'Nxd5', 'Nb3', 'Qb6', 'Bxh7+', 'Kxh7', 'Qe4+', 'Kg8', 'Qxd5', 'Bf8',
+        'Ng5', 'Be6', 'Qe4', 'g6', 'Qh4', 'Bg7', 'Be3', 'Qa6', 'Nc5', 'Qc4',
+        'Qh7+', 'Kf8', 'Ncxe6+', 'fxe6', 'Qxg6', 'Nd8', 'Nh7+'
+      ],
+      annotations: {
+        '10. e4': {
+          badge: '⚔️',
+          arrows: ['e4->d5:red', 'd3->h7:amber'],
+          targets: ['e4', 'd5', 'h7'],
+          text: {
+            en: 'The signature Colle break! Opening the center activates White’s e2 queen and dark-squared bishop while eyeing the d3–h7 diagonal.',
+            pl: 'Kluczowe pchnięcie w systemie Colle’a! Otwarcie centrum uaktywnia hetmana e2 oraz gońca c1, odsłaniając przekątną d3–h7.'
+          }
+        },
+        '12... Qb6': {
+          badge: '?',
+          arrows: ['b6->b3:blue', 'd3->h7:red', 'e2->e4:green'],
+          targets: ['h7', 'd5'],
+          text: {
+            en: 'Black tries to counterattack b3, overlooking that the d5 knight becomes vulnerable to a queen check fork after a sacrifice on h7.',
+            pl: 'Czarne kontratakują na skoczka b3, ale przeoczają, że ich własny skoczek na d5 straci osłonę z szachem po uderzeniu na h7.'
+          }
+        },
+        '13. Bxh7+': {
+          badge: '!!',
+          arrows: ['h7->g8:red', 'e2->e4:green', 'e4->d5:amber'],
+          targets: ['h7', 'd5'],
+          text: {
+            en: 'Greek Gift deflection! White sacrifices the bishop on h7 to drag the king onto the b1–h7 diagonal, setting up a decisive queen fork.',
+            pl: 'Ofiara Greckiego Daru! Białe poświęcają gońca na h7, by wciągnąć króla pod natychmiastowe widełki hetmanem z e4.'
+          }
+        },
+        '14. Qe4+': {
+          badge: '!',
+          arrows: ['e4->h7:red', 'e4->d5:red'],
+          targets: ['h7', 'd5'],
+          text: {
+            en: 'Royal double attack! White checks the exposed king on h7 and immediately recaptures the loose d5 knight with an extra pawn and shattered enemy king.',
+            pl: 'Podwójne uderzenie hetmanem! Szach na h7 z jednoczesnym atakiem na skoczka d5 odzyskuje figurę z zyskiem piona i rozbitym królem.'
+          }
+        },
+        '16. Ng5': {
+          badge: '🎯',
+          arrows: ['g5->f7:red', 'd5->e4:green', 'e4->h4:green'],
+          targets: ['f7', 'h7'],
+          text: {
+            en: 'Piling on the kingside! The knight eyes f7 and h7 while preparing the queen’s decisive transfer via e4 to h4.',
+            pl: 'Koncentracja ognia! Skoczek celuje w f7 i h7, przygotowując wejście hetmana przez e4 na pole h4.'
+          }
+        },
+        '22. Ncxe6+': {
+          badge: '!!',
+          arrows: ['e6->f8:red', 'h7->g6:red'],
+          targets: ['e6', 'f8', 'g6'],
+          text: {
+            en: 'Crushing breakthrough! Sacrificing the knight on e6 tears open the f7 pawn shield, letting White’s queen capture g6 with devastating effect.',
+            pl: 'Decydujący przełom! Ofiara skoczka na e6 rozrywa ostatnią zaporę pionową czarnych, otwierając hetmanowi drogę do bicia na g6.'
+          }
+        },
+        '24. Nh7+': {
+          badge: '🏆',
+          arrows: ['h7->f8:red', 'e3->h6:green', 'g6->f6:amber'],
+          targets: ['f8', 'h7'],
+          text: {
+            en: 'Black resigns! After 24... Kg8 25. Bh6, the threat of Qxg7# or Nf6+ is completely unstoppable.',
+            pl: 'Czarne poddały partię! Po 24... Kg8 25. Gh6 przed matem na g7 lub widełkami na f6 nie ma już żadnej obrony.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-31',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'medium',
+      themes: ['sacrifice', 'boden', 'clearance', 'pin'],
+      players: {
+        en: 'R. Schulder vs. Samuel Standidge Boden (London, 1853)',
+        pl: 'R. Schulder – Samuel Standidge Boden (Londyn, 1853)'
+      },
+      title: {
+        en: 'The Original Boden’s Mate (15... Ba3#)',
+        pl: 'Pierwszy w historii Mat Bodena (15... Ga3#)'
+      },
+      overview: {
+        en: 'The historic 1853 London game that gave chess one of its most iconic checkmate patterns. Samuel Boden castles queenside, invites White to do the same, and unleashes the immortal queen sacrifice 14... Qxc3+!! to deliver crisscrossing checkmate with his two bishops.',
+        pl: 'Historyczna partia z Londynu (1853), która dała szachom jeden z najsłynniejszych motywów matowych. Samuel Boden robi długą roszadę, prowokuje białe do tego samego i poświęca hetmana 14... Hxc3+!!, matując skrzyżowaną parą gońców.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'd6', 'c3', 'f5', 'Bc4', 'Nf6', 'd4', 'fxe4',
+        'dxe5', 'exf3', 'exf6', 'Qxf6', 'gxf3', 'Nc6', 'f4', 'Bd7', 'Be3', 'O-O-O',
+        'Nd2', 'Re8', 'Qf3', 'Bf5', 'O-O-O', 'd5', 'Bxd5', 'Qxc3+', 'bxc3', 'Ba3#'
+      ],
+      annotations: {
+        '11... Re8': {
+          badge: '🎯',
+          arrows: ['e8->e3:red', 'e8->e1:amber'],
+          targets: ['e3', 'e1'],
+          text: {
+            en: 'Eyeing the e-file! Placing the rook on e8 pins White’s e3 bishop against the uncastled king.',
+            pl: 'Kontrola linii e! Wieża na e8 wiąże gońca e3 z białym królem stojącym wciąż w centrum.'
+          }
+        },
+        '12... Bf5': {
+          badge: '⚔️',
+          arrows: ['f5->c2:amber', 'f5->b1:amber', 'f8->a3:green'],
+          targets: ['f5', 'c2', 'b1'],
+          text: {
+            en: 'Controlling the h7–b1 diagonal! The f5 bishop already slices off the d3 and c2 escape squares around White’s queenside.',
+            pl: 'Kluczowa przekątna! Goniec z f5 przecina przekątną h7–b1, odbierając białym pola d3 oraz c2 tuż przed roszadą białych.'
+          }
+        },
+        '13. O-O-O': {
+          badge: '?',
+          arrows: ['d6->d5:red', 'f8->a3:red'],
+          targets: ['c1', 'c3'],
+          text: {
+            en: 'Castling into the storm! With both the c3 pawn and White’s king sharing the c1–a3 diagonal, Black immediately strikes in the center.',
+            pl: 'Roszada prosto w burzę! Ponieważ król na c1 i pion c3 stoją na jednej przekątnej, czarne natychmiast uderzają w centrum.'
+          }
+        },
+        '13... d5': {
+          badge: '!',
+          arrows: ['d5->c4:red', 'f8->a3:green'],
+          targets: ['c4', 'a3'],
+          text: {
+            en: 'Clears the f8–a3 diagonal with tempo! Attacking the c4 bishop forces it away from defending b2 and c3.',
+            pl: 'Otwarcie przekątnej f8–a3 z tempem! Atak na gońca c4 przygotowuje wejście czarnopolowego gońca na pole a3.'
+          }
+        },
+        '14... Qxc3+': {
+          badge: '!!',
+          arrows: ['c3->c1:red', 'b2->c3:amber', 'f8->a3:red'],
+          targets: ['c3', 'c1', 'a3'],
+          text: {
+            en: 'The Immortal Queen Sacrifice! 14... Qxc3+!! forces 15. bxc3, clearing the b2 pawn out of the a3–c1 diagonal while blocking c3.',
+            pl: 'Historyczna ofiara hetmana! 14... Hxc3+!! wymusza 15. bxc3, usuwając piona b2 z przekątnej a3–c1 i blokując królowi ucieczkę przez c3.'
+          }
+        },
+        '15... Ba3#': {
+          badge: '🏆',
+          arrows: ['a3->c1:red', 'f5->c2:amber', 'f5->b1:amber'],
+          targets: ['c1', 'a3'],
+          text: {
+            en: 'Boden’s Mate! The two crisscrossing bishops on a3 and f5 slice across the queenside for the very first recorded Boden’s Mate!',
+            pl: 'Mat Bodena! Skrzyżowane gońce na a3 i f5 tworzą bezbłędną klatkę wokół króla c1 — to pierwszy w historii zapisany Mat Bodena!'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-32',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'medium',
+      themes: ['sacrifice', 'kingHunt', 'attraction', 'pin'],
+      players: {
+        en: 'Henry Edward Bird vs. Paul Morphy (London, 1858)',
+        pl: 'Henry Edward Bird – Paul Morphy (Londyn, 1858)'
+      },
+      title: {
+        en: 'Bird vs. Morphy: The 17... Rxf2!! Rook Sacrifice & Queen Hunt',
+        pl: 'Bird – Morphy: Ofiara wieży 17... Wxf2!! i polowanie hetmanem'
+      },
+      overview: {
+        en: 'One of Paul Morphy’s wildest attacking triumphs in London, 1858. As soon as Bird castles queenside (17. O-O-O?), Morphy blasts open the king’s shelter with 17... Rxf2!! and follows with 18... Qa3!, tearing apart the white queenside with relentless checks.',
+        pl: 'Jedna z najbardziej szalonych partii atakujących Paula Morphy’ego w Londynie (1858). Gdy tylko Bird robi długą roszadę (17. O-O-O?), Morphy rozrywa osłonę króla ofiarą wieży 17... Wxf2!! i wdziera się hetmanem 18... Ha3!, ścigając białego króla po całej szachownicy.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'd6', 'd4', 'f5', 'Nc3', 'fxe4', 'Nxe4', 'd5',
+        'Ng3', 'e4', 'Ne5', 'Nf6', 'Bg5', 'Bd6', 'Nh5', 'O-O', 'Qd2', 'Qe8',
+        'g4', 'Nxg4', 'Nxg4', 'Qxh5', 'Ne5', 'Nc6', 'Be2', 'Qh3', 'Nxc6', 'bxc6',
+        'Be3', 'Rb8', 'O-O-O', 'Rxf2', 'Bxf2', 'Qa3', 'c3', 'Qxa2', 'b4', 'Qa1+',
+        'Kc2', 'Qa4+', 'Kb2', 'Bxb4', 'cxb4', 'Rxb4+', 'Qxb4', 'Qxb4+', 'Kc2', 'e3',
+        'Bxe3', 'Bf5+', 'Rd3', 'Qc4+', 'Kd2', 'Qa2+', 'Kd1', 'Qb1+'
+      ],
+      annotations: {
+        '10... Qe8': {
+          badge: '⚔️',
+          arrows: ['e8->h5:red', 'e8->e5:red'],
+          targets: ['h5', 'e5'],
+          text: {
+            en: 'A clever double target! Morphy unpins the f6 knight and attacks White’s advanced knight on h5, preparing to swing the queen into the attack.',
+            pl: 'Sprytny zwrot! Morphy wychodzi ze związania i atakuje wysuniętego skoczka na h5, szykując przerzut hetmana do ataku.'
+          }
+        },
+        '16... Rb8': {
+          badge: '🎯',
+          arrows: ['b8->b2:red', 'f8->f2:red'],
+          targets: ['b2', 'f2'],
+          text: {
+            en: 'Seizing the half-open b-file! The rook immediately targets b2 just as White prepares to castle queenside.',
+            pl: 'Opanowanie półotwartej linii b! Wieża natychmiast bierze na celownik punkt b2, zanim biały król zdoła tam zaparkować.'
+          }
+        },
+        '17... Rxf2': {
+          badge: '!!',
+          arrows: ['f2->e2:red', 'h3->a3:green'],
+          targets: ['f2', 'a3'],
+          text: {
+            en: 'Thunderbolt Rook Sacrifice! 17... Rxf2!! clears the path for Black’s queen to invade on a3 while deflecting the e3 bishop away from defending c1 and a2.',
+            pl: 'Piorunująca ofiara wieży! 17... Wxf2!! odciąga gońca z e3 i otwiera czarnemu hetmanowi drogę do zabójczego wejścia na a3!'
+          }
+        },
+        '18... Qa3': {
+          badge: '!!',
+          arrows: ['a3->a2:red', 'a3->c1:amber', 'b8->b2:red'],
+          targets: ['a2', 'b2'],
+          text: {
+            en: 'Deadly invasion! Threatening Qa1# or Qxb2#, Morphy forces White to weaken the light squares permanently with 19. c3.',
+            pl: 'Śmiertelna inwazja! Grożąc matem na a1 lub b2, Morphy zmusza białe do osłabienia jasnych pól ruchem 19. c3.'
+          }
+        },
+        '22... Bxb4': {
+          badge: '!',
+          arrows: ['b4->c3:red', 'b8->b4:green', 'a4->c2:amber'],
+          targets: ['b4', 'c2'],
+          text: {
+            en: 'Second wave of sacrifices! Morphy blasts open the b-file with a bishop and rook sacrifice to strip every remaining pawn from White’s king.',
+            pl: 'Druga fala ofiar! Morphy oddaje gońca na b4, by oczyścić linię b dla wieży i zedrzeć ostatnią zasłonę pionową białego króla.'
+          }
+        },
+        '25... e3': {
+          badge: '!',
+          arrows: ['e3->f2:red', 'c8->f5:green'],
+          targets: ['e3', 'f5'],
+          text: {
+            en: 'Bringing in the final reserve! Pushing 25... e3 deflects the f2 bishop and opens the h7–b1 diagonal for 26... Bf5+!',
+            pl: 'Wprowadzenie ostatniej rezerwy! Pchnięcie 25... e3 odciąga gońca z f2 i otwiera przekątną dla decydującego szacha 26... Gf5+!'
+          }
+        },
+        '29... Qb1+': {
+          badge: '🏆',
+          arrows: ['b1->d1:red', 'b1->d3:red', 'f5->d3:amber'],
+          targets: ['d1', 'd3'],
+          text: {
+            en: 'Bird resigns! After 30. Kd2 (or 30. Ke2), Black captures the pinned rook on d3 or delivers checkmate along the back rank.',
+            pl: 'Bird poddał partię! Po odejściu króla wieża na d3 ginie lub czarny hetman z gońcem dają szybkiego mata.'
+          }
+        }
+      }
+    },
+
+    // === HARD (4) ===
+    {
+      id: 'ba-33',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'battery', 'pin', 'kingHunt'],
+      players: {
+        en: 'Bobby Fischer vs. Boris Spassky (Reykjavik, 1972 — Game 6)',
+        pl: 'Bobby Fischer – Boris Spassky (Reykjavik, 1972, Partia 6)'
+      },
+      title: {
+        en: 'Reykjavik Masterpiece: Fischer’s Game 6 Squeeze & Exchange Sacrifice',
+        pl: 'Arcydzieło z Reykjavíku: Pozycyjne zduszenie i ofiara 38. Wxf6!'
+      },
+      overview: {
+        en: 'Widely regarded as the finest game of the 1972 World Championship. Surprising Spassky with 1. c4, Fischer fixes Black’s hanging pawns, locks down the dark squares with 23. Bc4!, storms the f-file with 26. f5!, and sacrifices the exchange (38. Rxf6!) to earn applause from Spassky himself.',
+        pl: 'Najsłynniejsza partia meczu o mistrzostwo świata 1972. Zaskakując Spasskiego debiutem 1. c4, Fischer unieruchamia wiszące piony czarnych, blokuje pozycję ruchem 23. Gc4!, przełamuje linię f pchnięciem 26. f5! i poświęca jakość (38. Wxf6!), zyskując oklaski samego Spasskiego.'
+      },
+      moves: [
+        'c4', 'e6', 'Nf3', 'd5', 'd4', 'Nf6', 'Nc3', 'Be7', 'Bg5', 'O-O',
+        'e3', 'h6', 'Bh4', 'b6', 'cxd5', 'Nxd5', 'Bxe7', 'Qxe7', 'Nxd5', 'exd5',
+        'Rc1', 'Be6', 'Qa4', 'c5', 'Qa3', 'Rc8', 'Bb5', 'a6', 'dxc5', 'bxc5',
+        'O-O', 'Ra7', 'Be2', 'Nd7', 'Nd4', 'Qf8', 'Nxe6', 'fxe6', 'e4', 'd4',
+        'f4', 'Qe7', 'e5', 'Rb8', 'Bc4', 'Kh8', 'Qh3', 'Nf8', 'b3', 'a5',
+        'f5', 'exf5', 'Rxf5', 'Nh7', 'Rcf1', 'Qd8', 'Qg3', 'Re7', 'h4', 'Rbb7',
+        'e6', 'Rbc7', 'Qe5', 'Qe8', 'a4', 'Qd8', 'R1f2', 'Qe8', 'R2f3', 'Qd8',
+        'Bd3', 'Qe8', 'Qe4', 'Nf6', 'Rxf6', 'gxf6', 'Rxf6', 'Kg8', 'Bc4', 'Kh8',
+        'Qf4'
+      ],
+      annotations: {
+        '14. Bb5': {
+          badge: '🎯',
+          arrows: ['b5->a6:blue', 'd4->c5:red', 'a3->c5:amber'],
+          targets: ['c5', 'a6'],
+          text: {
+            en: 'Forcing structural concessions! By provoking 14... a6, Fischer ensures Black’s hanging pawns on c5 and d5 will stay fragile.',
+            pl: 'Wymuszenie osłabienia! Prowokując 14... a6, Fischer zmusza czarne do pozostawienia wiszących pionów na c5 i d5.'
+          }
+        },
+        '20. e4': {
+          badge: '!',
+          arrows: ['e4->d5:red', 'e2->c4:green'],
+          targets: ['d5', 'e6'],
+          text: {
+            en: 'Transforming the structure! After 19. Nxe6 fxe6 saddled Black with a backward e6 pawn, Fischer opens the dark squares to target it.',
+            pl: 'Zmiana struktury! Po osłabieniu piona e6 ruchem 19. Sxe6 fxe6 białe otwierają centrum, by przejąć kontrolę nad czarnymi polami.'
+          }
+        },
+        '23. Bc4': {
+          badge: '!',
+          arrows: ['c4->e6:red', 'c4->g8:amber', 'a3->h3:green'],
+          targets: ['e6', 'g8'],
+          text: {
+            en: 'Dream blockade! The c4 bishop dominates the a2–g8 diagonal, paralyzing e6 and aiming straight at the black king.',
+            pl: 'Idealna blokada! Goniec na c4 opanowuje przekątną a2–g8, paraliżując piona e6 i mierząc prosto w czarnego króla.'
+          }
+        },
+        '26. f5': {
+          badge: '!',
+          arrows: ['f5->e6:red', 'f1->f5:green', 'c1->f1:green'],
+          targets: ['e6', 'f5'],
+          text: {
+            en: 'Opening the f-file! Fischer blasts open the e6 weakness so both white rooks can double on the f-file.',
+            pl: 'Przełamanie na linii f! Fischer rozrywa punkt e6, aby obie białe wieże mogły zdublować się na otwartej linii f.'
+          }
+        },
+        '37. Qe4': {
+          badge: '🎯',
+          arrows: ['d3->h7:red', 'e4->h7:amber', 'f5->f7:green'],
+          targets: ['h7', 'f6'],
+          text: {
+            en: 'Lining up the battery! With Qe4 backing Bd3 behind the f5 rook, White threatens a devastating discovered attack (38. Rf7!), forcing 37... Nf6.',
+            pl: 'Ustawienie baterii! Hetman z e4 wspiera gońca d3 za wieżą f5, grożąc zabójczym atakiem z odsłonięcia (38. Wf7!), co zmusza 37... Sf6.'
+          }
+        },
+        '38. Rxf6': {
+          badge: '!!',
+          arrows: ['f6->g7:amber', 'f3->f6:red', 'e4->h7:red'],
+          targets: ['f6', 'g8'],
+          text: {
+            en: 'Decisive exchange sacrifice! White eliminates the sole defender of Black’s kingside and leaves the king stripped naked on g8.',
+            pl: 'Decydująca ofiara jakości! Białe eliminują jedynego obrońcę skrzydła królewskiego, obnażając całkowicie czarnego króla.'
+          }
+        },
+        '41. Qf4': {
+          badge: '🏆',
+          arrows: ['f4->h6:red', 'f6->f8:red', 'c4->g8:amber'],
+          targets: ['h6', 'f8'],
+          text: {
+            en: 'Spassky resigns and joins the audience in applauding! With Qxh6+ and Rf8+ or Bc4–e6 looming, Black’s fortress collapses.',
+            pl: 'Spassky poddał partię i nagrodził Fischera oklaskami! Wobec gróźb Hxh6+ oraz Wf8+ pozycja czarnych całkowicie się rozpada.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-34',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'fork', 'pin', 'backRank'],
+      players: {
+        en: 'Anatoly Karpov vs. Garry Kasparov (Moscow, 1985 — Game 16)',
+        pl: 'Anatolij Karpow – Garri Kasparow (Moskwa, 1985, Partia 16)'
+      },
+      title: {
+        en: 'The Octopus Knight: Kasparov’s Immortal 16... Nd3!',
+        pl: '„Ośmiornica” Kasparowa: Nieśmiertelny skoczek na d3'
+      },
+      overview: {
+        en: 'The crown jewel of the 1985 World Championship match. Playing a Sicilian gambit (11... Bc5!), Garry Kasparov anchors his legendary "octopus" knight on d3 (16... Nd3!), paralyzing Karpov’s entire army before breaking through with 33... Ne4! and a back-rank rook invasion (37... Rc1!).',
+        pl: 'Perła meczu o mistrzostwo świata z 1985 roku. W ostrym gambicie sycylijskim (11... Gc5!) Garri Kasparow zakotwicza słynnego skoczka-„ośmiornicę” na polu d3 (16... Sd3!), paraliżując całą armię Karpowa i rozbijając białe uderzeniem 33... Se4! oraz inwazją na pierwszej linii (37... Wc1!).'
+      },
+      moves: [
+        'e4', 'c5', 'Nf3', 'e6', 'd4', 'cxd4', 'Nxd4', 'Nc6', 'Nb5', 'd6',
+        'c4', 'Nf6', 'N1c3', 'a6', 'Na3', 'd5', 'cxd5', 'exd5', 'exd5', 'Nb4',
+        'Be2', 'Bc5', 'O-O', 'O-O', 'Bf3', 'Bf5', 'Bg5', 'Re8', 'Qd2', 'b5',
+        'Rad1', 'Nd3', 'Nab1', 'h6', 'Bh4', 'b4', 'Na4', 'Bd6', 'Bg3', 'Rc8',
+        'b3', 'g5', 'Bxd6', 'Qxd6', 'g3', 'Nd7', 'Bg2', 'Qf6', 'a3', 'a5',
+        'axb4', 'axb4', 'Qa2', 'Bg6', 'd6', 'g4', 'Qd2', 'Kg7', 'f3', 'Qxd6',
+        'fxg4', 'Qd4+', 'Kh1', 'Nf6', 'Rf4', 'Ne4', 'Qxd3', 'Nf2+', 'Rxf2', 'Bxd3',
+        'Rfd2', 'Qe3', 'Rxd3', 'Rc1', 'Nb2', 'Qf2', 'Nd2', 'Rxd1+', 'Nxd1', 'Re1+'
+      ],
+      annotations: {
+        '11... Bc5': {
+          badge: '📖',
+          arrows: ['c5->f2:red', 'b4->d3:green'],
+          targets: ['d5', 'd3'],
+          text: {
+            en: 'A prepared World Championship gambit! Kasparov sacrifices the d5 pawn to prevent White from untangling and to carve out the d3 outpost.',
+            pl: 'Mistrzowski gambit debiutowy! Kasparow poświęca piona d5, aby związać ręce białym i przygotować skok na placówkę d3.'
+          }
+        },
+        '16... Nd3': {
+          badge: '!!',
+          arrows: ['d3->b2:red', 'd3->f2:red', 'd3->e1:amber', 'd3->c1:amber'],
+          targets: ['d3', 'b2', 'f2'],
+          text: {
+            en: 'The Octopus Knight! Anchored on d3 with eight tentacles reaching into White’s camp, the knight paralyzes Karpov’s rooks, queen, and queenside.',
+            pl: 'Słynna „Ośmiornica”! Skoczek zakotwiczony na d3 swoimi ośmioma „mackami” paraliżuje wieże, hetmana oraz pionową strukturę Karpowa.'
+          }
+        },
+        '21... g5': {
+          badge: '⚔️',
+          arrows: ['g5->f4:green', 'd6->h2:amber', 'c8->c2:green'],
+          targets: ['d3', 'c2'],
+          text: {
+            en: 'Locking the bind! Even a pawn down, Black expands aggressively on both wings so the d3 octopus can never be challenged.',
+            pl: 'Zaciskanie pętli! Mimo braku piona czarne zdobywają przestrzeń na obu skrzydłach, cementując dominację skoczka na d3.'
+          }
+        },
+        '31... Qd4+': {
+          badge: '!',
+          arrows: ['d4->g1:red', 'd7->f6:green'],
+          targets: ['g1', 'f6'],
+          text: {
+            en: 'Regaining the pawn with tempo! Check drives Karpov’s king into the h1 corner, preparing the final tactical blow via f6 and e4.',
+            pl: 'Szach z tempem! Po odbiciu piona na d6 hetman spycha króla w róg h1, otwierając drogę dla skoczka na f6 i e4.'
+          }
+        },
+        '33... Ne4': {
+          badge: '!!',
+          arrows: ['e4->d2:red', 'e4->f2:amber', 'd3->f2:amber'],
+          targets: ['e4', 'd2', 'f2'],
+          text: {
+            en: 'Brilliant counter-strike! Threatening ...Nf2+ forks and ...Nxg3+, Kasparov leaves the d3 octopus en prise to trap White’s queen into tactics!',
+            pl: 'Genialne uderzenie! Grożąc widełkami ...Sf2+ oraz ...Sxg3+, Kasparow wystawia skoczka d3, by wciągnąć hetmana pod zabójczą taktykę!'
+          }
+        },
+        '34... Nf2+': {
+          badge: '!',
+          arrows: ['f2->h1:red', 'f2->d3:red', 'g6->d3:amber'],
+          targets: ['d3', 'h1'],
+          text: {
+            en: 'Royal fork! After 35. Rxf2 Bxd3, Black emerges with a dominating initiative and material edge as White’s pieces remain uncoordinated.',
+            pl: 'Królewskie widełki! Po 35. Wxf2 Gxd3 czarne zdobywają hetmana za wieżę i lekką figurę, zachowując miażdżący atak.'
+          }
+        },
+        '40... Re1+': {
+          badge: '🏆',
+          arrows: ['e1->h1:red', 'e1->d1:red', 'f2->g2:amber'],
+          targets: ['d1', 'h1'],
+          text: {
+            en: 'Karpov resigns! Following 37... Rc1! and 39... Rxd1+, Black’s rook and queen crush the back rank completely.',
+            pl: 'Karpow poddał partię! Po wtargnięciu 37... Wc1! i wymianie 39... Wxd1+ pierwsza linia białych zostaje całkowicie zdruzgotana.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-35',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['defense', 'sacrifice', 'promotion', 'discovered'],
+      players: {
+        en: 'José Raúl Capablanca vs. Frank James Marshall (New York, 1918)',
+        pl: 'José Raúl Capablanca – Frank James Marshall (Nowy Jork, 1918)'
+      },
+      title: {
+        en: 'Birth of the Marshall Attack: Capablanca’s Ice-Cold Defense',
+        pl: 'Narodziny Gambitu Marshalla: Lodowata obrona Capablanki'
+      },
+      overview: {
+        en: 'Frank Marshall kept 8... d5! secret for years to ambush Capablanca in New York, 1918. Unprepared at the board, Capablanca accepted the pawn, navigated a ferocious storm of sacrifices (13... Ng4! 15... Nxf2! 16... Bg4!) with machine-like precision, and counter-attacked with a winning b-pawn.',
+        pl: 'Frank Marshall trzymał ruch 8... d5! w tajemnicy przez lata, by zaskoczyć Capablankę w Nowym Jorku w 1918 roku. Grając bez przygotowania, Capablanca przyjął wyzwanie, obronił się przed lawiną ofiar (13... Sg4! 15... Sxf2! 16... Gg4!) z chłodną precyzją i kontratakował zwycięskim pionem b.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'a6', 'Ba4', 'Nf6', 'O-O', 'Be7',
+        'Re1', 'b5', 'Bb3', 'O-O', 'c3', 'd5', 'exd5', 'Nxd5', 'Nxe5', 'Nxe5',
+        'Rxe5', 'Nf6', 'Re1', 'Bd6', 'h3', 'Ng4', 'Qf3', 'Qh4', 'd4', 'Nxf2',
+        'Re2', 'Bg4', 'hxg4', 'Bh2+', 'Kf1', 'Bg3', 'Rxf2', 'Qh1+', 'Ke2', 'Bxf2',
+        'Bd2', 'Bh4', 'Qh3', 'Rae8+', 'Kd3', 'Qf1+', 'Kc2', 'Bf2', 'Qf3', 'Qg1',
+        'Bd5', 'c5', 'dxc5', 'Bxc5', 'b4', 'Bd6', 'a4', 'a5', 'axb5', 'axb4',
+        'Ra6', 'bxc3', 'Nxc3', 'Bb4', 'b6', 'Bxc3', 'Bxc3', 'h6', 'b7', 'Re3',
+        'Bxf7+'
+      ],
+      annotations: {
+        '8... d5': {
+          badge: '📖',
+          arrows: ['d5->e4:red', 'f6->d5:green'],
+          targets: ['d5', 'e4'],
+          text: {
+            en: 'The debut of the Marshall Attack! Black sacrifices a central pawn in the Ruy Lopez to unleash rapid kingside piece play.',
+            pl: 'Debiut słynnego Gambitu Marshalla! Czarne poświęcają centralnego piona, by zyskać błyskawiczny atak na skrzydło królewskie.'
+          }
+        },
+        '13... Ng4': {
+          badge: '⚔️',
+          arrows: ['g4->f2:red', 'd6->h2:red', 'd8->h4:green'],
+          targets: ['f2', 'h2'],
+          text: {
+            en: 'Launching the storm! Black threatens ...Qh4 and ...Nxf2, trying to overwhelm White’s unguarded kingside before the queenside develops.',
+            pl: 'Szturm na króla! Czarne grożą wejściem ...Hh4 oraz ...Sxf2, próbując rozbić króla przed rozwojem figur skrzydła hetmańskiego.'
+          }
+        },
+        '16. Re2': {
+          badge: '!',
+          arrows: ['e2->f2:green', 'f3->f2:blue'],
+          targets: ['f2', 'e2'],
+          text: {
+            en: 'Ice-cold defense! Refusing 16. Qxf2? (which loses to 16... Bh2+!), Capablanca guards f2 with the rook and invites Black’s bishop sacrifice.',
+            pl: 'Lodowata obrona! Odrzucając przegrane 16. Hxf2? (po 16... Gh2+!), Capablanca broni f2 wieżą i przyjmuje główne natarcie.'
+          }
+        },
+        '19. Rxf2': {
+          badge: '!',
+          arrows: ['f1->e2:green', 'f2->g3:blue'],
+          targets: ['f2', 'e2'],
+          text: {
+            en: 'Returning the exchange for survival! Capturing on f2 and walking the king toward e2 and c2 trades danger for two extra minor pieces.',
+            pl: 'Oddanie jakości na czas! Capablanca zbija skoczka na f2 i ucieka królem na d3/c2, zamieniając atak przeciwnika na przewagę figury.'
+          }
+        },
+        '22. Qh3': {
+          badge: '!',
+          arrows: ['h3->h1:red', 'h3->h4:red', 'd3->c2:green'],
+          targets: ['h3', 'c2'],
+          text: {
+            en: 'Crucial consolidation! White’s queen holds the kingside together while the king finds safe shelter behind the queenside pawns on c2.',
+            pl: 'Kluczowa konsolidacja! Biały hetman stabilizuje sytuację, a król bezpiecznie chroni się za pionami na c2.'
+          }
+        },
+        '31. Ra6': {
+          badge: '!',
+          arrows: ['a6->d6:red', 'b5->b7:green'],
+          targets: ['d6', 'b6'],
+          text: {
+            en: 'Seizing the initiative! White’s queenside pieces finally roar to life, mobilizing the passed b-pawn toward promotion.',
+            pl: 'Przejęcie inicjatywy! Wieża z a1 wkracza do gry z tempem, wspierając marsz wolnego piona b do promocji.'
+          }
+        },
+        '36. Bxf7+': {
+          badge: '🏆',
+          arrows: ['f7->g8:red', 'b7->b8:green', 'a6->h6:amber'],
+          targets: ['f7', 'b8'],
+          text: {
+            en: 'Marshall resigns! After 36... Rxf7 37. b8=Q+ Kh7 38. Rxh6+!, White’s b-pawn promotes with a winning attack.',
+            pl: 'Marshall poddał partię! Po 36... Wxf7 37. b8=H+ Kh7 38. Wxh6+! pion b promuje się na hetmana przy rozstrzygającym ataku.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-36',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'deflection', 'promotion', 'clearance'],
+      players: {
+        en: 'Mikhail Botvinnik vs. José Raúl Capablanca (AVRO, 1938)',
+        pl: 'Michaił Botwinnik – José Raúl Capablanca (AVRO, 1938)'
+      },
+      title: {
+        en: 'The AVRO 1938 Brilliancy: 30. Ba3!! & 31. Nh5+!!',
+        pl: 'Kombinacja turnieju AVRO 1938: 30. Ga3!! oraz 31. Sh5+!!'
+      },
+      overview: {
+        en: 'One of the greatest combinations in chess history. Facing Capablanca in the 1938 AVRO super-tournament, Mikhail Botvinnik sacrifices his queenside pawns to build a crushing central wave (19. e4!, 26. Re6!), then delivers the immortal double blow 30. Ba3!! and 31. Nh5+!! to promote his e-pawn.',
+        pl: 'Jedna z najsłynniejszych kombinacji w dziejach szachów. Przeciwko Capablance na superturnieju AVRO 1938 Michaił Botwinnik oddaje piony na skrzydle hetmańskim, buduje potężne centrum (19. e4!, 26. We6!), a następnie zadaje genialny podwójny cios 30. Ga3!! i 31. Sh5+!!, torując drogę pionowi e.'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'e6', 'Nc3', 'Bb4', 'e3', 'd5', 'a3', 'Bxc3+',
+        'bxc3', 'c5', 'cxd5', 'exd5', 'Bd3', 'O-O', 'Ne2', 'b6', 'O-O', 'Ba6',
+        'Bxa6', 'Nxa6', 'Bb2', 'Qd7', 'a4', 'Rfe8', 'Qd3', 'c4', 'Qc2', 'Nb8',
+        'Rae1', 'Nc6', 'Ng3', 'Na5', 'f3', 'Nb3', 'e4', 'Qxa4', 'e5', 'Nd7',
+        'Qf2', 'g6', 'f4', 'f5', 'exf6', 'Nxf6', 'f5', 'Rxe1', 'Rxe1', 'Re8',
+        'Re6', 'Rxe6', 'fxe6', 'Kg7', 'Qf4', 'Qe8', 'Qe5', 'Qe7', 'Ba3', 'Qxa3',
+        'Nh5+', 'gxh5', 'Qg5+', 'Kf8', 'Qxf6+', 'Kg8', 'e7', 'Qc1+', 'Kf2', 'Qc2+',
+        'Kg3', 'Qd3+', 'Kh4', 'Qe4+', 'Kxh5', 'Qe2+', 'Kh4', 'Qe4+', 'g4', 'Qe1+',
+        'Kh5'
+      ],
+      annotations: {
+        '19. e4': {
+          badge: '⚔️',
+          arrows: ['e4->d5:red', 'e4->e5:green', 'f3->f4:green'],
+          targets: ['e4', 'd5'],
+          text: {
+            en: 'Central steamroller begins! Botvinnik sacrifices the a4 pawn so his central pawn phalanx can storm forward with e5 and f4–f5.',
+            pl: 'Uruchomienie centralnego walca! Botwinnik oddaje piona a4, aby jego centrum ruszyło naprzód z niszczycielską siłą ruchami e5 oraz f4–f5.'
+          }
+        },
+        '26. Re6': {
+          badge: '!',
+          arrows: ['e6->f6:red', 'f5->e6:green', 'f2->f4:green'],
+          targets: ['e6', 'f6'],
+          text: {
+            en: 'Creating a monster passed pawn! Invading on e6 forces Capablanca to trade rooks, leaving White with a lethal protected spearhead on e6.',
+            pl: 'Stworzenie potężnego wolnego piona! Wtargnięcie na e6 wymusza wymianę wież i zostawia białym groźny taran na szóstej linii.'
+          }
+        },
+        '29. Qe5': {
+          badge: '🎯',
+          arrows: ['e5->f6:amber', 'f6->g7:amber', 'b2->a3:green'],
+          targets: ['f6', 'g7'],
+          text: {
+            en: 'Pinning f6 to the king! Capablanca plays 29... Qe7 to blockade the e6 pawn, thinking his defense holds — missing a bolt from the blue.',
+            pl: 'Związanie na przekątnej! Capablanca blokuje piona e6 hetmanem na e7, myśląc, że opanował sytuację — nie widząc nadchodzącej kombinacji.'
+          }
+        },
+        '30. Ba3': {
+          badge: '!!',
+          arrows: ['a3->e7:red', 'g3->h5:green'],
+          targets: ['a3', 'e7'],
+          text: {
+            en: 'Immortal Deflection! 30. Ba3!! sacrifices a whole bishop to lure Black’s queen off e7 so it can no longer defend f6 or stop the e-pawn.',
+            pl: 'Nieśmiertelne odciągnięcie! 30. Ga3!! poświęca gońca, aby odciągnąć czarnego hetmana z pola e7 i pozbawić skoczka f6 obrony.'
+          }
+        },
+        '31. Nh5+': {
+          badge: '!!',
+          arrows: ['h5->g7:red', 'h5->f6:red', 'e5->g5:green'],
+          targets: ['h5', 'f6', 'g7'],
+          text: {
+            en: 'The Double Blow! 31. Nh5+!! forces 31... gxh5, vacating g5 for White’s queen to check and capture f6 with tempo.',
+            pl: 'Genialne dobicie! 31. Sh5+!! zmusza czarne do bicia 31... gxh5, zwalniając pole g5 dla szacha hetmanem i zdobycia skoczka f6!'
+          }
+        },
+        '34. e7': {
+          badge: '!',
+          arrows: ['e7->e8:green', 'f6->f8:red'],
+          targets: ['e7', 'e8'],
+          text: {
+            en: 'One step from promotion! With the black king trapped on g8, Black’s only hope is a desperate perpetual check with the queen.',
+            pl: 'O krok od promocji! Czarny król jest uwięziony na g8, więc jedyną szansą Capablanki pozostaje desperacka próba wiecznego szacha.'
+          }
+        },
+        '41. Kh5': {
+          badge: '🏆',
+          arrows: ['g4->h5:amber', 'e7->e8:green'],
+          targets: ['h5', 'e8'],
+          text: {
+            en: 'Capablanca resigns! After White’s king dodges every check and reaches h5 behind 40. g4!, Black cannot stop e8=Q or Qe6+.',
+            pl: 'Capablanca poddał partię! Po zagraniu 40. g4! i dojściu królem na h5 czarne nie mają już żadnych szachów ani obrony przed e8=H.'
+          }
+        }
+      }
+    },
+    // =========================================================================
+    // BATCH 3: BATTLES ba-37 through ba-48 (4 Easy, 4 Medium, 4 Hard)
+    // =========================================================================
+    {
+      id: 'ba-37',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'clearance', 'pin', 'promotion'],
+      players: {
+        en: 'Mikhail Botvinnik vs. Mikhail Tal (Moscow, 1960, Game 6)',
+        pl: 'Michaił Botwinnik – Michaił Tal (Moskwa, 1960, Partia 6)'
+      },
+      title: {
+        en: 'Tal’s Fearless Knight Sacrifice (21... Nf4!!)',
+        pl: 'Szaleńcza ofiara skoczka Tala (21... Sf4!!)'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! In Game 6 of the 1960 World Championship, Mikhail Tal stunned Botvinnik with the purely intuitive sacrifice 21... Nf4!!, tearing open the kingside and unleashing a decisive pair of passed pawns.',
+        pl: 'Widok z perspektywy czarnych! W 6. partii meczu o Mistrzostwo Świata w 1960 roku Michaił Tal zaszokował Botwinnika intuicyjną ofiarą skoczka 21... Sf4!!, rozrywając skrzydło królewskie i puszczając w ruch parę wolnych pionów.'
+      },
+      moves: [
+        'c4', 'Nf6', 'Nf3', 'g6', 'g3', 'Bg7', 'Bg2', 'O-O', 'd4', 'd6',
+        'Nc3', 'Nbd7', 'O-O', 'e5', 'e4', 'c6', 'h3', 'Qb6', 'd5', 'cxd5',
+        'cxd5', 'Nc5', 'Ne1', 'Bd7', 'Nd3', 'Nxd3', 'Qxd3', 'Rfc8', 'Rb1', 'Nh5',
+        'Be3', 'Qb4', 'Qe2', 'Rc4', 'Rfc1', 'Rac8', 'Kh2', 'f5', 'exf5', 'Bxf5',
+        'Ra1', 'Nf4', 'gxf4', 'exf4', 'Bd2', 'Qxb2', 'Rab1', 'f3', 'Rxb2', 'fxe2',
+        'Rb3', 'Rd4', 'Be1', 'Be5+', 'Kg1', 'Bf4', 'Nxe2', 'Rxc1', 'Nxd4', 'Rxe1+',
+        'Bf1', 'Be4', 'Ne2', 'Be5', 'f4', 'Bf6', 'Rxb7', 'Bxd5', 'Rc7', 'Bxa2',
+        'Rxa7', 'Bc4', 'Ra8+', 'Kf7', 'Ra7+', 'Ke6', 'Ra3', 'd5', 'Kf2', 'Bh4+',
+        'Kg2', 'Kd6', 'Ng3', 'Bxg3', 'Bxc4', 'dxc4', 'Kxg3', 'Kd5', 'Ra7', 'c3',
+        'Rc7', 'Kd4'
+      ],
+      annotations: {
+        '16... Qb4': {
+          badge: '⚔️',
+          arrows: ['b4->b2:red', 'b4->e4:red', 'b4->b1:amber'],
+          targets: ['b2', 'e4'],
+          text: {
+            en: 'Tal seizes the queenside! The queen pins the b2 pawn to the b1 rook while eyeing e4 and preparing doubled rooks on the c-file.',
+            pl: 'Tal przejmuje inicjatywę na skrzydle hetmańskim! Hetman wiąże piona b2 z wieżą b1, kontroluje e4 i toruje drogę wieżom na linię c.'
+          }
+        },
+        '21... Nf4': {
+          badge: '!!',
+          arrows: ['h5->f4:green', 'f4->e2:red', 'f4->g2:red'],
+          targets: ['f4', 'e2', 'g2'],
+          text: {
+            en: 'A thunderbolt of pure intuition! Tal sacrifices a whole knight to pry open the dark-squared diagonal and smash White’s kingside.',
+            pl: 'Piorun czystej intuicji! Tal poświęca całego skoczka, by otworzyć przekątną dla gońca g7 i rozbić osłonę białego króla.'
+          }
+        },
+        '23... Qxb2': {
+          badge: '!',
+          arrows: ['b4->b2:red', 'b2->d2:red', 'b2->e2:amber', 'b2->a1:red'],
+          targets: ['b2', 'd2', 'a1'],
+          text: {
+            en: 'Snatching b2 while pinning the d2 bishop to the e2 queen — setting up a devastating intermediate pawn thrust!',
+            pl: 'Bicie piona b2 z jednoczesnym związaniem gońca d2 na tle hetmana e2 — przygotowanie zabójczego wtrąconego ruchu pionem!'
+          }
+        },
+        '24... f3': {
+          badge: '!!',
+          arrows: ['f4->f3:green', 'f3->e2:red', 'f3->g2:red'],
+          targets: ['f3', 'e2', 'g2'],
+          text: {
+            en: 'Counter-strike! Instead of retreating the queen, Tal forks White’s queen and bishop, forcing queen trades that plant a monster pawn on e2.',
+            pl: 'Kontrudar! Zamiast cofać hetmana, Tal atakuje jednocześnie hetmana e2 i gońca g2, po wymianie hetmanów tworząc potężnego piona na e2.'
+          }
+        },
+        '27... Be5+': {
+          badge: '!',
+          arrows: ['g7->e5:red', 'e5->h2:red', 'd4->d5:amber'],
+          targets: ['h2', 'e5'],
+          text: {
+            en: 'Activating the dark-squared monster with check! The king is driven to g1, letting Black’s bishop jump to f4 and break the back rank.',
+            pl: 'Wejście ciemopolowego gońca z szachem! Król musi odejść na g1, co pozwala na 28... Gf4 i atak na ostatnią linię.'
+          }
+        },
+        '30... Rxe1+': {
+          badge: '!',
+          arrows: ['c1->e1:red', 'e1->g1:red', 'f5->c2:amber'],
+          targets: ['e1', 'g1'],
+          text: {
+            en: 'Liquidating into power! Black emerges from the tactical storm with two sweeping bishops against a rook and an extra pawn.',
+            pl: 'Realizacja przewagi! Po opadnięciu taktycznego kurzu czarne wychodzą z parą potężnych gońców przeciwko wieży oraz przewagą piona.'
+          }
+        },
+        '45... c3': {
+          badge: '🏆',
+          arrows: ['c4->c3:green', 'c3->c1:red', 'd5->d4:blue'],
+          targets: ['c3', 'c1'],
+          text: {
+            en: 'Supported by Black’s active king (46... Kd4), the passed c-pawn cannot be stopped cleanly; Botvinnik resigned after move 46.',
+            pl: 'Wspierany przez aktywnego króla (46... Kd4) wolny pion c jest nie do zatrzymania bez strat; po 46. ruchu Botwinnik poddał partię.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-38',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'fork', 'pin', 'discovered'],
+      players: {
+        en: 'Richard Réti vs. Alexander Alekhine (Baden-Baden, 1925)',
+        pl: 'Richard Réti – Aleksander Alechin (Baden-Baden, 1925)'
+      },
+      title: {
+        en: 'Alekhine’s 12-Move Tactical Combination',
+        pl: '12-posunięciowa kombinacja Alechina przeciwko Rétiemu'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! After patiently neutralizing Réti’s hypermodern setup, Alexander Alekhine unleashes 26... Re3!! — sparking a famous 12-move calculating masterpiece that ends with White’s knight trapped on b7.',
+        pl: 'Widok z perspektywy czarnych! Po cierpliwym zneutralizowaniu hipermodernistycznego debiutu Rétiego, Aleksander Alechin odpala 26... We3!! — rozpoczynając słynną 12-ruchową kombinację zakończoną uwięzieniem białego skoczka na b7.'
+      },
+      moves: [
+        'g3', 'e5', 'Nf3', 'e4', 'Nd4', 'd5', 'd3', 'exd3', 'Qxd3', 'Nf6',
+        'Bg2', 'Bb4+', 'Bd2', 'Bxd2+', 'Nxd2', 'O-O', 'c4', 'Na6', 'cxd5', 'Nb4',
+        'Qc4', 'Nbxd5', 'N2b3', 'c6', 'O-O', 'Re8', 'Rfd1', 'Bg4', 'Rd2', 'Qc8',
+        'Nc5', 'Bh3', 'Bf3', 'Bg4', 'Bg2', 'Bh3', 'Bf3', 'Bg4', 'Bh1', 'h5',
+        'b4', 'a6', 'Rc1', 'h4', 'a4', 'hxg3', 'hxg3', 'Qc7', 'b5', 'axb5',
+        'axb5', 'Re3', 'Nf3', 'cxb5', 'Qxb5', 'Nc3', 'Qxb7', 'Qxb7', 'Nxb7', 'Nxe2+',
+        'Kh2', 'Ne4', 'Rc4', 'Nxf2', 'Bg2', 'Be6', 'Rcc2', 'Ng4+', 'Kh3', 'Ne5+',
+        'Kh2', 'Rxf3', 'Rxe2', 'Ng4+', 'Kh3', 'Ne3+', 'Kh2', 'Nxc2', 'Bxf3', 'Nd4'
+      ],
+      annotations: {
+        '22... h4': {
+          badge: '⚔️',
+          arrows: ['h5->h4:green', 'h4->g3:red', 'c8->c7:blue'],
+          targets: ['g3', 'h2'],
+          text: {
+            en: 'Launching the kingside battering ram! Black rips open the h-file and targets the weakened g3 shelter.',
+            pl: 'Szturm na skrzydle królewskim! Czarne rozbijają pionową osłonę białego króla wokół pola g3.'
+          }
+        },
+        '26... Re3': {
+          badge: '!!',
+          arrows: ['e8->e3:red', 'e3->g3:red', 'e3->e2:red', 'c7->g3:amber'],
+          targets: ['e3', 'g3', 'e2'],
+          text: {
+            en: 'The opening salvo of Alekhine’s 12-move combination! Capturing with 27. fxe3?? allows 27... Qxg3 with an unstoppable kingside attack.',
+            pl: 'Początek 12-ruchowej kombinacji Alechina! Bicie 27. fxe3?? przegrywa błyskawicznie po 27... Hxg3 z niepowstrzymanym atakiem.'
+          }
+        },
+        '28... Nc3': {
+          badge: '!',
+          arrows: ['d5->c3:red', 'c3->b5:red', 'c3->e2:red', 'e3->g3:amber'],
+          targets: ['b5', 'e2'],
+          text: {
+            en: 'Jumping into the heart of White’s camp! The knight attacks both the b5 queen and the e2 pawn.',
+            pl: 'Skok w samo serce obozu białych! Skoczek jednocześnie atakuje hetmana b5 oraz piona e2.'
+          }
+        },
+        '30... Nxe2+': {
+          badge: '!',
+          arrows: ['c3->e2:red', 'e2->g1:red', 'e2->c1:red', 'e2->g3:amber'],
+          targets: ['e2', 'c1', 'g1'],
+          text: {
+            en: 'Check! Note that 31. Rxe2 loses the c1 rook to 31... Rxc1+, so the king must step to h2 while Black’s second knight joins the fray.',
+            pl: 'Szach! Ruch 31. Wxe2 traci wieżę c1 po 31... Wxc1+, więc król ucieka na h2, a drugi czarny skoczek wchodzi do ataku.'
+          }
+        },
+        '31... Ne4': {
+          badge: '!',
+          arrows: ['f6->e4:red', 'e4->d2:red', 'e4->f2:red', 'e3->g3:amber'],
+          targets: ['d2', 'f2', 'g3'],
+          text: {
+            en: 'Both rooks and the f2 pawn come under fire! Black’s knights and rook weave a deadly tactical web.',
+            pl: 'Atak na wieżę d2 i piona f2! Czarne skoczki wraz z wieżą e3 splatają zabójczą sieć taktyczną.'
+          }
+        },
+        '36... Rxf3': {
+          badge: '!',
+          arrows: ['e3->f3:red', 'e5->g4:green', 'f3->g3:amber'],
+          targets: ['f3', 'e2'],
+          text: {
+            en: 'Eliminating the defender! Even though White recaptures the e2 knight (37. Rxe2), Black has calculated the decisive discovered check!',
+            pl: 'Usunięcie obrońcy! Choć białe mogą zbić skoczka e2 (37. Wxe2), Alechin policzył wszystko aż do decydującego szacha z odsłonięcia!'
+          }
+        },
+        '38... Ne3+': {
+          badge: '🏆',
+          arrows: ['g4->e3:red', 'e6->h3:red', 'e3->c2:amber', 'e3->g2:amber'],
+          targets: ['h3', 'c2', 'g2'],
+          text: {
+            en: 'Discovered check from the e6 bishop! Black wins the c2 rook and lands on d4 (40... Nd4), trapping White’s stray knight on b7.',
+            pl: 'Szach z odsłonięcia od gońca e6! Czarne wygrywają wieżę c2, a po 40... Sd4 biały skoczek na b7 zostaje odcięty bez ratunku.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-39',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['clearance', 'pin', 'battery', 'deflection'],
+      players: {
+        en: 'Emanuel Lasker vs. José Raúl Capablanca (St. Petersburg, 1914)',
+        pl: 'Emanuel Lasker – José Raúl Capablanca (Petersburg, 1914)'
+      },
+      title: {
+        en: 'Lasker’s Positional Squeeze & Pawn Breakthrough',
+        pl: 'Słynny przełom pozycyjny Laskera w wymiennym wariancie Hiszpanki'
+      },
+      overview: {
+        en: 'Facing tournament leader Capablanca in a must-win game, Emanuel Lasker chooses the Exchange Ruy Lopez, clamps down on the kingside with 12. f5!, plants an eternal knight on e6, and shatters Black’s blockade with 35. e5!.',
+        pl: 'W partii „o wszystko” z liderem turnieju Capablancą, Emanuel Lasker wybiera wariant wymienny Partii Hiszpańskiej, unieruchamia skrzydło królewskie ruchem 12. f5!, osadza skoczka na e6 i rozbija obronę przełomem 35. e5!.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'a6', 'Bxc6', 'dxc6', 'd4', 'exd4',
+        'Qxd4', 'Qxd4', 'Nxd4', 'Bd6', 'Nc3', 'Ne7', 'O-O', 'O-O', 'f4', 'Re8',
+        'Nb3', 'f6', 'f5', 'b6', 'Bf4', 'Bb7', 'Bxd6', 'cxd6', 'Nd4', 'Rad8',
+        'Ne6', 'Rd7', 'Rad1', 'Nc8', 'Rf2', 'b5', 'Rfd2', 'Rde7', 'b4', 'Kf7',
+        'a3', 'Ba8', 'Kf2', 'Ra7', 'g4', 'h6', 'Rd3', 'a5', 'h4', 'axb4',
+        'axb4', 'Rae7', 'Kf3', 'Rg8', 'Kf4', 'g6', 'Rg3', 'g5+', 'Kf3', 'Nb6',
+        'hxg5', 'hxg5', 'Rh3', 'Rd7', 'Kg3', 'Ke8', 'Rdh1', 'Bb7', 'e5', 'dxe5',
+        'Ne4', 'Nd5', 'N6c5', 'Bc8', 'Nxd7', 'Bxd7', 'Rh7', 'Rf8', 'Ra1', 'Kd8',
+        'Ra8+', 'Bc8', 'Nc5'
+      ],
+      annotations: {
+        '4. Bxc6': {
+          badge: '📖',
+          arrows: ['b5->c6:red', 'c6->d7:amber', 'c6->b7:amber'],
+          targets: ['c6'],
+          text: {
+            en: 'The Exchange Ruy Lopez! Lasker damages Black’s queenside pawn structure early, aiming for a kingside majority endgame.',
+            pl: 'Wariant wymienny Partii Hiszpańskiej! Lasker psuje strukturę pionową na skrzydle hetmańskim, planując grę swoją większością na skrzydle królewskim.'
+          }
+        },
+        '12. f5': {
+          badge: '!',
+          arrows: ['f4->f5:green', 'f5->e6:amber', 'f5->g6:amber'],
+          targets: ['e6', 'g6'],
+          text: {
+            en: 'Locking down the kingside! By fixing Black’s light-squared bishop and carving out the e6 outpost, Lasker prepares total positional domination.',
+            pl: 'Blokada pozycji! Ruch f5 ogranicza czarnego gońca i przygotowuje niezdobytą placówkę dla białego skoczka na polu e6.'
+          }
+        },
+        '16. Ne6': {
+          badge: '!',
+          arrows: ['d4->e6:green', 'e6->d8:red', 'e6->g7:red'],
+          targets: ['e6', 'd8'],
+          text: {
+            en: 'The eternal outpost! Supported by f5, the e6 knight paralyzes Black’s rooks and cuts Black’s camp in two.',
+            pl: 'Wieczny posterunek! Pod osłoną piona f5 skoczek na e6 paraliżuje czarne wieże i dzieli obóz przeciwnika na pół.'
+          }
+        },
+        '32. Rh3': {
+          badge: '!',
+          arrows: ['g3->h3:green', 'h3->h7:red', 'd1->h1:green'],
+          targets: ['h7'],
+          text: {
+            en: 'Seizing the open h-file! White prepares to double rooks with 34. Rdh1, threatening decisive penetration to the 7th rank.',
+            pl: 'Opanowanie otwartej linii h! Białe szykują zdwojenie wież ruchem 34. Wdh1, grożąc wtargnięciem na siódmą linię.'
+          }
+        },
+        '35. e5': {
+          badge: '!!',
+          arrows: ['e4->e5:red', 'e5->d6:red', 'e5->f6:red', 'c3->e4:green'],
+          targets: ['d6', 'f6', 'e4'],
+          text: {
+            en: 'The immortal positional breakthrough! Lasker sacrifices the e-pawn to vacate e4 for his knight and shatter Black’s coordination.',
+            pl: 'Genialny przełom pozycyjny! Lasker poświęca piona e, aby zwolnić pole e4 dla swojego skoczka i rozerwać obronę Capablanki.'
+          }
+        },
+        '37. N6c5': {
+          badge: '!',
+          arrows: ['e6->c5:red', 'c5->b7:red', 'c5->d7:red'],
+          targets: ['b7', 'd7', 'c5'],
+          text: {
+            en: 'Knight fork! Attacking both the b7 bishop and d7 rook forces winning exchanges, letting White’s rooks storm into h7 and a8.',
+            pl: 'Widełki skoczkiem! Jednoczesny atak na gońca b7 i wieżę d7 wymusza korzystne wymiany i otwiera białym wieżom drogę na pola h7 oraz a8.'
+          }
+        },
+        '41. Ra8+': {
+          badge: '🏆',
+          arrows: ['a1->a8:red', 'a8->d8:red', 'a8->f8:amber'],
+          targets: ['d8', 'c8', 'f8'],
+          text: {
+            en: 'Total paralysis! Pinning the c8 bishop against the rook, Lasker follows up with 42. Nc5 and Capablanca resigns.',
+            pl: 'Całkowity paraliż! Wieża wiąże gońca na c8, a po kolejnym ruchu 42. Sc5 Capablanca poddaje partię.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-40',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['sacrifice', 'clearance', 'battery', 'kingHunt'],
+      players: {
+        en: 'Boris Spassky vs. Tigran Petrosian (Moscow, 1969, Game 19)',
+        pl: 'Boris Spasski – Tigran Petrosjan (Moskwa, 1969, Partia 19)'
+      },
+      title: {
+        en: 'Spassky’s Kingside Storm Against Iron Tigran',
+        pl: 'Mistrzowski atak matowy Spasskiego przeciwko „Żelaznemu Tigranowi”'
+      },
+      overview: {
+        en: 'In Game 19 of the 1969 World Championship, Boris Spassky unleashes a textbook kingside attack against Petrosian’s Sicilian Najdorf with 15. g4!, 18. f5!, and 21. e5!, finishing with the crushing knight leap 24. Ng5!.',
+        pl: 'W 19. partii meczu o Mistrzostwo Świata 1969 Boris Spasski rozpętuje wzorcowy szturm na króla w Obronie Sycylijskiej ruchami 15. g4!, 18. f5! i 21. e5!, wieńcząc dzieło ciosem 24. Sg5!.'
+      },
+      moves: [
+        'e4', 'c5', 'Nf3', 'd6', 'd4', 'cxd4', 'Nxd4', 'Nf6', 'Nc3', 'a6',
+        'Bg5', 'Nbd7', 'Bc4', 'Qa5', 'Qd2', 'h6', 'Bxf6', 'Nxf6', 'O-O-O', 'e6',
+        'Rhe1', 'Be7', 'f4', 'O-O', 'Bb3', 'Re8', 'Kb1', 'Bf8', 'g4', 'Nxg4',
+        'Qg2', 'Nf6', 'Rg1', 'Bd7', 'f5', 'Kh8', 'Rdf1', 'Qd8', 'fxe6', 'fxe6',
+        'e5', 'dxe5', 'Ne4', 'Nh5', 'Qg6', 'exd4', 'Ng5'
+      ],
+      annotations: {
+        '15. g4': {
+          badge: '⚔️',
+          arrows: ['g2->g4:green', 'g4->h5:amber', 'd2->g2:green'],
+          targets: ['g4', 'g7'],
+          text: {
+            en: 'Opening the floodgates! Spassky sacrifices a pawn to blast open the g-file directly against Petrosian’s castled king.',
+            pl: 'Otwarcie śluz! Spasski poświęca piona, aby otworzyć linię g bezpośrednio przeciwko roszadzie Petrosjana.'
+          }
+        },
+        '17. Rg1': {
+          badge: '🎯',
+          arrows: ['e1->g1:green', 'g1->g7:red', 'g2->g7:red'],
+          targets: ['g7'],
+          text: {
+            en: 'Battery on the g-file! Queen and rook now double up directly against Black’s g7 point.',
+            pl: 'Bateria na linii g! Hetman i wieża tworzą podwójne uderzenie wycelowane prosto w punkt g7.'
+          }
+        },
+        '18. f5': {
+          badge: '!',
+          arrows: ['f4->f5:red', 'f5->e6:red', 'b3->e6:amber'],
+          targets: ['e6', 'g7'],
+          text: {
+            en: 'Tearing open the second line of attack! White strikes at e6 to unleash the b3 bishop and bring the d1 rook to f1.',
+            pl: 'Otwarcie drugiego frontu! Białe uderzają w punkt e6, uruchamiając gońca z b3 oraz drugą wieżę na linii f.'
+          }
+        },
+        '21. e5': {
+          badge: '!',
+          arrows: ['e4->e5:red', 'e5->f6:red', 'c3->e4:green'],
+          targets: ['f6', 'e4'],
+          text: {
+            en: 'Clearance sacrifice! White kicks the f6 defender and opens the e4 square for the c3 knight to join the mating assault.',
+            pl: 'Ofiara oczyszczająca pole! Białe przepędzają obrońcę z f6 i zwalniają pole e4 dla skoczka z c3.'
+          }
+        },
+        '23. Qg6': {
+          badge: '!!',
+          arrows: ['g2->g6:red', 'g6->g7:red', 'g6->h7:red', 'b3->e6:amber'],
+          targets: ['g7', 'h7', 'e6'],
+          text: {
+            en: 'Deadly infiltration! Ignoring the d4 knight, White’s queen slides onto g6, eyeing both h7 and f7.',
+            pl: 'Śmiertelne wtargnięcie! Ignorując skoczka na d4, biały hetman staje na g6 i grozi matem przez h7 oraz f7.'
+          }
+        },
+        '24. Ng5': {
+          badge: '🏆',
+          arrows: ['e4->g5:red', 'g5->h7:red', 'g5->f7:red', 'g6->h7:red'],
+          targets: ['h7', 'f7', 'e6'],
+          text: {
+            en: 'Checkmate threats everywhere! Since 24... hxg5 allows 25. Qxh5+ Kg8 26. Qf7+ Kh8 27. Rf3, Petrosian resigned on the spot.',
+            pl: 'Groźby matowe ze wszystkich stron! Ponieważ 24... hxg5 pozwala na 25. Hxh5+ Kg8 26. Hf7+ Kh8 27. Wf3, Petrosjan poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === MEDIUM (4) ===
+    {
+      id: 'ba-41',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'medium',
+      themes: ['sacrifice', 'smothered', 'clearance', 'pin'],
+      players: {
+        en: 'Levon Aronian vs. Viswanathan Anand (Wijk aan Zee, 2013)',
+        pl: 'Levon Aronian – Viswanathan Anand (Wijk aan Zee, 2013)'
+      },
+      title: {
+        en: 'Anand’s Immortal: Smothered Mate Threats & Twin Sacrifices',
+        pl: '„Nieśmiertelna Partia XXI Wieku”: Genialny kontratak Ananda'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Answering White’s aggressive 12. Ng5, World Champion Viswanathan Anand crafts a 21st-century masterpiece with 15... Bc5! and 16... Nde5!!, hiding a lethal smothered mate trap.',
+        pl: 'Widok z perspektywy czarnych! W odpowiedzi na ostry atak 12. Sg5 mistrz świata Viswanathan Anand tworzy arcydzieło XXI wieku: poświęca figury ruchami 15... Gc5! oraz 16... Sde5!!, kryjąc w zanadrzu mata zaduszonego.'
+      },
+      moves: [
+        'd4', 'd5', 'c4', 'c6', 'Nf3', 'Nf6', 'Nc3', 'e6', 'e3', 'Nbd7',
+        'Bd3', 'dxc4', 'Bxc4', 'b5', 'Bd3', 'Bd6', 'O-O', 'O-O', 'Qc2', 'Bb7',
+        'a3', 'Rc8', 'Ng5', 'c5', 'Nxh7', 'Ng4', 'f4', 'cxd4', 'exd4', 'Bc5',
+        'Be2', 'Nde5', 'Bxg4', 'Bxd4+', 'Kh1', 'Nxg4', 'Nxf8', 'f5', 'Ng6', 'Qf6',
+        'h3', 'Qxg6', 'Qe2', 'Qh5', 'Qd3', 'Be3'
+      ],
+      annotations: {
+        '12... c5': {
+          badge: '⚔️',
+          arrows: ['c6->c5:red', 'c5->d4:red', 'd6->h2:red'],
+          targets: ['d4', 'h2'],
+          text: {
+            en: 'Counter-attack in the center! Instead of defending h7 passively, Anand immediately strikes at White’s central d4 pawn.',
+            pl: 'Kontratak w centrum! Zamiast biernie bronić piona h7, Anand natychmiast uderza w centrum białych ruchem c5.'
+          }
+        },
+        '15... Bc5': {
+          badge: '!!',
+          arrows: ['d6->c5:red', 'c5->d4:red', 'c5->g1:amber', 'd8->d4:amber'],
+          targets: ['d4', 'g1'],
+          text: {
+            en: 'Piece sacrifice! The bishop pins d4 to White’s king; capturing 16. dxc5 allows 16... Nxc5 with crushing pressure on d3 and f2.',
+            pl: 'Ofiara figury! Goniec wiąże piona d4 z białym królem; bicie 16. dxc5 oddaje inicjatywę po 16... Sxc5 z groźbami na d3 oraz f2.'
+          }
+        },
+        '16... Nde5': {
+          badge: '!!',
+          arrows: ['d7->e5:red', 'c5->g1:amber', 'd8->d4:amber', 'g4->f2:amber'],
+          targets: ['e5', 'f2', 'g1'],
+          text: {
+            en: 'Anand’s Immortal move! Both the c5 bishop and e5 knight hang, yet 17. fxe5?? loses to 17... Qxd4+ 18. Kh1 Qg1+! 19. Rxg1 Nf2#!',
+            pl: 'Nieśmiertelny ruch Ananda! Obie czarne figury stoją pod biciem, lecz 17. fxe5?? przegrywa przez 17... Hxd4+ 18. Kh1 Hg1+! 19. Wxg1 Sf2#!'
+          }
+        },
+        '17... Bxd4+': {
+          badge: '!',
+          arrows: ['c5->d4:red', 'd4->g1:red', 'e5->g4:green'],
+          targets: ['g1', 'c3'],
+          text: {
+            en: 'Claiming the killer diagonal with check before calmly recapturing White’s bishop on g4.',
+            pl: 'Opanowanie zabójczej przekątnej z szachem przed spokojnym odbiciem białego gońca na g4.'
+          }
+        },
+        '20... Qf6': {
+          badge: '!',
+          arrows: ['d8->f6:red', 'f6->g6:red', 'g4->f2:amber', 'd4->g1:amber'],
+          targets: ['g6', 'f2'],
+          text: {
+            en: 'Preparing the final assault! Even a full rook down, Black’s queen swoops toward the g- and h-files while f2 and h2 are fatally weak.',
+            pl: 'Przygotowanie ostatecznego szturmu! Mimo straty wieży czarny hetman wchodzi na skrzydło królewskie, biorąc na cel pola g2 oraz h2.'
+          }
+        },
+        '23... Be3': {
+          badge: '🏆',
+          arrows: ['d4->e3:red', 'e3->c1:red', 'h5->h3:amber', 'h5->h1:amber'],
+          targets: ['c1', 'h2', 'e3'],
+          text: {
+            en: 'Stunning finale! Interference on e3 cuts off White’s queen from defending g3/h2 while threatening ...Qxh3# and ...Nf2+.',
+            pl: 'Olśniewający finał! Przysłona na e3 odcina białego hetmana od obrony skrzydła królewskiego i grozi matem na h3; Aronian poddał partię.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-42',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'deflection', 'backRank', 'attraction'],
+      players: {
+        en: 'Magnus Carlsen vs. Sergey Karjakin (New York, 2016, Tie-break Game 4)',
+        pl: 'Magnus Carlsen – Siergiej Karjakin (Nowy Jork, 2016, Tie-break Partia 4)'
+      },
+      title: {
+        en: 'Championship Clincher: The Immortal 50. Qh6+!!',
+        pl: 'Ofiara na wagę tytułu Mistrza Świata: 50. Hh6+!!'
+      },
+      overview: {
+        en: 'In the decisive rapid tiebreak game of the 2016 World Championship, Magnus Carlsen caps a relentless endgame grind with 49. Rc8+ and the dazzling Queen sacrifice 50. Qh6+!! to force checkmate and retain his crown.',
+        pl: 'W decydującej partii dogrywki o Mistrzostwo Świata 2016 Magnus Carlsen wieńczy długą walkę pozycyjną uderzeniem 49. Wc8+ i błyskotliwą ofiarą hetmana 50. Hh6+!!, zapewniającą tytuł mistrzowski.'
+      },
+      moves: [
+        'e4', 'c5', 'Nf3', 'd6', 'd4', 'cxd4', 'Nxd4', 'Nf6', 'f3', 'e5',
+        'Nb3', 'Be7', 'c4', 'a5', 'Be3', 'a4', 'Nc1', 'O-O', 'Nc3', 'Qa5',
+        'Qd2', 'Na6', 'Be2', 'Nc5', 'O-O', 'Bd7', 'Rb1', 'Rfc8', 'b4', 'axb3',
+        'axb3', 'Qd8', 'Nd3', 'Ne6', 'Nb4', 'Bc6', 'Rfd1', 'h5', 'Bf1', 'h4',
+        'Qf2', 'Nd7', 'g3', 'Ra3', 'Bh3', 'Rca8', 'Nc2', 'R3a6', 'Nb4', 'Ra5',
+        'Nc2', 'b6', 'Rd2', 'Qc7', 'Rbd1', 'Bf8', 'gxh4', 'Nf4', 'Bxf4', 'exf4',
+        'Bxd7', 'Qxd7', 'Nb4', 'Ra3', 'Nxc6', 'Qxc6', 'Nb5', 'Rxb3', 'Nd4', 'Qxc4',
+        'Nxb3', 'Qxb3', 'Qe2', 'Be7', 'Kg2', 'Qe6', 'h5', 'Ra3', 'Rd3', 'Ra2',
+        'R3d2', 'Ra3', 'Rd3', 'Ra7', 'Rd5', 'Rc7', 'Qd2', 'Qf6', 'Rf5', 'Qh4',
+        'Rc1', 'Ra7', 'Qxf4', 'Ra2+', 'Kh1', 'Qf2', 'Rc8+', 'Kh7', 'Qh6+'
+      ],
+      annotations: {
+        '29... Nf4': {
+          badge: '⚔️',
+          arrows: ['e6->f4:red', 'f4->h3:red', 'f4->g2:amber'],
+          targets: ['h3', 'f4'],
+          text: {
+            en: 'Karjakin seeks active counterplay on the kingside, provoking major tactical exchanges around the center.',
+            pl: 'Karjakin szuka aktywnej kontrgry na skrzydle królewskim, inicjując serię taktycznych wymian.'
+          }
+        },
+        '35. Nd4': {
+          badge: '!',
+          arrows: ['b5->d4:red', 'd4->c6:red', 'd4->b3:red'],
+          targets: ['c6', 'b3'],
+          text: {
+            en: 'Knight fork! Carlsen hits Black’s queen and rook simultaneously, winning the exchange and taking over the initiative.',
+            pl: 'Widełki skoczkiem! Carlsen atakuje jednocześnie czarnego hetmana oraz wieżę, zdobywając jakość.'
+          }
+        },
+        '45. Rf5': {
+          badge: '!',
+          arrows: ['d5->f5:red', 'f5->f6:red', 'f5->f4:red'],
+          targets: ['f6', 'f4'],
+          text: {
+            en: 'Shifting fire to the f-file! White’s rook attacks Black’s queen and piles up pressure on the fragile f4 and f7 pawns.',
+            pl: 'Przeniesienie nacisku na linię f! Wieża z f5 atakuje hetmana oraz naciska na słabe punkty f4 i f7.'
+          }
+        },
+        '47. Qxf4': {
+          badge: '!',
+          arrows: ['d2->f4:red', 'f4->h4:red', 'f5->f7:amber', 'c1->c8:green'],
+          targets: ['f7', 'h4'],
+          text: {
+            en: 'Crucial capture! Eliminating the f4 pawn creates a lethal queen-rook battery against f7 while the c1 rook eyes c8.',
+            pl: 'Kluczowe bicie! Zbicie piona f4 tworzy groźną baterię na linii f przeciwko f7 oraz otwiera wieży drogę na c8.'
+          }
+        },
+        '49. Rc8+': {
+          badge: '!',
+          arrows: ['c1->c8:red', 'c8->g8:red', 'f4->h6:green', 'f5->f7:amber'],
+          targets: ['g8', 'h7'],
+          text: {
+            en: 'Back-rank check! White forces Black’s king onto the h7 corner square, lining it up for the championship-winning shot.',
+            pl: 'Szach na ostatniej linii! Białe spychają czarnego króla na pole h7 — prosto pod decydujący cios końcowy.'
+          }
+        },
+        '50. Qh6+': {
+          badge: '🏆',
+          arrows: ['f4->h6:red', 'h6->h7:red', 'h6->g7:red', 'c8->h8:amber', 'f5->f7:amber'],
+          targets: ['h6', 'h7', 'g7'],
+          text: {
+            en: 'The World Championship finisher! Karjakin resigned instantly: 50... Kxh6 allows 51. Rh8#, while 50... gxh6 allows 51. Rxf7#!',
+            pl: 'Ruch na wagę tytułu! Karjakin natychmiast się poddał: po 50... Kxh6 następuje 51. Wh8#, a po 50... gxh6 — 51. Wxf7#!'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-43',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['sacrifice', 'clearance', 'fork', 'kingHunt'],
+      players: {
+        en: 'Boris Spassky vs. David Bronstein (Leningrad, 1960)',
+        pl: 'Boris Spasski – Dawid Bronstein (Leningrad, 1960)'
+      },
+      title: {
+        en: 'King’s Gambit Fire: The James Bond Chess Battle',
+        pl: 'Ogień Gambitu Królewskiego: Partia z filmu o Jamesie Bondzie'
+      },
+      overview: {
+        en: 'The thrilling King’s Gambit duel immortalized in the James Bond film "From Russia with Love". Spassky sacrifices a rook with 16. Nxf7!, allows Black to queen with check, and finishes the attack with 22. Nxe5+! and 23. Qe4+!.',
+        pl: 'Porywający pojedynek w Gambicie Królewskim uwieczniony w filmie o Jamesie Bondzie „Pozdrowienia z Rosji”. Spasski poświęca wieżę ruchem 16. Sxf7!, pozwala na promocję z szachem i kończy atak uderzeniami 22. Sxe5+! oraz 23. He4+!.'
+      },
+      moves: [
+        'e4', 'e5', 'f4', 'exf4', 'Nf3', 'd5', 'exd5', 'Bd6', 'Nc3', 'Ne7',
+        'd4', 'O-O', 'Bd3', 'Nd7', 'O-O', 'h6', 'Ne4', 'Nxd5', 'c4', 'Ne3',
+        'Bxe3', 'fxe3', 'c5', 'Be7', 'Bc2', 'Re8', 'Qd3', 'e2', 'Nd6', 'Nf8',
+        'Nxf7', 'exf1=Q+', 'Rxf1', 'Bf5', 'Qxf5', 'Qd7', 'Qf4', 'Bf6', 'N3e5', 'Qe7',
+        'Bb3', 'Bxe5', 'Nxe5+', 'Kh7', 'Qe4+'
+      ],
+      annotations: {
+        '10... Ne3': {
+          badge: '⚔️',
+          arrows: ['d5->e3:red', 'e3->d1:red', 'e3->f1:red'],
+          targets: ['e3', 'd1', 'f1'],
+          text: {
+            en: 'Bronstein tries to jam White’s attack with an outpost fork on e3, creating a dangerous passed pawn after 11. Bxe3 fxe3.',
+            pl: 'Bronstein próbuje zakłócić atak białych widełkami na e3, tworząc po wymianie groźnego wolnego piona.'
+          }
+        },
+        '15. Nd6': {
+          badge: '!!',
+          arrows: ['e4->d6:red', 'd6->f7:red', 'd6->e8:red', 'c2->h7:amber'],
+          targets: ['f7', 'e8'],
+          text: {
+            en: 'Ignoring the threat on f1! Spassky lands his knight on d6, hitting e8 and aiming straight at the f7/h7 fortress.',
+            pl: 'Ignorując groźbę na f1! Spasski stawia skoczka na d6, atakując wieżę e8 i szykując szturm na punkt f7.'
+          }
+        },
+        '16. Nxf7': {
+          badge: '!!',
+          arrows: ['d6->f7:red', 'f7->d8:red', 'c2->g6:amber', 'e2->f1:blue'],
+          targets: ['f7', 'd8'],
+          text: {
+            en: 'Dazzling Rook sacrifice! White allows Black to promote on f1 with check, knowing White’s pieces will swarm the exposed black king.',
+            pl: 'Olśniewająca ofiara wieży! Białe pozwalają na promocję piona na f1 z szachem, by rzucić wszystkie siły na osamotnionego króla.'
+          }
+        },
+        '20. N3e5': {
+          badge: '!',
+          arrows: ['f3->e5:red', 'e5->d7:red', 'f4->f7:amber'],
+          targets: ['d7', 'f7'],
+          text: {
+            en: 'Bringing up the reinforcements! White centralizes the second knight with tempo against Black’s queen.',
+            pl: 'Wprowadzenie rezerw! Drugi biały skoczek zajmuje centrum z tempem, atakując czarnego hetmana.'
+          }
+        },
+        '22. Nxe5+': {
+          badge: '!',
+          arrows: ['f7->e5:red', 'b3->g8:red', 'e5->g6:amber'],
+          targets: ['e5', 'g8', 'h7'],
+          text: {
+            en: 'Discovered check from the b3 bishop! Driving the king onto h7 opens the fatal diagonal for White’s queen.',
+            pl: 'Szach z odsłonięcia od gońca b3! Odejście króla na h7 otwiera zabójczą przekątną dla białego hetmana.'
+          }
+        },
+        '23. Qe4+': {
+          badge: '🏆',
+          arrows: ['f4->e4:red', 'e4->h7:red', 'f1->f8:amber', 'e5->g6:amber'],
+          targets: ['h7', 'g6', 'f8'],
+          text: {
+            en: 'Check and game over! After 23... g6 24. Qxg6+ Kh8 25. Qxh6# (or 23... Kh8 24. Ng6+), defense collapses; Bronstein resigned.',
+            pl: 'Szach kończący walkę! Po 23... g6 24. Hxg6+ Kh8 25. Hxh6# lub 23... Kh8 24. Sg6+ obrona czarnych całkowicie się sypie; Bronstein poddał partię.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-44',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'pin', 'fork', 'deflection'],
+      players: {
+        en: 'Rashid Nezhmetdinov vs. Oleg Chernikov (Rostov-on-Don, 1962)',
+        pl: 'Raszid Nieżmietdinow – Oleg Czernikow (Rostów nad Donem, 1962)'
+      },
+      title: {
+        en: 'Nezhmetdinov’s Positional Queen Sacrifice (12. Qxf6!!)',
+        pl: 'Słynna ofiara hetmana Nieżmietdinowa (12. Hxf6!!)'
+      },
+      overview: {
+        en: 'One of the deepest non-forcing Queen sacrifices in chess history! With 12. Qxf6!!, Nezhmetdinov gives up his Queen for two minor pieces to dominate Black’s dark squares, finishing with the brilliant combo 28. Bxf7+! and 29. Rh8+!.',
+        pl: 'Jedna z najgłębszych pozycyjnych ofiar hetmana w dziejach szachów! Ruchem 12. Hxf6!! Nieżmietdinow oddaje hetmana za dwie lekkie figury, aby całkowicie zapanować nad czarnymi polami i rozstrzygnąć partię kombinacją 28. Gxf7+! i 29. Wh8+!.'
+      },
+      moves: [
+        'e4', 'c5', 'Nf3', 'Nc6', 'd4', 'cxd4', 'Nxd4', 'g6', 'Nc3', 'Bg7',
+        'Be3', 'Nf6', 'Bc4', 'O-O', 'Bb3', 'Ng4', 'Qxg4', 'Nxd4', 'Qh4', 'Qa5',
+        'O-O', 'Bf6', 'Qxf6', 'Ne2+', 'Nxe2', 'exf6', 'Nc3', 'Re8', 'Nd5', 'Re6',
+        'Bd4', 'Kg7', 'Rad1', 'd6', 'Rd3', 'Bd7', 'Rf3', 'Bb5', 'Bc3', 'Qd8',
+        'Nxf6', 'Be2', 'Nxh7+', 'Kg8', 'Rh3', 'Re5', 'f4', 'Bxf1', 'Kxf1', 'Rc8',
+        'Bd4', 'b5', 'Ng5', 'Rc7', 'Bxf7+', 'Rxf7', 'Rh8+', 'Kxh8', 'Nxf7+', 'Kh7',
+        'Nxd8', 'Rxe4', 'Nc6', 'Rxf4+', 'Ke2'
+      ],
+      annotations: {
+        '12. Qxf6': {
+          badge: '!!',
+          arrows: ['h4->f6:red', 'b3->f7:amber', 'f6->f8:amber', 'c3->d5:green'],
+          targets: ['f6', 'f7'],
+          text: {
+            en: 'Immortal Positional Queen Sacrifice! After 12... Ne2+ 13. Nxe2 exf6, White gets two pieces and unbreakable grip on the dark squares.',
+            pl: 'Nieśmiertelna pozycyjna ofiara hetmana! Po 12... Se2+ 13. Sxe2 exf6 białe zdobywają dwie lekkie figury oraz pełną kontrolę nad czarnymi polami.'
+          }
+        },
+        '15. Nd5': {
+          badge: '!',
+          arrows: ['c3->d5:green', 'd5->f6:red', 'e3->d4:green'],
+          targets: ['d5', 'f6'],
+          text: {
+            en: 'Anchoring the monster knight on d5! Next comes Bd4 and Rf3, piling unstoppable pressure onto the pinned f6 pawn.',
+            pl: 'Osadzenie potężnego skoczka na polu d5! Kolejne ruchy Gd4 oraz Wf3 skoncentrują ogień na związanym pionie f6.'
+          }
+        },
+        '21. Nxf6': {
+          badge: '!',
+          arrows: ['d5->f6:red', 'f6->h7:red', 'c3->g7:amber', 'f3->f6:amber'],
+          targets: ['f6', 'h7'],
+          text: {
+            en: 'Cash in and break through! Capturing on f6 threatens discovered checks and rips open the black king’s pawn shield.',
+            pl: 'Przełamanie obrony! Zbicie na f6 grozi szachami z odsłonięcia i całkowicie rozrywa osłonę czarnego króla.'
+          }
+        },
+        '27. Ng5': {
+          badge: '!',
+          arrows: ['h7->g5:red', 'g5->f7:red', 'b3->f7:red', 'h3->h7:amber'],
+          targets: ['f7', 'h7'],
+          text: {
+            en: 'Setting up the final fireworks! Knight, bishop, and rook now coordinate against f7 and the back rank.',
+            pl: 'Przygotowanie końcowego fajerwerku! Skoczek, goniec oraz wieża h3 współdziałają teraz przeciwko f7 i ostatniej linii.'
+          }
+        },
+        '28. Bxf7+': {
+          badge: '!!',
+          arrows: ['b3->f7:red', 'f7->g8:red', 'h3->h8:green', 'g5->f7:amber'],
+          targets: ['f7', 'g8'],
+          text: {
+            en: 'Deflection blow! Forcing 28... Rxf7 clears the path and removes a defender so White’s rook can crash into h8!',
+            pl: 'Uderzenie odciągające! Wymuszenie 28... Wxf7 zwalnia kluczowe pole i odciąga obrońcę przed wtargnięciem wieży na h8!'
+          }
+        },
+        '29. Rh8+': {
+          badge: '!!',
+          arrows: ['h3->h8:red', 'h8->g8:red', 'g5->f7:amber'],
+          targets: ['h8', 'f7'],
+          text: {
+            en: 'Attraction sacrifice! The rook lures the black king onto h8 — straight into a devastating knight fork on f7!',
+            pl: 'Ofiara zaciągająca! Wieża wyciąga czarnego króla na pole h8 — prosto pod miażdżące widełki skoczkiem na f7!'
+          }
+        },
+        '30. Nxf7+': {
+          badge: '🏆',
+          arrows: ['g5->f7:red', 'f7->h8:red', 'f7->d8:red'],
+          targets: ['h8', 'd8'],
+          text: {
+            en: 'Royal Fork! Nezhmetdinov wins back the queen on d8 and cruises to victory with two minor pieces against a rook.',
+            pl: 'Królewskie widełki! Nieżmietdinow odzyskuje hetmana na d8 i pewnie wygrywa końcówkę z przewagą figury.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-45',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'kingHunt', 'doubleCheck', 'pin'],
+      players: {
+        en: 'Lev Polugaevsky vs. Rashid Nezhmetdinov (Sochi, 1958)',
+        pl: 'Lew Poługajewski – Raszid Nieżmietdinow (Soczi, 1958)'
+      },
+      title: {
+        en: 'Nezhmetdinov’s Immortal: Queen Sacrifice & Cross-Board King Hunt',
+        pl: 'Nieśmiertelna Nieżmietdinowa: Marsz białego króla pod deszczem ofiar'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! One of the greatest attacking games ever played. With 24... Rxf4!!, Nezhmetdinov sacrifices his Queen to force White’s king on a relentless hunt from e3 all the way up to a5.',
+        pl: 'Widok z perspektywy czarnych! Jedna z najbardziej olśniewających partii w dziejach szachów. Ofiarą hetmana 24... Wxf4!! Nieżmietdinow wyciąga białego króla na morderczy spacer z pola e3 aż na skraj deski (a5).'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'd6', 'Nc3', 'e5', 'e4', 'exd4', 'Qxd4', 'Nc6',
+        'Qd2', 'g6', 'b3', 'Bg7', 'Bb2', 'O-O', 'Bd3', 'Ng4', 'Nge2', 'Qh4',
+        'Ng3', 'Nge5', 'O-O', 'f5', 'f3', 'Bh6', 'Qd1', 'f4', 'Nge2', 'g5',
+        'Nd5', 'g4', 'g3', 'fxg3', 'hxg3', 'Qh3', 'f4', 'Be6', 'Bc2', 'Rf7',
+        'Kf2', 'Qh2+', 'Ke3', 'Bxd5', 'cxd5', 'Nb4', 'Rh1', 'Rxf4', 'Rxh2', 'Rf3+',
+        'Kd4', 'Bg7', 'a4', 'c5+', 'dxc6', 'bxc6', 'Bd3', 'Nexd3+', 'Kc4', 'd5+',
+        'exd5', 'cxd5+', 'Kb5', 'Rb8+', 'Ka5', 'Nc6+'
+      ],
+      annotations: {
+        '18... Qh3': {
+          badge: '⚔️',
+          arrows: ['h4->h3:red', 'h3->g3:red', 'h3->f1:red'],
+          targets: ['g3', 'f1', 'h2'],
+          text: {
+            en: 'Infiltrating the shattered dark squares! Black’s queen refuses to retreat, eyeing both g3 and the back rank.',
+            pl: 'Wtargnięcie po osłabionych czarnych polach! Czarny hetman wdziera się w głąb obozu białych, celując w g3 oraz f1.'
+          }
+        },
+        '21... Qh2+': {
+          badge: '!',
+          arrows: ['h3->h2:red', 'h2->f2:red', 'f7->f4:amber'],
+          targets: ['f2', 'e3'],
+          text: {
+            en: 'Luring the king out! White’s king is forced up to e3, right into the crossfire of Black’s pieces.',
+            pl: 'Wyciągnięcie króla na środek! Biały król musi wejść na e3, prosto pod zmasowany ostrzał czarnych figur.'
+          }
+        },
+        '24... Rxf4': {
+          badge: '!!',
+          arrows: ['f7->f4:red', 'h6->d2:amber', 'h1->h2:blue'],
+          targets: ['f4', 'h2'],
+          text: {
+            en: 'Nezhmetdinov’s Immortal Queen Sacrifice! Leaving his queen to be captured on h2, Black blasts open the central diagonals for a forced king hunt.',
+            pl: 'Nieśmiertelna ofiara hetmana Nieżmietdinowa! Oddając hetmana na h2, czarne rozrywają pozycję, by rozpocząć wymuszone polowanie na białego króla.'
+          }
+        },
+        '25... Rf3+': {
+          badge: '!',
+          arrows: ['f4->f3:red', 'f3->e3:red', 'h6->c1:amber'],
+          targets: ['e3', 'd4'],
+          text: {
+            en: 'Nowhere to retreat! With e2 and d2 covered, White’s king must step forward to d4.',
+            pl: 'Bez odwrotu! Ponieważ pola e2 oraz d2 są odcięte, król białych zostaje wypchnięty jeszcze wyżej na d4.'
+          }
+        },
+        '29... Nexd3+': {
+          badge: '!',
+          arrows: ['e5->d3:red', 'g7->d4:red', 'b4->c2:amber'],
+          targets: ['d4', 'c4'],
+          text: {
+            en: 'Discovered check from the g7 bishop! Every black minor piece now closes the cage around White’s wandering king.',
+            pl: 'Szach z odsłonięcia od gońca z g7! Wszystkie czarne lekkie figury zaciskają pętlę wokół błądzącego króla.'
+          }
+        },
+        '32... Rb8+': {
+          badge: '!',
+          arrows: ['a8->b8:red', 'b8->b5:red', 'd5->c4:amber'],
+          targets: ['b5', 'a5'],
+          text: {
+            en: 'The final reserve joins the hunt! White’s king is driven off the b-file onto the edge of the board at a5.',
+            pl: 'Ostatnia rezerwa wchodzi do gry! Wieża z b8 spycha białego króla na skraj szachownicy — na pole a5.'
+          }
+        },
+        '33... Nc6+': {
+          badge: '🏆',
+          arrows: ['b4->c6:red', 'c6->a5:red', 'b8->b5:amber', 'd3->b4:amber'],
+          targets: ['a5', 'a6'],
+          text: {
+            en: 'Polugaevsky resigned here! The only move 34. Ka6 allows instant checkmate with either 34... Ndb4# or 34... Nc5#.',
+            pl: 'Poługajewski poddał partię! Jedyna odpowiedź 34. Ka6 prowadzi do natychmiastowego mata po 34... Sdb4# lub 34... Sc5#.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-46',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'clearance', 'backRank', 'deflection'],
+      players: {
+        en: 'Mikhail Tal vs. Bent Larsen (Bled, 1965, Game 10)',
+        pl: 'Michaił Tal – Bent Larsen (Bled, 1965, Partia 10)'
+      },
+      title: {
+        en: 'Tal’s Decisive Match-Winner: 16. Nd5!! in the Sicilian',
+        pl: 'Ofiara skoczka 16. Sd5!! w Obronie Sycylijskiej'
+      },
+      overview: {
+        en: 'In the deciding 10th game of the 1965 Candidates Semifinal, Mikhail Tal ignites a sharp Sicilian battle with 16. Nd5!! and 20. Bxf5!, sacrificing pieces to blast open the e-file and win with a classic deflection on move 34.',
+        pl: 'W decydującej 10. partii półfinału turnieju pretendentów 1965 Michaił Tal rozpala szachownicę ofiarami 16. Sd5!! i 20. Gxf5!, otwierając linię e i kończąc pojedynek odciągnięciem 34. Gc5!.'
+      },
+      moves: [
+        'e4', 'c5', 'Nf3', 'Nc6', 'd4', 'cxd4', 'Nxd4', 'e6', 'Nc3', 'd6',
+        'Be3', 'Nf6', 'f4', 'Be7', 'Qf3', 'O-O', 'O-O-O', 'Qc7', 'Ndb5', 'Qb8',
+        'g4', 'a6', 'Nd4', 'Nxd4', 'Bxd4', 'b5', 'g5', 'Nd7', 'Bd3', 'b4',
+        'Nd5', 'exd5', 'exd5', 'f5', 'Rde1', 'Rf7', 'h4', 'Bb7', 'Bxf5', 'Rxf5',
+        'Rxe7', 'Ne5', 'Qe4', 'Qf8', 'fxe5', 'Rf4', 'Qe3', 'Rf3', 'Qe2', 'Qxe7',
+        'Qxf3', 'dxe5', 'Re1', 'Rd8', 'Rxe5', 'Qd6', 'Qf4', 'Rf8', 'Qe4', 'b3',
+        'axb3', 'Rf1+', 'Kd2', 'Qb4+', 'c3', 'Qd6', 'Bc5', 'Qxc5', 'Re8+', 'Rf8',
+        'Qe6+', 'Kh8', 'Qf7'
+      ],
+      annotations: {
+        '16. Nd5': {
+          badge: '!!',
+          arrows: ['c3->d5:red', 'd5->e7:red', 'd1->e1:green', 'd3->h7:amber'],
+          targets: ['d5', 'e7'],
+          text: {
+            en: 'Tal’s signature central sacrifice! Giving up a knight blasts open the e-file directly against Black’s bishop and uncoordinated kingside.',
+            pl: 'Klasyczne uderzenie Tala w centrum! Poświęcenie skoczka otwiera linię e wprost przeciwko gońcowi e7 oraz królowi czarnych.'
+          }
+        },
+        '20. Bxf5': {
+          badge: '!',
+          arrows: ['d3->f5:red', 'f5->d7:red', 'e1->e7:amber'],
+          targets: ['f5', 'e7'],
+          text: {
+            en: 'Second sacrifice! Luring Black’s rook away from the 7th rank allows White’s rook to storm into e7 with devastating effect.',
+            pl: 'Druga ofiara! Odciągnięcie wieży z f7 pozwala białej wieży z impetem wtargnąć na siódmą linię (We7).'
+          }
+        },
+        '21. Rxe7': {
+          badge: '!',
+          arrows: ['e1->e7:red', 'e7->d7:red', 'f3->f5:amber'],
+          targets: ['e7', 'd7'],
+          text: {
+            en: 'Penetrating the 7th rank! Even when Larsen counter-attacks with 21... Ne5 and 23... Rf4, White keeps total control over the center.',
+            pl: 'Wtargnięcie na siódmą linię! Nawet po kontratakach 21... Se5 i 23... Wf4 białe utrzymują inicjatywę w centrum.'
+          }
+        },
+        '28. Rxe5': {
+          badge: '!',
+          arrows: ['e1->e5:red', 'e5->e7:red', 'd4->g7:amber'],
+          targets: ['e5', 'e7'],
+          text: {
+            en: 'Regrouping with tempo! Eliminating the e5 pawn puts White’s rook on an active central perch while attacking the black queen.',
+            pl: 'Centralizacja z tempem! Bicie na e5 ustawia wieżę na potężnym centralnym posterunku, jednocześnie przeganiając hetmana.'
+          }
+        },
+        '34. Bc5': {
+          badge: '!!',
+          arrows: ['d4->c5:red', 'c5->d6:red', 'e5->e8:amber'],
+          targets: ['c5', 'd6', 'e8'],
+          text: {
+            en: 'Deadly deflection! Offering the bishop on c5 forces Black’s queen away from guarding e8, unleashing a back-rank mating net.',
+            pl: 'Śmiertelne odciągnięcie! Poświęcenie gońca na c5 odrywa czarnego hetmana od obrony pola e8, otwierając sieć matową na ostatniej linii.'
+          }
+        },
+        '37. Qf7': {
+          badge: '🏆',
+          arrows: ['e6->f7:red', 'f7->f8:red', 'f7->g7:red', 'e8->f8:amber'],
+          targets: ['f8', 'g7'],
+          text: {
+            en: 'Double threat of Qxf8# and Qxg7#! With no defense left against the back-rank battery, Larsen resigned and Tal won the match.',
+            pl: 'Podwójna groźba Hxf8# i Hxg7#! Bez obrony przed baterią na ósmej linii Larsen poddał partię, a Tal wygrał cały mecz.'
+          }
+        }
+      }
+    },
+
+    // === EASY (remaining 2: ba-47, ba-48) ===
+    {
+      id: 'ba-47',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['clearance', 'pin', 'battery', 'sacrifice'],
+      players: {
+        en: 'Bobby Fischer vs. Pal Benko (New York, 1963/64)',
+        pl: 'Bobby Fischer – Pal Benko (Nowy Jork, 1963/64)'
+      },
+      title: {
+        en: 'Fischer’s 11/11 Gem: The Brilliant Blockade 19. Rf6!!',
+        pl: 'Blokada 19. Wf6!! z historycznego turnieju 11/11 Fischera'
+      },
+      overview: {
+        en: 'From Bobby Fischer’s legendary 11–0 sweep of the 1963/64 US Championship! After dismantling Benko’s Pirc Defense, Fischer finds the unforgettable quiet move 19. Rf6!! — blocking Black’s f-pawn from defending the king.',
+        pl: 'Partia z historycznego triumfu 11/11 Bobby’ego Fischera w Mistrzostwach USA 1963/64! Po otwarciu linii przeciwko Obronie Pirca Fischer znajduje genialny ruch blokujący 19. Wf6!!, który odbiera czarnym obronę ruchem ...f5.'
+      },
+      moves: [
+        'e4', 'g6', 'd4', 'Bg7', 'Nc3', 'd6', 'f4', 'Nf6', 'Nf3', 'O-O',
+        'Bd3', 'Bg4', 'h3', 'Bxf3', 'Qxf3', 'Nc6', 'Be3', 'e5', 'dxe5', 'dxe5',
+        'f5', 'gxf5', 'Qxf5', 'Nd4', 'Qf2', 'Ne8', 'O-O', 'Nd6', 'Qg3', 'Kh8',
+        'Qg4', 'c6', 'Qh5', 'Qe8', 'Bxd4', 'exd4', 'Rf6', 'Kg8', 'e5', 'h6',
+        'Ne2'
+      ],
+      annotations: {
+        '11. f5': {
+          badge: '⚔️',
+          arrows: ['f4->f5:red', 'f5->g6:red', 'd3->h7:amber'],
+          targets: ['g6', 'h7'],
+          text: {
+            en: 'Attacking the kingside structure! Fischer opens the f-file for his rook and queen while weakening Black’s dark squares.',
+            pl: 'Atak na strukturę pionową! Fischer otwiera linię f dla ciężkich figur i osłabia pola wokół czarnego króla.'
+          }
+        },
+        '15. Qg3': {
+          badge: '!',
+          arrows: ['f2->g3:red', 'g3->g7:red', 'g3->g8:amber'],
+          targets: ['g7', 'g8'],
+          text: {
+            en: 'Pinning the g7 bishop! Black is forced to step into the corner with 15... Kh8, setting up future h7 mating motifs.',
+            pl: 'Związanie gońca na g7! Czarne muszą odejść królem w róg (15... Kh8), co wystawia punkt h7 na atak.'
+          }
+        },
+        '18. Bxd4': {
+          badge: '!',
+          arrows: ['e3->d4:red', 'd4->a7:red', 'f1->f6:green'],
+          targets: ['d4', 'f6'],
+          text: {
+            en: 'Clearing the path! Removing the d4 knight prevents Black from defending comfortably and sets up a stunning tactical strike.',
+            pl: 'Oczyszczenie pola! Zbicie aktywnego skoczka na d4 przygotowuje olśniewający manewr wieżą na linii f.'
+          }
+        },
+        '19. Rf6': {
+          badge: '!!',
+          arrows: ['f1->f6:red', 'f6->f7:red', 'f6->d6:red', 'h5->h7:amber'],
+          targets: ['f6', 'f7', 'h7'],
+          text: {
+            en: 'The famous blockade! 19. Rf6!! stops 19... f5 — and capturing the rook (19... Bxf6??) walks straight into 20. Qxh7#!',
+            pl: 'Słynna blokada! 19. Wf6!! uniemożliwia ruch 19... f5 — a zbicie wieży (19... Gxf6??) prowadzi do natychmiastowego mata 20. Hxh7#!'
+          }
+        },
+        '20. e5': {
+          badge: '!',
+          arrows: ['e4->e5:red', 'e5->d6:red', 'd3->h7:red', 'h5->h7:amber'],
+          targets: ['d6', 'h7'],
+          text: {
+            en: 'Opening the lethal d3–h7 battery! Threatened with Qxh7#, Black has no choice but to weaken the kingside further with 20... h6.',
+            pl: 'Otwarcie śmiercionośnej baterii d3–h7! W obliczu mata na h7 czarne muszą osłabić się ruchem 20... h6.'
+          }
+        },
+        '21. Ne2': {
+          badge: '🏆',
+          arrows: ['c3->e2:green', 'e2->f4:green', 'd3->h7:amber', 'h5->h7:amber'],
+          targets: ['e2', 'h6'],
+          text: {
+            en: 'Benko resigned! Capturing on f6 still allows 22. Qxh6+ Kg8 23. Qh7#, and Black cannot stop 22. Rxd6 or 22. Nf4.',
+            pl: 'Benko poddał partię! Bicie na f6 nadal przegrywa po 22. Hxh6+ Kg8 23. Hh7#, a przeciwko 22. Wxd6 lub 22. Sf4 nie ma obrony.'
+          }
+        }
+      }
+    },
+
+    {
+      id: 'ba-48',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['sacrifice', 'attraction', 'discovered', 'kingHunt'],
+      players: {
+        en: 'Robert Byrne vs. Bobby Fischer (New York, 1963/64)',
+        pl: 'Robert Byrne – Bobby Fischer (Nowy Jork, 1963/64)'
+      },
+      title: {
+        en: 'The Shocking Resignation: 15... Nxf2!! Against Byrne',
+        pl: 'Piorunująca kombinacja Fischera (15... Sxf2!!): Białe poddają w równej pozycji'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Another gem from Fischer’s 11–0 US Championship victory. Grandmaster Robert Byrne resigned at move 21 while still a piece up — stunned by a tactical storm sparked by 14... Nd3! and 15... Nxf2!!.',
+        pl: 'Widok z perspektywy czarnych! Kolejna perła z turnieju 11/11 Bobby’ego Fischera. Arcymistrz Robert Byrne poddał partię w 21. ruchu, mając figurę przewagi — zaskoczony taktyczną burzą po 14... Sd3! oraz 15... Sxf2!!.'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'g6', 'g3', 'c6', 'Bg2', 'd5', 'cxd5', 'cxd5',
+        'Nc3', 'Bg7', 'e3', 'O-O', 'Nge2', 'Nc6', 'O-O', 'b6', 'b3', 'Ba6',
+        'Ba3', 'Re8', 'Qd2', 'e5', 'dxe5', 'Nxe5', 'Rfd1', 'Nd3', 'Qc2', 'Nxf2',
+        'Kxf2', 'Ng4+', 'Kg1', 'Nxe3', 'Qd2', 'Nxg2', 'Kxg2', 'd4', 'Nxd4', 'Bb7+',
+        'Kf1', 'Qd7'
+      ],
+      annotations: {
+        '14... Nd3': {
+          badge: '!',
+          arrows: ['e5->d3:red', 'd3->f2:red', 'a6->f1:amber'],
+          targets: ['f2', 'd3'],
+          text: {
+            en: 'Jumping into the d3 outpost! Fischer threatens f2 while the a6 bishop cuts off White’s kingside escape squares.',
+            pl: 'Skok na placówkę d3! Fischer bierze na celownik pole f2, podczas gdy goniec a6 kontroluje kluczowe białe pola.'
+          }
+        },
+        '15... Nxf2': {
+          badge: '!!',
+          arrows: ['d3->f2:red', 'f2->d1:red', 'f6->g4:green', 'a6->f1:amber'],
+          targets: ['f2', 'g1'],
+          text: {
+            en: 'Brilliant Knight Sacrifice! Shattering White’s kingside shelter drags the king onto f2, setting up a fierce knight-and-bishop ambush.',
+            pl: 'Genialna ofiara skoczka! Zbicie na f2 rozbija osłonę króla i wyciąga go na pole f2 pod natychmiastowy kontratak.'
+          }
+        },
+        '16... Ng4+': {
+          badge: '!',
+          arrows: ['f6->g4:red', 'g4->f2:red', 'g4->e3:red', 'g7->d4:amber'],
+          targets: ['f2', 'e3'],
+          text: {
+            en: 'Check! Forcing the king back to g1 lets the knight hop into e3 with a triple attack on White’s queen, bishop, and rook.',
+            pl: 'Szach! Zmusza króla do odwrotu na g1, co otwiera skoczkowi drogę na e3 z potrójnym atakiem na hetmana, gońca i wieżę.'
+          }
+        },
+        '18... Nxg2': {
+          badge: '!',
+          arrows: ['e3->g2:red', 'g2->f1:amber', 'd5->d4:green'],
+          targets: ['g2', 'd4'],
+          text: {
+            en: 'Stripping the defender! Eliminating White’s light-squared bishop clears the long diagonal for 19... d4! and 20... Bb7+.',
+            pl: 'Eliminacja głównego obrońcy! Zbicie gońca na g2 otwiera wielką przekątną dla decydującego pchnięcia 19... d4! i szacha z b7.'
+          }
+        },
+        '20... Bb7+': {
+          badge: '!!',
+          arrows: ['a6->b7:red', 'b7->g2:red', 'b7->f1:amber'],
+          targets: ['g2', 'f1', 'd4'],
+          text: {
+            en: 'Laser check along the a8–h1 diagonal! White’s king is forced to f1 since 21. Nf3 loses the queen after 21... Qxd2.',
+            pl: 'Zabójczy szach po przekątnej a8–h1! Biały król musi uciec na f1, gdyż 21. Sf3 przegrywa hetmana po 21... Hxd2.'
+          }
+        },
+        '21... Qd7': {
+          badge: '🏆',
+          arrows: ['d8->d7:red', 'd7->h3:green', 'b7->h1:red', 'd7->d4:amber'],
+          targets: ['h3', 'f1', 'd4'],
+          text: {
+            en: 'White resigned despite being a piece up! Facing 22... Qh3+ followed by 23. Kg1 Qg2# (or 23. Ke2 Qg2+ and 24... Rxe3+), Byrne had no defense.',
+            pl: 'Białe poddały partię mimo przewagi figury! Wobec groźby 22... Hh3+ i 23... Hg2# lub 23. Ke2 Hg2+ i 24... Wxe3+ obrona była niemożliwa.'
+          }
+        }
+      }
+    },
+    // =========================================================================
+    // BATCH 4: Candidate Battles #37–#50 (ba-49 through ba-62)
+    // Difficulty split: 5 easy, 5 medium, 4 hard
+    // =========================================================================
+
+    // === #37 Zukertort – Blackburne (London, 1883) ===
+    {
+      id: 'ba-49',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'deflection', 'clearance', 'battery', 'pin'],
+      players: {
+        en: 'Johannes Zukertort vs. Joseph Henry Blackburne (London, 1883)',
+        pl: 'Johannes Zukertort – Joseph Henry Blackburne (Londyn, 1883)'
+      },
+      title: {
+        en: 'Zukertort’s Immortal: Double Queen & Rook Deflection (28. Qb4!!)',
+        pl: 'Nieśmiertelna Zukertorta: Podwójna ofiara hetmana i wieży (28. Hb4!!)'
+      },
+      overview: {
+        en: 'Steinitz called this one of the finest attacking masterpieces ever played. After cracking open the kingside with 23. f5 and 25. fxg6, Zukertort calmly offers his Queen on b4 (28. Qb4!!) and his Rook on f8 (29. Rf8+!!) to strip the black king’s defenses.',
+        pl: 'Steinitz nazwał tę partię jednym z najwspanialszych dzieł sztuki ataku w historii. Po przełamaniu skrzydła królewskiego ruchami 23. f5 i 25. fxg6 Zukertort z zimną krwią poświęca hetmana na b4 (28. Hb4!!) oraz wieżę na f8 (29. Wf8+!!), rozrywając obronę czarnego króla.'
+      },
+      moves: [
+        'c4', 'e6', 'e3', 'Nf6', 'Nf3', 'b6', 'Be2', 'Bb7', 'O-O', 'd5',
+        'd4', 'Bd6', 'Nc3', 'O-O', 'b3', 'Nbd7', 'Bb2', 'Qe7', 'Nb5', 'Ne4',
+        'Nxd6', 'cxd6', 'Nd2', 'Ndf6', 'f3', 'Nxd2', 'Qxd2', 'dxc4', 'Bxc4', 'd5',
+        'Bd3', 'Rfc8', 'Rae1', 'Rc7', 'e4', 'Rac8', 'e5', 'Ne8', 'f4', 'g6',
+        'Re3', 'f5', 'exf6', 'Nxf6', 'f5', 'Ne4', 'Bxe4', 'dxe4', 'fxg6', 'Rc2',
+        'gxh7+', 'Kh8', 'd5+', 'e5', 'Qb4', 'R8c5', 'Rf8+', 'Kxh7', 'Qxe4+', 'Kg7',
+        'Bxe5+', 'Kxf8', 'Bg7+', 'Kg8', 'Qxe7'
+      ],
+      annotations: {
+        '18. e4': {
+          badge: '⚔️',
+          arrows: ['e4->d5:red', 'e4->e5:green', 'd3->h7:amber'],
+          targets: ['d5', 'e5'],
+          text: {
+            en: 'With both rooks centralized, Zukertort opens the center to gain space for a kingside storm.',
+            pl: 'Po centralizacji obu wież Zukertort uderza w centrum, zdobywając przestrzeń do szturmu na skrzydle królewskim.'
+          }
+        },
+        '23. f5': {
+          badge: '!',
+          arrows: ['f5->e6:red', 'f5->g6:red', 'f1->f6:amber'],
+          targets: ['e6', 'g6'],
+          text: {
+            en: 'Breaking the blockade! White offers a pawn on e4 to pry open the f-file and dark squares.',
+            pl: 'Przełamanie blokady! Białe poświęcają piona, aby otworzyć linię f i ciemne pola wokół króla.'
+          }
+        },
+        '25. fxg6': {
+          badge: '!',
+          arrows: ['g6->h7:red', 'b2->g7:amber', 'e3->g3:green'],
+          targets: ['g6', 'h7'],
+          text: {
+            en: 'Ignoring Black’s infiltration on c2! Opening the g- and f-files creates lethal mating threats.',
+            pl: 'Zukertort ignoruje wtargnięcie czarnych na c2! Otwarcie linii f i g tworzy śmiertelne groźby matowe.'
+          }
+        },
+        '28. Qb4': {
+          badge: '!!',
+          arrows: ['b4->e7:red', 'b2->e5:amber', 'f1->f8:green'],
+          targets: ['b4', 'e5', 'e7'],
+          text: {
+            en: 'Immortal Queen Sacrifice! 28. Qb4!! leaves the queen en prise: 28... Qxb4 runs into 29. Bxe5+ Kxh7 30. Rh3+ and forced mate!',
+            pl: 'Nieśmiertelna ofiara hetmana! 28. Hb4!! wystawia hetmana pod bicie: po 28... Hxb4 następuje 29. Gxe5+ Kxh7 30. Wh3+ z forsującym matem!'
+          }
+        },
+        '29. Rf8+': {
+          badge: '!!',
+          arrows: ['f8->h8:red', 'b4->e4:green', 'b2->e5:amber'],
+          targets: ['f8', 'h7', 'e4'],
+          text: {
+            en: 'Now a Rook Sacrifice! 29. Rf8+!! deflects the king onto h7 so the queen can capture e4 with check.',
+            pl: 'Teraz ofiara wieży! 29. Wf8+!! ściąga króla na h7, dzięki czemu biały hetman zbije piona e4 z szachem.'
+          }
+        },
+        '31. Bxe5+': {
+          badge: '!',
+          arrows: ['b2->e5:red', 'e4->h7:amber', 'e4->e7:amber'],
+          targets: ['e5', 'f8'],
+          text: {
+            en: 'Clearing the long diagonal with check! Black’s king is forced to capture on f8, disconnecting the e7 queen.',
+            pl: 'Oczyszczenie wielkiej przekątnej z szachem! Król musi zbić wieżę f8, tracąc łączność z obroną hetmana.'
+          }
+        },
+        '33. Qxe7': {
+          badge: '🏆',
+          arrows: ['e4->e7:green', 'g7->f8:amber'],
+          targets: ['e7', 'g8'],
+          text: {
+            en: 'After 32. Bg7+! Black’s queen falls cleanly; Blackburne resigned immediately.',
+            pl: 'Po odciągającym szachu 32. Gg7+! czarny hetman ginie bez ratunku — Blackburne natychmiast się poddał.'
+          }
+        }
+      }
+    },
+
+    // === #38 Pillsbury – Tarrasch (Hastings, 1895) ===
+    {
+      id: 'ba-50',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'attraction', 'kingHunt', 'battery'],
+      players: {
+        en: 'Harry Nelson Pillsbury vs. Siegbert Tarrasch (Hastings, 1895)',
+        pl: 'Harry Nelson Pillsbury – Siegbert Tarrasch (Hastings, 1895)'
+      },
+      title: {
+        en: 'The Pillsbury Attack: Opposite-Wing Race at Hastings',
+        pl: 'Atak Pillsbury’ego: Wyścig na przeciwległych skrzydłach w Hastings'
+      },
+      overview: {
+        en: 'The model Queen’s Gambit kingside attack. As Tarrasch breaks through on the queenside with ...b4 and ...Ra3, Pillsbury launches g4–g5, sacrifices a rook and knight on g7 and h6, and hunts the king to h5.',
+        pl: 'Wzorcowy atak na skrzydle królewskim w Gambicie Hetmańskim. Gdy Tarrasch przedziera się po skrzydle hetmańskim ruchami ...b4 i ...Wa3, Pillsbury uderza g4–g5, poświęca wieżę oraz skoczka na g7 i h6 i matuje króla na h5.'
+      },
+      moves: [
+        'd4', 'd5', 'c4', 'e6', 'Nc3', 'Nf6', 'Bg5', 'Be7', 'Nf3', 'Nbd7',
+        'Rc1', 'O-O', 'e3', 'b6', 'cxd5', 'exd5', 'Bd3', 'Bb7', 'O-O', 'c5',
+        'Re1', 'c4', 'Bb1', 'a6', 'Ne5', 'b5', 'f4', 'Re8', 'Qf3', 'Nf8',
+        'Ne2', 'Ne4', 'Bxe7', 'Rxe7', 'Bxe4', 'dxe4', 'Qg3', 'f6', 'Ng4', 'Kh8',
+        'f5', 'Qd7', 'Rf1', 'Rd8', 'Rf4', 'Qd6', 'Qh4', 'Rde8', 'Nc3', 'Bd5',
+        'Nf2', 'Qc6', 'Rf1', 'b4', 'Ne2', 'Qa4', 'Ng4', 'Nd7', 'R4f2', 'Kg8',
+        'Nc1', 'c3', 'b3', 'Qc6', 'h3', 'a5', 'Nh2', 'a4', 'g4', 'axb3',
+        'axb3', 'Ra8', 'g5', 'Ra3', 'Ng4', 'Bxb3', 'Rg2', 'Kh8', 'gxf6', 'gxf6',
+        'Nxb3', 'Rxb3', 'Nh6', 'Rg7', 'Rxg7', 'Kxg7', 'Qg3+', 'Kxh6', 'Kh1', 'Qd5',
+        'Rg1', 'Qxf5', 'Qh4+', 'Qh5', 'Qf4+', 'Qg5', 'Rxg5', 'fxg5', 'Qd6+', 'Kh5',
+        'Qxd7', 'c2', 'Qxh7#'
+      ],
+      annotations: {
+        '13. Ne5': {
+          badge: '📖',
+          arrows: ['e5->f7:red', 'f2->f4:green', 'b1->h7:amber'],
+          targets: ['e5', 'h7'],
+          text: {
+            en: 'The signature Pillsbury Attack outpost! White plants the knight on e5 supported by f2–f4.',
+            pl: 'Klasyczna placówka Ataku Pillsbury’ego! Skoczek staje na e5, wsparty natychmiastowym marszem f2–f4.'
+          }
+        },
+        '24. Qh4': {
+          badge: '⚔️',
+          arrows: ['h4->f6:red', 'h4->h7:red', 'f4->g4:green'],
+          targets: ['f6', 'h7'],
+          text: {
+            en: 'White’s queen and rooks line up against the dark squares around Black’s castled king.',
+            pl: 'Biały hetman i wieże ustawiają się naprzeciwko słabych pól wokół roszady czarnych.'
+          }
+        },
+        '37. g5': {
+          badge: '!',
+          arrows: ['g5->f6:red', 'g2->g7:amber', 'h2->g4:green'],
+          targets: ['f6', 'g6'],
+          text: {
+            en: 'No time to defend the queenside! Pillsbury crashes open the g-file just as Black’s rooks invade b3.',
+            pl: 'Nie ma czasu na obronę b3! Pillsbury otwiera linię g, zanim czarne przełamią się na skrzydle hetmańskim.'
+          }
+        },
+        '42. Nh6': {
+          badge: '!!',
+          arrows: ['h6->f7:red', 'h6->g8:red', 'g2->g7:red'],
+          targets: ['f7', 'g8', 'g7'],
+          text: {
+            en: 'Deadly leap! Threatening 43. Qg8+ or 43. Nf7+, forcing Black to commit the rook to g7.',
+            pl: 'Zabójczy skok! Groźby Hg8+ oraz Sf7+ zmuszają czarne do obrony wieżą na g7.'
+          }
+        },
+        '43. Rxg7': {
+          badge: '!!',
+          arrows: ['g2->g7:red', 'h4->g3:green', 'f1->g1:green'],
+          targets: ['g7', 'h6'],
+          text: {
+            en: 'Sacrificing the rook and the h6 knight! Dragging Black’s king onto h6 exposes it to the final battery.',
+            pl: 'Ofiara wieży i skoczka h6! Wyciągnięcie czarnego króla na h6 wystawia go na decydujące uderzenie po linii g.'
+          }
+        },
+        '49. Rxg5': {
+          badge: '!',
+          arrows: ['g1->g5:red', 'f4->d6:green'],
+          targets: ['g5', 'd6'],
+          text: {
+            en: 'Eliminating Black’s defending queen! After 49... fxg5, White’s queen sweeps the board with tempo.',
+            pl: 'Usunięcie broniącego hetmana! Po 49... fxg5 biały hetman wdziera się na d6 z tempem.'
+          }
+        },
+        '52. Qxh7#': {
+          badge: '🏆',
+          arrows: ['d7->h7:red', 'h7->h5:red'],
+          targets: ['h5', 'h7'],
+          text: {
+            en: 'Checkmate! One move before Black’s c2 pawn could promote, Pillsbury seals the mate on h7.',
+            pl: 'Mat! O jeden ruch przed promocją czarnego piona c2 Pillsbury kończy partię matem na h7.'
+          }
+        }
+      }
+    },
+
+    // === #39 Short – Timman (Tilburg, 1991) ===
+    {
+      id: 'ba-51',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['kingHunt', 'pin', 'battery', 'sacrifice'],
+      players: {
+        en: 'Nigel Short vs. Jan Timman (Tilburg, 1991)',
+        pl: 'Nigel Short – Jan Timman (Tilburg, 1991)'
+      },
+      title: {
+        en: 'The Immortal King Walk: Marching from g1 to h6 to Mate',
+        pl: 'Nieśmiertelny Marsz Króla: Droga z g1 na h6 po mata'
+      },
+      overview: {
+        en: 'One of the most famous endgames-in-a-middlegame ever played. After paralyzing Timman on the dark squares with Qf6+, Nigel Short ignores every piece trade and marches his own king from g1 to g5 to help deliver checkmate on g7!',
+        pl: 'Jedna z najsłynniejszych kombinacji pozycyjnych XX wieku. Po sparaliżowaniu czarnych na ciemnych polach ruchem Hf6+ Nigel Short ignoruje resztę szachownicy i maszeruje własnym królem z g1 aż na g5, by osobiście pomóc w macie na g7!'
+      },
+      moves: [
+        'e4', 'Nf6', 'e5', 'Nd5', 'd4', 'd6', 'Nf3', 'g6', 'Bc4', 'Nb6',
+        'Bb3', 'Bg7', 'Qe2', 'Nc6', 'O-O', 'O-O', 'h3', 'a5', 'a4', 'dxe5',
+        'dxe5', 'Nd4', 'Nxd4', 'Qxd4', 'Re1', 'e6', 'Nd2', 'Nd5', 'Nf3', 'Qc5',
+        'Qe4', 'Qb4', 'Bc4', 'Nb6', 'b3', 'Nxc4', 'bxc4', 'Re8', 'Rd1', 'Qc5',
+        'Qh4', 'b6', 'Be3', 'Qc6', 'Bh6', 'Bh8', 'Rd8', 'Bb7', 'Rad1', 'Bg7',
+        'R8d7', 'Rf8', 'Bxg7', 'Kxg7', 'R1d4', 'Rae8', 'Qf6+', 'Kg8', 'h4', 'h5',
+        'Kh2', 'Rc8', 'Kg3', 'Rce8', 'Kf4', 'Bc8', 'Kg5'
+      ],
+      annotations: {
+        '19. bxc4': {
+          badge: '📖',
+          arrows: ['c4->d5:amber', 'e1->d1:green', 'e4->h4:green'],
+          targets: ['c4', 'd6'],
+          text: {
+            en: 'Short accepts doubled c-pawns to lock down d5 and seize the open d-file with his rooks.',
+            pl: 'Short zgadza się na zdwojone piony c, aby zabetonować pole d5 i opanować otwartą linię d.'
+          }
+        },
+        '23. Bh6': {
+          badge: '!',
+          arrows: ['h6->g7:red', 'h4->f6:amber'],
+          targets: ['g7', 'f6'],
+          text: {
+            en: 'Offering to trade off Black’s key dark-squared bishop, leaving f6 and g7 permanently defenseless.',
+            pl: 'Wymiana kluczowego gońca fianchetto pozostawi ciemne pola f6 oraz g7 całkowicie bezbronne.'
+          }
+        },
+        '26. R8d7': {
+          badge: '!',
+          arrows: ['d7->f7:red', 'd1->d4:green'],
+          targets: ['d7', 'f7'],
+          text: {
+            en: 'Anchoring a rook on the 7th rank! Black’s queen and bishops cannot generate any counterplay.',
+            pl: 'Zakotwiczenie wieży na 7. linii! Czarne figury są całkowicie związane obroną i pozbawione kontrgry.'
+          }
+        },
+        '29. Qf6+': {
+          badge: '!!',
+          arrows: ['f6->g7:red', 'f6->g8:red', 'd4->f4:amber'],
+          targets: ['f6', 'g7', 'g8'],
+          text: {
+            en: 'The paralysis begins! Black’s king is caged in the corner while Short prepares to bring up his final attacker.',
+            pl: 'Początek pełnego paraliżu! Czarny król zostaje uwięziony w rogu, a Short szuka ostatniej figury do mata.'
+          }
+        },
+        '31. Kh2': {
+          badge: '!!',
+          arrows: ['g1->h2:green', 'h2->g3:green', 'g3->f4:green', 'f4->g5:green'],
+          targets: ['h2', 'g5', 'h6'],
+          text: {
+            en: 'The Immortal King Walk begins! Since Black cannot untangle or attack, Short marches his king up the board!',
+            pl: 'Początek Nieśmiertelnego Marszu Króla! Ponieważ czarne nie mają kontrgry, Short rusza własnym królem na pomoc!'
+          }
+        },
+        '34. Kg5': {
+          badge: '🏆',
+          arrows: ['g5->h6:green', 'f6->g7:red'],
+          targets: ['g5', 'h6', 'g7'],
+          text: {
+            en: 'Mission accomplished! Facing 35. Kh6 and 36. Qg7#, Timman resigned—as 34... Bxd7 runs into 35. Kh6 and mate!',
+            pl: 'Cel osiągnięty! W obliczu groźby 35. Kh6 i 36. Hg7# Timman poddał partię — bicie 34... Gxd7 również przegrywa po 35. Kh6!'
+          }
+        }
+      }
+    },
+
+    // === #40 Ivanchuk – Yusupov (Brussels, 1991) ===
+    {
+      id: 'ba-52',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'kingHunt', 'deflection', 'fork'],
+      players: {
+        en: 'Vassily Ivanchuk vs. Artur Yusupov (Brussels, 1991)',
+        pl: 'Vassily Ivanchuk – Artur Yusupov (Bruksela, 1991)'
+      },
+      title: {
+        en: 'Yusupov’s Tactical Labyrinth: The Queen & Knight Assault',
+        pl: 'Labirynt Yusupova: Atak hetmanem i skoczkami po przekątnej'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! In Game 9 of the 1991 Candidates tiebreak, Yusupov sacrifices a knight on h4, ignores a whole rook on a8, and steers his knights to f2 and h3 for one of the wildest attacking victories in modern chess.',
+        pl: 'Widok z perspektywy czarnych! W 9. partii dogrywki meczów pretendentów 1991 Yusupov poświęca skoczka na h4, ignoruje własną wieżę na a8 i wprowadza skoczki na f2 i h3, tworząc jedno z najdzikszych zwycięstw atakiem we współczesnych szachach.'
+      },
+      moves: [
+        'c4', 'e5', 'g3', 'd6', 'Bg2', 'g6', 'd4', 'Nd7', 'Nc3', 'Bg7',
+        'Nf3', 'Ngf6', 'O-O', 'O-O', 'Qc2', 'Re8', 'Rd1', 'c6', 'b3', 'Qe7',
+        'Ba3', 'e4', 'Ng5', 'e3', 'f4', 'Nf8', 'b4', 'Bf5', 'Qb3', 'h6',
+        'Nf3', 'Ng4', 'b5', 'g5', 'bxc6', 'bxc6', 'Ne5', 'gxf4', 'Nxc6', 'Qg5',
+        'Bxd6', 'Ng6', 'Nd5', 'Qh5', 'h4', 'Nxh4', 'gxh4', 'Qxh4', 'Nde7+', 'Kh8',
+        'Nxf5', 'Qh2+', 'Kf1', 'Re6', 'Qb7', 'Rg6', 'Qxa8+', 'Kh7', 'Qg8+', 'Kxg8',
+        'Nce7+', 'Kh7', 'Nxg6', 'fxg6', 'Nxg7', 'Nf2', 'Bxf4', 'Qxf4', 'Ne6', 'Qh2',
+        'Rdb1', 'Nh3', 'Rb7+', 'Kh8', 'Rb8+', 'Qxb8', 'Bxh3', 'Qg3'
+      ],
+      annotations: {
+        '17... g5': {
+          badge: '⚔️',
+          arrows: ['g5->f4:red', 'g4->h2:red'],
+          targets: ['f4', 'h2'],
+          text: {
+            en: 'With White breaking through on the queenside, Yusupov hurls the g-pawn forward to crack open f4 and the h-file.',
+            pl: 'Gdy białe atakują skrzydło hetmańskie, Yusupov pcha piona g, by rozerwać osłonę na f4 i otworzyć linię h.'
+          }
+        },
+        '23... Nxh4': {
+          badge: '!!',
+          arrows: ['h4->g2:red', 'g5->h4:amber', 'h5->h4:green'],
+          targets: ['h4', 'h2'],
+          text: {
+            en: 'Crushing knight sacrifice! Tearing away the h4 barrier so Black’s queen can storm into h4 and h2.',
+            pl: 'Niszczycielska ofiara skoczka! Zniszczenie bariery na h4 otwiera czarnemu hetmanowi drogę do wtargnięcia na h2.'
+          }
+        },
+        '26... Qh2+': {
+          badge: '!',
+          arrows: ['h2->g1:red', 'e8->e6:green'],
+          targets: ['f1', 'h2'],
+          text: {
+            en: 'Driving White’s king to f1 and locking the g2 bishop down while the e8 rook prepares to join via the 6th rank.',
+            pl: 'Zepchnięcie króla na f1 blokuje gońca g2 i daje czas na przerzut wieży e8 przez szóstą linię.'
+          }
+        },
+        '28... Rg6': {
+          badge: '!!',
+          arrows: ['g6->g2:red', 'b7->a8:blue'],
+          targets: ['g2', 'a8'],
+          text: {
+            en: 'Ice-cold sacrifice! Yusupov leaves the a8 rook to fall with check, knowing White’s king cannot survive the g-file assault.',
+            pl: 'Zimnokrwista ofiara! Yusupov oddaje wieżę a8 z szachem, wiedząc, że król białych nie przeżyje ataku na linii g.'
+          }
+        },
+        '33... Nf2': {
+          badge: '!!',
+          arrows: ['f2->d1:red', 'f2->h3:green', 'h2->g1:red'],
+          targets: ['f2', 'h3', 'd1'],
+          text: {
+            en: 'Brilliant quiet stroke! Even after losing the queen earlier, Black’s queen and knight weave a forced mating net.',
+            pl: 'Genialne ciche posunięcie! Po wymianie hetmanów za wieże czarne utrzymują śmiertelną sieć matową skoczkiem i hetmanem.'
+          }
+        },
+        '36... Nh3': {
+          badge: '!',
+          arrows: ['h3->g1:red', 'h2->g1:red', 'h3->f2:amber'],
+          targets: ['g1', 'f2'],
+          text: {
+            en: 'Threatening instant checkmate on g1 and f2, forcing White to sacrifice a rook just to capture the knight.',
+            pl: 'Groźba natychmiastowego mata na g1 oraz f2 zmusza białe do oddania wieży za powstrzymanie skoczka.'
+          }
+        },
+        '39... Qg3': {
+          badge: '🏆',
+          arrows: ['g3->f2:red', 'g3->g1:red', 'g3->h3:red'],
+          targets: ['f2', 'g1', 'h3'],
+          text: {
+            en: 'Simultaneously attacking the h3 bishop and threatening 40... Qf2# or 40... Qg1#; Ivanchuk resigned.',
+            pl: 'Podwójny cios w gońca h3 i groźby 40... Hf2# / Hg1# — Ivanchuk poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === #41 Deep Blue – Kasparov (New York, 1997, Game 6) ===
+    {
+      id: 'ba-53',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['sacrifice', 'pin', 'deflection', 'clearance'],
+      players: {
+        en: 'Deep Blue vs. Garry Kasparov (New York, 1997, Game 6)',
+        pl: 'Deep Blue – Garri Kasparow (Nowy Jork, 1997, Partia 6)'
+      },
+      title: {
+        en: 'Man vs. Machine: The Historic 8. Nxe6! Breakthrough',
+        pl: 'Człowiek kontra Maszyna: Historyczna ofiara 8. Sxe6!'
+      },
+      overview: {
+        en: 'The decisive Game 6 of the 1997 rematch in New York. Deep Blue unleashes the famous 8. Nxe6! knight sacrifice against Kasparov’s Caro-Kann, stranding the black king in the center and winning in just 19 moves.',
+        pl: 'Decydująca 6. partia meczu rewanżowego w Nowym Jorku w 1997 roku. Deep Blue stosuje słynną ofiarę skoczka 8. Sxe6! w Obronie Caro-Kann, unieruchamiając króla Kasparowa w centrum i zmuszając mistrza świata do kapitulacji w zaledwie 19 ruchach.'
+      },
+      moves: [
+        'e4', 'c6', 'd4', 'd5', 'Nc3', 'dxe4', 'Nxe4', 'Nd7', 'Ng5', 'Ngf6',
+        'Bd3', 'e6', 'N1f3', 'h6', 'Nxe6', 'Qe7', 'O-O', 'fxe6', 'Bg6+', 'Kd8',
+        'Bf4', 'b5', 'a4', 'Bb7', 'Re1', 'Nd5', 'Bg3', 'Kc8', 'axb5', 'cxb5',
+        'Qd3', 'Bc6', 'Bf5', 'exf5', 'Rxe7', 'Bxe7', 'c4'
+      ],
+      annotations: {
+        '8. Nxe6': {
+          badge: '!!',
+          arrows: ['e6->d8:red', 'e6->f8:red', 'd3->g6:amber'],
+          targets: ['e6', 'd8', 'f8'],
+          text: {
+            en: 'The famous Caro-Kann sacrifice! Deep Blue tears open e6 to prevent Black from castling and wreck the kingside pawns.',
+            pl: 'Słynna ofiara w Obronie Caro-Kann! Deep Blue rozbija pole e6, uniemożliwiając czarnym roszadę i niszcząc ich strukturę.'
+          }
+        },
+        '10. Bg6+': {
+          badge: '!',
+          arrows: ['g6->e8:red', 'e1->g1:green'],
+          targets: ['e8', 'd8'],
+          text: {
+            en: 'Stripping castling rights! Black’s king is forced to d8, locking the h8 rook out of the game.',
+            pl: 'Odebranie prawa do roszady! Król musi wejść na d8, odcinając własną wieżę h8 od gry.'
+          }
+        },
+        '13. Re1': {
+          badge: '!',
+          arrows: ['e1->e6:red', 'e1->e7:amber'],
+          targets: ['e6', 'e7'],
+          text: {
+            en: 'Every white piece enters with tempo! The rook pins the e6 pawn straight against Black’s queen.',
+            pl: 'Wszystkie białe figury wchodzą do gry z tempem! Wieża wiąże piona e6 na tle hetmana e7.'
+          }
+        },
+        '16. Qd3': {
+          badge: '!',
+          arrows: ['d3->b5:red', 'd3->g6:amber', 'g6->f5:green'],
+          targets: ['b5', 'f5'],
+          text: {
+            en: 'Attacking b5 and preparing the decisive bishop sacrifice on f5 to rip open the e-file.',
+            pl: 'Atak na b5 i przygotowanie decydującego ciosu gońcem na f5, który ostatecznie otworzy linię e.'
+          }
+        },
+        '17. Bf5': {
+          badge: '!!',
+          arrows: ['f5->e6:red', 'e1->e7:red'],
+          targets: ['e6', 'e7'],
+          text: {
+            en: 'Breaking the blockade! Black cannot ignore Bf5 without losing e6, yet 17... exf5 allows 18. Rxe7.',
+            pl: 'Przełamanie blokady! Czarne nie mogą obronić pola e6, a bicie 17... exf5 oddaje hetmana po 18. Wxe7.'
+          }
+        },
+        '19. c4': {
+          badge: '🏆',
+          arrows: ['c4->b5:red', 'c4->d5:red', 'd3->b5:amber'],
+          targets: ['b5', 'd5'],
+          text: {
+            en: 'Final blow! White’s queen and c-pawn shatter the queenside shelter while Black’s h8 rook never moved; Kasparov resigned.',
+            pl: 'Ostateczny cios! Białe rozbijają osłonę króla na c8, podczas gdy wieża h8 wciąż śpi w rogu — Kasparow poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === #42 AlphaZero – Stockfish (London, 2017, Game 10) ===
+    {
+      id: 'ba-54',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'pin', 'kingHunt', 'defense'],
+      players: {
+        en: 'AlphaZero vs. Stockfish (London, 2017, Game 10)',
+        pl: 'AlphaZero – Stockfish (Londyn, 2017, Partia 10)'
+      },
+      title: {
+        en: 'Neural Revolution: Positional Sacrifice & Total Blockade',
+        pl: 'Rewolucja AI: Pozycyjna ofiara i całkowita blokada Stockfisha'
+      },
+      overview: {
+        en: 'The game that stunned the chess world in 2017. AlphaZero sacrifices a knight and multiple pawns with 15. Nh6+ and 19. Re1!!, binding Stockfish’s pieces on the back rank until the black king’s fortress collapses.',
+        pl: 'Partia, która zszokowała szachowy świat w 2017 roku. AlphaZero poświęca skoczka i pionki ruchami 15. Sh6+ oraz 19. We1!!, całkowicie paraliżując figury Stockfisha i przełamując jego obronę w końcówce.'
+      },
+      moves: [
+        'Nf3', 'Nf6', 'd4', 'e6', 'c4', 'b6', 'g3', 'Bb7', 'Bg2', 'Be7',
+        'O-O', 'O-O', 'd5', 'exd5', 'Nh4', 'c6', 'cxd5', 'Nxd5', 'Nf5', 'Nc7',
+        'e4', 'd5', 'exd5', 'Nxd5', 'Nc3', 'Nxc3', 'Qg4', 'g6', 'Nh6+', 'Kg7',
+        'bxc3', 'Bc8', 'Qf4', 'Qd6', 'Qa4', 'g5', 'Re1', 'Kxh6', 'h4', 'f6',
+        'Be3', 'Bf5', 'Rad1', 'Qa3', 'Qc4', 'b5', 'hxg5+', 'fxg5', 'Qh4+', 'Kg6',
+        'Qh1', 'Kg7', 'Be4', 'Bg6', 'Bxg6', 'hxg6', 'Qh3', 'Bf6', 'Kg2', 'Qxa2',
+        'Rh1', 'Qg8', 'c4', 'Re8', 'Bd4', 'Bxd4', 'Rxd4', 'Rd8', 'Rxd8', 'Qxd8',
+        'Qe6', 'Nd7', 'Rd1', 'Nc5', 'Rxd8', 'Nxe6', 'Rxa8', 'Kf6', 'cxb5', 'cxb5',
+        'Kf3', 'Nd4+', 'Ke4', 'Nc6', 'Rc8', 'Ne7', 'Rb8', 'Nf5', 'g4', 'Nh6',
+        'f3', 'Nf7', 'Ra8', 'Nd6+', 'Kd5', 'Nc4', 'Rxa7', 'Ne3+', 'Ke4', 'Nc4',
+        'Ra6+', 'Kg7', 'Rc6', 'Kf7', 'Rc5', 'Ke6', 'Rxg5', 'Kf6', 'Rc5', 'g5',
+        'Kd4'
+      ],
+      annotations: {
+        '10. Nf5': {
+          badge: '⚔️',
+          arrows: ['f5->e7:red', 'f5->g7:red', 'e2->e4:green'],
+          targets: ['f5', 'e7'],
+          text: {
+            en: 'AlphaZero plants a monster knight on f5, prioritizing long-term dark-square pressure over material.',
+            pl: 'AlphaZero lokuje potężnego skoczka na f5, stawiając długofalowy nacisk ponad rachunek pionów.'
+          }
+        },
+        '15. Nh6+': {
+          badge: '!',
+          arrows: ['h6->g8:red', 'g4->g7:amber'],
+          targets: ['h6', 'g7'],
+          text: {
+            en: 'Forcing the king to g7 and anchoring the knight deep inside Stockfish’s kingside.',
+            pl: 'Zmusza króla do wejścia na g7 i wbija klin w obóz Stockfisha na skrzydle królewskim.'
+          }
+        },
+        '19. Re1': {
+          badge: '!!',
+          arrows: ['e1->e7:amber', 'h6->g7:blue', 'h2->h4:green'],
+          targets: ['h6', 'e7'],
+          text: {
+            en: 'Stunning piece sacrifice! AlphaZero leaves the h6 knight en prise to seize the e-file and prepare h4.',
+            pl: 'Oszałamiająca ofiara figury! AlphaZero zostawia skoczka h6 pod biciem, by przejąć linię e i przygotować h4.'
+          }
+        },
+        '20. h4': {
+          badge: '!',
+          arrows: ['h4->g5:red', 'c1->e3:green'],
+          targets: ['g5', 'h6'],
+          text: {
+            en: 'Despite being down a full piece, White locks Stockfish’s king on the rim and activates both bishops.',
+            pl: 'Mimo straty całej figury białe zamykają króla Stockfisha w klatce i wprowadzają do gry oba gońce.'
+          }
+        },
+        '26. Qh1': {
+          badge: '!!',
+          arrows: ['h1->h7:amber', 'g2->e4:green', 'e1->h1:green'],
+          targets: ['h1', 'h7'],
+          text: {
+            en: 'Eerie quiet retreat! AlphaZero tucks its queen into the h1 corner, preparing Rh1 and Be4 while Black’s queenside sleeps.',
+            pl: 'Niesamowite wycofanie w róg! AlphaZero chowa hetmana na h1, przygotowując Wh1 i Ge4 przy całkowitym paraliżu figur czarnych.'
+          }
+        },
+        '36. Qe6': {
+          badge: '!',
+          arrows: ['e6->g6:red', 'h1->d1:green', 'd1->d7:amber'],
+          targets: ['e6', 'd7'],
+          text: {
+            en: 'Total domination! Down a knight and pawn earlier, White forces entry on the d-file to win back material with interest.',
+            pl: 'Pełna dominacja! Pomimo wcześniejszej straty materiału białe przejmują linię d i odzyskują wszystko z nawiązką.'
+          }
+        },
+        '56. Kd4': {
+          badge: '🏆',
+          arrows: ['d4->c4:red', 'c5->b5:red'],
+          targets: ['c4', 'b5'],
+          text: {
+            en: 'White’s king marches in to pick off Black’s last pawns and knight; Stockfish resigned.',
+            pl: 'Biały król wkracza do decydującego ataku na pozostałe piony i skoczka — Stockfish poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === #43 Jinshi Bai – Ding Liren (China, 2017) ===
+    {
+      id: 'ba-55',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'medium',
+      themes: ['sacrifice', 'kingHunt', 'fork', 'pin'],
+      players: {
+        en: 'Jinshi Bai vs. Ding Liren (Chinese League, 2017)',
+        pl: 'Jinshi Bai – Ding Liren (Liga Chińska, 2017)'
+      },
+      title: {
+        en: 'Ding Liren’s Chinese Immortal: King Hunt Through the Center',
+        pl: 'Chińska Nieśmiertelna Ding Lirena: Polowanie na króla w centrum'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Ding Liren sacrifices pawns, an exchange, and both queens early to strand the white king in the middle of the board, weaving an unforgettable minor-piece and rook mating net with 20... Rd4!! and 30... Rh8!!.',
+        pl: 'Widok z perspektywy czarnych! Ding Liren oddaje piony i jakość po wymianie hetmanów, aby uwięzić białego króla na środku szachownicy i zapleść niezapomnianą sieć matową ruchami 20... Wd4!! i 30... Wh8!!.'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'e6', 'Nc3', 'Bb4', 'Nf3', 'O-O', 'Bg5', 'c5',
+        'e3', 'cxd4', 'Qxd4', 'Nc6', 'Qd3', 'h6', 'Bh4', 'd5', 'Rd1', 'g5',
+        'Bg3', 'Ne4', 'Nd2', 'Nc5', 'Qc2', 'd4', 'Nf3', 'e5', 'Nxe5', 'dxc3',
+        'Rxd8', 'cxb2+', 'Ke2', 'Rxd8', 'Qxb2', 'Na4', 'Qc2', 'Nc3+', 'Kf3', 'Rd4',
+        'h3', 'h5', 'Bh2', 'g4+', 'Kg3', 'Rd2', 'Qb3', 'Ne4+', 'Kh4', 'Be7+',
+        'Kxh5', 'Kg7', 'Bf4', 'Bf5', 'Bh6+', 'Kh7', 'Qxb7', 'Rxf2', 'Bg5', 'Rh8',
+        'Nxf7', 'Bg6+', 'Kxg4', 'Ne5+'
+      ],
+      annotations: {
+        '13... d4': {
+          badge: '⚔️',
+          arrows: ['d4->c3:red', 'e6->e5:green'],
+          targets: ['c3', 'e2'],
+          text: {
+            en: 'Ding Liren blasts open the center before White can castle, threatening ...e5 and ...dxc3.',
+            pl: 'Ding Liren rozrywa centrum, zanim białe zdążą zrobić roszadę, grożąc dalszym ...e5 i ...dxc3.'
+          }
+        },
+        '18... Na4': {
+          badge: '!',
+          arrows: ['a4->b2:red', 'a4->c3:green'],
+          targets: ['b2', 'c3'],
+          text: {
+            en: 'Even after queens are traded—and regained on b2—Black’s knights swarm around White’s exposed king on e2.',
+            pl: 'Czarne skoczki otaczają wyeksponowanego białego króla na e2 z ogromną dynamiką.'
+          }
+        },
+        '20... Rd4': {
+          badge: '!!',
+          arrows: ['d4->f4:amber', 'c3->e2:amber', 'h6->h5:green'],
+          targets: ['d4', 'f3'],
+          text: {
+            en: 'Immortal Rook Lift! 20... Rd4!! is immune (21. exd4 Nxd4+ forks king and queen) and prepares ...g4+!',
+            pl: 'Genialne wprowadzenie wieży! Wieża na d4 jest nietykalna (po 21. exd4 Sxd4+ są widełki!) i szykuje ...g4+!'
+          }
+        },
+        '23... Rd2': {
+          badge: '!',
+          arrows: ['d2->c2:red', 'd2->f2:red', 'c3->e4:green'],
+          targets: ['c2', 'f2'],
+          text: {
+            en: 'Invading the 2nd rank with tempo, chasing White’s queen away so the c3 knight leaps to e4+.',
+            pl: 'Wtargnięcie na drugą linię z tempem przepędza białego hetmana i uwalnia pole e4 dla skoczka.'
+          }
+        },
+        '25... Be7+': {
+          badge: '!',
+          arrows: ['e7->h4:red', 'h4->h5:green'],
+          targets: ['h4', 'h5'],
+          text: {
+            en: 'Forcing the white king onto the edge of the board at h5, where every black piece joins the hunt.',
+            pl: 'Wypchnięcie białego króla na skraj szachownicy na h5, gdzie każda czarna figura ma dostęp do ataku.'
+          }
+        },
+        '30... Rh8': {
+          badge: '!!',
+          arrows: ['h8->h5:red', 'f2->g2:amber', 'f5->g6:green'],
+          targets: ['h8', 'h5'],
+          text: {
+            en: 'Quiet genius! Leaving f7 hanging to bring the final rook onto the h-file for an unstoppable discovered net.',
+            pl: 'Ciche arcydzieło! Ding oddaje piona f7, by wprowadzić drugą wieżę na linię h z nieuniknionym matem.'
+          }
+        },
+        '32... Ne5+': {
+          badge: '🏆',
+          arrows: ['e5->g4:red', 'g6->h5:amber', 'e7->g5:amber'],
+          targets: ['g4', 'h5'],
+          text: {
+            en: 'Check! Since 33. Nxe5 Bf5+ 34. Kh5 Kg7# is mate and 33. Kh4 Kg7+ wins everything, Bai Jinshi resigned.',
+            pl: 'Szach! Ponieważ 33. Sxe5 Gf5+ 34. Kh5 Kg7# daje mata, a 33. Kh4 Kg7+ niszczy białe, Bai Jinshi poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === #44 Wei Yi – Bruzón (Danzhou, 2015) ===
+    {
+      id: 'ba-56',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'kingHunt', 'attraction', 'clearance'],
+      players: {
+        en: 'Wei Yi vs. Lázaro Bruzón Batista (Danzhou, 2015)',
+        pl: 'Wei Yi – Lázaro Bruzón Batista (Danzhou, 2015)'
+      },
+      title: {
+        en: 'The 21st-Century Immortal: Rook Sacrifice & Quiet Killers',
+        pl: 'Nieśmiertelna XXI wieku: Ofiara wieży 22. Wxf7+! i ciche ruchy'
+      },
+      overview: {
+        en: 'At just 16 years old, Wei Yi created one of modern chess’s brightest gems. Sacrificing a rook on f7 (22. Rxf7!) and a bishop on e4 (25. Be4+!), he drove Bruzón’s king to h3 using ice-cold quiet queen and bishop moves.',
+        pl: 'Mając zaledwie 16 lat, Wei Yi stworzył jedną z najjaśniejszych pereł współczesnych szachów. Poświęcając wieżę na f7 (22. Wxf7!) oraz gońca na e4 (25. Ge4+!), przepędził króla Bruzóna aż na h3 serią zimnokrwistych cichych posunięć.'
+      },
+      moves: [
+        'e4', 'c5', 'Nf3', 'e6', 'Nc3', 'a6', 'Be2', 'Nc6', 'd4', 'cxd4',
+        'Nxd4', 'Qc7', 'O-O', 'Nf6', 'Be3', 'Be7', 'f4', 'd6', 'Kh1', 'O-O',
+        'Qe1', 'Nxd4', 'Bxd4', 'b5', 'Qg3', 'Bb7', 'a3', 'Rad8', 'Rae1', 'Rd7',
+        'Bd3', 'Qd8', 'Qh3', 'g6', 'f5', 'e5', 'Be3', 'Re8', 'fxg6', 'hxg6',
+        'Nd5', 'Nxd5', 'Rxf7', 'Kxf7', 'Qh7+', 'Ke6', 'exd5+', 'Kxd5', 'Be4+', 'Kxe4',
+        'Qf7', 'Bf6', 'Bd2+', 'Kd4', 'Be3+', 'Ke4', 'Qb3', 'Kf5', 'Rf1+', 'Kg4',
+        'Qd3', 'Bxg2+', 'Kxg2', 'Qa8+', 'Kg1', 'Bg5', 'Qe2+', 'Kh4', 'Bf2+', 'Kh3',
+        'Be1'
+      ],
+      annotations: {
+        '22. Rxf7': {
+          badge: '!!',
+          arrows: ['f1->f7:red', 'h3->h7:green'],
+          targets: ['f7', 'g8'],
+          text: {
+            en: 'Thunderbolt Rook Sacrifice! 22. Rxf7! drags the black king out into the open while Qh7+ awaits.',
+            pl: 'Piorunująca ofiara wieży! 22. Wxf7! wyciąga czarnego króla na otwartą przestrzeń przed atakiem Hh7+.'
+          }
+        },
+        '25. Be4+': {
+          badge: '!!',
+          arrows: ['d3->e4:red', 'e4->d5:red', 'h7->f7:green'],
+          targets: ['e4', 'd5'],
+          text: {
+            en: 'Bishop sacrifice! Pulling Black’s king all the way to e4 so the queen and e3 bishop lock it down.',
+            pl: 'Ofiara gońca! Zaciąga czarnego króla aż na e4 w sam środek białych figur.'
+          }
+        },
+        '29. Qb3': {
+          badge: '!!',
+          arrows: ['f7->b3:green', 'e1->f1:green', 'b3->f7:amber'],
+          targets: ['b3', 'f5'],
+          text: {
+            en: 'First brilliant quiet move! Retreating to b3 clears the f-file for Rf1+ while cutting off d5.',
+            pl: 'Pierwsze genialne ciche posunięcie! Odejście hetmana na b3 otwiera linię f dla Wf1+ i odcina pole d5.'
+          }
+        },
+        '31. Qd3': {
+          badge: '!!',
+          arrows: ['b3->d3:green', 'd3->g6:amber', 'f1->f3:amber'],
+          targets: ['d3', 'g6'],
+          text: {
+            en: 'Second quiet killer! Ignoring Black’s counter-checks to threaten Qd3–e2+ and Rf3+.',
+            pl: 'Drugie ciche uderzenie! Wei Yi ignoruje kontratak czarnych na g2, szykując decydujące He2+.'
+          }
+        },
+        '33. Kg1': {
+          badge: '!',
+          arrows: ['g2->g1:green', 'd3->e2:green'],
+          targets: ['g1', 'g4'],
+          text: {
+            en: 'Cold-blooded safety step! Black’s queen on a8 has no more checks, and the mating net closes.',
+            pl: 'Zimnokrwisty krok królem! Czarny hetman na a8 nie ma już szachów, a sieć matowa zamyka się.'
+          }
+        },
+        '35. Bf2+': {
+          badge: '!',
+          arrows: ['e3->f2:red', 'f2->h4:red'],
+          targets: ['h4', 'h3'],
+          text: {
+            en: 'Driving the black king onto h3, one step away from total confinement.',
+            pl: 'Spycha czarnego króla na skrajne pole h3, gdzie traci ostatnie pole ucieczki.'
+          }
+        },
+        '36. Be1': {
+          badge: '🏆',
+          arrows: ['f2->e1:green', 'e2->d3:amber', 'f1->f3:red'],
+          targets: ['e1', 'h3'],
+          text: {
+            en: 'The unforgettable final quiet move! Preventing ...Bf4 escapes and threatening unstoppable mate (Rf3+ / Qd3+); Bruzón resigned.',
+            pl: 'Niezapomniane ostatnie ciche posunięcie! Odcięcie odwrotu i nieuchronna groźba mata (Wf3+ / Hd3+) — Bruzón poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === #45 Topalov – Shirov (Linares, 1998) ===
+    {
+      id: 'ba-57',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'medium',
+      themes: ['sacrifice', 'deflection', 'promotion', 'clearance'],
+      players: {
+        en: 'Veselin Topalov vs. Alexei Shirov (Linares, 1998)',
+        pl: 'Veselin Topalov – Alexei Shirov (Linares, 1998)'
+      },
+      title: {
+        en: 'The Greatest Endgame Move Ever: 47... Bh3!!',
+        pl: 'Najwspanialszy ruch końcówki w historii: 47... Gh3!!'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! In an apparently drawn opposite-colored bishop endgame at Linares 1998, Alexei Shirov stunned the chess world with 47... Bh3!! — sacrificing his only bishop on an empty square so his king could break through and queen a pawn.',
+        pl: 'Widok z perspektywy czarnych! W pozornie remisowej końcówce różnobarwnych gońców w Linares 1998 Alexei Shirov zszokował świat ruchem 47... Gh3!! — poświęcając jedynego gońca na pustym polu, by torować drogę własnemu królowi i pionom.'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'g6', 'Nc3', 'd5', 'cxd5', 'Nxd5', 'e4', 'Nxc3',
+        'bxc3', 'Bg7', 'Bb5+', 'c6', 'Ba4', 'O-O', 'Ne2', 'Nd7', 'O-O', 'e5',
+        'f3', 'Qe7', 'Be3', 'Rd8', 'Qc2', 'Nb6', 'Bb3', 'Be6', 'Rad1', 'Nc4',
+        'Bc1', 'b5', 'f4', 'exd4', 'Nxd4', 'Bg4', 'Rde1', 'Qc5', 'Kh1', 'a5',
+        'h3', 'Bd7', 'a4', 'bxa4', 'Ba2', 'Be8', 'e5', 'Nb6', 'f5', 'Nd5',
+        'Bd2', 'Nb4', 'Qxa4', 'Nxa2', 'Qxa2', 'Bxe5', 'fxg6', 'hxg6', 'Bg5', 'Rd5',
+        'Re3', 'Qd6', 'Qe2', 'Bd7', 'c4', 'Bxd4', 'cxd5', 'Bxe3', 'Qxe3', 'Re8',
+        'Qc3', 'Qxd5', 'Bh6', 'Re5', 'Rf3', 'Qc5', 'Qa1', 'Bf5', 'Re3', 'f6',
+        'Rxe5', 'Qxe5', 'Qa2+', 'Qd5', 'Qxd5+', 'cxd5', 'Bd2', 'a4', 'Bc3', 'Kf7',
+        'h4', 'Ke6', 'Kg1', 'Bh3', 'gxh3', 'Kf5', 'Kf2', 'Ke4', 'Bxf6', 'd4',
+        'Be7', 'Kd3', 'Bc5', 'Kc4', 'Be7', 'Kb3'
+      ],
+      annotations: {
+        '18... Bg4': {
+          badge: '⚔️',
+          arrows: ['g4->d1:red', 'e7->c5:green'],
+          targets: ['d1', 'd4'],
+          text: {
+            en: 'Shirov activates with tempo against the d1 rook before pivoting his queen to c5.',
+            pl: 'Shirov aktywizuje gońca z tempem na wieżę d1, przygotowując wyjście hetmanem na c5.'
+          }
+        },
+        '26... Nb4': {
+          badge: '!',
+          arrows: ['b4->a2:red', 'b4->c2:red', 'g7->e5:green'],
+          targets: ['a2', 'c2'],
+          text: {
+            en: 'Tactical counter-strike! Forking White’s bishop and queen to snap off the critical e5 pawn.',
+            pl: 'Taktyczny kontratak! Widełki na gońca i hetmana pozwalają czarnym zbić ważnego piona e5.'
+          }
+        },
+        '33... Bxd4': {
+          badge: '!',
+          arrows: ['e5->d4:red', 'd4->e3:amber'],
+          targets: ['d4', 'e3'],
+          text: {
+            en: 'Trading into an endgame where Black will emerge with two connected passed pawns against White’s bishop.',
+            pl: 'Uproszczenie prowadzące do końcówki, w której czarne zyskają dwa groźne wolne piony.'
+          }
+        },
+        '47... Bh3': {
+          badge: '!!',
+          arrows: ['f5->h3:red', 'h3->g2:red', 'e6->f5:green', 'f5->e4:green'],
+          targets: ['h3', 'g2', 'e4'],
+          text: {
+            en: 'The Move of a Lifetime! 47... Bh3!! sacrifices a whole bishop to clear the f5–e4–d3 path for Black’s king and distract the g2 pawn!',
+            pl: 'Ruch życia! 47... Gh3!! poświęca całego gońca na pustym polu, by odblokować marsz króla przez f5–e4–d3 i odciągnąć piona g2!'
+          }
+        },
+        '50... d4': {
+          badge: '!',
+          arrows: ['d5->d4:green', 'e4->d3:green'],
+          targets: ['d4', 'd3'],
+          text: {
+            en: 'With White’s king held back on f2, Shirov’s king and passed pawns race forward simultaneously.',
+            pl: 'Gdy biały król nie zdążył zablokować pozycji, król Shirona wraz z wolnym pionem d4 pędzą do przodu.'
+          }
+        },
+        '53... Kb3': {
+          badge: '🏆',
+          arrows: ['c4->b3:green', 'a4->a1:green'],
+          targets: ['b3', 'a4'],
+          text: {
+            en: 'Total Zugzwang! White’s bishop cannot stop both the a4 pawn and the d4 pawn; Topalov resigned.',
+            pl: 'Biały goniec nie jest w stanie zatrzymać obu wolnych pionów naraz — Topalov poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === #46 Shirov – Judit Polgár (Buenos Aires, 1994) ===
+    {
+      id: 'ba-58',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['fork', 'pin', 'sacrifice', 'deflection'],
+      players: {
+        en: 'Alexei Shirov vs. Judit Polgár (Buenos Aires, 1994)',
+        pl: 'Alexei Shirov – Judit Polgár (Buenos Aires, 1994)'
+      },
+      title: {
+        en: 'Polgár’s Sicilian Storm: Knight Invasion on e3 & c2',
+        pl: 'Sycylijska burza Polgár: Inwazja skoczkiem na e3 i c2'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! At the 1994 Buenos Aires Sicilian thematic event, 18-year-old Judit Polgár fearlessly met Alexei Shirov’s 6. g4 thrust with 10... g5!, launching her knights straight into e3 and c2 to wreck White’s queenside.',
+        pl: 'Widok z perspektywy czarnych! Na tematycznym turnieju w Buenos Aires 1994 18-letnia Judit Polgár bez wahania odpowiedziała na atak Shirona 6. g4 kontrą 10... g5!, wbijając skoczka na e3 i c2 z druzgocącym skutkiem.'
+      },
+      moves: [
+        'e4', 'c5', 'Nf3', 'e6', 'd4', 'cxd4', 'Nxd4', 'Nc6', 'Nc3', 'd6',
+        'g4', 'a6', 'Be3', 'Nge7', 'Nb3', 'b5', 'f4', 'Bb7', 'Qf3', 'g5',
+        'fxg5', 'Ne5', 'Qg2', 'b4', 'Ne2', 'h5', 'gxh5', 'Nf5', 'Bf2', 'Qxg5',
+        'Na5', 'Ne3', 'Qg3', 'Qxg3', 'Nxg3', 'Nxc2+', 'Kd1', 'Nxa1', 'Nxb7', 'b3',
+        'axb3', 'Nxb3', 'Kc2', 'Nc5', 'Nxc5', 'dxc5', 'Be1', 'Nf3', 'Bc3', 'Nd4+',
+        'Kd3', 'Bd6', 'Bg2', 'Be5', 'Kc4', 'Ke7', 'Ra1', 'Nc6'
+      ],
+      annotations: {
+        '10... g5': {
+          badge: '⚔️',
+          arrows: ['g5->f4:red', 'c6->e5:green'],
+          targets: ['f4', 'e5'],
+          text: {
+            en: 'Polgár counter-strikes immediately! Sacrificing a pawn to seize the e5 outpost and open the g-file.',
+            pl: 'Polgár natychmiast kontratakuje! Poświęca piona, by opanować pole e5 i otworzyć linię g.'
+          }
+        },
+        '14... Nf5': {
+          badge: '!',
+          arrows: ['f5->e3:red', 'd8->g5:green'],
+          targets: ['e3', 'g5'],
+          text: {
+            en: 'Unleashing both the knight and queen! If 15. exf5 Qxg2 wins, so White must retreat the bishop.',
+            pl: 'Uruchomienie skoczka i hetmana naraz! Bicie 15. exf5 przegrywa po 15... Hxg2.'
+          }
+        },
+        '16... Ne3': {
+          badge: '!!',
+          arrows: ['e3->g2:red', 'e3->f1:red', 'e3->c2:red'],
+          targets: ['e3', 'c2', 'g2'],
+          text: {
+            en: 'Devastating octopus knight! 16... Ne3!! forks the g2 queen and f1 bishop while eyeing the fatal c2 fork.',
+            pl: 'Druzgocący skoczek na e3! 16... Se3!! atakuje hetmana g2 oraz gońca f1, grożąc jednocześnie widełkami na c2.'
+          }
+        },
+        '18... Nxc2+': {
+          badge: '!',
+          arrows: ['c2->e1:red', 'c2->a1:red'],
+          targets: ['c2', 'a1'],
+          text: {
+            en: 'Clean fork! Black wins the a1 rook and forces White’s king into the center.',
+            pl: 'Czyste widełki! Czarne zdobywają wieżę a1 i pozbawiają białe roszady.'
+          }
+        },
+        '20... b3': {
+          badge: '!',
+          arrows: ['b4->b3:green', 'a1->b3:green'],
+          targets: ['b3', 'a1'],
+          text: {
+            en: 'Rescuing the trapped knight! Opening the b3 square lets the cornered knight escape back into play.',
+            pl: 'Ratunek dla uwięzionego skoczka! Ruch 20... b3 otwiera drogę powrotu z rogu a1.'
+          }
+        },
+        '25... Nd4+': {
+          badge: '🏆',
+          arrows: ['d4->c2:red', 'f8->d6:green'],
+          targets: ['d4', 'c2'],
+          text: {
+            en: 'Planting a dominant knight on d4 with check! Up a full exchange with active pieces, Polgár easily converted.',
+            pl: 'Potężny skoczek w centrum z szachem! Z przewagą jakości i świetną koordynacją Polgár pewnie zrealizowała wygraną.'
+          }
+        }
+      }
+    },
+
+    // === #47 Kramnik – Lékó (Brissago, 2004, Game 14) ===
+    {
+      id: 'ba-59',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['fork', 'pin', 'promotion', 'battery'],
+      players: {
+        en: 'Vladimir Kramnik vs. Péter Lékó (Brissago, 2004, Game 14)',
+        pl: 'Władimir Kramnik – Péter Lékó (Brissago, 2004, Partia 14)'
+      },
+      title: {
+        en: 'Brissago Showdown: Must-Win Endgame Mastery for the Crown',
+        pl: 'Finał w Brissago: Zwycięstwo na wagę korony Mistrza Świata'
+      },
+      overview: {
+        en: 'Trailing by a point in the 14th and final game of the 2004 World Championship, Kramnik needed a win on demand. Watch him squeeze Lékó’s Caro-Kann, break through with 29. Nxf7! and 33. Rxg7!, and drive his king to f6 to retain the title.',
+        pl: 'Przegrywając jednym punktem przed 14., ostatnią partią meczu o MŚ 2004, Kramnik musiał wygrać na zawołanie. Zobacz, jak wyciska Obronę Caro-Kann Lékó, przełamuje obronę ruchami 29. Sxf7! i 33. Wxg7! i prowadzi króla na f6, broniąc tytułu.'
+      },
+      moves: [
+        'e4', 'c6', 'd4', 'd5', 'e5', 'Bf5', 'h4', 'h6', 'g4', 'Bd7',
+        'Nd2', 'c5', 'dxc5', 'e6', 'Nb3', 'Bxc5', 'Nxc5', 'Qa5+', 'c3', 'Qxc5',
+        'Nf3', 'Ne7', 'Bd3', 'Nbc6', 'Be3', 'Qa5', 'Qd2', 'Ng6', 'Bd4', 'Nxd4',
+        'cxd4', 'Qxd2+', 'Kxd2', 'Nf4', 'Rac1', 'h5', 'Rhg1', 'Bc6', 'gxh5', 'Nxh5',
+        'b4', 'a6', 'a4', 'Kd8', 'Ng5', 'Be8', 'b5', 'Nf4', 'b6', 'Nxd3',
+        'Kxd3', 'Rc8', 'Rxc8+', 'Kxc8', 'Rc1+', 'Bc6', 'Nxf7', 'Rxh4', 'Nd6+', 'Kd8',
+        'Rg1', 'Rh3+', 'Ke2', 'Ra3', 'Rxg7', 'Rxa4', 'f4', 'Ra2+', 'Kf3', 'Ra3+',
+        'Kg4', 'Rd3', 'f5', 'Rxd4+', 'Kg5', 'exf5', 'Kf6', 'Rg4', 'Rc7', 'Rh4',
+        'Nf7+'
+      ],
+      annotations: {
+        '15. Bd4': {
+          badge: '📖',
+          arrows: ['d4->a7:red', 'd2->e2:blue'],
+          targets: ['d4', 'c6'],
+          text: {
+            en: 'Trading queens into a strategic squeeze where White’s space advantage and b4–b5 expansion will tell.',
+            pl: 'Przejście do końcówki bez hetmanów, w której przewaga przestrzeni i marsz b4–b5 zdecydują o losach partii.'
+          }
+        },
+        '24. b5': {
+          badge: '!',
+          arrows: ['b5->a6:red', 'b5->b6:green'],
+          targets: ['b5', 'b6'],
+          text: {
+            en: 'Expanding on the queenside to carve out a permanent b6 wedge and invade on the c-file.',
+            pl: 'Ekspansja na skrzydle hetmańskim wbija klin b6 i otwiera drogę do wtargnięcia po linii c.'
+          }
+        },
+        '29. Nxf7': {
+          badge: '!',
+          arrows: ['g5->f7:red', 'f7->d6:green', 'f7->h8:red'],
+          targets: ['f7', 'd6'],
+          text: {
+            en: 'Breaking the blockade! Kramnik willingly gives up the h4 pawn to plant an untouchable knight on d6.',
+            pl: 'Przełamanie obrony! Kramnik oddaje piona h4, by osadzić nietykalnego skoczka na polu d6.'
+          }
+        },
+        '33. Rxg7': {
+          badge: '!',
+          arrows: ['g1->g7:red', 'f2->f4:green'],
+          targets: ['g7', 'f4'],
+          text: {
+            en: 'Harvesting g7! Now White’s f-pawn and king are free to surge up the board.',
+            pl: 'Zbicie na g7! Teraz biały pion f oraz król mogą bez przeszkód ruszyć do decydującego ataku.'
+          }
+        },
+        '39. Kf6': {
+          badge: '!!',
+          arrows: ['g5->f6:green', 'g7->c7:green'],
+          targets: ['f6', 'd8'],
+          text: {
+            en: 'The World Champion’s king enters the mating net! Threatening Rc7 and Re7/Nf7+.',
+            pl: 'Król Mistrza Świata wchodzi bezpośrednio do sieci matowej, wspierając groźbę Wc7 i Sf7+!'
+          }
+        },
+        '41. Nf7+': {
+          badge: '🏆',
+          arrows: ['d6->f7:red', 'c7->c6:amber', 'f7->e8:amber'],
+          targets: ['f7', 'd8'],
+          text: {
+            en: 'Check! Forced to 41... Ke8, Black drops the c6 bishop or suffers mate after 42. Nd6+; Lékó resigned, tying the match 7–7!',
+            pl: 'Szach! Po wymuszonym 41... Ke8 czarne tracą gońca c6 lub dostają mata; Lékó poddał się, a Kramnik obronił tytuł wynikiem 7–7!'
+          }
+        }
+      }
+    },
+
+    // === #48 Paulsen – Morphy (New York, 1857) ===
+    {
+      id: 'ba-60',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['sacrifice', 'pin', 'battery', 'deflection'],
+      players: {
+        en: 'Louis Paulsen vs. Paul Morphy (New York, 1857)',
+        pl: 'Louis Paulsen – Paul Morphy (Nowy Jork, 1857)'
+      },
+      title: {
+        en: 'Morphy’s American Masterpiece: 17... Qxf3!! Queen Sacrifice',
+        pl: 'Arcydzieło Morphy’ego: Ofiara hetmana 17... Hxf3!! w Nowym Jorku'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! From the 1st American Chess Congress final. After paralyzing White’s entire queenside with 12... Qd3!, Morphy detonates 17... Qxf3!!, sacrificing his queen to unleash two bishops and two rooks on Paulsen’s exposed king.',
+        pl: 'Widok z perspektywy czarnych! Finał I Amerykańskiego Kongresu Szachowego. Po sparaliżowaniu całego skrzydła hetmańskiego białych ruchem 12... Hd3!, Morphy odpala bombę 17... Hxf3!!, poświęcając hetmana, by rzucić parę gońców i wież na białego króla.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Nc3', 'Nf6', 'Bb5', 'Bc5', 'O-O', 'O-O',
+        'Nxe5', 'Re8', 'Nxc6', 'dxc6', 'Bc4', 'b5', 'Be2', 'Nxe4', 'Nxe4', 'Rxe4',
+        'Bf3', 'Re6', 'c3', 'Qd3', 'b4', 'Bb6', 'a4', 'bxa4', 'Qxa4', 'Bd7',
+        'Ra2', 'Rae8', 'Qa6', 'Qxf3', 'gxf3', 'Rg6+', 'Kh1', 'Bh3', 'Rd1', 'Bg2+',
+        'Kg1', 'Bxf3+', 'Kf1', 'Bg2+', 'Kg1', 'Bh3+', 'Kh1', 'Bxf2', 'Qf1', 'Bxf1',
+        'Rxf1', 'Re2', 'Ra1', 'Rh6', 'd4', 'Be3'
+      ],
+      annotations: {
+        '12... Qd3': {
+          badge: '!',
+          arrows: ['d3->d2:red', 'd3->f1:amber', 'b6->f2:amber'],
+          targets: ['d2', 'c1'],
+          text: {
+            en: 'Pure paralysis! Planting the queen on d3 freezes White’s d2 pawn, locking the c1 bishop and a1 rook out of play.',
+            pl: 'Pełny paraliż! Hetman na d3 blokuje piona d2, całkowicie więżąc białego gońca c1 oraz wieżę a1.'
+          }
+        },
+        '17... Qxf3': {
+          badge: '!!',
+          arrows: ['d3->f3:red', 'e6->g6:green', 'd7->h3:green'],
+          targets: ['f3', 'g2'],
+          text: {
+            en: 'Immortal Queen Sacrifice! Morphy smashes the g-file shelter, bringing both rooks and both bishops into an unstoppable attack.',
+            pl: 'Nieśmiertelna ofiara hetmana! Morphy rozrywa osłonę na linii g, włączając obie wieże i gońce do niszczycielskiego ataku.'
+          }
+        },
+        '18... Rg6+': {
+          badge: '!',
+          arrows: ['g6->g1:red', 'd7->h3:green'],
+          targets: ['g1', 'h1'],
+          text: {
+            en: 'Seizing the open g-file with check and forcing the king into the h1 corner.',
+            pl: 'Zajęcie otwartej linii g z szachem i zepchnięcie króla w róg szachownicy.'
+          }
+        },
+        '19... Bh3': {
+          badge: '!',
+          arrows: ['h3->f1:red', 'h3->g2:green'],
+          targets: ['g2', 'f1'],
+          text: {
+            en: 'Threatening 20... Bg2+ and 21... Bxf3#, weaving a classic two-bishop mating net.',
+            pl: 'Groźba 20... Gg2+ i 21... Gxf3# tworzy klasyczną sieć matową pary gońców.'
+          }
+        },
+        '24... Bxf2': {
+          badge: '!',
+          arrows: ['b6->f2:red', 'h3->g2:amber'],
+          targets: ['f2', 'g2'],
+          text: {
+            en: 'After picking off the f3 pawn, Morphy takes f2, threatening 25... Bg2# and forcing White to give back the queen.',
+            pl: 'Po zgarnięciu piona f3 Morphy bije na f2 z groźbą mata na g2, zmuszając białe do oddania hetmana.'
+          }
+        },
+        '28... Be3': {
+          badge: '🏆',
+          arrows: ['f2->e3:green', 'h6->h2:red', 'e2->g2:red'],
+          targets: ['h2', 'e3'],
+          text: {
+            en: 'Quiet killer! Threatening 29... Rxh2#, and 29. Bxe3 allows 29... Rhxh2+ 30. Kg1 Reg2#. Paulsen resigned.',
+            pl: 'Ciche wykończenie! Grozi 29... Wxh2#, a po 29. Gxe3 następuje 29... Whxh2+ 30. Kg1 Weg2#. Paulsen poddał partię.'
+          }
+        }
+      }
+    },
+
+    // === #49 Nimzowitsch – Alapin (Riga, 1914) ===
+    {
+      id: 'ba-61',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['sacrifice', 'deflection', 'clearance', 'backRank'],
+      players: {
+        en: 'Aron Nimzowitsch vs. Semion Alapin (Riga, 1914)',
+        pl: 'Aron Nimzowitsch – Siemion Ałapin (Ryga, 1914)'
+      },
+      title: {
+        en: 'Nimzowitsch’s 18-Move Miniature: The Opera-Style 17. Qd8+!!',
+        pl: '18-ruchowa miniatura Nimzowitscha: Ofiara hetmana 17. Hd8+!!'
+      },
+      overview: {
+        en: 'Punishing queen pawn-grabbing in the French Defense. After Alapin snaps off g2, Nimzowitsch castles queenside, clears the central files with 14. Bf6!!, and mirrors Morphy’s Opera Game with 17. Qd8+!! Bxd8 18. Re8#.',
+        pl: 'Książkowa kara za chciwe bicie piona hetmanem w Obronie Francuskiej. Gdy Ałapin bije na g2, Nimzowitsch robi długą roszadę, przecina linie ruchem 14. Gf6!! i kończy partię echem Partii Operowej: 17. Hd8+!! Gxd8 18. We8#.'
+      },
+      moves: [
+        'e4', 'e6', 'd4', 'd5', 'Nc3', 'Nf6', 'exd5', 'Nxd5', 'Nf3', 'c5',
+        'Nxd5', 'Qxd5', 'Be3', 'cxd4', 'Nxd4', 'a6', 'Be2', 'Qxg2', 'Bf3', 'Qg6',
+        'Qd2', 'e5', 'O-O-O', 'exd4', 'Bxd4', 'Nc6', 'Bf6', 'Qxf6', 'Rhe1+', 'Be7',
+        'Bxc6+', 'Kf8', 'Qd8+', 'Bxd8', 'Re8#'
+      ],
+      annotations: {
+        '9... Qxg2': {
+          badge: '?!',
+          arrows: ['d5->g2:red', 'e2->f3:green'],
+          targets: ['g2', 'f3'],
+          text: {
+            en: 'Alapin grabs a poisoned pawn while his kingside pieces remain undeveloped on the back rank.',
+            pl: 'Ałapin chciwie bije piona g2, zostawiając cały swój obóz na ósmej linii bez rozwoju.'
+          }
+        },
+        '12. O-O-O': {
+          badge: '!',
+          arrows: ['e1->c1:green', 'd1->d4:amber', 'h1->e1:green'],
+          targets: ['d4', 'e8'],
+          text: {
+            en: 'Ignoring the attacked d4 knight! Castling long speeds the d1 rook straight into the attack.',
+            pl: 'Białe ignorują atak na skoczka d4! Długa roszada błyskawicznie wprowadza wieżę do gry.'
+          }
+        },
+        '14. Bf6': {
+          badge: '!!',
+          arrows: ['d4->f6:red', 'f6->g7:amber', 'h1->e1:green'],
+          targets: ['f6', 'e7'],
+          text: {
+            en: 'Brilliant interference sacrifice! Cutting off ...Be7 and clearing the d-file; 14... gxf6 fails to 15. Rhe1+ Be7 16. Bxc6+.',
+            pl: 'Genialna ofiara na zablokowanie! Odcina gońca na f8 i zwalnia linię d; po 14... gxf6 następuje 15. Whe1+ Ge7 16. Gxc6+.'
+          }
+        },
+        '15. Rhe1+': {
+          badge: '!',
+          arrows: ['e1->e8:red', 'f3->c6:amber'],
+          targets: ['e8', 'e7'],
+          text: {
+            en: 'Every white piece strikes! Black must block on e7, creating a fatal pin.',
+            pl: 'Każda biała figura atakuje! Czarne muszą zasłonić się gońcem e7, wpadając w śmiertelne związanie.'
+          }
+        },
+        '17. Qd8+': {
+          badge: '!!',
+          arrows: ['d2->d8:red', 'e1->e8:amber'],
+          targets: ['d8', 'e8'],
+          text: {
+            en: 'Queen Sacrifice! 17. Qd8+!! deflects the e7 bishop away from guarding the e8 mating square.',
+            pl: 'Ofiara hetmana! 17. Hd8+!! odciąga gońca e7 od obrony pola matowego e8.'
+          }
+        },
+        '18. Re8#': {
+          badge: '🏆',
+          arrows: ['e8->f8:red', 'e8->d8:red', 'c6->e8:amber'],
+          targets: ['f8', 'e8'],
+          text: {
+            en: 'Checkmate! The rook lands on e8 supported by the c6 bishop for a textbook back-rank finish.',
+            pl: 'Mat! Wieża wjeżdża na e8 przy wsparciu gońca z c6, dając klasycznego mata na ostatniej linii.'
+          }
+        }
+      }
+    },
+
+    // === #50 Dubov – Giri (Moscow, 2019) ===
+    {
+      id: 'ba-62',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'kingHunt', 'fork', 'deflection'],
+      players: {
+        en: 'Daniil Dubov vs. Anish Giri (Moscow, 2019)',
+        pl: 'Daniil Dubov – Anish Giri (Moskwa, 2019)'
+      },
+      title: {
+        en: 'Dubov’s Modern Romanticism: 19. O-O-O! & Double Knight Sacrifice',
+        pl: 'Współczesny romantyzm Dubova: Długa roszada 19. O-O-O! i szturm skoczków'
+      },
+      overview: {
+        en: 'In the 2019 Moscow FIDE Grand Prix, Daniil Dubov stunned top seed Anish Giri with deep home preparation, castling queenside into an open board (19. O-O-O!), walking his own king to safety at f3, and smashing Giri’s fortress with 37. N5g6+!!.',
+        pl: 'W turnieju FIDE Grand Prix w Moskwie 2019 Daniil Dubov zaskoczył Anisha Giriego głębokim przygotowaniem, robiąc długą roszadę na odsłonięte skrzydło (19. O-O-O!), wyprowadzając własnego króla w bezpieczne miejsce na f3 i rozbijając obronę kombinacją 37. S5g6+!!.'
+      },
+      moves: [
+        'd4', 'Nf6', 'c4', 'e6', 'Nf3', 'd5', 'Bg5', 'dxc4', 'e4', 'b5',
+        'a4', 'c6', 'Nc3', 'b4', 'Nb1', 'Ba6', 'e5', 'h6', 'Bxf6', 'gxf6',
+        'exf6', 'c5', 'Nbd2', 'c3', 'bxc3', 'bxc3', 'Ne4', 'cxd4', 'Bb5+', 'Bxb5',
+        'axb5', 'Qd5', 'Qxd4', 'Qxb5', 'Nxc3', 'Bb4', 'O-O-O', 'Qa5', 'Nb5', 'Na6',
+        'Qd7+', 'Kf8', 'Kb1', 'Ba3', 'Rd3', 'Qb4+', 'Kc2', 'Qa4+', 'Kd2', 'Bb4+',
+        'Ke2', 'Kg8', 'Ne5', 'Qc2+', 'Kf3', 'Rf8', 'Rhd1', 'h5', 'Qd4', 'Rh7',
+        'Qf4', 'Bc5', 'Nd4', 'Qa2', 'R1d2', 'Qd5+', 'Ke2', 'Bb4', 'Ndc6', 'Qc5',
+        'Ne7+', 'Kh8', 'N5g6+', 'fxg6', 'Nxg6+', 'Kg8', 'Ne7+', 'Qxe7', 'fxe7', 'Bxe7',
+        'Rg3+', 'Rg7', 'Rxg7+', 'Kxg7', 'Qe5+', 'Bf6', 'Qxe6'
+      ],
+      annotations: {
+        '14. Ne4': {
+          badge: '⚔️',
+          arrows: ['d2->e4:green', 'f1->b5:amber'],
+          targets: ['c3', 'c5'],
+          text: {
+            en: 'Dubov gives up the d4 pawn to activate every minor piece with tempo in a sharp Noteboom gambit.',
+            pl: 'Dubov oddaje piona d4, aby w ostrym gambitowym wariancie błyskawicznie zaktywizować wszystkie lekkie figury.'
+          }
+        },
+        '19. O-O-O': {
+          badge: '!!',
+          arrows: ['e1->c1:green', 'd1->d8:amber', 'c3->b5:green'],
+          targets: ['c1', 'd7'],
+          text: {
+            en: 'Audacious long castling into an open queenside! Dubov banks on his rooks and knights outpacing Black’s checks.',
+            pl: 'Zuchwała długa roszada na otwartym skrzydle! Dubov liczy, że jego wieże i skoczki okażą się szybsze od szachów czarnych.'
+          }
+        },
+        '23. Rd3': {
+          badge: '!',
+          arrows: ['d1->d3:green', 'd3->a3:red'],
+          targets: ['d3', 'a3'],
+          text: {
+            en: 'Rook lift! Attacking the a3 bishop and preparing the white king’s escape march across the board.',
+            pl: 'Przerzut wieży na trzecią linię atakuje gońca a3 i otwiera białemu królowi drogę ewakuacji.'
+          }
+        },
+        '28. Kf3': {
+          badge: '!',
+          arrows: ['e2->f3:green', 'h1->d1:green', 'e5->f7:red'],
+          targets: ['f3', 'f7'],
+          text: {
+            en: 'Dubov’s king finds shelter on f3 while the second rook enters on d1 to seal the initiative.',
+            pl: 'Król Dubova znajduje schronienie na f3, podczas gdy druga wieża wkracza na d1, domykając inicjatywę.'
+          }
+        },
+        '35. Ndc6': {
+          badge: '!',
+          arrows: ['d4->c6:green', 'c6->e7:amber', 'e5->g6:amber'],
+          targets: ['c6', 'e7'],
+          text: {
+            en: 'Both knights converge on e7 and g6, setting up the decisive tactical demolition of Black’s kingside.',
+            pl: 'Oba białe skoczki celują w pola e7 i g6, przygotowując taktyczną rozbiórkę królewskiej twierdzy czarnych.'
+          }
+        },
+        '37. N5g6+': {
+          badge: '!!',
+          arrows: ['e5->g6:red', 'e7->g6:amber', 'e7->f8:red'],
+          targets: ['g6', 'h8'],
+          text: {
+            en: 'Double Knight Sacrifice! 37. N5g6+ fxg6 38. Nxg6+ forces 39. Ne7+ Qxe7 40. fxe7, winning the queen and crashing through!',
+            pl: 'Podwójna ofiara skoczka! 37. S5g6+ fxg6 38. Sxg6+ wymusza 39. Se7+ Hxe7 40. fxe7, wygrywając hetmana i rozbijając obronę!'
+          }
+        },
+        '44. Qxe6': {
+          badge: '🏆',
+          arrows: ['e5->e6:red', 'e6->a6:red', 'e6->f6:red'],
+          targets: ['e6', 'g7'],
+          text: {
+            en: 'With a winning queen against two minor pieces and an exposed black king, Dubov forced Giri’s resignation.',
+            pl: 'Z wygrywającym hetmanem przeciwko dwóm lekkim figurom i odsłoniętym królem Dubov zmusił Giriego do poddania partii.'
           }
         }
       }
