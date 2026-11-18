@@ -657,8 +657,11 @@
           (m) => m.from === from && m.to === to && (m.promotion || undefined) === (promo || (m.promotion ? 'q' : undefined))
         );
         if (!chosen) {
-          // Try SAN match
-          chosen = allLegal.find((m) => this.moveToSan(m, allLegal) === clean);
+          // Try SAN match (exact or normalized without check/annotation symbols)
+          const stripped = clean.replace(/[+#!?]+$/g, '');
+          chosen =
+            allLegal.find((m) => this.moveToSan(m, allLegal) === clean) ||
+            allLegal.find((m) => this.moveToSan(m, allLegal).replace(/[+#]+$/g, '') === stripped);
         }
       } else if (moveInput && typeof moveInput === 'object') {
         const promo = moveInput.promotion ? moveInput.promotion.toLowerCase() : undefined;
@@ -698,6 +701,117 @@
     isPromotionMove(from, to) {
       const legal = this.getLegalMoves(from);
       return legal.some((m) => m.to === to && Boolean(m.promotion));
+    }
+
+    /**
+     * Analyzes what a piece on `square` is currently targeting/attacking on the board:
+     * - Direct attacks on enemy pieces (captures/checks)
+     * - Pins or X-ray lines through an enemy piece toward the enemy King or Queen
+     * - Control over squares immediately adjacent to the enemy King
+     */
+    analyzePieceTargets(square) {
+      const coords = squareToCoords(square);
+      if (!coords) return { attackedEnemies: [], pinsOrXrays: [], kingZoneSquares: [] };
+      const piece = this.board[coords.r][coords.c];
+      if (!piece) return { attackedEnemies: [], pinsOrXrays: [], kingZoneSquares: [] };
+
+      const color = piece.color;
+      const opp = oppositeColor(color);
+      const oppKing = this.findKing(opp);
+      const attackedEnemies = [];
+      const pinsOrXrays = [];
+      const kingZoneSquares = [];
+
+      const isNearOppKing = (r, c) =>
+        oppKing && Math.abs(r - oppKing.r) <= 1 && Math.abs(c - oppKing.c) <= 1 && !(r === oppKing.r && c === oppKing.c);
+
+      const checkTargetSquare = (nr, nc) => {
+        const sq = coordsToSquare(nr, nc);
+        const target = this.board[nr][nc];
+        if (target && target.color === opp) {
+          attackedEnemies.push({ from: square, to: sq, piece: target.type });
+        } else if (!target && isNearOppKing(nr, nc)) {
+          kingZoneSquares.push({ from: square, to: sq });
+        }
+      };
+
+      const { r, c } = coords;
+      if (piece.type === 'p') {
+        const dir = color === 'w' ? -1 : 1;
+        const nr = r + dir;
+        if (nr >= 0 && nr < 8) {
+          for (const dc of [-1, 1]) {
+            const nc = c + dc;
+            if (nc >= 0 && nc < 8) checkTargetSquare(nr, nc);
+          }
+        }
+      } else if (piece.type === 'n') {
+        const jumps = [
+          [-2, -1], [-2, 1], [-1, -2], [-1, 2],
+          [1, -2], [1, 2], [2, -1], [2, 1]
+        ];
+        for (const [dr, dc] of jumps) {
+          const nr = r + dr;
+          const nc = c + dc;
+          if (nr >= 0 && nr < 8 && nc >= 0 && nc < 8) checkTargetSquare(nr, nc);
+        }
+      } else if (piece.type === 'k') {
+        for (let dr = -1; dr <= 1; dr++) {
+          for (let dc = -1; dc <= 1; dc++) {
+            if (dr === 0 && dc === 0) continue;
+            const nr = r + dr;
+            const nc = c + dc;
+            if (nr >= 0 && nr < 8 && nc >= 0 && nc < 8) checkTargetSquare(nr, nc);
+          }
+        }
+      } else {
+        // Sliding pieces: b, r, q
+        const dirs = [];
+        if (piece.type === 'r' || piece.type === 'q') {
+          dirs.push([-1, 0], [1, 0], [0, -1], [0, 1]);
+        }
+        if (piece.type === 'b' || piece.type === 'q') {
+          dirs.push([-1, -1], [-1, 1], [1, -1], [1, 1]);
+        }
+        for (const [dr, dc] of dirs) {
+          let nr = r + dr;
+          let nc = c + dc;
+          let firstEnemy = null;
+          while (nr >= 0 && nr < 8 && nc >= 0 && nc < 8) {
+            const target = this.board[nr][nc];
+            const sq = coordsToSquare(nr, nc);
+            if (!firstEnemy) {
+              if (!target) {
+                if (isNearOppKing(nr, nc)) {
+                  kingZoneSquares.push({ from: square, to: sq });
+                }
+              } else if (target.color === color) {
+                break; // blocked by own piece
+              } else {
+                firstEnemy = { sq, type: target.type };
+                attackedEnemies.push({ from: square, to: sq, piece: target.type });
+              }
+            } else {
+              // Looking behind firstEnemy for a pin / X-ray against enemy King or Queen
+              if (target) {
+                if (target.color === opp && (target.type === 'k' || target.type === 'q' || target.type === 'r')) {
+                  pinsOrXrays.push({
+                    from: square,
+                    pinned: firstEnemy.sq,
+                    behind: sq,
+                    behindPiece: target.type
+                  });
+                }
+                break;
+              }
+            }
+            nr += dr;
+            nc += dc;
+          }
+        }
+      }
+
+      return { attackedEnemies, pinsOrXrays, kingZoneSquares };
     }
 
     /**

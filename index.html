@@ -23,7 +23,7 @@
       <div class="stat-pill">
         <span class="stat-icon">✓</span>
         <div>
-          <span id="solvedCount" class="stat-value">0/84</span>
+          <span id="solvedCount" class="stat-value">0/102</span>
           <span id="solvedLabel" class="stat-label">Rozwiązane</span>
         </div>
       </div>
@@ -56,7 +56,7 @@
     </div>
   </header>
 
-  <!-- Mode Navigation Tabs (4 Training Modes) -->
+  <!-- Mode Navigation Tabs (7 Training & Analysis Modes) -->
   <nav class="mode-tabs-bar" aria-label="Training Mode">
     <button type="button" id="modePuzzlesTab" class="mode-tab active" data-mode="puzzles">
       <span class="mode-tab-icon">🎯</span>
@@ -74,10 +74,22 @@
       <span class="mode-tab-icon">🛡️</span>
       <span id="modeDefenseText">Obrona przed Matem (12)</span>
     </button>
+    <button type="button" id="modeFamousTab" class="mode-tab famous-tab" data-mode="famous">
+      <span class="mode-tab-icon">🏛️</span>
+      <span id="modeFamousText">Słynne Partie (12)</span>
+    </button>
+    <button type="button" id="modeAnalysisTab" class="mode-tab analysis-tab" data-mode="analysis">
+      <span class="mode-tab-icon">🔍</span>
+      <span id="modeAnalysisText">Analiza Partii (6)</span>
+    </button>
+    <button type="button" id="modeRushTab" class="mode-tab rush-tab" data-mode="rush">
+      <span class="mode-tab-icon">⏱️</span>
+      <span id="modeRushText">Tryb Błyskawiczny</span>
+    </button>
   </nav>
 
   <!-- Filter Bar (Difficulty: Easy / Medium / Hard + Moves + Tactical Themes) -->
-  <section class="filter-bar" aria-label="Filtry zadań">
+  <section id="filterBar" class="filter-bar" aria-label="Filtry zadań">
     <div class="filter-group">
       <span id="filterDiffLabel" class="filter-label">Poziom:</span>
       <div id="filterDiffGroup" class="pill-group diff-pill-group">
@@ -125,6 +137,45 @@
 
     <!-- Right Column: Tactical Dashboard & Controls -->
     <aside class="panel-column">
+      <!-- Speed Rush Mode Panel (Visible in Rush Mode) -->
+      <div id="rushPanel" class="panel-card rush-panel hidden">
+        <div class="rush-header-row">
+          <div id="rushVariantGroup" class="pill-group rush-variant-group">
+            <button type="button" class="filter-pill rush-variant-btn active" data-variant="3m" id="rushBtn3m">⚡ 3 Min</button>
+            <button type="button" class="filter-pill rush-variant-btn" data-variant="5m" id="rushBtn5m">⏱️ 5 Min</button>
+            <button type="button" class="filter-pill rush-variant-btn" data-variant="survival" id="rushBtnSurvival">🛡️ Przetrwanie</button>
+          </div>
+          <div class="rush-best-badge">
+            <span id="rushBestLabel">Rekord:</span>
+            <strong id="rushBestVal">0</strong>
+          </div>
+        </div>
+
+        <div class="rush-hud-grid">
+          <div class="rush-hud-box">
+            <span id="rushTimerLabel" class="rush-hud-label">Czas</span>
+            <span id="rushTimerVal" class="rush-hud-value rush-timer">03:00</span>
+          </div>
+          <div class="rush-hud-box">
+            <span id="rushScoreLabel" class="rush-hud-label">Wynik</span>
+            <span id="rushScoreVal" class="rush-hud-value rush-score">0</span>
+          </div>
+          <div class="rush-hud-box">
+            <span id="rushLivesLabel" class="rush-hud-label">Życia</span>
+            <span id="rushLivesVal" class="rush-hud-value rush-lives">❤️❤️❤️</span>
+          </div>
+        </div>
+
+        <button type="button" id="rushStartStopBtn" class="rush-action-btn start">
+          ▶ Rozpocznij Rush
+        </button>
+
+        <div id="rushHistoryWrap" class="rush-history-wrap hidden">
+          <span id="rushHistoryTitle" class="rush-history-title">Historia rundy (kliknij, aby przeanalizować):</span>
+          <div id="rushHistoryList" class="rush-history-list"></div>
+        </div>
+      </div>
+
       <!-- Puzzle Info Card -->
       <div class="panel-card puzzle-header-card">
         <div class="puzzle-badges-row">
@@ -155,8 +206,55 @@
         <p id="coachText" class="coach-text"></p>
       </div>
 
+      <!-- Battle Analysis Replay & Targeting Controls (Visible in Battle Analysis Mode) -->
+      <div id="analysisPanel" class="panel-card analysis-panel hidden">
+        <div class="analysis-top-row">
+          <div class="analysis-step-info">
+            <span id="analysisStepLabel" class="analysis-step-label">Posunięcie:</span>
+            <strong id="analysisStepVal" class="analysis-step-val">0 / 33</strong>
+            <span id="analysisMoveBadge" class="analysis-move-badge hidden"></span>
+          </div>
+          <div class="analysis-top-actions">
+            <button type="button" id="analysisAutoTargetBtn" class="analysis-toggle-btn active" title="Automatyczne strzałki celowania figur">
+              🎯 <span id="analysisAutoTargetText">Auto-Cele: WŁ.</span>
+            </button>
+            <button type="button" id="analysisFlipBtn" class="analysis-icon-btn" title="Obróć szachownicę">
+              ⇅
+            </button>
+          </div>
+        </div>
+
+        <div class="analysis-progress-track">
+          <div id="analysisProgressFill" class="analysis-progress-fill" style="width: 0%"></div>
+        </div>
+
+        <div class="analysis-vcr-row">
+          <button type="button" id="analysisFirstBtn" class="vcr-btn" title="Początek partii">⏮</button>
+          <button type="button" id="analysisPrevBtn" class="vcr-btn" title="Poprzedni ruch">
+            <span>◀</span>
+            <span id="analysisPrevText">Cofnij</span>
+          </button>
+          <button type="button" id="analysisPlayBtn" class="vcr-btn play-btn" title="Odtwarzaj / Pauza">
+            <span id="analysisPlayIcon">▶</span>
+            <span id="analysisPlayText">Auto</span>
+          </button>
+          <button type="button" id="analysisNextBtn" class="vcr-btn next-step-btn" title="Następny ruch">
+            <span id="analysisNextText">Dalej</span>
+            <span>▶</span>
+          </button>
+          <button type="button" id="analysisLastBtn" class="vcr-btn" title="Koniec partii">⏭</button>
+        </div>
+
+        <div class="analysis-legend">
+          <span class="legend-item"><i class="legend-dot green"></i><span id="legendMoveText">Ruch / Plan</span></span>
+          <span class="legend-item"><i class="legend-dot red"></i><span id="legendThreatText">Groźba / Cel</span></span>
+          <span class="legend-item"><i class="legend-dot amber"></i><span id="legendPinText">Bateria / Związanie</span></span>
+          <span class="legend-item"><i class="legend-dot blue"></i><span id="legendAltText">Alternatywa</span></span>
+        </div>
+      </div>
+
       <!-- Primary Training Controls -->
-      <div class="controls-grid">
+      <div id="trainingControlsGrid" class="controls-grid">
         <button type="button" id="hintBtn" class="ctrl-btn hint-btn">
           <span>💡</span>
           <span id="hintBtnText">Podpowiedź (Figura)</span>
@@ -176,7 +274,7 @@
       </div>
 
       <!-- Navigation Controls (Prev / Next Puzzle) -->
-      <div class="nav-controls-row">
+      <div id="navControlsRow" class="nav-controls-row">
         <button type="button" id="prevBtn" class="nav-btn prev-btn">
           <span>←</span>
           <span id="prevBtnText">Poprzednie</span>

@@ -42,7 +42,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['backRank'],
-      fen: '6k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1',
+      fen: '6k1/pp3ppp/2p5/4b3/4P3/2P5/PP3PPP/3R2K1 w - - 0 1',
       solution: ['d1d8'],
       title: {
         en: 'Classic Back-Rank Mate',
@@ -62,7 +62,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['smothered'],
-      fen: '6rk/6pp/8/6N1/8/8/6PP/6K1 w - - 0 1',
+      fen: 'r5rk/pp2b1pp/2p1p3/4P1N1/3P4/2P5/PP4PP/R4RK1 w - - 0 1',
       solution: ['g5f7'],
       title: {
         en: 'Smothered Knight Leap',
@@ -102,7 +102,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['arabian'],
-      fen: '7k/1R6/5N2/8/8/8/6PP/6K1 w - - 0 1',
+      fen: '7k/1R6/p1p2N2/3p4/3P4/2P5/PP4PP/6K1 w - - 0 1',
       solution: ['b7h7'],
       title: {
         en: 'Arabian Corner Mate',
@@ -122,7 +122,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['anastasia'],
-      fen: '5r2/1b2Nppk/8/8/8/3R4/5PPP/6K1 w - - 0 1',
+      fen: '2r2r2/pb2Nppk/1p6/3p4/3P4/2PR4/PP3PPP/6K1 w - - 0 1',
       solution: ['d3h3'],
       title: {
         en: "Anastasia's Wall",
@@ -142,7 +142,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['pin'],
-      fen: '6rk/6p1/5Q2/8/8/8/1B3PPP/6K1 w - - 0 1',
+      fen: '6rk/pp4p1/2p2Q2/8/2p4P/1P6/PB3PP1/6K1 w - - 0 1',
       solution: ['f6h6'],
       title: {
         en: 'Exploiting the Absolute Pin',
@@ -162,7 +162,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['boden'],
-      fen: '2kr4/p2p4/2p5/8/5B2/8/5PPP/5BK1 w - - 0 1',
+      fen: '2kr3r/p2pqppp/2p5/8/3P1B2/2P5/PP3PPP/R4BK1 w - - 0 1',
       solution: ['f1a6'],
       title: {
         en: "Boden's Criss-Cross Bishops",
@@ -182,7 +182,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['battery'],
-      fen: '3rkr2/8/Q7/8/8/8/5PPP/6K1 w - - 0 1',
+      fen: '3rkr2/pp5p/Q5p1/2p5/2P5/1P6/P4PPP/R5K1 w - - 0 1',
       solution: ['a6e6'],
       title: {
         en: 'Epaulette Checkmate',
@@ -202,7 +202,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['battery'],
-      fen: '6k1/5p2/5P1Q/6K1/8/8/8/8 w - - 0 1',
+      fen: '6k1/pp3p2/2p2P1Q/3p2K1/3P4/2P5/PP6/8 w - - 0 1',
       solution: ['h6g7'],
       title: {
         en: "Lolli's Outpost Mate",
@@ -222,7 +222,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['battery'],
-      fen: '7k/6p1/8/8/2B5/3R4/5PPP/6K1 w - - 0 1',
+      fen: '7k/pp4p1/1qp5/8/2BP4/2PR4/PP3PPP/6K1 w - - 0 1',
       solution: ['d3h3'],
       title: {
         en: "Greco's Corner Mate",
@@ -242,18 +242,18 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['backRank'],
-      fen: '6k1/5ppp/8/8/3q4/8/5PPP/6K1 b - - 0 1',
+      fen: '5rk1/pp3ppp/2p5/3p4/3q4/1P6/PB3PPP/6K1 b - - 0 1',
       solution: ['d4d1'],
       title: {
         en: 'Black to Move: Back-Rank Strike',
         pl: 'Ruch czarnych: Uderzenie na 1. linii'
       },
       hint: {
-        en: 'You are playing Black! White’s king is trapped behind its own pawns on f2, g2, and h2.',
-        pl: 'Grasz czarnymi! Biały król jest uwięziony za własnymi pionami f2, g2 i h2.'
+        en: 'You are playing Black! White’s king is trapped behind its own pawns on f2, g2, and h2 while b2 guards a1.',
+        pl: 'Grasz czarnymi! Biały król jest uwięziony za własnymi pionami f2, g2 i h2 (a pole a1 broni goniec b2).'
       },
       explanation: {
-        en: '1... Qd1# punishes White’s unguarded first rank.',
+        en: '1... Qd1# punishes White’s unguarded first rank on the only safe square.',
         pl: '1... Hd1# wykorzystuje brak obrony pierwszej linii białych.'
       }
     },
@@ -262,7 +262,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['battery'],
-      fen: '6k1/1b3ppp/8/8/8/7q/5PPP/5RK1 b - - 0 1',
+      fen: '5rk1/pb3ppp/1p2p3/8/2P5/1P5q/P4PPP/2R2RK1 b - - 0 1',
       solution: ['h3g2'],
       title: {
         en: 'Black to Move: Long-Diagonal Battery',
@@ -282,7 +282,7 @@
       movesToMate: 2,
       difficulty: 'easy',
       themes: ['battery'],
-      fen: '7k/8/8/8/8/8/1R4PP/Q5K1 w - - 0 1',
+      fen: '7k/8/p7/P1p5/2P5/8/1R4PP/Q5K1 w - - 0 1',
       solution: ['b2b7', 'h8g8', 'a1g7'],
       title: {
         en: 'Queen & Rook 7th-Rank Trap',
@@ -293,8 +293,8 @@
         pl: 'Najpierw odetnij czarnego króla na 7. linii wieżą, a następnie daj mata hetmanem na g7!'
       },
       explanation: {
-        en: '1. Rb7! Kg8 2. Qg7# boxes the king onto the back rank so the queen delivers mate on g7.',
-        pl: '1. Wb7! Kg8 2. Hg7# zamyka króla na ostatniej linii i matuje na g7.'
+        en: '1. Rb7+! Kg8 2. Qg7# boxes the king onto the back rank so the queen delivers mate on g7.',
+        pl: '1. Wb7+! Kg8 2. Hg7# zamyka króla na ostatniej linii i matuje na g7.'
       }
     },
     {
@@ -302,7 +302,7 @@
       movesToMate: 2,
       difficulty: 'easy',
       themes: ['backRank'],
-      fen: '6k1/5ppp/4r3/8/8/8/5PPP/3RR1K1 w - - 0 1',
+      fen: '6k1/pp3ppp/2p1r3/4p3/4P3/2P5/PP3PPP/3RR1K1 w - - 0 1',
       solution: ['d1d8', 'e6e8', 'd8e8'],
       title: {
         en: 'Two Rooks vs One Defender',
@@ -342,7 +342,7 @@
       movesToMate: 2,
       difficulty: 'easy',
       themes: ['backRank'],
-      fen: '3rr1k1/5ppp/8/8/8/4R3/5PPP/6K1 b - - 0 1',
+      fen: '3rr1k1/pp3ppp/2p5/4p3/4P3/2P1R3/PP3PPP/6K1 b - - 0 1',
       solution: ['d8d1', 'e3e1', 'd1e1'],
       title: {
         en: 'Black to Move: Double-Rook Invader',
@@ -366,7 +366,7 @@
       movesToMate: 1,
       difficulty: 'medium',
       themes: ['arabian'],
-      fen: '4k3/4pppp/4N3/8/8/8/6PP/3R2K1 w - - 0 1',
+      fen: '4k3/pp2pppp/2p1N3/8/4P3/2P5/PP4PP/3R2K1 w - - 0 1',
       solution: ['d1d8'],
       title: {
         en: 'The Hook Mate Pattern',
@@ -386,7 +386,7 @@
       movesToMate: 1,
       difficulty: 'medium',
       themes: ['doubleCheck', 'discovered'],
-      fen: '4r1bk/7p/5N2/8/8/8/1B4PP/6K1 w - - 0 1',
+      fen: '4r1bk/1p5p/p1p2N2/8/P7/1P6/1B4PP/6K1 w - - 0 1',
       solution: ['f6e8'],
       title: {
         en: 'Discovered Check Battery',
@@ -406,7 +406,7 @@
       movesToMate: 1,
       difficulty: 'medium',
       themes: ['smothered'],
-      fen: '6k1/5ppp/8/8/6n1/8/6PP/6RK b - - 0 1',
+      fen: '5rk1/pp3ppp/2p5/4p3/4P1n1/2NP4/PPP3PP/6RK b - - 0 1',
       solution: ['g4f2'],
       title: {
         en: 'Black to Move: Corner Smothered Mate',
@@ -426,7 +426,7 @@
       movesToMate: 1,
       difficulty: 'medium',
       themes: ['promotion', 'backRank'],
-      fen: '6k1/3P1ppp/8/8/8/8/5PPP/6K1 w - - 0 1',
+      fen: '6k1/pp1P1ppp/2p5/8/2B5/2P5/PP3PPP/6K1 w - - 0 1',
       solution: ['d7d8q'],
       title: {
         en: 'Instant Promotion Checkmate',
@@ -466,7 +466,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['smothered', 'sacrifice'],
-      fen: 'r4r1k/6pp/7N/8/8/1Q6/6PP/6K1 w - - 0 1',
+      fen: 'r4r1k/pp4pp/2p4N/4p3/4P3/1QP5/PP4PP/5RK1 w - - 0 1',
       solution: ['b3g8', 'f8g8', 'h6f7'],
       title: {
         en: 'Smothered Mate via Queen Sacrifice',
@@ -486,19 +486,19 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['backRank', 'sacrifice', 'attraction'],
-      fen: '5rk1/4p2p/6p1/4B1N1/8/8/6PP/3R1Q1K w - - 0 1',
+      fen: '5rk1/pp2p2p/2p3p1/1b2B1N1/4P3/2P5/PP4PP/3R1Q1K w - - 0 1',
       solution: ['f1f8', 'g8f8', 'd1d8'],
       title: {
         en: 'Attraction to the Back Rank',
         pl: 'Zaciągnięcie na ósmą linię'
       },
       hint: {
-        en: 'Eliminate Black’s rook on f8 with a queen sacrifice to draw the king into a back-rank net!',
-        pl: 'Zbij wieżę na f8 hetmanem, zaciągając czarnego króla w matową sieć na 8. linii!'
+        en: 'Your queen on f1 is attacked by Bb5! Eliminate Black’s rook on f8 with check to draw the king into a back-rank net!',
+        pl: 'Twój hetman na f1 jest atakowany przez gońca b5! Zbij wieżę na f8 z szachem, zaciągając króla w matową sieć na 8. linii!'
       },
       explanation: {
-        en: '1. Qxf8+! Kxf8 2. Rd8# works because the e5-bishop and g5-knight control g7 and f7.',
-        pl: '1. Hxf8+! Kxf8 2. Wd8# wygrywa, ponieważ goniec e5 i skoczek g5 odcinają pola g7 oraz f7.'
+        en: '1. Qxf8+! Kxf8 2. Rd8# works because the e5-bishop and g5-knight control g7 and f7 (while quiet 1. Rd8? fails to 1... Bxf1!).',
+        pl: '1. Hxf8+! Kxf8 2. Wd8# wygrywa, ponieważ goniec e5 i skoczek g5 odcinają pola g7 oraz f7 (ciche 1. Wd8? przegrywa po 1... Gxf1!).'
       }
     },
     {
@@ -506,7 +506,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['doubleCheck', 'sacrifice', 'attraction'],
-      fen: '4Q2n/5pkp/8/8/6N1/B7/5P1P/6RK w - - 0 1',
+      fen: '4Q2n/pp3pkp/8/8/2p3N1/B1P5/P4P1P/6RK w - - 0 1',
       solution: ['e8g8', 'g7g8', 'g4f6'],
       title: {
         en: 'Queen Sacrifice into Double Check',
@@ -526,7 +526,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['anastasia', 'sacrifice', 'attraction'],
-      fen: '5r1k/4Nppp/8/8/8/3R3Q/5PPP/6K1 w - - 0 1',
+      fen: '5r1k/pp2Nppp/2p5/3p4/3P4/2PR3Q/PP3PPP/6K1 w - - 0 1',
       solution: ['h3h7', 'h8h7', 'd3h3'],
       title: {
         en: 'Anastasia’s Queen Sacrifice on h7',
@@ -566,7 +566,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['arabian', 'backRank'],
-      fen: '7k/6pp/3r1N2/8/8/8/1R4PP/6K1 w - - 0 1',
+      fen: '7k/p5pp/2pr1N2/4p3/4P3/2P5/PR4PP/6K1 w - - 0 1',
       solution: ['b2b8', 'd6d8', 'b8d8'],
       title: {
         en: 'Arabian Back-Rank Siege',
@@ -586,7 +586,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['promotion', 'backRank', 'sacrifice'],
-      fen: 'r5k1/3P1ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1',
+      fen: 'r5k1/pp1P1ppp/2p5/8/2P5/1P6/P4PPP/4R1K1 w - - 0 1',
       solution: ['e1e8', 'a8e8', 'd7e8q'],
       title: {
         en: 'Promotion Punch',
@@ -606,7 +606,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['sacrifice', 'clearance'],
-      fen: '5r1k/6pp/8/4N1Q1/2B5/8/6PP/6K1 w - - 0 1',
+      fen: 'r4r1k/pp4pp/2p5/4N1Q1/2BP4/2P5/PP4PP/5RK1 w - - 0 1',
       solution: ['e5g6', 'h7g6', 'g5h4'],
       title: {
         en: 'Greco’s Knight Sacrifice on g6',
@@ -646,7 +646,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['sacrifice', 'battery'],
-      fen: '5r1k/6p1/7p/8/8/5Q2/5P1P/6RK w - - 0 1',
+      fen: '5r1k/pp4p1/2p4p/3p4/3P4/2P2Q2/PP3P1P/6RK w - - 0 1',
       solution: ['f3f8', 'h8h7', 'f8g7'],
       title: {
         en: 'Eliminating the g7 Guard',
@@ -690,7 +690,7 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['smothered', 'doubleCheck', 'sacrifice'],
-      fen: 'r4rk1/ppp2Npp/8/8/8/1Q6/PPP3PP/6K1 w - - 0 1',
+      fen: 'r1b2rk1/ppqp1Npp/2n5/4p3/4P3/1QPP4/PP2BPPP/R4RK1 w - - 0 1',
       solution: ['f7h6', 'g8h8', 'b3g8', 'f8g8', 'h6f7'],
       title: {
         en: 'The Classic Smothered Trio',
@@ -701,8 +701,8 @@
         pl: 'Zacznij od podwójnego szacha (1. Sh6+!), który zapędzi króla na h8, a potem poświęć hetmana na g8!'
       },
       explanation: {
-        en: '1. Nh6+! Kh8 2. Qg8+! Rxg8 3. Nf7# is the iconic Philidor Legacy finish.',
-        pl: '1. Sh6+! Kh8 2. Hg8+! Wxg8 3. Sf7# to ikoniczny finał "Dziedzictwa Philidora".'
+        en: '1. Nh6+! Kh8 2. Qg8+! Rxg8 3. Nf7# is the iconic Philidor Legacy finish executed in a full middlegame position.',
+        pl: '1. Sh6+! Kh8 2. Hg8+! Wxg8 3. Sf7# to ikoniczny finał "Dziedzictwa Philidora" w pełnej pozycji gry środkowej.'
       }
     },
     {
@@ -710,19 +710,19 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['backRank', 'sacrifice', 'deflection'],
-      fen: '3r2k1/5ppp/8/6N1/8/1Q6/5PPP/4R1K1 w - - 0 1',
-      solution: ['b3f7', 'g8h8', 'f7e8', 'd8e8', 'e1e8'],
+      fen: '2r3k1/ppqp1ppp/2n1p3/4P1N1/3P4/2P2Q2/PP4PP/5RK1 w - - 0 1',
+      solution: ['f3f7', 'g8h8', 'f7f8', 'c8f8', 'f1f8'],
       title: {
         en: 'Overloading the Cornered King',
-        pl: 'Przełamanie obrony w rogu'
+        pl: 'Przełamanie obrony na linii f'
       },
       hint: {
-        en: 'Drive the king to h8 with 1. Qxf7+ (protected by your g5-knight), then sacrifice the queen on e8!',
-        pl: 'Zapędź króla na h8 ruchem 1. Hxf7+ (ze wsparciem skoczka g5), a następnie poświęć hetmana na e8!'
+        en: 'Drive the king to h8 with 1. Qxf7+ (protected by your g5-knight), then sacrifice the queen on f8!',
+        pl: 'Zapędź króla na h8 ruchem 1. Hxf7+ (ze wsparciem skoczka g5), a następnie poświęć hetmana na f8!'
       },
       explanation: {
-        en: '1. Qxf7+! Kh8 2. Qe8+! Rxe8 3. Rxe8# strips the last defender of the 8th rank.',
-        pl: '1. Hxf7+! Kh8 2. He8+! Wxe8 3. Wxe8# eliminuje ostatniego obrońcę ósmej linii.'
+        en: '1. Qxf7+! Kh8 2. Qf8+!! Rxf8 3. Rxf8# uses the vertical f-file battery to deflect the last defender of the 8th rank.',
+        pl: '1. Hxf7+! Kh8 2. Hf8+!! Wxf8 3. Wxf8# wykorzystuje baterię po linii f do odciągnięcia ostatniego obrońcy ósmej linii.'
       }
     },
     {
@@ -730,7 +730,7 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['sacrifice', 'kingHunt', 'battery'],
-      fen: '2r3k1/5pp1/7p/6N1/8/1Q6/5PP1/6KR w - - 0 1',
+      fen: '2r3k1/ppqp1pp1/2n4p/4p1N1/4P3/1QPP4/PP3PP1/2R3KR w - - 0 1',
       solution: ['b3f7', 'g8h8', 'h1h6', 'g7h6', 'f7h7'],
       title: {
         en: 'Rook Sacrifice on h6',
@@ -750,59 +750,59 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['anastasia', 'sacrifice', 'attraction'],
-      fen: '5r1k/4Nppp/5b2/8/8/3R3Q/5PPP/6K1 w - - 0 1',
-      solution: ['h3h7', 'h8h7', 'd3h3', 'f6h4', 'h3h4'],
+      fen: 'r4rk1/ppqb1ppp/2p1p3/4PN2/3P4/2PR3Q/PP3PPP/5RK1 w - - 0 1',
+      solution: ['f5e7', 'g8h8', 'h3h7', 'h8h7', 'd3h3'],
       title: {
-        en: 'Anastasia’s Full Line in 3',
-        pl: 'Pełny wariant mata Anastazji w 3 ruchach'
+        en: 'Anastasia’s Full Combination in 3',
+        pl: 'Pełna kombinacja mata Anastazji w 3 ruchach'
       },
       hint: {
-        en: 'Sacrifice the queen on h7, swing the rook to h3, and capture the interposing bishop on h4!',
-        pl: 'Poświęć hetmana na h7, przerzuć wieżę na h3 i zbij zasłaniającego gońca na h4!'
+        en: 'First jump with your knight to e7 with check (1. Ne7+!) to seal g8 and g6, then sacrifice your queen on h7!',
+        pl: 'Najpierw wskocz skoczkiem na e7 z szachem (1. Se7+!), odcinając pola g8 i g6, a potem poświęć hetmana na h7!'
       },
       explanation: {
-        en: '1. Qxh7+! Kxh7 2. Rh3+ Bh4 3. Rxh4# — the bishop interposition on h4 only delays mate by one move.',
-        pl: '1. Hxh7+! Kxh7 2. Wh3+ Gh4 3. Wxh4# — zasłona gońcem na h4 jedynie o ruch odwleka mata.'
+        en: '1. Ne7+! Kh8 2. Qxh7+!! Kxh7 3. Rh3# constructs the complete Anastasia’s Mate net from a rich middlegame.',
+        pl: '1. Se7+! Kh8 2. Hxh7+!! Kxh7 3. Wh3# od podstaw buduje siatkę mata Anastazji i otwiera linię h dla wieży.'
       }
     },
     {
       id: 'm3-05',
       movesToMate: 3,
       difficulty: 'hard',
-      themes: ['sacrifice', 'deflection', 'backRank'],
-      fen: '6k1/5ppp/2b1r3/8/8/8/5PPP/3RR1K1 w - - 0 1',
-      solution: ['d1d8', 'e6e8', 'd8e8', 'c6e8', 'e1e8'],
+      themes: ['boden', 'sacrifice', 'deflection'],
+      fen: '2kr1b1r/pb1np1pp/1pp2p2/N2p4/4PB2/2Q5/PPP2PPP/R3KB1R w KQ - 0 1',
+      solution: ['c3c6', 'b7c6', 'f1a6', 'c6b7', 'a6b7'],
       title: {
-        en: 'Double Interposition Crusher',
-        pl: 'Przełamanie podwójnej zasłony'
+        en: 'Boden’s Queen Sacrifice & Deflection in 3',
+        pl: 'Ofiara hetmana i odciągnięcie w stylu Bodena'
       },
       hint: {
-        en: 'Invade on d8 and eliminate both Black’s rook and bishop as they try to block on e8!',
-        pl: 'Wtargnij na d8 i kolejno zbij wieżę oraz gońca próbujących zasłonić 8. linię na e8!'
+        en: 'Sacrifice your queen on c6 (`1. Qxc6+!!`) to deflect the b7-bishop, then slice in with `2. Ba6+!` and `3. Bxb7#`!',
+        pl: 'Poświęć hetmana na c6 (`1. Hxc6+!!`), aby odciągnąć gońca b7, a następnie uderz `2. Ga6+!` oraz `3. Gxb7#`!'
       },
       explanation: {
-        en: '1. Rd8+ Re8 2. Rxe8+ Bxe8 3. Rxe8# systematically demolishes every interposing defender.',
-        pl: '1. Wd8+ We8 2. Wxe8+ Gxe8 3. Wxe8# systematycznie likwiduje wszystkie zasłony na ósmej linii.'
+        en: '1. Qxc6+!! Bxc6 2. Ba6+! Bb7 3. Bxb7# uses the a5-knight and f4-bishop to weave an unstoppable queenside mating net.',
+        pl: '1. Hxc6+!! Gxc6 2. Ga6+! Gb7 3. Gxb7# wykorzystuje współpracę skoczka a5 z dwoma gońcami przeciwko długiej roszadzie.'
       }
     },
     {
       id: 'm3-06',
       movesToMate: 3,
       difficulty: 'hard',
-      themes: ['backRank', 'sacrifice'],
-      fen: '3rr1k1/5ppp/8/8/8/2B1R3/5PPP/6K1 b - - 0 1',
-      solution: ['d8d1', 'e3e1', 'd1e1', 'c3e1', 'e8e1'],
+      themes: ['arabian', 'sacrifice', 'attraction'],
+      fen: '3r2k1/pb3ppp/1p3r2/7q/3p1p2/2P3n1/PPQ2RPP/R1B3K1 b - - 0 1',
+      solution: ['h5h2', 'g1h2', 'f6h6', 'h2g1', 'h6h1'],
       title: {
-        en: 'Black to Move: Back-Rank Siege',
-        pl: 'Ruch czarnych: Oblężenie pierwszej linii'
+        en: 'Black to Move: Queen Sacrifice into Corner Mate',
+        pl: 'Ruch czarnych: Ofiara hetmana na h2 i mat na h1'
       },
       hint: {
-        en: 'You are playing Black! Invade the 1st rank with 1... Rd1+ and breakthrough on e1.',
-        pl: 'Grasz czarnymi! Wtargnij na pierwszą linię ruchem 1... Wd1+ i przełam obronę na e1.'
+        en: 'You are playing Black! Rip open the h-file with `1... Qxh2+!!`, swing your f6-rook to h6 with check, and mate on h1!',
+        pl: 'Grasz czarnymi! Otwórz linię h ofiarą hetmana `1... Hxh2+!!`, przerzuć wieżę na h6 z szachem i zamatuj na h1!'
       },
       explanation: {
-        en: '1... Rd1+ 2. Re1 Rxe1+ 3. Bxe1 Rxe1# mirrors the classic double-rook back-rank siege.',
-        pl: '1... Wd1+ 2. We1 Wxe1+ 3. Gxe1 Wxe1# to klasyczne przełamanie pierwszej linii dwiema wieżami.'
+        en: '1... Qxh2+!! 2. Kxh2 Rh6+! 3. Kg1 Rh1# — the g3-knight and f4-pawn seal every escape square while the rook sweeps the h-file.',
+        pl: '1... Hxh2+!! 2. Kxh2 Wh6+! 3. Kg1 Wh1# — skoczek g3 i pion f4 odcinają ucieczkę, a wieża matuje po otwartej linii h.'
       }
     },
     {
@@ -810,39 +810,39 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['battery', 'clearance'],
-      fen: '5k2/5P1p/6p1/6K1/8/8/8/6R1 w - - 0 1',
+      fen: '5k2/p1p2P1p/1p4p1/P1p3K1/2P5/8/8/6R1 w - - 0 1',
       solution: ['g5f6', 'h7h5', 'g1g6', 'h5h4', 'g6g8'],
       title: {
-        en: 'Anderssen’s Endgame Net in 3',
-        pl: 'Siatka matowa Anderssena w 3 ruchach'
+        en: 'Anderssen’s Quiet-Move Endgame Net in 3',
+        pl: 'Cichy ruch królem w siatce Anderssena'
       },
       hint: {
-        en: 'Step your king to f6 first to protect the f7-pawn and seal e7, then capture on g6!',
-        pl: 'Podejdź najpierw królem na f6, aby obronić piona f7 i odciąć pole e7, a potem zbij na g6!'
+        en: 'With the queenside completely locked, step your king quietly to f6 (`1. Kf6!`) to put Black in zugzwang, then capture on g6!',
+        pl: 'Przy zablokowanym skrzydle hetmańskim podejdź cicho królem na f6 (`1. Kf6!`), zmuszając czarne do ruchu pionem h, po czym zbij na g6!'
       },
       explanation: {
-        en: '1. Kf6! h5 2. Rxg6 h4 3. Rg8# is a quiet-move masterpiece where the f7-pawn and f6-king seal every escape.',
-        pl: '1. Kf6! h5 2. Wxg6 h4 3. Wg8# wykorzystuje ciche posunięcie królem zamykające siatkę matową.'
+        en: '1. Kf6! h5 2. Rxg6 h4 3. Rg8# is a classic quiet-move zugzwang study: Black is forced to advance the h-pawn and open g6.',
+        pl: '1. Kf6! h5 2. Wxg6 h4 3. Wg8# to klasyczne studium z cichym posunięciem królem i przymusem ruchu (zugzwangiem).'
       }
     },
     {
       id: 'm3-08',
       movesToMate: 3,
       difficulty: 'hard',
-      themes: ['smothered', 'doubleCheck', 'sacrifice'],
-      fen: '6k1/ppp3pp/1q6/8/8/8/PPP2nPP/R4RK1 b - - 0 1',
-      solution: ['f2h3', 'g1h1', 'b6g1', 'f1g1', 'h3f2'],
+      themes: ['boden', 'sacrifice', 'deflection'],
+      fen: 'r3kb1r/ppp2ppp/2q5/3p1b2/n7/1PP2P2/PB1NP1PP/2KR1B1R b kq - 0 1',
+      solution: ['c6c3', 'b2c3', 'f8a3', 'c3b2', 'a3b2'],
       title: {
-        en: 'Black to Move: Smothered Double-Check Trio',
-        pl: 'Ruch czarnych: Sekwencja mata zaduszonego w 3'
+        en: 'Black to Move: Queenside Queen Sacrifice in 3',
+        pl: 'Ruch czarnych: Ofiara hetmana na c3 w 3 ruchach'
       },
       hint: {
-        en: 'Give a double check with 1... Nh3+!, sacrifice the queen on g1, and finish with 3... Nf2#!',
-        pl: 'Daj podwójnego szacha 1... Sh3+!, poświęć hetmana na g1 i zakończ skokiem 3... Sf2#!'
+        en: 'Sacrifice your queen on c3 (`1... Qxc3+!!`) to deflect the b2-bishop, then strike with `2... Ba3+!` and `3... Bxb2#`!',
+        pl: 'Poświęć hetmana na c3 (`1... Hxc3+!!`), odciągając gońca b2, a następnie uderz `2... Ga3+!` i `3... Gxb2#`!'
       },
       explanation: {
-        en: '1... Nh3+! 2. Kh1 Qg1+! 3. Rxg1 Nf2# executes the classic 3-move smothered combination with Black.',
-        pl: '1... Sh3+! 2. Kh1 Hg1+! 3. Wxg1 Sf2# realizuje klasyczną kombinację zaduszoną czarnymi.'
+        en: '1... Qxc3+!! 2. Bxc3 Ba3+! 3. Bb2 Bxb2# coordinates both bishops and the a4-knight to crush White’s queenside castling.',
+        pl: '1... Hxc3+!! 2. Gxc3 Ga3+! 3. Gb2 Gxb2# łączy siłę obu gońców i skoczka a4 w ataku na długą roszadę białych.'
       }
     },
     {
@@ -850,39 +850,39 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['promotion', 'sacrifice', 'backRank'],
-      fen: 'r5k1/3P1pbp/6pB/8/8/8/5PPP/4R1K1 w - - 0 1',
-      solution: ['e1e8', 'a8e8', 'd7e8q', 'g7f8', 'e8f8'],
+      fen: '5rk1/pp1P2pn/2p1p1B1/4P3/3P4/2P2Q2/PP4PP/5RK1 w - - 0 1',
+      solution: ['f3f8', 'h7f8', 'f1f8', 'g8f8', 'd7d8q'],
       title: {
-        en: 'Rook Sacrifice into Promotion & Bishop Mate',
-        pl: 'Ofiara wieży, promocja i mat na f8'
+        en: 'Double f8 Sacrifice into Promotion Mate',
+        pl: 'Podwójna ofiara na f8 i promocja piona z matem'
       },
       hint: {
-        en: 'Sacrifice the rook on e8, promote the d7-pawn to a queen, and crush the f8 interposition!',
-        pl: 'Poświęć wieżę na e8, promuj piona d7 na hetmana i zbij gońca zasłaniającego na f8!'
+        en: 'Sacrifice BOTH your queen and rook on f8 (`1. Qxf8+!! Nxf8 2. Rxf8+! Kxf8`) to clear the 8th rank for your d7-pawn!',
+        pl: 'Poświęć ZARÓWNO hetmana, jak i wieżę na f8 (`1. Hxf8+!! Sxf8 2. Wxf8+! Kxf8`), aby promować piona d7 z matem!'
       },
       explanation: {
-        en: '1. Re8+! Rxe8 2. dxe8=Q+ Bf8 3. Qxf8# uses the h6-bishop to cover g7 and support f8.',
-        pl: '1. We8+! Wxe8 2. dxe8=H+ Gf8 3. Hxf8# wykorzystuje gońca h6 wspierającego pole f8.'
+        en: '1. Qxf8+!! Nxf8 2. Rxf8+! Kxf8 3. d8=Q# lures the black king onto f8 while the g6-bishop seals e8 and g7.',
+        pl: '1. Hxf8+!! Sxf8 2. Wxf8+! Kxf8 3. d8=H# zaciąga czarnego króla na f8, podczas gdy goniec g6 odcina pola ucieczki.'
       }
     },
     {
       id: 'm3-10',
       movesToMate: 3,
       difficulty: 'hard',
-      themes: ['sacrifice', 'promotion', 'backRank'],
-      fen: '2r1r1k1/1P3ppp/8/6N1/8/1Q6/5PPP/2R3K1 w - - 0 1',
-      solution: ['b3f7', 'g8h8', 'c1c8', 'e8c8', 'b7c8q'],
+      themes: ['sacrifice', 'battery', 'clearance'],
+      fen: 'r2q1nk1/pp3pb1/2np3p/8/2P4Q/1P4R1/PB3PPP/6K1 w - - 0 1',
+      solution: ['g3g7', 'g8h8', 'h4h6', 'f8h7', 'h6h7'],
       title: {
-        en: 'Corner Drive into Promotion Mate in 3',
-        pl: 'Wypchnięcie do rogu i promocja w 3 ruchach'
+        en: 'Long-Diagonal Rook Sacrifice on g7',
+        pl: 'Ofiara wieży na g7 po długiej przekątnej'
       },
       hint: {
-        en: 'First drive the black king to h8 with 1. Qxf7+, then sacrifice on c8 so the b7-pawn promotes with mate!',
-        pl: 'Najpierw zapędź króla na h8 ruchem 1. Hxf7+, a potem poświęć wieżę na c8 pod promocję piona b7!'
+        en: 'Black’s g7-bishop guards h6! Smash it first with `1. Rxg7+!! Kh8`, then play `2. Qxh6+! Nh7 3. Qxh7#`!',
+        pl: 'Czarny goniec na g7 broni piona h6! Uderz najpierw `1. Wxg7+!! Kh8`, a następnie `2. Hxh6+! Sh7 3. Hxh7#`!'
       },
       explanation: {
-        en: '1. Qxf7+ Kh8 2. Rxc8! Rxc8 3. bxc8=Q# works because the queen on f7 pins and blocks f8!',
-        pl: '1. Hxf7+ Kh8 2. Wxc8! Wxc8 3. bxc8=H# działa, ponieważ hetman na f7 kontroluje i blokuje f8!'
+        en: '1. Rxg7+!! Kh8 (1... Kxg7 is illegal because of Bb2!) 2. Qxh6+! Nh7 3. Qxh7# destroys Black’s fianchetto fortress.',
+        pl: '1. Wxg7+!! Kh8 (bicie 1... Kxg7 jest nielegalne z uwagi na gońca b2!) 2. Hxh6+! Sh7 3. Hxh7# burzy fortecę czarnych.'
       }
     },
     {
@@ -890,7 +890,7 @@
       movesToMate: 4,
       difficulty: 'hard',
       themes: ['smothered', 'doubleCheck', 'sacrifice'],
-      fen: 'r3r2k/ppp3pp/8/4N3/8/1Q6/PPP3PP/6K1 w - - 0 1',
+      fen: 'r1b1r2k/ppqp2pp/2n5/4N3/4P3/1QPP4/PP2BPPP/R4RK1 w - - 0 1',
       solution: ['e5f7', 'h8g8', 'f7h6', 'g8h8', 'b3g8', 'e8g8', 'h6f7'],
       title: {
         en: "Philidor's Legacy (Full 4-Move Combination)",
@@ -909,100 +909,100 @@
       id: 'm4-02',
       movesToMate: 4,
       difficulty: 'hard',
-      themes: ['backRank', 'sacrifice', 'clearance'],
-      fen: '6k1/4npbp/4r1pB/8/8/8/2R2PPP/2R3K1 w - - 0 1',
-      solution: ['c2c8', 'e7c8', 'c1c8', 'e6e8', 'c8e8', 'g7f8', 'e8f8'],
+      themes: ['anastasia', 'sacrifice', 'attraction'],
+      fen: '5rk1/ppqb1ppp/2p1p3/4PN2/1r6/2PR3Q/PP2PPPP/5RK1 w - - 0 1',
+      solution: ['f5e7', 'g8h8', 'h3h7', 'h8h7', 'd3h3', 'b4h4', 'h3h4'],
       title: {
-        en: 'Double-Rook Battery Demolition in 4',
-        pl: 'Bateria dwóch wież w ataku 4-ruchowym'
+        en: 'Anastasia’s 4-Move Masterpiece',
+        pl: 'Pełny atak Anastazji w 4 ruchach'
       },
       hint: {
-        en: 'Invade on c8 with your first rook, recapture with the second rook, and smash through every interposition!',
-        pl: 'Wtargnij pierwszą wieżą na c8, odbij drugą wieżą i przebij się przez kolejne zasłony na ósmej linii!'
+        en: 'Start with `1. Ne7+! Kh8`, sacrifice your queen on h7 (`2. Qxh7+!! Kxh7`), swing `3. Rh3+!`, and crush the `3... Rh4` interposition!',
+        pl: 'Zacznij od `1. Se7+! Kh8`, poświęć hetmana na h7 (`2. Hxh7+!! Kxh7`), zagraj `3. Wh3+!` i zbij zasłaniającą wieżę na h4!'
       },
       explanation: {
-        en: '1. Rc8+ Nxc8 2. Rxc8+ Re8 3. Rxe8+ Bf8 4. Rxf8# eliminates three defenders in a row with the h6-bishop sealing g7 and f8.',
-        pl: '1. Wc8+ Sxc8 2. Wxc8+ We8 3. Wxe8+ Gf8 4. Wxf8# eliminuje trzech obrońców z rzędu przy wsparciu gońca h6.'
+        en: '1. Ne7+! Kh8 2. Qxh7+!! Kxh7 3. Rh3+! Rh4 4. Rxh4# executes the complete 4-move Anastasia combination.',
+        pl: '1. Se7+! Kh8 2. Hxh7+!! Kxh7 3. Wh3+! Wh4 4. Wxh4# realizuje pełną, 4-ruchową kombinację w stylu Anastazji.'
       }
     },
     {
       id: 'm4-03',
       movesToMate: 4,
       difficulty: 'hard',
-      themes: ['backRank', 'sacrifice', 'deflection'],
-      fen: '6k1/5pbp/2b1r1pB/8/8/8/3R1PPP/4R1K1 w - - 0 1',
-      solution: ['d2d8', 'e6e8', 'd8e8', 'c6e8', 'e1e8', 'g7f8', 'e8f8'],
+      themes: ['sacrifice', 'battery', 'kingHunt'],
+      fen: '3r2k1/ppqp1pp1/2nr3p/4p1N1/4P3/1QPP3R/PP3PP1/6KR w - - 0 1',
+      solution: ['b3f7', 'g8h8', 'h3h6', 'd6h6', 'h1h6', 'g7h6', 'f7h7'],
       title: {
-        en: 'Triple Interposition Demolition in 4',
-        pl: 'Rozbicie potrójnej zasłony w 4 ruchach'
+        en: 'Double-Rook Sacrifice on h6 in 4',
+        pl: 'Podwójna ofiara wieży na h6 w 4 ruchach'
       },
       hint: {
-        en: 'Start with 1. Rd8+ and smash through Black’s rook and both bishops on the 8th rank!',
-        pl: 'Zacznij od 1. Wd8+ i przebij się przez wieżę oraz oba gońce czarnych na ósmej linii!'
+        en: 'Black threatens `1... Rd1#`, so start with check (`1. Qxf7+! Kh8`), then sacrifice BOTH rooks on h6 (`2. Rxh6+!! Rxh6 3. Rxh6+!! gxh6`)!',
+        pl: 'Czarne grożą `1... Wd1#`, więc zacznij od szacha (`1. Hxf7+! Kh8`), a potem poświęć OBIE wieże na h6 (`2. Wxh6+!! Wxh6 3. Wxh6+!! gxh6`)!'
       },
       explanation: {
-        en: '1. Rd8+ Re8 2. Rxe8+ Bxe8 3. Rxe8+ Bf8 4. Rxf8# — the h6-bishop covers both f8 and g7 for the final blow.',
-        pl: '1. Wd8+ We8 2. Wxe8+ Gxe8 3. Wxe8+ Gf8 4. Wxf8# — goniec na h6 wspiera pole f8 i odcina g7.'
+        en: '1. Qxf7+! Kh8 2. Rxh6+!! Rxh6 3. Rxh6+!! gxh6 4. Qh7# sacrifices both rooks in succession to tear open the h7 mating square.',
+        pl: '1. Hxf7+! Kh8 2. Wxh6+!! Wxh6 3. Wxh6+!! gxh6 4. Hh7# poświęca kolejno obie wieże na h6, by otworzyć drogę do mata na h7.'
       }
     },
     {
       id: 'm4-04',
       movesToMate: 4,
       difficulty: 'hard',
-      themes: ['backRank', 'sacrifice', 'promotion'],
-      fen: '6k1/1P2npbp/4r1pB/8/8/8/5PPP/2R3K1 w - - 0 1',
-      solution: ['c1c8', 'e7c8', 'b7c8q', 'e6e8', 'c8e8', 'g7f8', 'e8f8'],
+      themes: ['sacrifice', 'doubleCheck', 'clearance'],
+      fen: 'r2q1nk1/pp3pb1/2np3p/5b2/2P4Q/1P4R1/PB3PPP/6K1 w - - 0 1',
+      solution: ['g3g7', 'g8h8', 'h4h6', 'f5h7', 'g7h7', 'h8g8', 'h6g7'],
       title: {
-        en: 'Rook Sacrifice into Promotion Sweep in 4',
-        pl: 'Ofiara wieży i promocja piona w 4 ruchach'
+        en: 'Long-Diagonal Double-Check Clearance in 4',
+        pl: 'Podwójny szach i oczyszczenie pola g7 w 4 ruchach'
       },
       hint: {
-        en: '1. Rc8+! Nxc8 2. bxc8=Q+! Re8 3. Qxe8+ Bf8 4. Qxf8#!',
-        pl: '1. Wc8+! Sxc8 2. bxc8=H+! We8 3. Hxe8+ Gf8 4. Hxf8#!'
+        en: 'Play `1. Rxg7+!! Kh8 2. Qxh6+! Bh7`, then unleash the double-check clearance sacrifice `3. Rxh7+!! Kg8 4. Qg7#`!',
+        pl: 'Zagraj `1. Wxg7+!! Kh8 2. Hxh6+! Gh7`, a następnie uderz podwójnym szachem oczyszczającym pole g7: `3. Wxh7+!! Kg8 4. Hg7#`!'
       },
       explanation: {
-        en: '1. Rc8+! Nxc8 2. bxc8=Q+! promotes the b7-pawn with check, and the new queen sweeps away both remaining defenders.',
-        pl: '1. Wc8+! Sxc8 2. bxc8=H+! promuje piona b7 z szachem, a nowy hetman likwiduje obie zasłony do mata.'
+        en: '1. Rxg7+!! Kh8 2. Qxh6+! Bh7 3. Rxh7+!! Kg8 (forced because 3. Rxh7+ is a double check from Rh7 and Bb2!) 4. Qg7# is a masterpiece of pin and double-check geometry.',
+        pl: '1. Wxg7+!! Kh8 2. Hxh6+! Gh7 3. Wxh7+!! Kg8 (wymuszone z uwagi na podwójny szach od wieży h7 i gońca b2!) 4. Hg7# to geometryczne arcydzieło.'
       }
     },
     {
       id: 'm4-05',
       movesToMate: 4,
       difficulty: 'hard',
-      themes: ['smothered', 'doubleCheck', 'sacrifice'],
-      fen: '6k1/ppp3pp/1q6/8/4n3/8/PPP3PP/R3R2K b - - 0 1',
-      solution: ['e4f2', 'h1g1', 'f2h3', 'g1h1', 'b6g1', 'e1g1', 'h3f2'],
+      themes: ['sacrifice', 'battery', 'kingHunt'],
+      fen: '6kr/pp3pp1/1qpp3r/4p3/4P1n1/2NR3P/PPQP1PP1/3R2K1 b - - 0 1',
+      solution: ['b6f2', 'g1h1', 'h6h3', 'd3h3', 'h8h3', 'g2h3', 'f2h2'],
       title: {
-        en: "Black to Move: Philidor's Legacy in 4",
-        pl: 'Ruch czarnych: Dziedzictwo Philidora w 4 ruchach'
+        en: 'Black to Move: Double-Rook Sacrifice on h3 in 4',
+        pl: 'Ruch czarnych: Podwójna ofiara wieży na h3 w 4'
       },
       hint: {
-        en: 'Play 1... Nf2+ 2. Kg1 Nh3+! (double check) 3. Kh1 Qg1+! 4. Rxg1 Nf2#!',
-        pl: 'Zagraj 1... Sf2+ 2. Kg1 Sh3+! (podwójny szach) 3. Kh1 Hg1+! 4. Wxg1 Sf2#!'
+        en: 'Drive White’s king into the corner with `1... Qxf2+! 2. Kh1`, then sacrifice BOTH rooks on h3 (`2... Rxh3+!! 3. Rxh3 Rxh3+!!`)!',
+        pl: 'Zapędź białego króla w róg ruchem `1... Hxf2+! 2. Kh1`, a następnie poświęć OBIE czarne wieże na h3 (`2... Wxh3+!! 3. Wxh3 Wxh3+!!`)!'
       },
       explanation: {
-        en: '1... Nf2+ 2. Kg1 Nh3+! 3. Kh1 Qg1+! 4. Rxg1 Nf2# is the complete 4-move Philidor’s Legacy from Black’s perspective.',
-        pl: '1... Sf2+ 2. Kg1 Sh3+! 3. Kh1 Hg1+! 4. Wxg1 Sf2# to pełna kombinacja Philidora wykonana czarnymi.'
+        en: '1... Qxf2+! 2. Kh1 Rxh3+!! 3. Rxh3 Rxh3+!! 4. gxh3 Qh2# demolishes the h3/g2 shield with a spectacular double-rook sacrifice.',
+        pl: '1... Hxf2+! 2. Kh1 Wxh3+!! 3. Wxh3 Wxh3+!! 4. gxh3 Hh2# burzy osłonę króla efektowną ofiarą obu wież na polu h3.'
       }
     },
     {
       id: 'm4-06',
       movesToMate: 4,
       difficulty: 'hard',
-      themes: ['backRank', 'sacrifice', 'deflection'],
-      fen: '4r1k1/3r1ppp/8/8/8/2B1R2b/5PBP/6K1 b - - 0 1',
-      solution: ['d7d1', 'e3e1', 'd1e1', 'c3e1', 'e8e1', 'g2f1', 'e1f1'],
+      themes: ['sacrifice', 'doubleCheck', 'clearance'],
+      fen: '6k1/pb3ppp/1p4r1/2p4q/5B2/2NP3P/PP3PB1/R2Q1NK1 b - - 0 1',
+      solution: ['g6g2', 'g1h1', 'h5h3', 'f4h2', 'g2h2', 'h1g1', 'h3g2'],
       title: {
-        en: 'Black to Move: Triple Interposition Crusher in 4',
-        pl: 'Ruch czarnych: Rozbicie potrójnej zasłony w 4'
+        en: 'Black to Move: Long-Diagonal Double-Check Clearance in 4',
+        pl: 'Ruch czarnych: Podwójny szach i mat na długiej przekątnej'
       },
       hint: {
-        en: 'Invade on d1 with your rook and eliminate White’s rook and both bishops on the 1st rank!',
-        pl: 'Wtargnij wieżą na d1 i kolejno zbij wieżę oraz oba gońce białych na pierwszej linii!'
+        en: 'Strike with `1... Rxg2+!! 2. Kh1 Qxh3+! 3. Bh2`, then unleash the double-check clearance `3... Rxh2+!! 4. Kg1 Qg2#`!',
+        pl: 'Uderz `1... Wxg2+!! 2. Kh1 Hxh3+! 3. Gh2`, a następnie daj podwójnego szacha oczyszczającego pole g2: `3... Wxh2+!! 4. Kg1 Hg2#`!'
       },
       explanation: {
-        en: '1... Rd1+ 2. Re1 Rxe1+ 3. Bxe1 Rxe1+ 4. Bf1 Rxf1# uses the h3-bishop to seal g2 and support f1.',
-        pl: '1... Wd1+ 2. We1 Wxe1+ 3. Gxe1 Wxe1+ 4. Gf1 Wxf1# wykorzystuje gońca h3 wspierającego pole f1.'
+        en: '1... Rxg2+!! 2. Kh1 Qxh3+! 3. Bh2 Rxh2+!! 4. Kg1 (forced by double check from Rh2 and Bb7!) Qg2# finishes a brilliant 4-move combination.',
+        pl: '1... Wxg2+!! 2. Kh1 Hxh3+! 3. Gh2 Wxh2+!! 4. Kg1 (wymuszone podwójnym szachem od Wh2 i Gb7!) Hg2# wieńczy 4-ruchową kombinację.'
       }
     }
   ];
@@ -1607,7 +1607,7 @@
       movesToMate: 2,
       difficulty: 'easy',
       themes: ['fork'],
-      fen: 'r3k2r/ppp2ppp/4p3/1q1N4/8/8/PPP2PPP/4R1K1 w kq - 0 1',
+      fen: 'r3k2r/ppp2ppp/4p3/1q1N4/3P4/2P5/PP3PPP/4R1K1 w kq - 0 1',
       solution: ['d5c7', 'e8d8', 'c7b5'],
       title: {
         en: 'Royal Knight Fork on c7',
@@ -1628,7 +1628,7 @@
       movesToMate: 2,
       difficulty: 'easy',
       themes: ['skewer'],
-      fen: '8/1q3ppp/8/3k4/8/6P1/5P1P/3B2K1 w - - 0 1',
+      fen: '8/pq3ppp/1p6/3k4/3P4/2P3P1/P4P1P/3B2K1 w - - 0 1',
       solution: ['d1f3', 'd5d6', 'f3b7'],
       title: {
         en: 'Diagonal Bishop Skewer',
@@ -1649,7 +1649,7 @@
       movesToMate: 2,
       difficulty: 'easy',
       themes: ['skewer'],
-      fen: '8/q4kpp/8/8/8/8/5PPP/4R1K1 w - - 0 1',
+      fen: '8/q4kpp/p1p5/1p1p4/3P4/2P5/PP3PPP/4R1K1 w - - 0 1',
       solution: ['e1e7', 'f7f6', 'e7a7'],
       title: {
         en: '7th-Rank Rook Skewer',
@@ -1667,22 +1667,22 @@
     {
       id: 'wm-04',
       isWinMaterial: true,
-      movesToMate: 1,
+      movesToMate: 2,
       difficulty: 'easy',
       themes: ['pin'],
-      fen: '4k3/5ppp/4q3/8/8/2B5/5PPP/4R1K1 w - - 0 1',
-      solution: ['e1e6'],
+      fen: 'r3k2r/ppp2ppp/3b4/4q3/8/2P1B3/PP3PPP/R3R1K1 w kq - 0 1',
+      solution: ['e3d4', 'e5e1', 'a1e1'],
       title: {
-        en: 'Capturing the Pinned Defender',
-        pl: 'Zdobycie hetmana w bezwzględnym związaniu'
+        en: 'Attacking the Pinned Queen on the e-File',
+        pl: 'Atak na związanego hetmana po linii e'
       },
       hint: {
-        en: 'Black’s queen on e6 is directly in front of the king on e8. Capture it!',
-        pl: 'Czarny hetman stoi na linii e bezpośrednio przed własnym królem!'
+        en: 'Black’s queen on e5 is pinned to the king on e8 by your e1-rook! Attack the pinned queen with your bishop!',
+        pl: 'Czarny hetman na e5 jest związany z królem na e8 przez Twoją wieżę e1! Zaatakuj związanego hetmana gońcem!'
       },
       explanation: {
-        en: '1. Rxe6+! wins the queen cleanly because the f7-pawn cannot recapture (or even if it does, 2. Rxe6 is supported by the rook/bishop).',
-        pl: '1. Wxe6+! wykorzystuje ustawienie hetmana na jednej linii z królem.'
+        en: '1. Bd4! exploits the absolute pin along the e-file — Black’s queen cannot leave the e-file and must give herself up for a rook (1... Qxe1+ 2. Rxe1+).',
+        pl: '1. Gd4! wykorzystuje bezwzględne związanie po linii e — czarny hetman nie może zejść z linii e i musi oddać się za wieżę (1... Hxe1+ 2. Wxe1+).'
       }
     },
 
@@ -1693,7 +1693,7 @@
       movesToMate: 3,
       difficulty: 'medium',
       themes: ['sacrifice', 'attraction', 'fork'],
-      fen: 'r4rk1/pppq1ppp/8/8/2B5/5N2/PPP2PPP/4R1K1 w - - 0 1',
+      fen: 'r4rk1/pppq1ppp/2np4/8/2B1P3/2P2N2/PP3PPP/4R1K1 w - - 0 1',
       solution: ['c4f7', 'g8f7', 'f3e5', 'f7g8', 'e5d7'],
       title: {
         en: 'Attraction Sacrifice into Royal Fork',
@@ -1714,7 +1714,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['discovered', 'sacrifice'],
-      fen: '2rq1rk1/pp3ppp/8/8/8/3B4/PPP2PPP/3R2K1 w - - 0 1',
+      fen: '2rq1rk1/pp2bppp/2p1p3/8/2P5/3B4/PP3PPP/3R2K1 w - - 0 1',
       solution: ['d3h7', 'g8h8', 'd1d8'],
       title: {
         en: 'Discovered Attack on the d-File',
@@ -1734,20 +1734,20 @@
       isWinMaterial: true,
       movesToMate: 2,
       difficulty: 'medium',
-      themes: ['deflection', 'sacrifice'],
-      fen: '2r3k1/5ppp/8/2q5/8/8/2Q2PPP/3R2K1 w - - 0 1',
-      solution: ['d1d8', 'c8d8', 'c2c5'],
+      themes: ['deflection', 'discovered', 'sacrifice'],
+      fen: '2r3k1/pp3pp1/2p4p/2q5/3R4/1P2Q3/P4PPP/6K1 w - - 0 1',
+      solution: ['d4d8', 'c8d8', 'e3c5'],
       title: {
-        en: 'Deflecting the Queen’s Guardian',
-        pl: 'Odciągnięcie obrońcy hetmana'
+        en: 'Clearance & Deflection of the Queen’s Guardian',
+        pl: 'Odsłonięcie i odciągnięcie obrońcy hetmana'
       },
       hint: {
-        en: 'Black’s rook on c8 is overloaded: it must guard both the 8th rank AND the queen on c5!',
-        pl: 'Czarna wieża na c8 jest przeciążona: musi jednocześnie bronić 8. linii oraz hetmana na c5!'
+        en: 'Your d4-rook blocks your e3-queen from attacking c5, while Black’s c8-rook guards both c5 and the 8th rank! Invade on d8 with check!',
+        pl: 'Twoja wieża d4 przesłania hetmanowi e3 drogę do hetmana c5, a czarna wieża c8 jest przeciążona! Uderz wieżą na d8 z szachem!'
       },
       explanation: {
-        en: '1. Rd8+! Rxd8 2. Qxc5 deflects the c8-rook with a back-rank check, leaving the black queen undefended.',
-        pl: '1. Wd8+! Wxd8 2. Hxc5 odciąga wieżę c8 szachem na ósmej linii i zdobywa hetmana.'
+        en: '1. Rd8+! Rxd8 2. Qxc5 simultaneously clears the e3-c5 diagonal and deflects the c8-rook from guarding the black queen.',
+        pl: '1. Wd8+! Wxd8 2. Hxc5 jednocześnie odsłania przekątną e3-c5 i odciąga wieżę c8 od obrony czarnego hetmana.'
       }
     },
     {
@@ -1756,7 +1756,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['fork'],
-      fen: 'r3k2r/p1p2ppp/8/8/8/8/PPQ2PPP/6K1 w kq - 0 1',
+      fen: 'r3k2r/p1p2ppp/3pb3/4p3/8/2P1P3/PPQ2PPP/R4RK1 w kq - 0 1',
       solution: ['c2e4', 'e8f8', 'e4a8'],
       title: {
         en: 'Central Queen Fork Winning a Rook',
@@ -1779,7 +1779,7 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['sacrifice', 'fork', 'deflection'],
-      fen: 'r4rk1/pbp2ppp/1pnq4/3N4/8/8/PP3PPP/2R3K1 w - - 0 1',
+      fen: 'r4rk1/pbp2ppp/1pnq4/3N4/3P4/4P3/PP3PPP/2R2RK1 w - - 0 1',
       solution: ['c1c6', 'd6c6', 'd5e7', 'g8h8', 'e7c6'],
       title: {
         en: 'Exchange Sacrifice into Royal Fork',
@@ -1800,7 +1800,7 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['sacrifice', 'attraction', 'skewer'],
-      fen: '5rk1/6pp/8/8/8/q3B3/6PP/5RK1 w - - 0 1',
+      fen: '5rk1/pp4pp/2p1p3/8/8/qPP1B3/P5PP/5RK1 w - - 0 1',
       solution: ['f1f8', 'g8f8', 'e3c5', 'f8g8', 'c5a3'],
       title: {
         en: 'Decoy on f8 into Bishop Skewer',
@@ -1821,7 +1821,7 @@
       movesToMate: 3,
       difficulty: 'hard',
       themes: ['zwischenzug', 'fork'],
-      fen: '2rq1rk1/pp3ppp/2n5/8/2BN4/8/PPPQ1PPP/3R2K1 w - - 0 1',
+      fen: '2rq1rk1/pp2bppp/2n1p3/8/2BN4/2P1P3/PP1Q1PPP/3R2K1 w - - 0 1',
       solution: ['d4c6', 'd8d2', 'c6e7', 'g8h8', 'd1d2'],
       title: {
         en: 'Winning a Piece via Intermediate Check (Zwischenzug)',
@@ -1842,7 +1842,7 @@
       movesToMate: 2,
       difficulty: 'hard',
       themes: ['discovered', 'sacrifice'],
-      fen: '3r2k1/ppp2ppp/3b4/8/8/1P6/PBP2PPP/3Q1RK1 b - - 0 1',
+      fen: '3r2k1/pp3ppp/2pbpn2/8/2P5/1P3N2/PBP1PPPP/3Q1RK1 b - - 0 1',
       solution: ['d6h2', 'g1h1', 'd8d1'],
       title: {
         en: 'Black to Move: Discovered Attack Winning the Queen',
@@ -1872,15 +1872,15 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['defense', 'battery'],
-      fen: '6k1/1b3ppp/8/8/8/5B1q/5PPP/5RK1 w - - 0 1',
-      solution: ['f3b7'],
+      fen: '3r2k1/1b3pp1/B6p/p5q1/1p1P4/2P5/PP3PPP/4R1K1 w - - 0 1',
+      solution: ['a6b7'],
       title: {
         en: 'Eliminate the Long-Diagonal Mate Threat',
         pl: 'Likwidacja groźby mata na g2'
       },
       hint: {
-        en: 'Black’s queen on h3 and bishop on b7 threaten unstoppable mate on g2! Capture the supporting piece!',
-        pl: 'Czarny hetman na h3 i goniec na b7 grożą matem na g2! Zbij figurę wspierającą atak!'
+        en: 'Black’s queen on g5 and bishop on b7 threaten unstoppable mate on g2! Capture the supporting bishop with your a6-bishop!',
+        pl: 'Czarny hetman na g5 i goniec na b7 grożą matem na g2! Zbij figurę wspierającą atak gońcem z a6!'
       },
       explanation: {
         en: '1. Bxb7! eliminates the b7-bishop, completely neutralizing the ...Qxg2# checkmate threat.',
@@ -1893,7 +1893,7 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['defense', 'backRank'],
-      fen: '4r1k1/5ppp/8/8/8/2q5/5PPP/4R1K1 w - - 0 1',
+      fen: '4r1k1/pp3ppp/2p5/3p4/3P4/2qP4/P4PPP/4R1K1 w - - 0 1',
       solution: ['e1e8'],
       title: {
         en: 'Counter-Strike Against Back-Rank Mate',
@@ -1914,10 +1914,10 @@
       movesToMate: 1,
       difficulty: 'easy',
       themes: ['defense', 'backRank'],
-      fen: '6k1/1b3ppp/8/8/8/6Pq/5P1P/4Q1K1 w - - 0 1',
+      fen: '6k1/pb3ppp/1p6/3p4/8/2P3Pq/PP3P1P/4Q1K1 w - - 0 1',
       solution: ['e1e8'],
       title: {
-        en: 'Escaping Qxg2# via Back-Rank Mate',
+        en: 'Escaping Qg2# via Back-Rank Counter-Mate',
         pl: 'Ratunek przed matem na g2 przez 8. linię'
       },
       hint: {
@@ -1958,15 +1958,15 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['defense', 'pin', 'battery'],
-      fen: '6k1/1b3ppp/8/8/8/1B4q1/1B3PPP/3Q2K1 w - - 0 1',
+      fen: '5rk1/1b3pp1/p6p/1p6/6q1/1B6/PB2PPPP/3Q2K1 w - - 0 1',
       solution: ['b3d5', 'b7d5', 'd1d5'],
       title: {
         en: 'Blocking the Mating Diagonal',
         pl: 'Przesłonięcie matowej przekątnej'
       },
       hint: {
-        en: 'Black threatens 1... Qxg2#. Interpose your b3-bishop on d5 to cut the communication between b7 and g2!',
-        pl: 'Czarne grożą 1... Hxg2#. Postaw gońca na d5, przecinając współpracę czarnego gońca b7 z hetmanem g3!'
+        en: 'Black’s queen on g4 and bishop on b7 threaten 1... Qxg2#. Interpose your b3-bishop on d5 to cut the b7-g2 diagonal!',
+        pl: 'Czarny hetman na g4 i goniec na b7 grożą 1... Hxg2#. Postaw gońca na d5, przecinając matową przekątną b7-g2!'
       },
       explanation: {
         en: '1. Bd5! Bxd5 2. Qxd5 eliminates the dangerous b7-bishop and stops the mate on g2.',
@@ -1979,7 +1979,7 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['defense', 'skewer'],
-      fen: '6k1/1b3ppp/8/3q4/8/8/4BPPP/2R3K1 w - - 0 1',
+      fen: '3r2k1/1b3pp1/p6p/1p1q4/8/2P5/PP2BPPP/2R3K1 w - - 0 1',
       solution: ['e2f3', 'd5d7', 'f3b7'],
       title: {
         en: 'Defensive Skewer on the Mating Battery',
@@ -2000,19 +2000,19 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['defense', 'backRank'],
-      fen: '6k1/5ppp/3r4/8/8/1q6/2Q2PPP/6K1 w - - 0 1',
-      solution: ['c2c8', 'd6d8', 'c8d8'],
+      fen: '6k1/p2r1ppp/1p2p3/8/4P3/q7/P1Q2PPP/6K1 w - - 0 1',
+      solution: ['c2c8', 'd7d8', 'c8d8'],
       title: {
-        en: 'Saving the Queen & Back Rank with Tempo',
-        pl: 'Ratunek hetmana i 1. linii z tempem'
+        en: 'Saving the Back Rank with Tempo',
+        pl: 'Ratunek pierwszej linii z tempem'
       },
       hint: {
-        en: 'Your queen on c2 is attacked AND Black threatens ...Rd1#! Counter-attack on the 8th rank with check!',
-        pl: 'Twój hetman na c2 jest atakowany, a czarne grożą ...Wd1#! Uderz z szachem na 8. linię!'
+        en: 'Black’s rook on d7 and queen on a3 threaten ...Rd1#! Counter-attack on the 8th rank with check!',
+        pl: 'Czarna wieża na d7 i hetman na a3 grożą ...Wd1#! Uderz z szachem na 8. linię!'
       },
       explanation: {
-        en: '1. Qc8+! Rd8 2. Qxd8# turns a desperate defensive position into immediate checkmate!',
-        pl: '1. Hc8+! Wd8 2. Hxd8# zamienia groźną pozycję obronną w natychmiastowego mata!'
+        en: '1. Qc8+! Rd8 2. Qxd8+ Qf8 3. Qxf8+ Kxf8 turns a desperate defensive position into a winning counter-checkmate!',
+        pl: '1. Hc8+! Wd8 2. Hxd8# zamienia groźną pozycję obronną w natychmiastowego kontrmata!'
       }
     },
     {
@@ -2021,19 +2021,19 @@
       movesToMate: 2,
       difficulty: 'medium',
       themes: ['defense'],
-      fen: '5rk1/5ppp/8/8/8/3N3q/5PPP/5RK1 w - - 0 1',
-      solution: ['d3e1', 'h3h6', 'e1f3'],
+      fen: '5rk1/pp3ppp/2p5/8/2b5/3N2Pq/PP3P1P/5RK1 w - - 0 1',
+      solution: ['d3e1', 'h3h6', 'e1g2'],
       title: {
-        en: 'The Defensive Knight Retreat',
-        pl: 'Powrót skoczka do obrony i kontrataku'
+        en: 'The Defensive Knight Retreat to e1',
+        pl: 'Powrót skoczka na e1 w obronie pola g2'
       },
       hint: {
-        en: 'Your knight on d3 is hanging and Black eyes the kingside. Retreat the knight to e1 to guard g2 and prepare Nf3!',
-        pl: 'Twój skoczek na d3 jest niebroniony. Cofnij go na e1, zabezpieczając skrzydło królewskie przed wprowadzeniem na f3!'
+        en: 'Black’s queen on h3 threatens ...Qg2# and your d3-knight is attacked by Bc4! Retreat the knight to e1 to guard g2!',
+        pl: 'Czarny hetman na h3 grozi matem na g2, a skoczek d3 jest atakowany! Cofnij skoczka na e1, aby obronić punkt g2!'
       },
       explanation: {
-        en: '1. Ne1! Qh6 2. Nf3! consolidates the kingside and saves the piece.',
-        pl: '1. Se1! Hh6 2. Sf3! konsoliduje obronę skrzydła królewskiego i ratuje figurę.'
+        en: '1. Ne1! Qh6 2. Ng2! saves the attacked knight while building an unbreakable fortress on the light squares around g2.',
+        pl: '1. Se1! Hh6 2. Sg2! ratuje atakowanego skoczka i trwale zabezpiecza słabe białe pola wokół króla.'
       }
     },
 
@@ -2044,7 +2044,7 @@
       movesToMate: 2,
       difficulty: 'hard',
       themes: ['defense', 'sacrifice', 'clearance'],
-      fen: '4r1k1/1b3ppp/8/8/8/6q1/2Q2PPP/4R1K1 w - - 0 1',
+      fen: '3rr1k1/1b3pp1/p6p/1p6/6q1/2P5/PPQ2PPP/4R1K1 w - - 0 1',
       solution: ['e1e4', 'b7e4', 'c2e4'],
       title: {
         en: 'Miracle Interposition on e4 (Stopping Dual Mate Threats)',
@@ -2062,22 +2062,22 @@
     {
       id: 'df-10',
       isDefensePuzzle: true,
-      movesToMate: 1,
+      movesToMate: 2,
       difficulty: 'hard',
       themes: ['defense'],
-      fen: '6k1/5ppp/8/8/8/4B3/5PPq/6K1 w - - 0 1',
-      solution: ['g1f1'],
+      fen: '6k1/pp3ppp/2p5/8/6n1/2P1B3/PP3PPq/6K1 w - - 0 1',
+      solution: ['g1f1', 'g4e3', 'f2e3'],
       title: {
         en: 'Stepping Out of the Check Trap',
         pl: 'Zimna krew pod szachem'
       },
       hint: {
-        en: 'You are in check from Qh2+. Step safely to f1 where your e3-bishop and f2-pawn shield the king!',
-        pl: 'Jesteś pod szachem od hetmana h2. Odejdź królem na f1, gdzie goniec e3 i pion f2 zapewniają bezpieczeństwo!'
+        en: 'You are in check from Qh2+ (protected by Ng4). Step safely to f1 (`1. Kf1!`) where your e3-bishop and f2-pawn shield the king!',
+        pl: 'Jesteś pod szachem od hetmana h2 (bronionego przez skoczka g4). Odejdź królem na f1 (`1. Kf1!`), a po `1... Sxe3+` odbij `2. fxe3`!'
       },
       explanation: {
-        en: '1. Kf1! steps safely out of check, and after 1... Qh1+ 2. Ke2 Black’s attack runs out of steam.',
-        pl: '1. Kf1! spokojnie wyprowadza króla spod szacha, po czym czarny hetman nie ma już groźnych kontynuacji.'
+        en: '1. Kf1! Nxe3+ 2. fxe3 steps safely out of check and opens the f-file shelter so Black’s queen runs out of checks.',
+        pl: '1. Kf1! Sxe3+ 2. fxe3 bezpiecznie wyprowadza króla spod szacha i wygasza atak czarnego hetmana.'
       }
     },
     {
@@ -2086,15 +2086,15 @@
       movesToMate: 2,
       difficulty: 'hard',
       themes: ['defense', 'deflection', 'sacrifice'],
-      fen: '6k1/1b3ppp/8/8/8/6q1/Q4PPP/R5K1 w - - 0 1',
+      fen: '6k1/1b3ppp/2p1p3/8/6q1/2P5/Q4PPP/R5K1 w - - 0 1',
       solution: ['a2a8', 'b7a8', 'a1a8'],
       title: {
         en: 'Deflecting the Mating Bishop with a Queen Sacrifice',
         pl: 'Odciągnięcie matującego gońca ofiarą hetmana'
       },
       hint: {
-        en: 'Black threatens 1... Qxg2#. Sacrifice your queen on a8 to force the b7-bishop off the mating diagonal!',
-        pl: 'Czarne grożą 1... Hxg2#. Poświęć hetmana na a8, zmuszając gońca z b7 do opuszczenia długiej przekątnej!'
+        en: 'Black’s queen on g4 and bishop on b7 threaten 1... Qxg2#. Sacrifice your queen on a8 to force the b7-bishop off the mating diagonal!',
+        pl: 'Czarny hetman na g4 i goniec na b7 grożą 1... Hxg2#. Poświęć hetmana na a8, zmuszając gońca z b7 do opuszczenia długiej przekątnej!'
       },
       explanation: {
         en: '1. Qa8+!! Bxa8 2. Rxa8# is a stunning turnaround: the bishop on b7 is forced to capture on a8, allowing immediate back-rank checkmate!',
@@ -2106,20 +2106,982 @@
       isDefensePuzzle: true,
       movesToMate: 2,
       difficulty: 'hard',
-      themes: ['defense', 'sacrifice'],
-      fen: '4r1k1/ppp2ppp/8/8/8/1P4q1/PBP2PPP/3R1RK1 b - - 0 1',
-      solution: ['e8e2', 'h2g3', 'e2c2'],
+      themes: ['defense', 'pin', 'clearance'],
+      fen: '4r1k1/ppq2ppp/2p5/8/3Q4/1P5P/PBP2PP1/3RR1K1 b - - 0 1',
+      solution: ['c7e5', 'd4e5', 'e8e5'],
       title: {
-        en: 'Black to Move: Escaping Back-Rank Mate via Counter-Pin',
-        pl: 'Ruch czarnych: Ucieczka przed matem przez związanie f2'
+        en: 'Black to Move: Queen Interposition on the Intersection Square',
+        pl: 'Ruch czarnych: Przesłona hetmanem na polu skrzyżowania e5'
       },
       hint: {
-        en: 'Your queen on g3 is attacked by h2 AND White threatens Rd8#! Invade the 2nd rank with your rook to pin f2!',
-        pl: 'Twój hetman na g3 jest atakowany przez piona h2, a białe grożą matem Wd8#! Wtargnij wieżą na e2, wiążąc piona f2!'
+        en: 'White threatens BOTH `1. Qxg7#` AND `1. Rxe8#`! Step your queen to e5 (`1... Qe5!!`) to block the b2-g7 diagonal, guard e8, and pin White’s queen!',
+        pl: 'Białe grożą JEDNOCZEŚNIE `1. Hxg7#` ORAZ `1. Wxe8#`! Postaw hetmana na e5 (`1... He5!!`), blokując przekątną b2-g7 i broniąc pola e8!'
       },
       explanation: {
-        en: '1... Re2! 2. hxg3 Rxc2 saves the game by counter-attacking f2 and liquidating into a winning endgame.',
-        pl: '1... We2! 2. hxg3 Wxc2 ratuje partię dzięki kontratakowi na punkt f2 i przejściu do wygranej końcówki.'
+        en: '1... Qe5!! 2. Qxe5 Rxe5 stops both `Qxg7#` and `Rxe8#` simultaneously because e5 is the intersection of the e-file and the long diagonal!',
+        pl: '1... He5!! 2. Hxe5 Wxe5 zatrzymuje obie groźby matowe jednocześnie, ponieważ pole e5 leży na przecięciu linii e oraz długiej przekątnej b2-g7!'
+      }
+    }
+  ];
+
+  /**
+   * 12 "Famous Historical Games" (Słynne Partie z Historii Szachów)
+   * 4 Easy, 4 Medium, 4 Hard — Authentic FENs and combinations from legendary masters:
+   * Anderssen, Marshall, Deep Blue vs Kasparov, Adams vs Torre, Réti, Lasker vs Thomas,
+   * Byrne vs Fischer, Lasker vs Bauer, Steinitz, Rubinstein, and Kasparov vs Topalov.
+   */
+  const FAMOUS_GAMES = [
+    // === EASY (4) ===
+    {
+      id: 'fg-01',
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: 'easy',
+      players: {
+        en: 'Anderssen vs. Kieseritzky (London, 1851)',
+        pl: 'Anderssen – Kieseritzky (Londyn, 1851)'
+      },
+      themes: ['sacrifice', 'deflection', 'kingHunt'],
+      fen: 'r1bk2nr/p2p1pNp/n2B4/1p1NP2P/6P1/3P1Q2/P1P1K3/q5b1 w - - 1 22',
+      solution: ['f3f6', 'g8f6', 'd6e7'],
+      title: {
+        en: 'The Immortal Game: Queen Sacrifice Finale',
+        pl: 'Nieśmiertelna Partia: Finałowa ofiara hetmana'
+      },
+      hint: {
+        en: 'Adolf Anderssen already sacrificed both rooks and a bishop! Now sacrifice your queen on f6 to deflect the g8-knight from guarding e7!',
+        pl: 'Adolf Anderssen poświęcił już obie wieże i gońca! Teraz poświęć hetmana na f6, aby odciągnąć skoczka g8 od obrony pola e7!'
+      },
+      explanation: {
+        en: '22. Qf6+!! Nxf6 23. Be7# is the immortal conclusion to Anderssen vs. Kieseritzky (London, 1851) — White checkmates in the middle of the board using only three minor pieces!',
+        pl: '22. Hf6+!! Sxf6 23. Ge7# to nieśmiertelny finał partii Anderssen – Kieseritzky (Londyn, 1851) — białe matują króla w centrum samymi lekkimi figurami!'
+      }
+    },
+    {
+      id: 'fg-02',
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 2,
+      difficulty: 'easy',
+      players: {
+        en: 'Levitsky vs. Marshall (Breslau, 1912)',
+        pl: 'Lewicki – Marshall (Wrocław, 1912)'
+      },
+      themes: ['sacrifice', 'fork', 'attraction'],
+      fen: '5rk1/pp4pp/4p3/2R3Q1/3n4/2q4r/P1P2PPP/5RK1 b - - 1 23',
+      solution: ['c3g3', 'h2g3', 'd4e2'],
+      title: {
+        en: 'The "Shower of Gold Coins" Move (23... Qg3!!)',
+        pl: 'Ruch "Deszczu Złotych Monet" (23... Hg3!!)'
+      },
+      hint: {
+        en: 'You are playing Black (Frank Marshall). Place your queen on a square where THREE White pieces can capture it — yet every capture loses on the spot!',
+        pl: 'Grasz czarnymi (Frank Marshall). Postaw hetmana na polu g3, gdzie TRZY białe bierki mogą go zbić — a każde bicie przegrywa natychmiast!'
+      },
+      explanation: {
+        en: '23... Qg3!! is one of the most shocking moves ever played: 24. hxg3 allows 24... Ne2#, 24. fxg3 allows 24... Ne2+ 25. Kh1 Rxf1#, and 24. Qxg3 allows 24... Ne2+ winning a full rook!',
+        pl: '23... Hg3!! (Wrocław, 1912) przeszedł do legendy: hetman staje pod potrójnym biciem! Po 24. hxg3 następuje 24... Se2#, po 24. fxg3 — 24... Se2+ i 25... Wxf1#, a po 24. Hxg3 — widełki 24... Se2+!'
+      }
+    },
+    {
+      id: 'fg-03',
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 2,
+      difficulty: 'easy',
+      players: {
+        en: 'Deep Blue vs. Kasparov (New York, 1997)',
+        pl: 'Deep Blue – Kasparow (Nowy Jork, 1997)'
+      },
+      themes: ['sacrifice', 'kingHunt'],
+      fen: 'r1bqkb1r/pp1n1pp1/2p1pn1p/6N1/3P4/3B1N2/PPP2PPP/R1BQK2R w KQkq - 0 8',
+      solution: ['g5e6', 'f7e6', 'd3g6'],
+      title: {
+        en: 'Deep Blue’s Knight Sacrifice (8. Nxe6!)',
+        pl: 'Ofiara skoczka Deep Blue (8. Sxe6!)'
+      },
+      hint: {
+        en: 'Instead of retreating the g5-knight after 7... h6, smash open Black’s central light squares by sacrificing on e6!',
+        pl: 'Zamiast cofać skoczka z g5 po 7... h6, rozbij czarne centrum i białe pola ofiarą na e6!'
+      },
+      explanation: {
+        en: '8. Nxe6! fxe6 (in the game Kasparov played 8... Qe7 9. O-O fxe6 10. Bg6+ Kd8) 9. Bg6+ traps Black’s king in the center without castling rights, deciding the historic 1997 match.',
+        pl: '8. Sxe6! fxe6 9. Gg6+ więzi czarnego króla w centrum i pozbawia go roszady — ta słynna ofiara przesądziła o losach historycznego meczu z 1997 roku.'
+      }
+    },
+    {
+      id: 'fg-04',
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 2,
+      difficulty: 'easy',
+      players: {
+        en: 'Adams vs. Torre (New Orleans, 1920)',
+        pl: 'Adams – Torre (Nowy Orlean, 1920)'
+      },
+      themes: ['deflection', 'backRank', 'sacrifice'],
+      fen: '2r1r1k1/1p3ppp/3p1b2/pq1P4/6Q1/5N2/PP2RPPP/4R1K1 w - - 2 19',
+      solution: ['a2a4', 'b5e2', 'e1e2'],
+      title: {
+        en: 'Adams vs. Torre: Trapping the Overloaded Queen (19. a4!!)',
+        pl: 'Adams – Torre: Odcięcie przeciążonego hetmana (19. a4!!)'
+      },
+      hint: {
+        en: 'Black’s queen on b5 MUST stay on the a4-e8 diagonal to guard the e2-rook! Push your a-pawn to kick her off the diagonal!',
+        pl: 'Czarny hetman na b5 MUSI pilnować przekątnej a4-e8 oraz wieży na e2! Pchnij piona a, aby pozbawić go jedynego bezpiecznego pola!'
+      },
+      explanation: {
+        en: '19. a4!! is the famous finishing blow after White’s queen chased Black around the board: 19... Qxa4 loses the queen (since 19... Qxd5 allows Rxe8+), forcing 19... Qxe2 20. Rxe2!',
+        pl: '19. a4!! to słynny cios kończący pościg białego hetmana: czarny hetman nie ma już bezpiecznego pola na przekątnej i musi oddać się za wieżę (19... Hxe2 20. Wxe2)!'
+      }
+    },
+
+    // === MEDIUM (4) ===
+    {
+      id: 'fg-05',
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: 'medium',
+      players: {
+        en: 'Réti vs. Tartakower (Vienna, 1910)',
+        pl: 'Réti – Tartakower (Wiedeń, 1910)'
+      },
+      themes: ['sacrifice', 'doubleCheck', 'opera'],
+      fen: 'rnb1kb1r/pp3ppp/2p5/4q3/4n3/3Q4/PPPB1PPP/2KR1BNR w kq - 0 9',
+      solution: ['d3d8', 'e8d8', 'd2g5', 'd8c7', 'g5d8'],
+      title: {
+        en: 'Réti’s Famous Double-Check Mate (9. Qd8+!!)',
+        pl: 'Słynny Mat Rétiego z Podwójnym Szachem (9. Hd8+!!)'
+      },
+      hint: {
+        en: 'Sacrifice your queen on d8 to drag the black king onto the open d-file, then unleash a devastating double check with your bishop!',
+        pl: 'Poświęć hetmana na d8, aby wciągnąć czarnego króla na otwartą linię d, po czym uderz niszczycielskim podwójnym szachem!'
+      },
+      explanation: {
+        en: '9. Qd8+!! Kxd8 10. Bg5+! (double check from bishop and d1-rook) Kc7 11. Bd8# (or 10... Ke8 11. Rd8#) is the most famous 11-move miniature in chess history.',
+        pl: '9. Hd8+!! Kxd8 10. Gg5+! (podwójny szach od gońca i wieży d1) Kc7 11. Gd8# (lub 10... Ke8 11. Wd8#) to najsłynniejsza 11-ruchowa miniatura w dziejach szachów.'
+      }
+    },
+    {
+      id: 'fg-06',
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: 'medium',
+      players: {
+        en: 'Ed. Lasker vs. Thomas (London, 1912)',
+        pl: 'Ed. Lasker – Thomas (Londyn, 1912)'
+      },
+      themes: ['kingHunt', 'discovered'],
+      fen: 'rn3r2/pbppq1p1/1p2pN2/8/3P2NP/3B1kP1/PPP2P2/R3K2R w KQ - 1 16',
+      solution: ['d3e2', 'f3g2', 'h1h2', 'g2g1', 'e1d2'],
+      title: {
+        en: 'Lasker vs. Thomas: The Royal King Walk Finale',
+        pl: 'Lasker – Thomas: Finał królewskiego marszu przez całą deskę'
+      },
+      hint: {
+        en: 'After sacrificing his queen on h7, Edward Lasker drove Black’s king all the way to f3! Finish the hunt with 16. Be2+ Kg2 17. Rh2+ Kg1 and a quiet king move!',
+        pl: 'Po ofierze hetmana na h7 Edward Lasker zapędził czarnego króla aż na f3! Dokończ polowanie ruchami 16. Ge2+ Kg2 17. Wh2+ Kg1 i odkrytym matem królem!'
+      },
+      explanation: {
+        en: '16. Be2+ Kg2 17. Rh2+ Kg1 18. Kd2# (or 18. O-O-O#!) completes the most famous king hunt in history — Black’s king marched from g8 all the way to g1!',
+        pl: '16. Ge2+ Kg2 17. Wh2+ Kg1 18. Kd2# (lub 18. O-O-O#!) wieńczy najsłynniejsze polowanie na króla w historii — czarny monarcha przeszedł z g8 aż na g1!'
+      }
+    },
+    {
+      id: 'fg-07',
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 3,
+      difficulty: 'medium',
+      players: {
+        en: 'Byrne vs. Fischer (New York, 1956)',
+        pl: 'Byrne – Fischer (Nowy Jork, 1956)'
+      },
+      themes: ['battery', 'kingHunt'],
+      fen: '1Q6/5pk1/2p3p1/1p2N2p/1b5P/1b4n1/r5P1/2K5 b - - 11 39',
+      solution: ['g3e2', 'c1b1', 'e2c3', 'b1c1', 'a2c2'],
+      title: {
+        en: 'Bobby Fischer’s "Game of the Century" Checkmate',
+        pl: '"Partia Stulecia" 13-letniego Bobby’ego Fischera'
+      },
+      hint: {
+        en: '13-year-old Bobby Fischer (Black) has woven a perfect net around White’s king. Dance with your knight (39... Ne2+ and 40... Nc3+) to set up 41... Rc2#!',
+        pl: '13-letni Bobby Fischer (Czarne) oplótł białego króla idealną siecią. Przeprowadź manewr skoczkiem (39... Se2+ i 40... Sc3+), przygotowując 41... Wc2#!'
+      },
+      explanation: {
+        en: '39... Ne2+! 40. Kb1 Nc3+! 41. Kc1 Rc2# concludes the "Game of the Century", where every single black piece participates in the final mating net.',
+        pl: '39... Se2+! 40. Kb1 Sc3+! 41. Kc1 Wc2# kończy słynną "Partię Stulecia", w której każda figura Fischera bierze udział w matowej sieci.'
+      }
+    },
+    {
+      id: 'fg-08',
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 3,
+      difficulty: 'medium',
+      players: {
+        en: 'Em. Lasker vs. Bauer (Amsterdam, 1889)',
+        pl: 'Em. Lasker – Bauer (Amsterdam, 1889)'
+      },
+      themes: ['sacrifice', 'clearance', 'kingHunt'],
+      fen: 'r4rk1/1b2bppp/ppq1p3/2ppB2n/5P2/1P1BP3/P1PPQ1PP/R4RK1 w - - 0 15',
+      solution: ['d3h7', 'g8h7', 'e2h5', 'h7g8', 'e5g7'],
+      title: {
+        en: 'Lasker’s Famous Double-Bishop Sacrifice (Bxh7+ & Bxg7!)',
+        pl: 'Słynna Ofiara Dwóch Gońców Laskera (Gxh7+ i Gxg7!)'
+      },
+      hint: {
+        en: 'Sacrifice your first bishop on h7, bring the queen to h5 with check, and then sacrifice your SECOND bishop on g7 to strip the black king completely bare!',
+        pl: 'Poświęć pierwszego gońca na h7, wprowadź hetmana na h5 z szachem, a następnie poświęć DRUGIEGO gońca na g7, całkowicie obnażając czarnego króla!'
+      },
+      explanation: {
+        en: '15. Bxh7+! Kxh7 16. Qxh5+ Kg8 17. Bxg7!! introduced the "Double-Bishop Sacrifice" to chess theory — after 17... Kxg7 18. Qg4+ Kh7 19. Rf3, Black must surrender the queen to avoid mate.',
+        pl: '15. Gxh7+! Kxh7 16. Hxh5+ Kg8 17. Gxg7!! wprowadziło do teorii szachów motyw ofiary dwóch gońców — po 17... Kxg7 18. Hg4+ Kh7 19. Wf3 czarne są bezradne wobec groźby Wh3#.'
+      }
+    },
+
+    // === HARD (4) ===
+    {
+      id: 'fg-09',
+      isFamousGame: true,
+      endsInMate: true,
+      movesToMate: 4,
+      difficulty: 'hard',
+      players: {
+        en: 'Anderssen vs. Dufresne (Berlin, 1852)',
+        pl: 'Anderssen – Dufresne (Berlin, 1852)'
+      },
+      themes: ['sacrifice', 'doubleCheck', 'kingHunt'],
+      fen: '1r2k1r1/pbppnp1p/1b3P2/8/Q7/B1PB1q2/P4PPP/3R2K1 w - - 0 21',
+      solution: ['a4d7', 'e8d7', 'd3f5', 'd7e8', 'f5d7', 'e8f8', 'a3e7'],
+      title: {
+        en: 'The Evergreen Game: Anderssen’s Queen Sacrifice',
+        pl: 'Wiecznie Zielona Partia: Kombinacja Anderssena'
+      },
+      hint: {
+        en: 'White faces immediate mate on g2! Deflect the black king onto d7 with 21. Qxd7+!!, then unleash a double check on f5!',
+        pl: 'Białym grozi natychmiastowy mat na g2! Zaciągnij czarnego króla na d7 ofiarą hetmana 21. Hxd7+!!, a następnie uderz podwójnym szachem 22. Gf5+!'
+      },
+      explanation: {
+        en: '21. Qxd7+!! Kxd7 22. Bf5+! (double check) Ke8 23. Bd7+ Kf8 24. Bxe7# is Wilhelm Steinitz’s "Evergreen" jewel in the crown of chess.',
+        pl: '21. Hxd7+!! Kxd7 22. Gf5+! (podwójny szach) Ke8 23. Gd7+ Kf8 24. Gxe7# to arcydzieło nazwane przez Wilhelma Steinitza "Wiecznie Zieloną Partią".'
+      }
+    },
+    {
+      id: 'fg-10',
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 4,
+      difficulty: 'hard',
+      players: {
+        en: 'Steinitz vs. von Bardeleben (Hastings, 1895)',
+        pl: 'Steinitz – von Bardeleben (Hastings, 1895)'
+      },
+      themes: ['sacrifice', 'pin', 'kingHunt'],
+      fen: 'r1r1k3/pp1qn2p/5pp1/3p2N1/6Q1/8/PP3PPP/2R1R1K1 w - - 2 22',
+      solution: ['e1e7', 'e8f8', 'e7f7', 'f8g8', 'f7g7', 'g8h8', 'g7h7'],
+      title: {
+        en: 'Battle of Hastings: The Immortal Rook Walk (22. Rxe7+!!)',
+        pl: 'Bitwa pod Hastings: Nieśmiertelny marsz wieży (22. Wxe7+!!)'
+      },
+      hint: {
+        en: 'Every White piece is en prise (`Qg4`, `Ng5`, `Rc1`)! Capture on e7 with your rook and chase the black king step-by-step down the 7th rank (`Rf7+`, `Rg7+`, `Rxh7+`) — the rook can NEVER be captured!',
+        pl: 'Wszystkie białe figury stoją pod biciem! Zbij na e7 wieżą i ścigaj czarnego króla krok po kroku po 7. linii (`Wf7+`, `Wg7+`, `Wxh7+`) — czarne ani razu nie mogą zbić wieży!'
+      },
+      explanation: {
+        en: '22. Rxe7+!! Kf8 23. Rf7+! Kg8 24. Rg7+! Kh8 25. Rxh7+! — Black can never capture the rook because `Qxe7` loses to `Rxc8+`, and `Kxf7`/`Kxg7` allows `Qxd7+`! Von Bardeleben famously walked out of the tournament hall without resigning.',
+        pl: '22. Wxe7+!! Kf8 23. Wf7+! Kg8 24. Wg7+! Kh8 25. Wxh7+! — czarne w żadnym momencie nie mogą zbić szachującej wieży z uwagi na `Wxc8+` oraz niebronionego hetmana na d7!'
+      }
+    },
+    {
+      id: 'fg-11',
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 4,
+      difficulty: 'hard',
+      players: {
+        en: 'Rotlewi vs. Rubinstein (Lodz, 1907)',
+        pl: 'Rotlewi – Rubinstein (Łódź, 1907)'
+      },
+      themes: ['sacrifice', 'deflection', 'attraction', 'battery'],
+      fen: '2rr2k1/1b3ppp/pb2p3/1p2P3/1P2BPnq/P1N3P1/1B2Q2P/R4R1K b - - 0 22',
+      solution: ['c8c3', 'g3h4', 'd8d2', 'e2d2', 'b7e4', 'd2g2', 'c3h3'],
+      title: {
+        en: 'Rubinstein’s Immortal (22... Rxc3!! & 23... Rd2!!)',
+        pl: 'Nieśmiertelna Partia Rubinsteina w Łodzi (22... Wxc3!! i 23... Wd2!!)'
+      },
+      hint: {
+        en: 'You are playing Black (Akiba Rubinstein). Leave your queen on h4 to be captured by playing 22... Rxc3!!, then deflect White’s queen from guarding e4 with 23... Rd2!! and finish with 25... Rh3!!',
+        pl: 'Grasz czarnymi (Akiba Rubinstein). Zostaw hetmana na h4 pod biciem, grając 22... Wxc3!!, następnie odciągnij białego hetmana od obrony pola e4 ruchem 23... Wd2!! i zamknij klatkę ruchem 25... Wh3!!'
+      },
+      explanation: {
+        en: '22... Rxc3!! 23. gxh4 Rd2!! 24. Qxd2 Bxe4+ 25. Qg2 Rh3! leaves White helpless against `...Rxh2#` — universally acclaimed as one of the greatest combinations ever played in Poland.',
+        pl: '22... Wxc3!! 23. gxh4 Wd2!! 24. Hxd2 Gxe4+ 25. Hg2 Wh3! pozostawia białe bez obrony przed matem na h2 — najsłynniejsza kombinacja rozegrana na ziemiach polskich (Łódź, 1907).'
+      }
+    },
+    {
+      id: 'fg-12',
+      isFamousGame: true,
+      endsInMate: false,
+      movesToMate: 4,
+      difficulty: 'hard',
+      players: {
+        en: 'Kasparov vs. Topalov (Wijk aan Zee, 1999)',
+        pl: 'Kasparow – Topałow (Wijk aan Zee, 1999)'
+      },
+      themes: ['sacrifice', 'kingHunt', 'attraction'],
+      fen: 'b2r3r/k4p1p/p2q1np1/NppP4/3p1Q2/P4PPB/1PP4P/1K1RR3 w - - 1 24',
+      solution: ['d1d4', 'c5d4', 'e1e7', 'a7b6', 'f4d4', 'b6a5', 'b2b4'],
+      title: {
+        en: 'Kasparov’s Immortal: The Rook Sacrifice King Hunt (24. Rxd4!!)',
+        pl: 'Nieśmiertelna Partia Kasparowa: Polowanie na króla (24. Wxd4!!)'
+      },
+      hint: {
+        en: 'Launch Garry Kasparov’s legendary king hunt! Sacrifice your rook on d4 (`24. Rxd4!!`), invade with `25. Re7+!`, capture on d4 with check (`26. Qxd4+!`), and drive the king up the board with `27. b4+!`',
+        pl: 'Rozpocznij legendarne polowanie Garriego Kasparowa! Poświęć wieżę na d4 (`24. Wxd4!!`), wtargnij drugą wieżą (`25. We7+!`), zbij na d4 z szachem (`26. Hxd4+!`) i pchnij `27. b4+!`'
+      },
+      explanation: {
+        en: '24. Rxd4!! cxd4 25. Re7+! Kb6 26. Qxd4+! Kxa5 27. b4+! Ka4 drags the black king from a7 all the way down to d1 in the most famous game of the modern era.',
+        pl: '24. Wxd4!! cxd4 25. We7+! Kb6 26. Hxd4+! Kxa5 27. b4+! Ka4 wyciąga czarnego króla z a7 aż na pole d1 w najsłynniejszej partii współczesnych szachów.'
+      }
+    }
+  ];
+
+  // =========================================================================
+  // BATTLE ANALYSES (6 Full Interactive Annotated Battles — Move-by-Move + SVG Targeting)
+  // =========================================================================
+  // HOW TO ADD A FUTURE MATCH:
+  // 1. Add an object to `BATTLE_ANALYSES` below.
+  // 2. Provide `moves` as either an array of SAN strings (`['e4', 'e5', 'Nf3', ...]`)
+  //    or a raw PGN move string (`"1. e4 e5 2. Nf3 d6 ..."`). No FENs required!
+  // 3. Add optional `annotations` keyed by human-readable move notation (e.g. `'6. Bc4'`,
+  //    `'10. Nxb5'`) or 1-based ply number. Any move without a custom annotation will
+  //    automatically display engine-detected piece targeting arrows and commentary!
+  // 4. Arrow shorthand format: `'from->to:color'` where color is:
+  //    - `'red'`   = Threat / Attack Target
+  //    - `'amber'` = Pin / Battery / X-Ray / Fork
+  //    - `'green'` = Key Plan / Played Move
+  //    - `'blue'`  = Defensive Idea / Alternative
+  // =========================================================================
+  const BATTLE_ANALYSES = [
+    // === EASY (2) ===
+    {
+      id: 'ba-01',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['battery', 'pin', 'sacrifice', 'opera'],
+      players: {
+        en: 'Paul Morphy vs. Duke of Brunswick & Count Isouard (Paris, 1858)',
+        pl: 'Paul Morphy – Książę Brunszwiku i Hrabia Isouard (Paryż, 1858)'
+      },
+      title: {
+        en: 'The Opera Game: Masterclass in Development & Pinning',
+        pl: 'Partia Operowa: Arcydzieło rozwoju i celowania w słabe punkty'
+      },
+      overview: {
+        en: 'Played in a Paris opera box during Bellini’s "Norma". Watch how Morphy punishes slow development by targeting f7 and b7 simultaneously, piling up pins on d7, and finishing with a legendary Queen sacrifice.',
+        pl: 'Rozegrana w loży Opery Paryskiej. Zobacz krok po kroku, jak Morphy karze opóźnienie w rozwoju figur: tworzy baterie celujące w f7 i b7, wiąże czarne figury na linii d i kończy partię słynną ofiarą hetmana.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'd6', 'd4', 'Bg4', 'dxe5', 'Bxf3', 'Qxf3', 'dxe5',
+        'Bc4', 'Nf6', 'Qb3', 'Qe7', 'Nc3', 'c6', 'Bg5', 'b5', 'Nxb5', 'cxb5',
+        'Bxb5+', 'Nbd7', 'O-O-O', 'Rd8', 'Rxd7', 'Rxd7', 'Rd1', 'Qe6',
+        'Bxd7+', 'Nxd7', 'Qb8+', 'Nxb8', 'Rd8#'
+      ],
+      annotations: {
+        '3. d4': {
+          badge: '⚔️',
+          arrows: ['d4->e5:red', 'f3->e5:amber'],
+          targets: ['e5'],
+          text: {
+            en: 'Morphy immediately strikes at the center, putting double pressure on e5.',
+            pl: 'Morphy natychmiast uderza w centrum, wywierając podwójny nacisk na piona e5.'
+          }
+        },
+        '3... Bg4': {
+          badge: '?!',
+          arrows: ['g4->f3:amber', 'f3->d1:amber'],
+          targets: ['f3'],
+          text: {
+            en: 'Black pins the knight on f3, but neglects developing the kingside knights and bishops.',
+            pl: 'Czarne wiążą skoczka na f3, ale zaniedbują rozwój figur skrzydła królewskiego.'
+          }
+        },
+        '6. Bc4': {
+          badge: '🎯',
+          arrows: ['c4->f7:red', 'f3->f7:red'],
+          targets: ['f7'],
+          text: {
+            en: 'Deadly battery! Both the bishop on c4 and queen on f3 converge on f7 — threatening immediate checkmate.',
+            pl: 'Zabójcza bateria! Goniec z c4 oraz hetman z f3 celują jednocześnie w słaby punkt f7, grożąc matem w 1 ruchu.'
+          }
+        },
+        '7. Qb3': {
+          badge: '!',
+          arrows: ['b3->f7:red', 'b3->b7:red', 'c4->f7:amber'],
+          targets: ['f7', 'b7'],
+          text: {
+            en: 'Double attack! The queen shifts to b3, maintaining the mate threat on f7 while also targeting the undefended b7 pawn.',
+            pl: 'Podwójny cel! Hetman przechodzi na b3, podtrzymując groźbę mata na f7 i jednocześnie biorąc na celownik bezbronnego piona b7.'
+          }
+        },
+        '7... Qe7': {
+          badge: '?!',
+          arrows: ['e7->f7:blue', 'f8->c5:blue'],
+          targets: ['f7', 'f8'],
+          text: {
+            en: 'Black defends f7, but blocks the dark-squared bishop on f8 — trapping the h8 rook in the corner for the rest of the game!',
+            pl: 'Czarne bronią punktu f7, ale blokują własnego gońca na f8 — przez co wieża h8 pozostanie uwięziona w rogu do końca partii!'
+          }
+        },
+        '9. Bg5': {
+          badge: '!',
+          arrows: ['g5->f6:amber', 'f6->e7:amber'],
+          targets: ['f6', 'e7'],
+          text: {
+            en: 'Every White piece is now in the battle! Bg5 pins the f6 knight against Black’s queen on e7.',
+            pl: 'Każda lekka figura białych jest już w grze! Ruch Gg5 wiąże skoczka f6 na tle hetmana stojącego na e7.'
+          }
+        },
+        '10. Nxb5': {
+          badge: '!!',
+          arrows: ['b5->d6:red', 'b5->c7:red', 'c4->b5:amber'],
+          targets: ['b5', 'e8'],
+          text: {
+            en: 'Knight sacrifice! Instead of retreating, Morphy rips open lines toward the uncastled black king on e8.',
+            pl: 'Ofiara skoczka! Zamiast cofać gońca, Morphy rozrywa osłonę czarnego króla stojącego wciąż w centrum na e8.'
+          }
+        },
+        '11. Bxb5+': {
+          badge: '!',
+          arrows: ['b5->e8:red', 'g5->f6:amber'],
+          targets: ['e8', 'd7'],
+          text: {
+            en: 'Check along the a4–e8 diagonal forces Black to block on d7, creating a second paralyzed pin!',
+            pl: 'Szach po przekątnej a4–e8 zmusza czarne do zasłonięcia się na d7, co tworzy drugie śmiertelne związanie!'
+          }
+        },
+        '12. O-O-O': {
+          badge: '!',
+          arrows: ['d1->d7:red', 'b5->d7:amber', 'b5->e8:amber'],
+          targets: ['d7'],
+          text: {
+            en: 'Castling queenside brings the rook directly onto the d-file with tempo, targeting the pinned knight on d7!',
+            pl: 'Długa roszada wprowadza wieżę z tempem prosto na linię d, biorąc na celownik związanego skoczka d7!'
+          }
+        },
+        '13. Rxd7': {
+          badge: '!',
+          arrows: ['d7->e7:red', 'g5->f6:amber', 'd1->d7:green'],
+          targets: ['d7', 'f6'],
+          text: {
+            en: 'Exchange sacrifice! Eliminating the defender on d7 so the remaining h1 rook can pin the black rook cleanly.',
+            pl: 'Ofiara jakości! Morphy usuwa obrońcę z pola d7, aby druga wieża mogła bezwzględnie związać czarną wieżę.'
+          }
+        },
+        '14. Rd1': {
+          badge: '!',
+          arrows: ['d1->d7:red', 'b5->d7:red', 'g5->f6:amber'],
+          targets: ['d7', 'f6'],
+          text: {
+            en: 'Maximum pressure! The rook on d7 is pinned to the king on e8, and its defender on f6 is pinned to the queen on e7.',
+            pl: 'Maksymalny nacisk! Wieża na d7 jest związana z królem e8, a broniący jej skoczek f6 jest związany z hetmanem e7.'
+          }
+        },
+        '16. Qb8+': {
+          badge: '!!',
+          arrows: ['b8->e8:red', 'b8->d8:amber', 'd1->d8:red', 'g5->d8:amber'],
+          targets: ['b8', 'd8', 'e8'],
+          text: {
+            en: 'The Immortal Queen Sacrifice! 16. Qb8+!! forces the knight on d7 to capture on b8, deflecting it from guarding d8!',
+            pl: 'Nieśmiertelna ofiara hetmana! 16. Hb8+!! zmusza skoczka z d7 do zbicia na b8, odciągając go od obrony kluczowego pola d8!'
+          }
+        },
+        '17. Rd8#': {
+          badge: '🏆',
+          arrows: ['d8->e8:red', 'g5->d8:green', 'g5->f6:amber'],
+          targets: ['e8', 'd8'],
+          text: {
+            en: 'Opera Mate! The rook on d8 checkmates the black king while protected by the bishop on g5.',
+            pl: 'Mat operowy! Wieża na d8 matuje czarnego króla pod osłoną gońca z g5.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-02',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['sacrifice', 'attraction', 'pin', 'fork'],
+      players: {
+        en: 'Sire de Légal vs. Saint Brie (Paris, 1750)',
+        pl: 'Sire de Légal – Saint Brie (Paryż, 1750)'
+      },
+      title: {
+        en: "Légal's Trap: Breaking the Relative Pin on f3",
+        pl: 'Pułapka Légala: Złamanie pozornego związania na f3'
+      },
+      overview: {
+        en: 'Why you must always check whether a pin is absolute or relative! Sire de Légal allows his Queen on d1 to be captured in order to coordinate three minor pieces against the black king.',
+        pl: 'Dlaczego zawsze trzeba sprawdzać, czy związanie jest bezwzględne, czy względne! Sire de Légal oddaje hetmana na d1, aby zmatować czarnego króla samymi lekkimi figurami.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'd6', 'Bc4', 'Bg4', 'Nc3', 'g6', 'Nxe5', 'Bxd1',
+        'Bxf7+', 'Ke7', 'Nd5#'
+      ],
+      annotations: {
+        '3. Bc4': {
+          badge: '🎯',
+          arrows: ['c4->f7:red'],
+          targets: ['f7'],
+          text: {
+            en: 'The Italian Bishop takes aim directly at f7 — the weakest point in Black’s camp.',
+            pl: 'Włoski goniec celuje bezpośrednio w punkt f7 — najsłabsze pole w obozie czarnych.'
+          }
+        },
+        '3... Bg4': {
+          badge: '?!',
+          arrows: ['g4->f3:amber', 'f3->d1:amber'],
+          targets: ['f3', 'd1'],
+          text: {
+            en: 'Black pins the knight on f3 against the queen on d1 without developing the kingside knight first.',
+            pl: 'Czarne wiążą skoczka f3 na tle hetmana d1, nie wyprowadziwszy wcześniej skoczka na f6.'
+          }
+        },
+        '4... g6': {
+          badge: '?',
+          arrows: ['f3->e5:red', 'c4->f7:red'],
+          targets: ['e5', 'f7'],
+          text: {
+            en: 'A fatal mistake! Slow pawn play allows White to spring the classic tactical trap in the center.',
+            pl: 'Fatalny błąd! Powolny ruch pionem pozwala białym uruchomić klasyczną pułapkę w centrum.'
+          }
+        },
+        '5. Nxe5': {
+          badge: '!!',
+          arrows: ['e5->f7:red', 'e5->g4:red', 'c4->f7:amber'],
+          targets: ['f7', 'g4', 'd1'],
+          text: {
+            en: 'Breaking the pin! White sacrifices the queen on d1. If 5... dxe5, 6. Qxg4 wins a clean pawn.',
+            pl: 'Złamanie związania! Białe wystawiają hetmana na d1. Jeśli 5... dxe5, to 6. Hxg4 wygrywa czystego piona.'
+          }
+        },
+        '6. Bxf7+': {
+          badge: '!',
+          arrows: ['f7->e8:red', 'e5->d7:amber', 'e5->g6:amber'],
+          targets: ['e8', 'e7'],
+          text: {
+            en: 'Attraction check! The bishop and knight strip away all escape squares except e7.',
+            pl: 'Szach przyciągający! Goniec z f7 oraz skoczek z e5 odbierają królowi wszystkie pola oprócz e7.'
+          }
+        },
+        '7. Nd5#': {
+          badge: '🏆',
+          arrows: ['d5->e7:red', 'e5->d7:amber', 'f7->e8:amber'],
+          targets: ['e7'],
+          text: {
+            en: "Légal's Mate! Three minor pieces weave an airtight cage around the black king in the center.",
+            pl: 'Mat Légala! Trzy lekkie figury tworzą szczelną klatkę wokół czarnego króla w samym środku szachownicy.'
+          }
+        }
+      }
+    },
+
+    // === MEDIUM (2) ===
+    {
+      id: 'ba-03',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'fork', 'pin', 'kingHunt'],
+      players: {
+        en: 'Italian Game Analysis — Fried Liver Attack (Fegatello)',
+        pl: 'Analiza Partii Włoskiej — Atak Fried Liver (Fegatello)'
+      },
+      title: {
+        en: 'The Fried Liver Attack: Crushing the Pinned Knight on d5',
+        pl: 'Atak Fried Liver: Miażdżący nacisk na związanego skoczka d5'
+      },
+      overview: {
+        en: 'See how White sacrifices a knight on f7 (`6. Nxf7!!`) to drag the black king out and pile up attacking arrows onto the pinned knight on d5.',
+        pl: 'Zobacz, jak białe poświęcają skoczka na f7 (`6. Sxf7!!`), aby wyciągnąć czarnego króla i skoncentrować ogień wszystkich figur na związanym skoczku d5.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Nf6', 'Ng5', 'd5', 'exd5', 'Nxd5',
+        'Nxf7', 'Kxf7', 'Qf3+', 'Kg8', 'Bxd5+', 'Qxd5', 'Qxd5+', 'Be6', 'Qxe6#'
+      ],
+      annotations: {
+        '4. Ng5': {
+          badge: '⚔️',
+          arrows: ['g5->f7:red', 'c4->f7:red'],
+          targets: ['f7'],
+          text: {
+            en: 'The Knight Attack! White immediately teams up knight and bishop against f7.',
+            pl: 'Atak skoczkiem! Białe błyskawicznie łączą siły skoczka g5 i gońca c4 przeciwko punktowi f7.'
+          }
+        },
+        '5... Nxd5': {
+          badge: '?!',
+          arrows: ['g5->f7:red', 'c4->d5:amber'],
+          targets: ['f7', 'd5'],
+          text: {
+            en: 'Recapturing on d5 looks natural, but walks straight into the 400-year-old Fried Liver sacrifice! (`5... Na5!` is the safe theory move).',
+            pl: 'Odbicie skoczkiem na d5 wygląda naturalnie, ale wchodzi prosto w 400-letnią ofiarę Fegatello! (Poprawne teoretycznie jest `5... Sa5!`).'
+          }
+        },
+        '6. Nxf7': {
+          badge: '!!',
+          arrows: ['f7->d8:red', 'f7->h8:red', 'c4->f7:amber'],
+          targets: ['f7', 'd8', 'h8'],
+          text: {
+            en: 'The Fried Liver Sacrifice! Forking Queen and Rook forces Black’s king to capture on f7 and step into the line of fire.',
+            pl: 'Ofiara Fried Liver! Widełki na hetmana d8 i wieżę h8 zmuszają czarnego króla do bicia na f7 i wyjścia na linię ognia.'
+          }
+        },
+        '7. Qf3+': {
+          badge: '!',
+          arrows: ['f3->f7:red', 'f3->d5:red', 'c4->d5:red'],
+          targets: ['f7', 'd5'],
+          text: {
+            en: 'Double attack & pin! The queen checks the king on f7 while teaming up with Bc4 to attack the knight on d5 twice!',
+            pl: 'Podwójny atak i związanie! Hetman szachuje króla na f7 i jednocześnie razem z gońcem c4 dwukrotnie atakuje skoczka d5!'
+          }
+        },
+        '7... Kg8': {
+          badge: '?',
+          arrows: ['c4->d5:red', 'f3->f7:amber', 'f7->e6:blue'],
+          targets: ['d5', 'g8'],
+          text: {
+            en: 'Retreating to g8 loses on the spot! Black had to brave the center with 7... Ke6 to defend the d5 knight.',
+            pl: 'Ucieczka na g8 przegrywa natychmiast! Czarne musiały odważnie wyjść królem na 7... Ke6, aby bronić skoczka na d5.'
+          }
+        },
+        '8. Bxd5+': {
+          badge: '!',
+          arrows: ['d5->g8:red', 'f3->f7:amber'],
+          targets: ['d5', 'g8'],
+          text: {
+            en: 'Crushing check on the a2–g8 diagonal! Black is forced to give up the queen on d5.',
+            pl: 'Miażdżący szach po przekątnej a2–g8! Czarne są zmuszone oddać hetmana na d5.'
+          }
+        },
+        '10. Qxe6#': {
+          badge: '🏆',
+          arrows: ['e6->g8:red'],
+          targets: ['g8', 'e6'],
+          text: {
+            en: 'Checkmate along the fatally weakened a2–g8 diagonal!',
+            pl: 'Mat po śmiertelnie osłabionej przekątnej a2–g8!'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-04',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'doubleCheck', 'attraction', 'clearance'],
+      players: {
+        en: 'Richard Réti vs. Savielly Tartakower (Vienna, 1910)',
+        pl: 'Richard Réti – Ksawery Tartakower (Wiedeń, 1910)'
+      },
+      title: {
+        en: 'Vienna Miniature: Queen Sacrifice & Double-Check Mate',
+        pl: 'Wiedeńska Miniatura: Ofiara hetmana i podwójny szach'
+      },
+      overview: {
+        en: 'One of the most famous 11-move battles ever played. Watch how Réti uses queenside castling to set an invisible X-ray trap along the open d-file.',
+        pl: 'Jedna z najsłynniejszych 11-posunięciowych bitew w historii. Zobacz, jak Réti wykorzystuje długą roszadę do zastawienia niewidocznej pułapki rentgenowej na otwartej linii d.'
+      },
+      moves: [
+        'e4', 'c6', 'd4', 'd5', 'Nc3', 'dxe4', 'Nxe4', 'Nf6', 'Qd3', 'e5',
+        'dxe5', 'Qa5+', 'Bd2', 'Qxe5', 'O-O-O', 'Nxe4', 'Qd8+', 'Kxd8', 'Bg5+', 'Kc7',
+        'Bd8#'
+      ],
+      annotations: {
+        '5. Qd3': {
+          badge: '📖',
+          arrows: ['d3->e4:green', 'c1->d2:blue'],
+          targets: ['e4'],
+          text: {
+            en: 'Réti defends the e4 knight with the queen, preparing rapid queenside castling.',
+            pl: 'Réti broni skoczka e4 hetmanem, przygotowując błyskawiczną długą roszadę.'
+          }
+        },
+        '6... Qa5+': {
+          badge: '⚔️',
+          arrows: ['a5->e1:red', 'a5->e5:red'],
+          targets: ['e1', 'e5'],
+          text: {
+            en: 'Tartakower forks the white king on e1 and the e5 pawn, regaining material at the cost of development.',
+            pl: 'Tartakower daje widełki na króla e1 oraz piona e5, odzyskując materiał kosztem czasu na rozwój.'
+          }
+        },
+        '8. O-O-O': {
+          badge: '!',
+          arrows: ['d1->d8:amber', 'd2->g5:blue'],
+          targets: ['d8', 'e4'],
+          text: {
+            en: 'A brilliant trap! The knight on e4 appears to be hanging, because the queen on d3 blocks the d1 rook.',
+            pl: 'Genialna pułapka! Skoczek na e4 wygląda na niebronionego, ponieważ hetman na d3 pozornie zasłania wieżę d1.'
+          }
+        },
+        '8... Nxe4': {
+          badge: '??',
+          arrows: ['d3->d8:red', 'd1->d8:amber', 'd2->g5:red'],
+          targets: ['d8', 'e8'],
+          text: {
+            en: 'Tartakower grabs the knight — walking straight into a forced mate in 3 along the open d-file!',
+            pl: 'Tartakower bije skoczka — wchodząc prosto w forsującego mata w 3 ruchach na otwartej linii d!'
+          }
+        },
+        '9. Qd8+': {
+          badge: '!!',
+          arrows: ['d8->e8:red', 'd1->d8:amber'],
+          targets: ['d8', 'e8'],
+          text: {
+            en: 'Thunderbolt Queen Sacrifice! 9. Qd8+!! drags the black king onto the d8 square, right into the X-ray of the d1 rook!',
+            pl: 'Piorunująca ofiara hetmana! 9. Hd8+!! wciąga czarnego króla na pole d8 — prosto pod rentgen wieży z d1!'
+          }
+        },
+        '10. Bg5+': {
+          badge: '!!',
+          arrows: ['g5->d8:red', 'd1->d8:red'],
+          targets: ['d8', 'c7', 'e7'],
+          text: {
+            en: 'Double Check! Both the bishop on g5 and the rook on d1 check the king simultaneously, leaving only Kc7 or Ke8.',
+            pl: 'Podwójny szach! Zarówno goniec z g5, jak i wieża z d1 szachują króla jednocześnie, wymuszając ucieczkę.'
+          }
+        },
+        '11. Bd8#': {
+          badge: '🏆',
+          arrows: ['d8->c7:red', 'd1->d8:green'],
+          targets: ['c7', 'd8'],
+          text: {
+            en: 'Checkmate! The bishop and rook seal the d-file completely.',
+            pl: 'Mat! Goniec wspierany przez wieżę d1 całkowicie zamyka królowi drogę ucieczki.'
+          }
+        }
+      }
+    },
+
+    // === HARD (2) ===
+    {
+      id: 'ba-05',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'deflection', 'kingHunt'],
+      players: {
+        en: 'Adolf Anderssen vs. Lionel Kieseritzky (London, 1851)',
+        pl: 'Adolf Anderssen – Lionel Kieseritzky (Londyn, 1851)'
+      },
+      title: {
+        en: 'The Immortal Game: Sacrificing Both Rooks & the Queen',
+        pl: 'Nieśmiertelna Partia: Ofiara obu wież i hetmana'
+      },
+      overview: {
+        en: 'The supreme Romantic battle of the 19th century. Anderssen sacrifices a bishop on move 11, both rooks on moves 18–19, and his queen on move 22 to deliver checkmate with three minor pieces!',
+        pl: 'Najsłynniejsza romantyczna bitwa XIX wieku. Anderssen poświęca gońca w 11. ruchu, obie wieże w ruchach 18–19 oraz hetmana w 22. ruchu, by dać mata trzema lekkimi figurami!'
+      },
+      moves: [
+        'e4', 'e5', 'f4', 'exf4', 'Bc4', 'Qh4+', 'Kf1', 'b5', 'Bxb5', 'Nf6',
+        'Nf3', 'Qh6', 'd3', 'Nh5', 'Nh4', "Qg5", 'Nf5', 'c6', 'g4', 'Nf6',
+        'Rg1', 'cxb5', 'h4', 'Qg6', 'h5', 'Qg5', 'Qf3', 'Ng8', 'Bxf4', 'Qf6',
+        'Nc3', 'Bc5', 'Nd5', 'Qxb2', 'Bd6', 'Bxg1', 'e5', 'Qxa1+', 'Ke2', 'Na6',
+        'Nxg7+', 'Kd8', 'Qf6+', 'Nxf6', 'Be7#'
+      ],
+      annotations: {
+        '4... b5': {
+          badge: '⚔️',
+          arrows: ['b5->c4:red', 'c8->b7:blue'],
+          targets: ['c4'],
+          text: {
+            en: 'The Bryan Countergambit! Kieseritzky sacrifices a wing pawn to deflect White’s bishop from the f7 target.',
+            pl: 'Kontrgambit Bryana! Kieseritzky poświęca piona skrzydłowego, by odciągnąć białego gońca od celowania w punkt f7.'
+          }
+        },
+        '11. Rg1': {
+          badge: '!',
+          arrows: ['g1->g4:green', 'c6->b5:red'],
+          targets: ['b5', 'g4'],
+          text: {
+            en: 'First piece sacrifice! Anderssen sacrifices the b5 bishop to gain two tempos trapping Black’s queen on the kingside.',
+            pl: 'Pierwsza ofiara figury! Anderssen poświęca gońca na b5, aby zyskać dwa tempa i osaczyć czarnego hetmana na skrzydle królewskim.'
+          }
+        },
+        '15. Bxf4': {
+          badge: '!',
+          arrows: ['f4->c7:amber', 'f3->b7:amber', 'f5->g7:red'],
+          targets: ['f6', 'g7'],
+          text: {
+            en: 'Look at the contrast: White has four active pieces targeting the center, while Black’s pieces have been driven back to the 8th rank!',
+            pl: 'Spójrz na kontrast: białe mają cztery aktywne figury celujące w centrum, podczas gdy czarne figury zostały cofnięte na ósmą linię!'
+          }
+        },
+        '17. Nd5': {
+          badge: '!',
+          arrows: ['d5->c7:red', 'd5->f6:red', 'f4->d6:green'],
+          targets: ['c7', 'b2'],
+          text: {
+            en: 'Centralizing with power! White ignores the b2 pawn and threatens the devastating fork on c7.',
+            pl: 'Potężna centralizacja! Białe ignorują piona b2 i grożą niszczycielskimi widełkami na c7.'
+          }
+        },
+        '18. Bd6': {
+          badge: '!!',
+          arrows: ['d6->f8:red', 'c5->g1:blue', 'b2->a1:blue'],
+          targets: ['d6', 'f8', 'g1'],
+          text: {
+            en: 'Offering BOTH rooks! Bd6 weaves a mating net around e7 and f8 while leaving the g1 and a1 rooks to be captured.',
+            pl: 'Ofiara OBU wież! Ruch Gd6 zarzuca sieć matową wokół pól e7 i f8, oddając czarnym wieże na g1 oraz a1.'
+          }
+        },
+        '19. e5': {
+          badge: '!',
+          arrows: ['f4->f6:amber', 'g5->f6:amber'],
+          targets: ['e5', 'f6'],
+          text: {
+            en: 'Sealing the diagonal! 19. e5 cuts off the black queen on b2/a1 from returning along the a1–h8 diagonal to defend f6!',
+            pl: 'Odcięcie przekątnej! 19. e5 odcina czarnemu hetmanowi powrót po wielkiej przekątnej a1–h8 do obrony pola f6!'
+          }
+        },
+        '21. Nxg7+': {
+          badge: '!',
+          arrows: ['g7->e8:red', 'd6->f8:amber', 'd5->c7:amber'],
+          targets: ['e8', 'd8'],
+          text: {
+            en: 'Clearing the f5 square and forcing the black king onto d8 where all escape squares are controlled.',
+            pl: 'Szach na g7 zmusza czarnego króla do wejścia na pole d8, gdzie wszystkie drogi ucieczki są odcięte.'
+          }
+        },
+        '22. Qf6+': {
+          badge: '!!',
+          arrows: ['f6->d8:red', 'g8->f6:amber', 'd6->e7:red'],
+          targets: ['f6', 'e7', 'd8'],
+          text: {
+            en: 'The crowning Queen Sacrifice! 22. Qf6+!! deflects the knight on g8 away from guarding the e7 mating square!',
+            pl: 'Koronująca ofiara hetmana! 22. Hf6+!! odciąga skoczka g8 od obrony kluczowego pola matowego e7!'
+          }
+        },
+        '23. Be7#': {
+          badge: '🏆',
+          arrows: ['e7->d8:red', 'd5->c7:amber', 'd5->e7:green', 'g7->e8:amber'],
+          targets: ['d8', 'e7'],
+          text: {
+            en: 'Checkmate! Down a Queen, two Rooks, and a Bishop, Anderssen’s three remaining minor pieces deliver the Immortal Mate!',
+            pl: 'Mat! Mimo straty hetmana, dwóch wież i gońca, trzy pozostałe lekkie figury Anderssena dają Nieśmiertelnego Mata!'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-06',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'doubleCheck', 'battery', 'kingHunt'],
+      players: {
+        en: 'Adolf Anderssen vs. Jean Dufresne (Berlin, 1852)',
+        pl: 'Adolf Anderssen – Jean Dufresne (Berlin, 1852)'
+      },
+      title: {
+        en: 'The Evergreen Game: Laser-Beam Open Lines',
+        pl: 'Wiecznie Zielona Partia: Laserowe uderzenie po otwartych liniach'
+      },
+      overview: {
+        en: 'With Black threatening immediate checkmate on g2, Anderssen unleashes a 5-move forcing combination sacrificing a knight, rook, and queen to hunt the black king down the d- and e-files.',
+        pl: 'W obliczu natychmiastowej groźby mata na g2 Anderssen uruchamia 5-posunięciową kombinację forsującą, poświęcając skoczka, wieżę i hetmana, by dopaść króla na liniach d oraz e.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'b4', 'Bxb4', 'c3', 'Ba5',
+        'd4', 'exd4', 'O-O', 'd3', 'Qb3', 'Qf6', 'e5', 'Qg6', 'Re1', 'Nge7',
+        'Ba3', 'b5', 'Qxb5', 'Rb8', 'Qa4', 'Bb6', 'Nbd2', 'Bb7', 'Ne4', 'Qf5',
+        'Bxd3', 'Qh5', 'Nf6+', 'gxf6', 'exf6', 'Rg8', 'Rad1', 'Qxf3', 'Rxe7+', 'Nxe7',
+        'Qxd7+', 'Kxd7', 'Bf5+', 'Ke8', 'Bd7+', 'Kf8', 'Bxe7#'
+      ],
+      annotations: {
+        '4. b4': {
+          badge: '📖',
+          arrows: ['b4->c5:red', 'c3->d4:green'],
+          targets: ['c5', 'd4'],
+          text: {
+            en: 'The Evans Gambit! White sacrifices the b4 pawn to gain rapid central control with c3 and d4.',
+            pl: 'Gambit Evansa! Białe poświęcają piona b4, aby błyskawicznie opanować centrum ruchami c3 oraz d4.'
+          }
+        },
+        '8. Qb3': {
+          badge: '🎯',
+          arrows: ['b3->f7:red', 'c4->f7:red'],
+          targets: ['f7'],
+          text: {
+            en: 'Once again, the classic Queen + Bishop battery targets f7!',
+            pl: 'Po raz kolejny klasyczna bateria hetman + goniec celuje w czuły punkt f7!'
+          }
+        },
+        '17. Nf6+': {
+          badge: '!',
+          arrows: ['f6->e8:red', 'f6->h5:red', 'e1->e7:amber'],
+          targets: ['e8', 'f6'],
+          text: {
+            en: 'Knight sacrifice! Opening the e-file directly against the uncastled black king on e8.',
+            pl: 'Ofiara skoczka! Otwiera linię e bezpośrednio przeciwko czarnemu królowi stojącemu w centrum na e8.'
+          }
+        },
+        '18... Rg8': {
+          badge: '⚔️',
+          arrows: ['g8->g2:red', 'b7->f3:red'],
+          targets: ['g2', 'f3'],
+          text: {
+            en: 'Dufresne counter-attacks! The g8 rook and b7 bishop now aim straight at White’s king on g1.',
+            pl: 'Dufresne kontratakuje! Wieża z g8 oraz goniec z b7 celują teraz prosto w białego króla na g1.'
+          }
+        },
+        '19. Rad1': {
+          badge: '!!',
+          arrows: ['d1->d7:red', 'e1->e7:red', 'h5->f3:blue'],
+          targets: ['d7', 'e7', 'f3'],
+          text: {
+            en: 'Calmly bringing the last reserve into battle! White leaves the f3 knight to be captured, creating threat of mate on g2.',
+            pl: 'Spokojne wprowadzenie ostatniej rezerwy do bitwy! Białe zostawiają skoczka f3 pod biciem, mimo że czarnym grozi mat na g2.'
+          }
+        },
+        '20. Rxe7+': {
+          badge: '!!',
+          arrows: ['e7->e8:red', 'a4->d7:amber', 'd1->d7:amber'],
+          targets: ['e7', 'd7', 'e8'],
+          text: {
+            en: 'Rook sacrifice! Eliminating the guard of d7 so the queen and d1 rook can strike along the d-file.',
+            pl: 'Ofiara wieży! Usuwa obrońcę pola d7, przygotowując decydujące uderzenie hetmana i wieży po linii d.'
+          }
+        },
+        '21. Qxd7+': {
+          badge: '!!',
+          arrows: ['d7->e8:red', 'd3->f5:amber', 'd1->d7:amber'],
+          targets: ['d7', 'e8'],
+          text: {
+            en: 'Queen Sacrifice! 21. Qxd7+!! drags the black king onto d7 — straight into a discovered double check!',
+            pl: 'Ofiara hetmana! 21. Hxd7+!! zaciąga czarnego króla na pole d7 — prosto pod podwójny szach z odsłonięcia!'
+          }
+        },
+        '22. Bf5+': {
+          badge: '!',
+          arrows: ['f5->d7:red', 'd1->d7:red'],
+          targets: ['d7', 'e8'],
+          text: {
+            en: 'Double Check! Both the bishop on f5 and rook on d1 check the king, forcing 22... Ke8 (since 22... Kc6 allows 23. Bd7#).',
+            pl: 'Podwójny szach! Zarówno goniec z f5, jak i wieża z d1 szachują króla, wymuszając 22... Ke8 (po 22... Kc6 następuje 23. Gd7#).'
+          }
+        },
+        '24. Bxe7#': {
+          badge: '🏆',
+          arrows: ['e7->f8:red', 'd7->e8:amber', 'f6->g7:amber'],
+          targets: ['f8', 'e7'],
+          text: {
+            en: 'The Evergreen Checkmate! Two bishops and a pawn on f6 weave a flawless mating net around the king.',
+            pl: 'Wiecznie Zielony Mat! Para gońców oraz pion na f6 tworzą bezbłędną sieć matową wokół czarnego króla.'
+          }
+        }
       }
     }
   ];
@@ -2131,7 +3093,9 @@
       OPENING_TRAPS,
       OPENING_FAMILIES,
       WIN_MATERIAL_PUZZLES,
-      DEFENSE_PUZZLES
+      DEFENSE_PUZZLES,
+      FAMOUS_GAMES,
+      BATTLE_ANALYSES
     };
   } else {
     global.PUZZLES = PUZZLES;
@@ -2140,5 +3104,7 @@
     global.OPENING_FAMILIES = OPENING_FAMILIES;
     global.WIN_MATERIAL_PUZZLES = WIN_MATERIAL_PUZZLES;
     global.DEFENSE_PUZZLES = DEFENSE_PUZZLES;
+    global.FAMOUS_GAMES = FAMOUS_GAMES;
+    global.BATTLE_ANALYSES = BATTLE_ANALYSES;
   }
 })(typeof window !== 'undefined' ? window : globalThis);
