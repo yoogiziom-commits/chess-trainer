@@ -31,6 +31,7 @@
       analysisNext: 'Next',
       analysisPlay: 'Auto',
       analysisPause: 'Pause',
+      analysisDelayLabel: 'Speed (Auto):',
       legendMove: 'Move / Plan',
       legendThreat: 'Threat / Target',
       legendPin: 'Battery / Pin',
@@ -167,6 +168,7 @@
       analysisNext: 'Dalej',
       analysisPlay: 'Auto',
       analysisPause: 'Pauza',
+      analysisDelayLabel: 'Tempo (Auto):',
       legendMove: 'Ruch / Plan',
       legendThreat: 'Groźba / Cel',
       legendPin: 'Bateria / Związanie',
@@ -339,6 +341,8 @@
         ply: 0,
         snapshots: [],
         autoPlayId: null,
+        delaySec: 5,
+        countdownSec: 5,
         autoTargets: true,
         inspectSquare: null
       };
@@ -562,6 +566,8 @@
         analysisNextBtn: document.getElementById('analysisNextBtn'),
         analysisNextText: document.getElementById('analysisNextText'),
         analysisLastBtn: document.getElementById('analysisLastBtn'),
+        analysisDelayLabel: document.getElementById('analysisDelayLabel'),
+        analysisDelayGroup: document.getElementById('analysisDelayGroup'),
         legendMoveText: document.getElementById('legendMoveText'),
         legendThreatText: document.getElementById('legendThreatText'),
         legendPinText: document.getElementById('legendPinText'),
@@ -713,6 +719,17 @@
           this.flipped = !this.flipped;
           this._renderBoard();
         });
+        if (this.dom.analysisDelayGroup) {
+          this.dom.analysisDelayGroup.addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-delay]');
+            if (!btn) return;
+            const sec = parseInt(btn.dataset.delay, 10);
+            if (![5, 10, 15, 30, 45, 60].includes(sec)) return;
+            this.analysis.delaySec = sec;
+            this.analysis.countdownSec = sec;
+            this._renderAnalysisPanel();
+          });
+        }
       }
 
       // Keyboard Left / Right arrow support in Battle Analysis mode
@@ -845,6 +862,9 @@
         this.dom.analysisStepLabel.textContent = this.t('analysisStepLabel');
         this.dom.analysisPrevText.textContent = this.t('analysisPrev');
         this.dom.analysisNextText.textContent = this.t('analysisNext');
+        if (this.dom.analysisDelayLabel) {
+          this.dom.analysisDelayLabel.textContent = this.t('analysisDelayLabel');
+        }
         this.dom.legendMoveText.textContent = this.t('legendMove');
         this.dom.legendThreatText.textContent = this.t('legendThreat');
         this.dom.legendPinText.textContent = this.t('legendPin');
@@ -1026,8 +1046,8 @@
         this.analysis.ply = 0;
         this.analysis.inspectSquare = null;
         this.engine = new window.ChessEngine(this.analysis.snapshots[0].fen);
-        this.playerColor = 'w';
-        this.flipped = false;
+        this.playerColor = puzzle.perspective === 'b' ? 'b' : 'w';
+        this.flipped = puzzle.perspective === 'b';
         this.status = 'viewing';
         this._renderAll();
         return;
@@ -1202,17 +1222,31 @@
       if (this.analysis.ply >= maxPly) {
         this._stepAnalysisTo(0, false);
       }
+      // If starting at ply 0, immediately show move 1 so user doesn't wait up to 60s for the opening move
+      if (this.analysis.ply === 0 && maxPly > 0) {
+        this._stepAnalysisTo(1, true);
+      }
+      this.analysis.countdownSec = this.analysis.delaySec;
       this.analysis.autoPlayId = setInterval(() => {
         if (this.mode !== 'analysis') {
           this._stopAnalysisAutoPlay();
           return;
         }
-        if (this.analysis.ply < this.analysis.snapshots.length - 1) {
-          this._stepAnalysisTo(this.analysis.ply + 1, true);
-        } else {
+        if (this.analysis.ply >= this.analysis.snapshots.length - 1) {
           this._stopAnalysisAutoPlay();
+          return;
         }
-      }, 1500);
+        this.analysis.countdownSec -= 1;
+        if (this.analysis.countdownSec <= 0) {
+          this.analysis.countdownSec = this.analysis.delaySec;
+          this._stepAnalysisTo(this.analysis.ply + 1, true);
+          if (this.analysis.ply >= this.analysis.snapshots.length - 1) {
+            this._stopAnalysisAutoPlay();
+          }
+        } else {
+          this._renderAnalysisPanel();
+        }
+      }, 1000);
       this._renderAnalysisPanel();
     }
 
@@ -1246,12 +1280,21 @@
         ? this.t('analysisAutoTargetOn')
         : this.t('analysisAutoTargetOff');
 
+      if (this.dom.analysisDelayGroup) {
+        this.dom.analysisDelayGroup.querySelectorAll('[data-delay]').forEach((btn) => {
+          btn.classList.toggle(
+            'active',
+            parseInt(btn.dataset.delay, 10) === this.analysis.delaySec
+          );
+        });
+      }
+
       const isPlaying = Boolean(this.analysis.autoPlayId);
       this.dom.analysisPlayBtn.classList.toggle('playing', isPlaying);
       this.dom.analysisPlayIcon.textContent = isPlaying ? '⏸' : '▶';
       this.dom.analysisPlayText.textContent = isPlaying
-        ? this.t('analysisPause')
-        : this.t('analysisPlay');
+        ? `${this.t('analysisPause')} (${this.analysis.countdownSec}s)`
+        : `${this.t('analysisPlay')} (${this.analysis.delaySec}s)`;
 
       this.dom.analysisFirstBtn.disabled = cur <= 0;
       this.dom.analysisPrevBtn.disabled = cur <= 0;
@@ -1798,7 +1841,11 @@
         });
         const activeEl = this.dom.movesList.querySelector('.active-ply');
         if (activeEl) {
-          activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          // Scroll only inside #movesList container so mobile viewport never jumps away from the board!
+          const listEl = this.dom.movesList;
+          const rowTop = activeEl.offsetTop - listEl.offsetTop;
+          const targetScroll = rowTop - listEl.clientHeight / 2 + activeEl.clientHeight / 2;
+          listEl.scrollTop = Math.max(0, targetScroll);
         }
         return;
       }

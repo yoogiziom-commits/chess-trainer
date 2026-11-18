@@ -3083,6 +3083,585 @@
           }
         }
       }
+    },
+
+    // === ADDITIONAL 6 BATTLES (2 Easy, 2 Medium, 2 Hard -> 12 Total) ===
+    {
+      id: 'ba-07',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'easy',
+      themes: ['sacrifice', 'pin', 'smothered', 'fork'],
+      players: {
+        en: 'Amateur vs. Boris Kostić (Cologne, 1911)',
+        pl: 'Amator – Boris Kostić (Kolonia, 1911)'
+      },
+      title: {
+        en: 'Blackburne Shilling Gambit: 7-Move Smothered Pin Mate',
+        pl: 'Gambit Szylingowy Blackburne’a: Mat ze związaniem w 7 ruchach'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! Watch how Black baits the e5 pawn with 3... Nd4?! to invade on g2 and e4, pinning White’s bishop on e2 for an instant 7-move checkmate.',
+        pl: 'Widok z perspektywy czarnych! Zobacz, jak czarne wystawiają piona e5 na przynętę ruchem 3... Sd4?!, aby wtargnąć hetmanem na g2 oraz e4 i zmatować białe w 7 ruchach dzięki związaniu gońca e2.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Nd4', 'Nxe5', 'Qg5', 'Nxf7', 'Qxg2',
+        'Rf1', 'Qxe4+', 'Be2', 'Nf3#'
+      ],
+      annotations: {
+        '3... Nd4': {
+          badge: '?!',
+          arrows: ['d4->f3:amber', 'd4->c2:red', 'f3->e5:blue'],
+          targets: ['e5', 'f3'],
+          text: {
+            en: 'The Shilling Gambit trap! Black leaves the e5 pawn undefended to lure White’s knight away from f3.',
+            pl: 'Pułapka Gambitu Szylingowego! Czarne zostawiają piona e5 bez obrony, by odciągnąć białego skoczka z pola f3.'
+          }
+        },
+        '4. Nxe5': {
+          badge: '?',
+          arrows: ['d8->g5:red', 'g5->g2:red', 'g5->e5:red'],
+          targets: ['e5', 'g2'],
+          text: {
+            en: 'Greedy capture! Taking e5 loses instantly to the queen sortie 4... Qg5! (Correct was 4. Nxd4!).',
+            pl: 'Zbyt chciwe bicie! Wzięcie piona e5 przegrywa przez wypad hetmana 4... Hg5! (Poprawne było 4. Sxd4!).'
+          }
+        },
+        '4... Qg5': {
+          badge: '!',
+          arrows: ['g5->e5:red', 'g5->g2:red'],
+          targets: ['e5', 'g2'],
+          text: {
+            en: 'Double attack! The black queen simultaneously targets the knight on e5 and the g2 pawn.',
+            pl: 'Podwójny cel! Czarny hetman jednocześnie bierze na celownik skoczka e5 oraz bezbronnego piona g2.'
+          }
+        },
+        '5. Nxf7': {
+          badge: '??',
+          arrows: ['f7->d8:blue', 'f7->h8:blue', 'g5->g2:red'],
+          targets: ['g2', 'e4'],
+          text: {
+            en: 'White hopes for a fork on f7, overlooking that Black’s counter-attack on g2 and e4 is much faster!',
+            pl: 'Białe liczą na widełki na f7, nie widząc, że kontratak czarnych przez g2 i e4 matuje króla!'
+          }
+        },
+        '6... Qxe4+': {
+          badge: '!',
+          arrows: ['e4->e1:red', 'd4->f3:red'],
+          targets: ['e1', 'e2', 'f3'],
+          text: {
+            en: 'Crucial check! Since 7. Qe2 loses the queen to 7... Nxe2, White must block with 7. Be2.',
+            pl: 'Kluczowy szach! Ponieważ 7. He2 traci hetmana po 7... Sxe2, białe muszą zasłonić się gońcem 7. Ge2.'
+          }
+        },
+        '7... Nf3#': {
+          badge: '🏆',
+          arrows: ['f3->e1:red', 'e4->e2:amber', 'e2->e1:amber'],
+          targets: ['e1', 'e2'],
+          text: {
+            en: 'Smothered Pin Mate! The bishop on e2 cannot capture the knight on f3 because it is pinned to the king on e1 by Black’s queen!',
+            pl: 'Mat ze związaniem! Goniec na e2 nie może zbić skoczka f3, ponieważ jest bezwzględnie związany z królem e1 przez czarnego hetmana!'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-08',
+      isBattleAnalysis: true,
+      difficulty: 'easy',
+      themes: ['sacrifice', 'battery', 'clearance', 'kingHunt'],
+      players: {
+        en: 'Gioachino Greco vs. NN (Rome, 1620)',
+        pl: 'Gioachino Greco – NN (Rzym, 1620)'
+      },
+      title: {
+        en: 'The Classic Greek Gift Sacrifice (7. Bxh7+!)',
+        pl: 'Klasyczny "Grecki Dar" (7. Gxh7+!)'
+      },
+      overview: {
+        en: 'The earliest recorded masterpiece of the Greek Gift bishop sacrifice on h7! Watch how Bd3, Ng5, the h-file rook, and Qh5 combine to tear open the castled king’s fortress.',
+        pl: 'Najstarszy zapisany wzorzec "Greckiego Daru" — ofiary gońca na h7! Zobacz, jak goniec d3, skoczek g5, wieża na linii h oraz hetman h5 rozrywają roszadę czarnych.'
+      },
+      moves: [
+        'e4', 'e6', 'd4', 'Nf6', 'Bd3', 'Nc6', 'Nf3', 'Be7', 'h4', 'O-O',
+        'e5', 'Nd5', 'Bxh7+', 'Kxh7', 'Ng5+', 'Bxg5', 'hxg5+', 'Kg8', 'Qh5', 'f6',
+        'g6', 'fxe5', 'Qh8#'
+      ],
+      annotations: {
+        '5. h4': {
+          badge: '⚔️',
+          arrows: ['h4->g5:green', 'd3->h7:red'],
+          targets: ['h7'],
+          text: {
+            en: 'Setting the Greek Gift hook! The h4 pawn prepares to support Ng5 and open the h-file if Black castles kingside.',
+            pl: 'Przygotowanie "Greckiego Daru"! Pion h4 jest gotowy wesprzeć skok Sg5 i otworzyć linię h dla wieży h1, jeśli czarne zrobią krótką roszadę.'
+          }
+        },
+        '6. e5': {
+          badge: '!',
+          arrows: ['e5->f6:red', 'd3->h7:red'],
+          targets: ['f6', 'h7'],
+          text: {
+            en: 'Driving away the key kingside defender! Once the f6 knight leaves, h7 has no protector except the black king.',
+            pl: 'Przepędzenie głównego obrońcy! Gdy skoczek f6 odchodzi z posterunku, punkt h7 zostaje bez osłony.'
+          }
+        },
+        '7. Bxh7+': {
+          badge: '!!',
+          arrows: ['h7->g8:red', 'f3->g5:green', 'd1->h5:green'],
+          targets: ['h7', 'g8'],
+          text: {
+            en: 'The Greek Gift Sacrifice! 7. Bxh7+! blasts open the h7 shelter and drags the black king out into the open.',
+            pl: 'Ofiara "Greckiego Daru"! 7. Gxh7+! rozbija osłonę pionową króla i wyciąga go na otwartą linię.'
+          }
+        },
+        '8. Ng5+': {
+          badge: '!',
+          arrows: ['g5->h7:red', 'h4->g5:amber', 'd1->h5:green'],
+          targets: ['h7', 'g5'],
+          text: {
+            en: 'Follow-up check! If Black declines the knight, Qh5+ mates immediately; capturing on g5 opens the deadly h1 rook!',
+            pl: 'Kolejny szach! Jeśli czarne nie zbiją skoczka, wejście Hh5+ daje natychmiastowego mata; bicie na g5 otwiera zaś linię dla wieży h1!'
+          }
+        },
+        '9. hxg5+': {
+          badge: '!',
+          arrows: ['h1->h8:red', 'd1->h5:green'],
+          targets: ['g8', 'h8'],
+          text: {
+            en: 'Discovered check from the h1 rook! The h-file is now a highway straight to h8.',
+            pl: 'Szach z odsłonięcia od wieży z h1! Linia h staje się teraz autostradą prowadzącą prosto do pola h8.'
+          }
+        },
+        '10. Qh5': {
+          badge: '!',
+          arrows: ['h5->h7:red', 'h5->h8:red', 'h1->h8:amber'],
+          targets: ['h7', 'h8'],
+          text: {
+            en: 'Doubling on the h-file! Queen and rook form an unstoppable battery aimed at h7 and h8.',
+            pl: 'Zdwojenie na linii h! Hetman i wieża tworzą niepowstrzymaną baterię wycelowaną w pola h7 oraz h8.'
+          }
+        },
+        '11. g6': {
+          badge: '!',
+          arrows: ['g6->f7:red', 'h5->h8:red'],
+          targets: ['f7', 'h8'],
+          text: {
+            en: 'Sealing the coffin! 11. g6! clamps down on the f7 escape square so the black king cannot run.',
+            pl: 'Zamknięcie klatki! 11. g6! odcina królowi drogę ucieczki przez pole f7.'
+          }
+        },
+        '12. Qh8#': {
+          badge: '🏆',
+          arrows: ['h8->g8:red', 'g6->f7:amber', 'h1->h8:green'],
+          targets: ['g8', 'h8'],
+          text: {
+            en: 'Checkmate on h8! Supported by the h1 rook while the g6 pawn guards f7.',
+            pl: 'Mat na h8! Hetman wspierany przez wieżę h1 zadaje decydujący cios, podczas gdy pion g6 pilnuje pola f7.'
+          }
+        }
+      }
+    },
+
+    // === MEDIUM (+2) ===
+    {
+      id: 'ba-09',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'boden', 'clearance', 'attraction'],
+      players: {
+        en: 'Esteban Canal vs. Amateur (Budapest, 1934)',
+        pl: 'Esteban Canal – Amator (Budapeszt, 1934)'
+      },
+      title: {
+        en: "The Peruvian Immortal: Sacrificing Both Rooks & Queen for Boden's Mate",
+        pl: 'Peruwiańska Nieśmiertelna: Ofiara obu wież i hetmana do mata Bodena'
+      },
+      overview: {
+        en: 'In just 14 moves, Peruvian master Esteban Canal sacrifices his a1 rook, his h1 rook, and his Queen on c6 (`13. Qxc6+!!`) to deliver a pure crisscrossed Boden’s Mate with his two bishops!',
+        pl: 'W zaledwie 14 ruchach peruwiański mistrz Esteban Canal poświęca wieżę a1, wieżę h1 oraz hetmana na c6 (`13. Hxc6+!!`), by dać czystego mata Bodena samą parą gońców!'
+      },
+      moves: [
+        'e4', 'd5', 'exd5', 'Qxd5', 'Nc3', 'Qa5', 'd4', 'c6', 'Nf3', 'Bg4',
+        'Bf4', 'e6', 'h3', 'Bxf3', 'Qxf3', 'Bb4', 'Be2', 'Nd7', 'a3', 'O-O-O',
+        'axb4', 'Qxa1+', 'Kd2', 'Qxh1', 'Qxc6+', 'bxc6', 'Ba6#'
+      ],
+      annotations: {
+        '10. a3': {
+          badge: '!',
+          arrows: ['a3->b4:red', 'a1->a8:amber'],
+          targets: ['b4', 'a1'],
+          text: {
+            en: 'Baiting the trap! White challenges the b4 bishop even though capturing it leaves the a1 rook undefended.',
+            pl: 'Zastawienie sieci! Białe atakują gońca b4, mimo że po biciu axb4 wieża na a1 straci ochronę.'
+          }
+        },
+        '10... O-O-O': {
+          badge: '?',
+          arrows: ['a3->b4:red', 'f3->c6:red', 'e2->a6:amber'],
+          targets: ['c8', 'c6', 'b4'],
+          text: {
+            en: 'Castling into the storm! Black assumes the a1 rook is pinned to the h1 rook, missing the deadly criss-cross bishop geometry against c8.',
+            pl: 'Roszada prosto w paszczę lwa! Czarne sądzą, że białe nie mogą bić na b4 z uwagi na stratę obu wież, nie dostrzegając geometrii mata Bodena.'
+          }
+        },
+        '11. axb4': {
+          badge: '!!',
+          arrows: ['a5->a1:blue', 'f3->c6:red', 'f4->d6:amber'],
+          targets: ['a1', 'c6'],
+          text: {
+            en: 'Double Rook Sacrifice! Canal calmly captures the bishop, inviting Black’s queen to gobble up both rooks in the corners.',
+            pl: 'Ofiara obu wież! Canal spokojnie bije gońca, zapraszając czarnego hetmana do zjedzenia obu wież w rogach szachownicy.'
+          }
+        },
+        '12... Qxh1': {
+          badge: '??',
+          arrows: ['f3->c6:red', 'e2->a6:red', 'f4->d6:amber'],
+          targets: ['c6', 'a6', 'c8'],
+          text: {
+            en: 'Black is now up two full rooks, but the black queen is stuck in the distant h1 corner while c6 and a6 are fatally weak!',
+            pl: 'Czarne mają dwie wieże przewagi, ale ich hetman utknął w dalekim rogu h1, podczas gdy pola c6 i a6 wokół króla c8 płoną!'
+          }
+        },
+        '13. Qxc6+': {
+          badge: '!!',
+          arrows: ['c6->c8:red', 'b7->c6:amber', 'e2->a6:red'],
+          targets: ['c6', 'c8', 'a6'],
+          text: {
+            en: 'Crowning Queen Sacrifice! 13. Qxc6+!! forces 13... bxc6, clearing the b-file pawn so it no longer blocks the a6–c8 diagonal!',
+            pl: 'Koronująca ofiara hetmana! 13. Hxc6+!! wymusza 13... bxc6, otwierając przekątną a6–c8 i jednocześnie blokując królowi pole c6!'
+          }
+        },
+        '14. Ba6#': {
+          badge: '🏆',
+          arrows: ['a6->c8:red', 'f4->c7:amber', 'f4->d6:amber'],
+          targets: ['c8', 'a6'],
+          text: {
+            en: "Boden's Mate! The two criss-crossing bishops on a6 and f4 slice through the queenside for an unforgettable checkmate.",
+            pl: 'Mat Bodena! Dwa krzyżujące się gońce na a6 oraz f4 przecinają skrzydło hetmańskie, dając niezapomnianego mata.'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-10',
+      isBattleAnalysis: true,
+      difficulty: 'medium',
+      themes: ['sacrifice', 'battery', 'pin', 'kingHunt'],
+      players: {
+        en: 'Gioachino Greco vs. NN (Europe, 1620)',
+        pl: 'Gioachino Greco – NN (Europa, 1620)'
+      },
+      title: {
+        en: 'Greco’s Italian Tempest: Sacrificing the Rook on a1',
+        pl: 'Włoska Burza Greco: Ofiara wieży a1 i polowanie na króla'
+      },
+      overview: {
+        en: 'The textbook Italian Game gambit (`4. c3` & `5. d4`). Greco sacrifices two pawns and his a1 rook (`10. Qb3! Bxa1`) to trap the black king in the center under a crossfire of bishops, knight, and queen.',
+        pl: 'Wzorcowy gambit w Partii Włoskiej (`4. c3` i `5. d4`). Greco poświęca dwa pionki oraz wieżę a1 (`10. Hb3! Gxa1`), by uwięzić czarnego króla w centrum pod krzyżowym ogniem figur.'
+      },
+      moves: [
+        'e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'c3', 'Nf6', 'd4', 'exd4',
+        'cxd4', 'Bb4+', 'Nc3', 'Nxe4', 'O-O', 'Nxc3', 'bxc3', 'Bxc3', 'Qb3', 'Bxa1',
+        'Bxf7+', 'Kf8', 'Bg5', 'Ne7', 'Ne5', 'Bxd4', 'Bg6', 'd5', 'Qf3+', 'Bf5',
+        'Bxf5', 'Bxe5', 'Be6+', 'Bf6', 'Bxf6', 'gxf6', 'Qxf6+', 'Ke8', 'Qf7#'
+      ],
+      annotations: {
+        '7... Nxe4': {
+          badge: '⚔️',
+          arrows: ['e4->c3:red', 'b4->c3:red', 'e1->g1:green'],
+          targets: ['c3'],
+          text: {
+            en: 'Black captures the central pawn and piles up on the pinned c3 knight, while White prepares to castle and open lines.',
+            pl: 'Czarne biją centralnego piona i naciskają na związanego skoczka c3, podczas gdy białe wykonują roszadę, by otworzyć linie.'
+          }
+        },
+        '10. Qb3': {
+          badge: '!!',
+          arrows: ['b3->f7:red', 'c4->f7:red', 'b3->c3:amber'],
+          targets: ['f7', 'a1'],
+          text: {
+            en: 'Offering the a1 rook! Instead of saving the rook, Greco forms a lethal Queen + Bishop battery aimed straight at f7.',
+            pl: 'Ofiara wieży a1! Zamiast ratować wieżę w rogu, Greco tworzy zabójczą baterię hetman + goniec wycelowaną w punkt f7.'
+          }
+        },
+        '11. Bxf7+': {
+          badge: '!',
+          arrows: ['f7->e8:red', 'c1->g5:green'],
+          targets: ['e8', 'f8'],
+          text: {
+            en: 'Stripping castling rights! Black’s king is forced to f8, losing the ability to castle while the a1 bishop is stranded offside.',
+            pl: 'Pozbawienie prawa do roszady! Król czarnych musi iść na f8, a czarny goniec na a1 jest całkowicie wyłączony z obrony.'
+          }
+        },
+        '12. Bg5': {
+          badge: '!',
+          arrows: ['g5->d8:red', 'f7->e8:amber'],
+          targets: ['d8', 'e7'],
+          text: {
+            en: 'Trapping the black queen! The only way to save the d8 queen is 12... Ne7, which self-pins the knight!',
+            pl: 'Atak na czarnego hetmana! Jedynym sposobem na uratowanie hetmana d8 jest 12... Se7, co natychmiast wiąże skoczka!'
+          }
+        },
+        '14. Bg6': {
+          badge: '!!',
+          arrows: ['b3->f7:red', 'g6->f7:red', 'g5->e7:amber'],
+          targets: ['f7', 'g6'],
+          text: {
+            en: 'Clearance & Mate Threat! Moving the bishop to g6 unblocks the b3 queen’s path to f7! Note that 14... Nxg6 allows 15. Qf7#.',
+            pl: 'Oczyszczenie linii! Odejście gońca na g6 otwiera hetmanowi z b3 drogę do mata na f7! Po 14... Sxg6 następuje 15. Hf7#.'
+          }
+        },
+        '15. Qf3+': {
+          badge: '!',
+          arrows: ['f3->f8:red', 'f3->f5:red', 'g6->f5:amber'],
+          targets: ['f8', 'f5'],
+          text: {
+            en: 'Shifting the attack to the f-file! Every check strips away another defender around the king.',
+            pl: 'Przeniesienie ognia na otwartą linię f! Każdy kolejny szach eliminuje następnego obrońcę wokół czarnego króla.'
+          }
+        },
+        '17. Be6+': {
+          badge: '!',
+          arrows: ['f3->f8:red', 'e6->f7:amber'],
+          targets: ['f8', 'f6'],
+          text: {
+            en: 'Discovered Check! The bishop steps to e6, unleashing the queen’s check along the f-file.',
+            pl: 'Szach z odsłonięcia! Goniec przechodzi na e6, odsłaniając linię szacha dla białego hetmana po linii f.'
+          }
+        },
+        '20. Qf7#': {
+          badge: '🏆',
+          arrows: ['f7->e8:red', 'e6->f7:green'],
+          targets: ['e8', 'f7'],
+          text: {
+            en: 'Checkmate! The queen and e6 bishop finish the king hunt right in the center.',
+            pl: 'Mat! Hetman wspierany przez gońca e6 kończy polowanie na króla w samym centrum.'
+          }
+        }
+      }
+    },
+
+    // === HARD (+2) ===
+    {
+      id: 'ba-11',
+      isBattleAnalysis: true,
+      difficulty: 'hard',
+      themes: ['sacrifice', 'kingHunt', 'attraction', 'doubleCheck'],
+      players: {
+        en: 'Edward Lasker vs. Sir George Thomas (London, 1912)',
+        pl: 'Edward Lasker – Sir George Thomas (Londyn, 1912)'
+      },
+      title: {
+        en: 'Fatal King Walk: Hunting the King from h7 All the Way to g1!',
+        pl: 'Królewski Spacer: Polowanie na króla z pola h7 aż na g1!'
+      },
+      overview: {
+        en: 'One of the most extraordinary king hunts ever played! With 11. Qxh7+!!, Edward Lasker sacrifices his queen to force the black king on a 7-move forced march from g8 all the way down to g1!',
+        pl: 'Jedno z najbardziej niezwykłych polowań na króla w dziejach szachów! Ofiarą hetmana 11. Hxh7+!! Edward Lasker zmusza czarnego króla do przymusowego marszu przez całą szachownicę z g8 aż na pole g1!'
+      },
+      moves: [
+        'd4', 'e6', 'Nf3', 'f5', 'Nc3', 'Nf6', 'Bg5', 'Be7', 'Bxf6', 'Bxf6',
+        'e4', 'fxe4', 'Nxe4', 'b6', 'Ne5', 'O-O', 'Bd3', 'Bb7', 'Qh5', 'Qe7',
+        'Qxh7+', 'Kxh7', 'Nxf6+', 'Kh6', 'Neg4+', 'Kg5', 'h4+', 'Kf4', 'g3+', 'Kf3',
+        'Be2+', 'Kg2', 'Rh2+', 'Kg1', 'Kd2#'
+      ],
+      annotations: {
+        '8. Ne5': {
+          badge: '!',
+          arrows: ['e5->f7:amber', 'd1->h5:green', 'f1->d3:green'],
+          targets: ['h7', 'f6'],
+          text: {
+            en: 'Dominant knights! Both white knights control the center and prepare a massive kingside assault.',
+            pl: 'Dominacja skoczków! Oba białe skoczki panują nad centrum i przygotowują szturm na skrzydle królewskim.'
+          }
+        },
+        '10. Qh5': {
+          badge: '⚔️',
+          arrows: ['h5->h7:red', 'd3->h7:red', 'e4->f6:red'],
+          targets: ['h7', 'f6'],
+          text: {
+            en: 'Threatening Nxf6+ followed by Qxh7#! Black plays 10... Qe7 thinking f6 and h7 are covered, but misses a stunning queen sacrifice.',
+            pl: 'Groźba Sxf6+ i Hxh7#! Czarne grają 10... He7, sądząc, że pola f6 oraz h7 są zabezpieczone, ale przeoczają genialną ofiarę hetmana.'
+          }
+        },
+        '11. Qxh7+': {
+          badge: '!!',
+          arrows: ['h7->g8:red', 'e4->f6:red', 'd3->h7:amber'],
+          targets: ['h7', 'g8'],
+          text: {
+            en: 'Immortal Queen Sacrifice! 11. Qxh7+!! forces 11... Kxh7, dragging the king onto a square where 12. Nxf6+ delivers a double check!',
+            pl: 'Nieśmiertelna ofiara hetmana! 11. Hxh7+!! wymusza 11... Kxh7, wyciągając króla na pole, gdzie 12. Sxf6+ uderza podwójnym szachem!'
+          }
+        },
+        '12. Nxf6+': {
+          badge: '!!',
+          arrows: ['f6->h7:red', 'd3->h7:red', 'f6->g8:amber'],
+          targets: ['h7', 'h6'],
+          text: {
+            en: 'Double Check! Both the f6 knight and d3 bishop check the king; since g8 is guarded by the knight, the king is forced forward to h6!',
+            pl: 'Podwójny szach! Zarówno skoczek f6, jak i goniec d3 szachują króla; ponieważ pole g8 jest odcięte przez skoczka, król musi wyjść naprzód na h6!'
+          }
+        },
+        '13. Neg4+': {
+          badge: '!',
+          arrows: ['g4->h6:red', 'f6->h7:amber', 'h2->h4:green'],
+          targets: ['h6', 'g5'],
+          text: {
+            en: 'The knights dance in harmony! Every retreat square is covered, forcing the king deeper to g5.',
+            pl: 'Perfekcyjna współpraca skoczków! Wszystkie pola odwrotu są odcięte, co zmusza czarnego króla do marszu na g5.'
+          }
+        },
+        '14. h4+': {
+          badge: '!',
+          arrows: ['h4->g5:red', 'c1->g5:amber'],
+          targets: ['g5', 'f4'],
+          text: {
+            en: 'Pawn check! Reinforced by the c1 bishop, 14. h4+ drives the black king further into White’s territory on f4.',
+            pl: 'Szach pionem! Wspierany przez gońca z c1 ruch 14. h4+ spycha czarnego króla jeszcze głębiej na pole f4.'
+          }
+        },
+        '15. g3+': {
+          badge: '!',
+          arrows: ['g3->f4:red', 'f6->e4:amber', 'g4->e5:amber'],
+          targets: ['f4', 'f3'],
+          text: {
+            en: 'Another pawn check! With e4 and e5 controlled by White’s knights, the black king must step onto f3.',
+            pl: 'Kolejny szach pionem! Ponieważ pola e4 i e5 są kontrolowane przez białe skoczki, król musi wejść na f3.'
+          }
+        },
+        '16. Be2+': {
+          badge: '!',
+          arrows: ['e2->f3:red', 'h1->h2:green'],
+          targets: ['f3', 'g2'],
+          text: {
+            en: 'Quietly retreating the bishop with check forces the black king down to the 2nd rank (`Kg2`)!',
+            pl: 'Cofnięcie gońca z szachem zmusza czarnego króla do zejścia aż na drugą linię (`Kg2`)!'
+          }
+        },
+        '18. Kd2#': {
+          badge: '🏆',
+          arrows: ['a1->g1:red', 'h2->h1:amber', 'e2->f1:amber'],
+          targets: ['g1', 'd2'],
+          text: {
+            en: 'Discovered Checkmate by the King (or O-O-O#)! Moving the king to d2 unleashes the a1 rook along the 1st rank to mate the black king on g1!',
+            pl: 'Mat z odsłonięcia ruchem króla (białe mogły też zagrać 18. O-O-O#)! Ruch 18. Kd2# odsłania wieżę a1, która matuje czarnego króla na pierwszej linii!'
+          }
+        }
+      }
+    },
+    {
+      id: 'ba-12',
+      isBattleAnalysis: true,
+      perspective: 'b',
+      difficulty: 'hard',
+      themes: ['sacrifice', 'deflection', 'fork', 'kingHunt', 'battery'],
+      players: {
+        en: 'Donald Byrne vs. Bobby Fischer (New York, 1956)',
+        pl: 'Donald Byrne – Bobby Fischer (Nowy Jork, 1956)'
+      },
+      title: {
+        en: 'The Game of the Century: 13-Year-Old Fischer’s Queen Sacrifice',
+        pl: '"Partia Stulecia": Legendarna ofiara hetmana 13-letniego Fischera'
+      },
+      overview: {
+        en: 'Viewed from Black’s perspective! At just 13 years old, Bobby Fischer stunned the chess world with 11... Na4!! and the immortal Queen sacrifice 17... Be6!!, culminating in a windmill and textbook mating net.',
+        pl: 'Widok z perspektywy czarnych! Zaledwie 13-letni Bobby Fischer zachwycił świat genialnym zwrotem 11... Sa4!! oraz nieśmiertelną ofiarą hetmana 17... Ge6!!, kończąc partię młynkiem i siecią matową.'
+      },
+      moves: [
+        'Nf3', 'Nf6', 'c4', 'g6', 'Nc3', 'Bg7', 'd4', 'O-O', 'Bf4', 'd5',
+        'Qb3', 'dxc4', 'Qxc4', 'c6', 'e4', 'Nbd7', 'Rd1', 'Nb6', 'Qc5', 'Bg4',
+        'Bg5', 'Na4', 'Qa3', 'Nxc3', 'bxc3', 'Nxe4', 'Bxe7', 'Qb6', 'Bc4', 'Nxc3',
+        'Bc5', 'Rfe8+', 'Kf1', 'Be6', 'Bxb6', 'Bxc4+', 'Kg1', 'Ne2+', 'Kf1', 'Nxd4+',
+        'Kg1', 'Ne2+', 'Kf1', 'Nc3+', 'Kg1', 'axb6', 'Qb4', 'Ra4', 'Qxb6', 'Nxd1',
+        'h3', 'Rxa2', 'Kh2', 'Nxf2', 'Re1', 'Rxe1', 'Qd8+', 'Bf8', 'Nxe1', 'Bd5',
+        'Nf3', 'Ne4', 'Qb8', 'b5', 'h4', 'h5', 'Ne5', 'Kg7', 'Kg1', 'Bc5+',
+        'Kf1', 'Ng3+', 'Ke1', 'Bb4+', 'Kd1', 'Bb3+', 'Kc1', 'Ne2+', 'Kb1', 'Nc3+',
+        'Kc1', 'Rc2#'
+      ],
+      annotations: {
+        '11. Bg5': {
+          badge: '?',
+          arrows: ['b6->a4:red', 'e1->g1:blue'],
+          targets: ['c3', 'c5', 'e4'],
+          text: {
+            en: 'Byrne moves the bishop a second time instead of castling (`11. Be2`), allowing Fischer to launch abolt-from-the-blue tactical strike!',
+            pl: 'Byrne rusza drugi raz tym samym gońcem zamiast dokończyć rozwój (`11. Ge2`), co pozwala Fischerowi na piorunujący zwrot taktyczny!'
+          }
+        },
+        '11... Na4': {
+          badge: '!!',
+          arrows: ['a4->c3:red', 'a4->c5:red', 'f6->e4:amber'],
+          targets: ['a4', 'c3', 'e4'],
+          text: {
+            en: 'Brilliant deflection! If 12. Nxa4 Nxe4! 13. Qc1 Qa5+ wins the piece back with a crushing attack against the uncastled white king.',
+            pl: 'Genialne odciągnięcie! Jeśli 12. Sxa4 Sxe4! 13. Hc1 Ha5+, czarne odzyskują figurę z miażdżącym atakiem na króla w centrum.'
+          }
+        },
+        '13... Nxe4': {
+          badge: '!',
+          arrows: ['e4->g5:red', 'f8->e8:amber'],
+          targets: ['e4', 'e1', 'g5'],
+          text: {
+            en: 'Opening the e-file! Fischer sacrifices the exchange on f8 to rip open the center before White’s king can castle.',
+            pl: 'Otwarcie linii e! Fischer oferuje jakość na f8, by rozerwać centrum, zanim biały król zdąży zrobić roszadę.'
+          }
+        },
+        '16. Bc5': {
+          badge: '?',
+          arrows: ['c5->b6:blue', 'f8->e8:red', 'g4->e6:red'],
+          targets: ['b6', 'c4', 'e1'],
+          text: {
+            en: 'Byrne thinks he has trapped Black’s queen and pinned the c3 knight — but 13-year-old Fischer has seen 10 moves deeper!',
+            pl: 'Byrne sądzi, że złapał czarnego hetmana b6 i związał skoczka c3 — ale 13-letni Fischer policzył wariant o 10 ruchów głębiej!'
+          }
+        },
+        '17... Be6': {
+          badge: '!!',
+          arrows: ['e6->c4:red', 'c3->e2:red', 'e8->e1:amber'],
+          targets: ['b6', 'c4', 'f1'],
+          text: {
+            en: 'The Move of the Century! 17... Be6!! sacrifices Black’s queen on b6 to unleash a devastating windmill of checks!',
+            pl: 'Posunięcie Stulecia! 17... Ge6!! poświęca czarnego hetmana na b6, uruchamiając niszczycielski "młynek" szachów z odsłonięcia!'
+          }
+        },
+        '20... Nxd4+': {
+          badge: '!',
+          arrows: ['c4->f1:red', 'd4->e2:green', 'd4->b3:amber'],
+          targets: ['f1', 'd4'],
+          text: {
+            en: 'The Windmill begins! Each discovered check from the c4 bishop allows Fischer’s knight to gobble up pawns and pieces with tempo.',
+            pl: 'Rusza "młynek"! Każdy szach z odsłonięcia od gońca c4 pozwala skoczkowi Fischera zbierać materiał z tempem.'
+          }
+        },
+        '25... Nxd1': {
+          badge: '!',
+          arrows: ['d1->f2:red', 'a4->a2:green'],
+          targets: ['d1', 'a2', 'f2'],
+          text: {
+            en: 'The dust clears: for the sacrificed queen, Fischer has emerged with a Rook, two Bishops, and a Pawn — while White’s rooks and pieces are completely uncoordinated!',
+            pl: 'Gdy opada kurz: za poświęconego hetmana Fischer ma wieżę, parę gońców oraz piona, a białe figury są całkowicie pozbawione współpracy!'
+          }
+        },
+        '35... Bc5+': {
+          badge: '⚔️',
+          arrows: ['c5->g1:red', 'e4->g3:red', 'd5->b3:green'],
+          targets: ['g1', 'd1', 'c1'],
+          text: {
+            en: 'Beginning the final mating net! Every black piece now converges to drive White’s king across the 1st rank to c1.',
+            pl: 'Początek sieci matowej! Wszystkie czarne figury współpracują teraz, by zapędzić białego króla po pierwszej linii na pole c1.'
+          }
+        },
+        '41... Rc2#': {
+          badge: '🏆',
+          arrows: ['c2->c1:red', 'b3->d1:amber', 'b4->d2:amber', 'c3->b1:amber'],
+          targets: ['c1', 'c2'],
+          text: {
+            en: 'Checkmate! Rook, both bishops, and knight participate in a picture-perfect mating net on c2.',
+            pl: 'Mat! Wieża, para gońców oraz skoczek tworzą podręcznikową sieć matową wokół białego króla na c1.'
+          }
+        }
+      }
     }
   ];
 

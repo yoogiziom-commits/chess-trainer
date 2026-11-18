@@ -23,7 +23,7 @@
       <div class="stat-pill">
         <span class="stat-icon">✓</span>
         <div>
-          <span id="solvedCount" class="stat-value">0/102</span>
+          <span id="solvedCount" class="stat-value">0/108</span>
           <span id="solvedLabel" class="stat-label">Rozwiązane</span>
         </div>
       </div>
@@ -80,7 +80,7 @@
     </button>
     <button type="button" id="modeAnalysisTab" class="mode-tab analysis-tab" data-mode="analysis">
       <span class="mode-tab-icon">🔍</span>
-      <span id="modeAnalysisText">Analiza Partii (6)</span>
+      <span id="modeAnalysisText">Analiza Partii (12)</span>
     </button>
     <button type="button" id="modeRushTab" class="mode-tab rush-tab" data-mode="rush">
       <span class="mode-tab-icon">⏱️</span>
@@ -176,37 +176,7 @@
         </div>
       </div>
 
-      <!-- Puzzle Info Card -->
-      <div class="panel-card puzzle-header-card">
-        <div class="puzzle-badges-row">
-          <div id="turnBadge" class="turn-badge">
-            <span id="turnDot" class="turn-dot white"></span>
-            <span id="turnText">Ruch białych</span>
-          </div>
-          <div class="puzzle-meta-right">
-            <span id="mateBadge" class="mate-badge" data-difficulty="easy">Łatwy • Mat w 1</span>
-            <span id="puzzleIdBadge" class="puzzle-id-badge">#M1-01</span>
-            <span id="puzzleSolvedBadge" class="solved-badge hidden"></span>
-          </div>
-        </div>
-
-        <h2 id="puzzleTitle" class="puzzle-title">Klasyczny mat na ostatniej linii</h2>
-        <div id="puzzleThemes" class="puzzle-themes"></div>
-      </div>
-
-      <!-- Interactive Status Banner -->
-      <div id="statusBanner" class="status-banner">
-        <span id="statusIcon" class="status-icon">⚡</span>
-        <p id="statusText" class="status-text">Ruch białych — Znajdź forsującego mata w 1 ruchu!</p>
-      </div>
-
-      <!-- Coach Hint / Post-Solve Explanation Box -->
-      <div id="coachBox" class="coach-box hidden">
-        <strong id="coachLabel" class="coach-label">Wskazówka taktyczna:</strong>
-        <p id="coachText" class="coach-text"></p>
-      </div>
-
-      <!-- Battle Analysis Replay & Targeting Controls (Visible in Battle Analysis Mode) -->
+      <!-- Battle Analysis Replay & Targeting Controls (Placed right below board on mobile!) -->
       <div id="analysisPanel" class="panel-card analysis-panel hidden">
         <div class="analysis-top-row">
           <div class="analysis-step-info">
@@ -245,12 +215,54 @@
           <button type="button" id="analysisLastBtn" class="vcr-btn" title="Koniec partii">⏭</button>
         </div>
 
+        <div class="analysis-delay-row">
+          <span id="analysisDelayLabel" class="analysis-delay-label">Tempo (Auto):</span>
+          <div id="analysisDelayGroup" class="pill-group analysis-delay-group">
+            <button type="button" class="filter-pill delay-pill active" data-delay="5">5s</button>
+            <button type="button" class="filter-pill delay-pill" data-delay="10">10s</button>
+            <button type="button" class="filter-pill delay-pill" data-delay="15">15s</button>
+            <button type="button" class="filter-pill delay-pill" data-delay="30">30s</button>
+            <button type="button" class="filter-pill delay-pill" data-delay="45">45s</button>
+            <button type="button" class="filter-pill delay-pill" data-delay="60">60s</button>
+          </div>
+        </div>
+
         <div class="analysis-legend">
           <span class="legend-item"><i class="legend-dot green"></i><span id="legendMoveText">Ruch / Plan</span></span>
           <span class="legend-item"><i class="legend-dot red"></i><span id="legendThreatText">Groźba / Cel</span></span>
           <span class="legend-item"><i class="legend-dot amber"></i><span id="legendPinText">Bateria / Związanie</span></span>
           <span class="legend-item"><i class="legend-dot blue"></i><span id="legendAltText">Alternatywa</span></span>
         </div>
+      </div>
+
+      <!-- Puzzle Info Card -->
+      <div class="panel-card puzzle-header-card">
+        <div class="puzzle-badges-row">
+          <div id="turnBadge" class="turn-badge">
+            <span id="turnDot" class="turn-dot white"></span>
+            <span id="turnText">Ruch białych</span>
+          </div>
+          <div class="puzzle-meta-right">
+            <span id="mateBadge" class="mate-badge" data-difficulty="easy">Łatwy • Mat w 1</span>
+            <span id="puzzleIdBadge" class="puzzle-id-badge">#M1-01</span>
+            <span id="puzzleSolvedBadge" class="solved-badge hidden"></span>
+          </div>
+        </div>
+
+        <h2 id="puzzleTitle" class="puzzle-title">Klasyczny mat na ostatniej linii</h2>
+        <div id="puzzleThemes" class="puzzle-themes"></div>
+      </div>
+
+      <!-- Interactive Status Banner -->
+      <div id="statusBanner" class="status-banner">
+        <span id="statusIcon" class="status-icon">⚡</span>
+        <p id="statusText" class="status-text">Ruch białych — Znajdź forsującego mata w 1 ruchu!</p>
+      </div>
+
+      <!-- Coach Hint / Post-Solve Explanation Box -->
+      <div id="coachBox" class="coach-box hidden">
+        <strong id="coachLabel" class="coach-label">Wskazówka taktyczna:</strong>
+        <p id="coachText" class="coach-text"></p>
       </div>
 
       <!-- Primary Training Controls -->

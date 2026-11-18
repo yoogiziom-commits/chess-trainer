@@ -405,6 +405,40 @@ select {
   color: #6ee7b7;
 }
 
+.analysis-delay-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.analysis-delay-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.analysis-delay-group {
+  display: flex;
+  gap: 0.28rem;
+  flex-wrap: wrap;
+}
+
+.delay-pill {
+  padding: 0.22rem 0.55rem;
+  font-size: 0.74rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.delay-pill.active {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #082f49;
+}
+
 .analysis-legend {
   display: flex;
   flex-wrap: wrap;
