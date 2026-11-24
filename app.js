@@ -450,6 +450,15 @@
         resultMsg: null
       };
 
+      // GM Training Tabs state (Woodpecker, Vision, Eval Quiz, Kotov)
+      if (!Array.isArray(this.state.mistakes)) this.state.mistakes = [];
+      if (typeof this.state.visionBest !== 'number') this.state.visionBest = 0;
+      this.gm = {
+        vision: { active: false, kind: 'click', targetSq: 'e4', score: 0, secondsLeft: 30, intervalId: null },
+        evalQuiz: { streak: 0, answered: false, evalWhite: 0, bestMove: null },
+        kotov: { candidates: [], evaluated: false, bestMove: null }
+      };
+
       this._cacheDom();
       this._bindEvents();
       this._applyThemeAndLang();
@@ -521,7 +530,11 @@
           'analysis',
           'rush',
           'sparring',
-          'endgames'
+          'endgames',
+          'woodpecker',
+          'vision',
+          'evalquiz',
+          'kotov'
         ].includes(newMode)
       )
         return;
@@ -531,6 +544,9 @@
       }
       if (newMode !== 'analysis') {
         this._stopAnalysisAutoPlay();
+      }
+      if (newMode !== 'vision') {
+        this._stopVisionTimer();
       }
       this._clearTimers();
       this.mode = newMode;
@@ -553,11 +569,24 @@
       if (this.dom.modeEndgamesTab) {
         this.dom.modeEndgamesTab.classList.toggle('active', this.mode === 'endgames');
       }
+      if (this.dom.modeWoodpeckerTab) {
+        this.dom.modeWoodpeckerTab.classList.toggle('active', this.mode === 'woodpecker');
+      }
+      if (this.dom.modeVisionTab) {
+        this.dom.modeVisionTab.classList.toggle('active', this.mode === 'vision');
+      }
+      if (this.dom.modeEvalQuizTab) {
+        this.dom.modeEvalQuizTab.classList.toggle('active', this.mode === 'evalquiz');
+      }
+      if (this.dom.modeKotovTab) {
+        this.dom.modeKotovTab.classList.toggle('active', this.mode === 'kotov');
+      }
 
       const isSparringLike = this._isSparringLikeMode();
+      const isGmSpecial = ['woodpecker', 'vision', 'evalquiz', 'kotov'].includes(this.mode);
       this.dom.filterBar.classList.toggle(
         'hidden',
-        this.mode === 'rush' || isSparringLike
+        this.mode === 'rush' || isSparringLike || isGmSpecial
       );
       this.dom.rushPanel.classList.toggle('hidden', this.mode !== 'rush');
       if (this.dom.endgamesPanel) {
@@ -569,17 +598,32 @@
       if (this.dom.sparringMaterialWrap) {
         this.dom.sparringMaterialWrap.classList.toggle('hidden', this.mode !== 'sparring');
       }
+      if (this.dom.woodpeckerPanel) {
+        this.dom.woodpeckerPanel.classList.toggle('hidden', this.mode !== 'woodpecker');
+      }
+      if (this.dom.visionPanel) {
+        this.dom.visionPanel.classList.toggle('hidden', this.mode !== 'vision');
+      }
+      if (this.dom.evalQuizPanel) {
+        this.dom.evalQuizPanel.classList.toggle('hidden', this.mode !== 'evalquiz');
+      }
+      if (this.dom.kotovPanel) {
+        this.dom.kotovPanel.classList.toggle('hidden', this.mode !== 'kotov');
+      }
       if (this.dom.analysisPanel) {
         this.dom.analysisPanel.classList.toggle('hidden', this.mode !== 'analysis');
       }
       if (this.dom.trainingControlsGrid) {
         this.dom.trainingControlsGrid.classList.toggle(
           'hidden',
-          this.mode === 'analysis' || isSparringLike
+          this.mode === 'analysis' || isSparringLike || ['vision', 'evalquiz', 'kotov'].includes(this.mode)
         );
       }
       if (this.dom.navControlsRow) {
-        this.dom.navControlsRow.classList.toggle('hidden', isSparringLike);
+        this.dom.navControlsRow.classList.toggle('hidden', isSparringLike || isGmSpecial);
+      }
+      if (this.dom.boardGrid) {
+        this.dom.boardGrid.classList.toggle('board-hide-coords', this.mode === 'vision');
       }
       this.dom.movesFilterWrap.classList.toggle('hidden', this.mode !== 'puzzles');
 
@@ -593,6 +637,22 @@
       }
       if (this.mode === 'endgames') {
         this._startEndgameDrill(this.activeEndgameKey || 'kq');
+        return;
+      }
+      if (this.mode === 'woodpecker') {
+        this._loadWoodpeckerNext();
+        return;
+      }
+      if (this.mode === 'vision') {
+        this._initVisionBoard();
+        return;
+      }
+      if (this.mode === 'evalquiz') {
+        this._loadNextEvalQuiz();
+        return;
+      }
+      if (this.mode === 'kotov') {
+        this._loadNextKotovPosition();
         return;
       }
 
@@ -691,6 +751,32 @@
         modeRushTab: document.getElementById('modeRushTab'),
         modeSparringTab: document.getElementById('modeSparringTab'),
         modeEndgamesTab: document.getElementById('modeEndgamesTab'),
+        modeWoodpeckerTab: document.getElementById('modeWoodpeckerTab'),
+        modeVisionTab: document.getElementById('modeVisionTab'),
+        modeEvalQuizTab: document.getElementById('modeEvalQuizTab'),
+        modeKotovTab: document.getElementById('modeKotovTab'),
+        woodpeckerPanel: document.getElementById('woodpeckerPanel'),
+        woodpeckerCountVal: document.getElementById('woodpeckerCountVal'),
+        woodpeckerNextBtn: document.getElementById('woodpeckerNextBtn'),
+        woodpeckerSeedBtn: document.getElementById('woodpeckerSeedBtn'),
+        visionPanel: document.getElementById('visionPanel'),
+        visionKindGroup: document.getElementById('visionKindGroup'),
+        visionTargetSq: document.getElementById('visionTargetSq'),
+        visionTimerVal: document.getElementById('visionTimerVal'),
+        visionScoreVal: document.getElementById('visionScoreVal'),
+        visionBestVal: document.getElementById('visionBestVal'),
+        visionColorBtns: document.getElementById('visionColorBtns'),
+        visionLightBtn: document.getElementById('visionLightBtn'),
+        visionDarkBtn: document.getElementById('visionDarkBtn'),
+        visionStartBtn: document.getElementById('visionStartBtn'),
+        evalQuizPanel: document.getElementById('evalQuizPanel'),
+        evalQuizStreak: document.getElementById('evalQuizStreak'),
+        evalQuizResult: document.getElementById('evalQuizResult'),
+        evalQuizNextBtn: document.getElementById('evalQuizNextBtn'),
+        kotovPanel: document.getElementById('kotovPanel'),
+        kotovCandidatesList: document.getElementById('kotovCandidatesList'),
+        kotovResult: document.getElementById('kotovResult'),
+        kotovNextBtn: document.getElementById('kotovNextBtn'),
         modePuzzlesText: document.getElementById('modePuzzlesText'),
         modeOpeningsText: document.getElementById('modeOpeningsText'),
         modeMaterialText: document.getElementById('modeMaterialText'),
@@ -906,6 +992,57 @@
       }
       if (this.dom.modeEndgamesTab) {
         this.dom.modeEndgamesTab.addEventListener('click', () => this.setMode('endgames'));
+      }
+      if (this.dom.modeWoodpeckerTab) {
+        this.dom.modeWoodpeckerTab.addEventListener('click', () => this.setMode('woodpecker'));
+      }
+      if (this.dom.modeVisionTab) {
+        this.dom.modeVisionTab.addEventListener('click', () => this.setMode('vision'));
+      }
+      if (this.dom.modeEvalQuizTab) {
+        this.dom.modeEvalQuizTab.addEventListener('click', () => this.setMode('evalquiz'));
+      }
+      if (this.dom.modeKotovTab) {
+        this.dom.modeKotovTab.addEventListener('click', () => this.setMode('kotov'));
+      }
+      if (this.dom.woodpeckerNextBtn) {
+        this.dom.woodpeckerNextBtn.addEventListener('click', () => this._loadWoodpeckerNext());
+      }
+      if (this.dom.woodpeckerSeedBtn) {
+        this.dom.woodpeckerSeedBtn.addEventListener('click', () => this._seedWoodpeckerSet());
+      }
+      if (this.dom.visionKindGroup) {
+        this.dom.visionKindGroup.addEventListener('click', (e) => {
+          const btn = e.target.closest('.vision-kind-btn');
+          if (!btn) return;
+          this.gm.vision.kind = btn.dataset.kind;
+          this.dom.visionKindGroup.querySelectorAll('.vision-kind-btn').forEach((b) => {
+            b.classList.toggle('active', b === btn);
+          });
+          this.dom.visionColorBtns.classList.toggle('hidden', this.gm.vision.kind !== 'color');
+          this._stopVisionTimer();
+          this._initVisionBoard();
+        });
+      }
+      if (this.dom.visionStartBtn) {
+        this.dom.visionStartBtn.addEventListener('click', () => this._startVisionSession());
+      }
+      if (this.dom.visionLightBtn) {
+        this.dom.visionLightBtn.addEventListener('click', () => this._answerVisionColor('light'));
+      }
+      if (this.dom.visionDarkBtn) {
+        this.dom.visionDarkBtn.addEventListener('click', () => this._answerVisionColor('dark'));
+      }
+      if (this.dom.evalQuizPanel) {
+        this.dom.evalQuizPanel.querySelectorAll('.eval-choice-btn').forEach((btn) => {
+          btn.addEventListener('click', () => this._answerEvalQuiz(btn.dataset.choice));
+        });
+      }
+      if (this.dom.evalQuizNextBtn) {
+        this.dom.evalQuizNextBtn.addEventListener('click', () => this._loadNextEvalQuiz());
+      }
+      if (this.dom.kotovNextBtn) {
+        this.dom.kotovNextBtn.addEventListener('click', () => this._loadNextKotovPosition());
       }
 
       // Coach Sparring controls
@@ -2547,6 +2684,269 @@
     // =========================================================================
     // COACH SPARRING MODE (Play vs. Built-in Bot + Blunder Guard + Threat Radar)
     // =========================================================================
+    // =========================================================================
+    // GM TRAINING TABS (WOODPECKER, VISION, EVAL QUIZ, KOTOV)
+    // =========================================================================
+    _renderWoodpeckerPanel() {
+      if (this.dom.woodpeckerCountVal) {
+        this.dom.woodpeckerCountVal.textContent = String((this.state.mistakes || []).length);
+      }
+    }
+
+    _seedWoodpeckerSet() {
+      const pool = [...(window.PUZZLES || []), ...(window.WIN_MATERIAL_PUZZLES || []), ...(window.DEFENSE_PUZZLES || [])];
+      const shuffled = pool.sort(() => Math.random() - 0.5).slice(0, 10);
+      const set = new Set(this.state.mistakes || []);
+      for (const p of shuffled) set.add(p.id);
+      this.state.mistakes = Array.from(set);
+      this._saveState();
+      this._loadWoodpeckerNext();
+    }
+
+    _loadWoodpeckerNext() {
+      this._renderWoodpeckerPanel();
+      const all = this._getAllItems();
+      const validIds = (this.state.mistakes || []).filter((id) => all.some((x) => x.id === id));
+      this.state.mistakes = validIds;
+      this._saveState();
+      this._renderWoodpeckerPanel();
+      if (validIds.length === 0) {
+        this._seedWoodpeckerSet();
+        return;
+      }
+      const nextId = validIds[Math.floor(Math.random() * validIds.length)];
+      this.loadPuzzle(nextId);
+    }
+
+    _stopVisionTimer() {
+      if (this.gm.vision.intervalId) {
+        clearInterval(this.gm.vision.intervalId);
+        this.gm.vision.intervalId = null;
+      }
+      this.gm.vision.active = false;
+    }
+
+    _initVisionBoard() {
+      this._stopVisionTimer();
+      this.engine = new window.ChessEngine('8/8/8/8/8/8/8/8 w - - 0 1');
+      this.playerColor = 'w';
+      this.flipped = false;
+      this.selectedSquare = null;
+      this.legalTargetsForSelected = [];
+      this.lastMoveSquares = null;
+      this.currentPuzzle = { id: 'vision', solution: [], title: { en: 'Board Vision', pl: 'Wizualizacja' } };
+      this.status = 'playing';
+      this.gm.vision.score = 0;
+      this.gm.vision.secondsLeft = 30;
+      this._nextVisionTarget();
+      this._renderVisionHud();
+      this._renderBoard();
+      this._renderStatusAndCoach('progress', 'Kliknij „Rozpocznij trening (30s)” i wskazuj szukane pola bez współrzędnych!');
+    }
+
+    _nextVisionTarget() {
+      const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+      const ranks = ['1', '2', '3', '4', '5', '6', '7', '8'];
+      const sq = files[Math.floor(Math.random() * 8)] + ranks[Math.floor(Math.random() * 8)];
+      this.gm.vision.targetSq = sq;
+      if (this.dom.visionTargetSq) this.dom.visionTargetSq.textContent = sq;
+    }
+
+    _renderVisionHud() {
+      if (this.dom.visionTimerVal) this.dom.visionTimerVal.textContent = `${this.gm.vision.secondsLeft}s`;
+      if (this.dom.visionScoreVal) this.dom.visionScoreVal.textContent = String(this.gm.vision.score);
+      if (this.dom.visionBestVal) this.dom.visionBestVal.textContent = String(this.state.visionBest || 0);
+    }
+
+    _startVisionSession() {
+      this._stopVisionTimer();
+      this.gm.vision.active = true;
+      this.gm.vision.score = 0;
+      this.gm.vision.secondsLeft = 30;
+      this._nextVisionTarget();
+      this._renderVisionHud();
+      this.gm.vision.intervalId = setInterval(() => {
+        if (!this.gm.vision.active) return;
+        this.gm.vision.secondsLeft--;
+        this._renderVisionHud();
+        if (this.gm.vision.secondsLeft <= 0) {
+          this._stopVisionTimer();
+          if (this.gm.vision.score > (this.state.visionBest || 0)) {
+            this.state.visionBest = this.gm.vision.score;
+            this._saveState();
+          }
+          this._renderVisionHud();
+          this.sound.solved();
+          this._renderStatusAndCoach('solved', `Koniec czasu! Twój wynik: ${this.gm.vision.score} pól w 30s!`);
+        }
+      }, 1000);
+    }
+
+    _handleVisionSquareClick(sq) {
+      if (this.gm.vision.kind !== 'click') return;
+      if (!this.gm.vision.active) this._startVisionSession();
+      if (sq === this.gm.vision.targetSq) {
+        this.gm.vision.score++;
+        this.sound.move();
+        this.lastMoveSquares = { from: sq, to: sq };
+        this._nextVisionTarget();
+      } else {
+        this.sound.wrong();
+        this.wrongMoveSquare = sq;
+        this._schedule(() => { this.wrongMoveSquare = null; this._renderBoard(); }, 300);
+      }
+      this._renderVisionHud();
+      this._renderBoard();
+    }
+
+    _answerVisionColor(choice) {
+      if (this.gm.vision.kind !== 'color') return;
+      if (!this.gm.vision.active) this._startVisionSession();
+      const sq = this.gm.vision.targetSq;
+      const c = 'abcdefgh'.indexOf(sq[0]);
+      const r = parseInt(sq[1], 10) - 1;
+      const actual = (r + c) % 2 === 1 ? 'light' : 'dark';
+      if (choice === actual) {
+        this.gm.vision.score++;
+        this.sound.move();
+        this._nextVisionTarget();
+      } else {
+        this.sound.wrong();
+      }
+      this._renderVisionHud();
+    }
+
+    _loadNextEvalQuiz() {
+      const pool = [
+        ...(window.WIN_MATERIAL_PUZZLES || []),
+        ...(window.DEFENSE_PUZZLES || []),
+        ...(window.FAMOUS_GAMES || [])
+      ];
+      const item = pool[Math.floor(Math.random() * pool.length)];
+      this.engine = new window.ChessEngine(item.fen);
+      this.playerColor = this.engine.turn;
+      this.flipped = this.playerColor === 'b';
+      this.selectedSquare = null;
+      this.legalTargetsForSelected = [];
+      this.lastMoveSquares = null;
+      this.currentPuzzle = { id: 'evalquiz', solution: [], title: item.title };
+      this.status = 'playing';
+
+      const res = this.engine.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 250 });
+      this.gm.evalQuiz.evalWhite = res ? res.evalWhite : this.engine.evaluatePosition();
+      this.gm.evalQuiz.bestMove = res ? res.move : null;
+      this.gm.evalQuiz.answered = false;
+
+      if (this.dom.evalQuizResult) this.dom.evalQuizResult.classList.add('hidden');
+      if (this.dom.evalQuizStreak) this.dom.evalQuizStreak.textContent = `Seria: ${this.gm.evalQuiz.streak}`;
+      this._renderBoard();
+      this._renderStatusAndCoach('progress', `Ruch: ${this.engine.turn === 'w' ? 'Białe' : 'Czarne'} — kto stoi lepiej?`);
+    }
+
+    _answerEvalQuiz(choice) {
+      if (this.gm.evalQuiz.answered) return;
+      this.gm.evalQuiz.answered = true;
+      const cp = this.gm.evalQuiz.evalWhite;
+      const actual = cp >= 120 ? 'white' : cp <= -120 ? 'black' : 'equal';
+      const ok = choice === actual;
+      if (ok) {
+        this.gm.evalQuiz.streak++;
+        this.sound.solved();
+      } else {
+        this.gm.evalQuiz.streak = 0;
+        this.sound.wrong();
+      }
+      const pawns = Math.abs(cp) >= 25000 ? (cp > 0 ? '+M' : '-M') : (cp > 0 ? `+${(cp / 100).toFixed(1)}` : (cp / 100).toFixed(1));
+      const bm = this.gm.evalQuiz.bestMove;
+      const bmStr = bm ? `${bm.from}→${bm.to}` : '—';
+      if (this.dom.evalQuizResult) {
+        this.dom.evalQuizResult.classList.remove('hidden');
+        this.dom.evalQuizResult.innerHTML = `${ok ? '✅ Świetna intuicja!' : '❌ Inaczej ocenia silnik.'} Ocena: <strong>${pawns}</strong>. Najlepszy ruch: <strong>${bmStr}</strong> (zielona strzałka).`;
+      }
+      if (this.dom.evalQuizStreak) this.dom.evalQuizStreak.textContent = `Seria: ${this.gm.evalQuiz.streak}`;
+      if (bm) {
+        this._renderAnalysisArrows([{ from: bm.from, to: bm.to, color: 'green' }]);
+      }
+    }
+
+    _loadNextKotovPosition() {
+      const pool = [
+        ...(window.DEFENSE_PUZZLES || []),
+        ...(window.WIN_MATERIAL_PUZZLES || []),
+        ...(window.FAMOUS_GAMES || [])
+      ];
+      const item = pool[Math.floor(Math.random() * pool.length)];
+      this.engine = new window.ChessEngine(item.fen);
+      this.playerColor = this.engine.turn;
+      this.flipped = this.playerColor === 'b';
+      this.selectedSquare = null;
+      this.legalTargetsForSelected = [];
+      this.lastMoveSquares = null;
+      this.currentPuzzle = { id: 'kotov', solution: [], title: item.title };
+      this.status = 'playing';
+      this.gm.kotov = { candidates: [], evaluated: false, bestMove: null };
+
+      ['kotovChkChecks', 'kotovChkCaptures', 'kotovChkThreats'].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.checked = false;
+      });
+      if (this.dom.kotovCandidatesList) this.dom.kotovCandidatesList.innerHTML = '';
+      if (this.dom.kotovResult) this.dom.kotovResult.classList.add('hidden');
+      this._renderBoard();
+      this._renderStatusAndCoach('progress', 'Odhacz checklistę S-B-G i wskaż na planszy 2 ruchy kandydujące!');
+    }
+
+    _addKotovCandidate(from, to, promotion) {
+      if (this.gm.kotov.evaluated) return;
+      const legal = this.engine.getLegalMoves();
+      const chosen = legal.find((m) => m.from === from && m.to === to && (!m.promotion || m.promotion === (promotion || 'q')));
+      if (!chosen) return;
+      const san = this.engine.moveToSan(chosen);
+      if (this.gm.kotov.candidates.some((c) => c.from === from && c.to === to)) return;
+
+      // Evaluate this candidate move
+      const snap = this.engine._applyRawMove(chosen);
+      const reply = this.engine.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 200 });
+      const evalWhite = reply ? reply.evalWhite : this.engine.evaluatePosition();
+      this.engine._undoRawMove(snap);
+
+      this.gm.kotov.candidates.push({ from, to, san, evalWhite });
+      this.selectedSquare = null;
+      this.legalTargetsForSelected = [];
+      this.sound.move();
+
+      if (this.dom.kotovCandidatesList) {
+        this.dom.kotovCandidatesList.innerHTML = this.gm.kotov.candidates
+          .map((c, idx) => `<span class="kotov-chip">#${idx + 1}: ${c.san}</span>`)
+          .join('');
+      }
+
+      if (this.gm.kotov.candidates.length >= 2) {
+        this.gm.kotov.evaluated = true;
+        const best = this.engine.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 250 });
+        const bestSan = best && best.move ? this.engine.moveToSan(best.move) : '—';
+        const fmt = (cp) => (Math.abs(cp) >= 25000 ? (cp > 0 ? '+M' : '-M') : (cp > 0 ? `+${(cp / 100).toFixed(1)}` : (cp / 100).toFixed(1)));
+        const [c1, c2] = this.gm.kotov.candidates;
+        if (this.dom.kotovResult) {
+          this.dom.kotovResult.classList.remove('hidden');
+          this.dom.kotovResult.innerHTML =
+            `<strong>Porównanie kandydatów:</strong><br/>` +
+            `1. <strong>${c1.san}</strong> → ocena <strong>${fmt(c1.evalWhite)}</strong><br/>` +
+            `2. <strong>${c2.san}</strong> → ocena <strong>${fmt(c2.evalWhite)}</strong><br/>` +
+            `🏆 Najlepszy ruch silnika: <strong>${bestSan}</strong> (zielona strzałka).`;
+        }
+        const arrows = [
+          { from: c1.from, to: c1.to, color: 'blue' },
+          { from: c2.from, to: c2.to, color: 'amber' }
+        ];
+        if (best && best.move) arrows.push({ from: best.move.from, to: best.move.to, color: 'green' });
+        this._renderAnalysisArrows(arrows);
+        this.sound.solved();
+      } else {
+        this._renderAnalysisArrows([{ from, to, color: 'blue' }]);
+      }
+    }
+
     _startMaterialScenario(key) {
       const scenarios = {
         punish_center: {
@@ -3150,7 +3550,12 @@
       const legal = this.engine.getLegalMoves();
       if (legal.length === 0) {
         this.sparring.gameOver = true;
-        this.status = 'solved';
+        if (this.mode === 'woodpecker' && !this.hadMistakeThisAttempt && !this.usedAssistance && this.currentPuzzle) {
+        this.state.mistakes = (this.state.mistakes || []).filter((id) => id !== this.currentPuzzle.id);
+        this._saveState();
+        this._renderWoodpeckerPanel();
+      }
+      this.status = 'solved';
         if (this.engine.inCheck(this.engine.turn)) {
           const playerWon = this.engine.turn !== this.playerColor;
           if (playerWon) {
@@ -3167,13 +3572,23 @@
       }
       if (this.engine.isInsufficientMaterial()) {
         this.sparring.gameOver = true;
-        this.status = 'solved';
+        if (this.mode === 'woodpecker' && !this.hadMistakeThisAttempt && !this.usedAssistance && this.currentPuzzle) {
+        this.state.mistakes = (this.state.mistakes || []).filter((id) => id !== this.currentPuzzle.id);
+        this._saveState();
+        this._renderWoodpeckerPanel();
+      }
+      this.status = 'solved';
         this._renderStatusAndCoach('progress', this.t('sparringDraw')('Insufficient material'));
         return true;
       }
       if (this.engine.halfMoves >= 100) {
         this.sparring.gameOver = true;
-        this.status = 'solved';
+        if (this.mode === 'woodpecker' && !this.hadMistakeThisAttempt && !this.usedAssistance && this.currentPuzzle) {
+        this.state.mistakes = (this.state.mistakes || []).filter((id) => id !== this.currentPuzzle.id);
+        this._saveState();
+        this._renderWoodpeckerPanel();
+      }
+      this.status = 'solved';
         this._renderStatusAndCoach('progress', this.t('sparringDraw')('50-move rule'));
         return true;
       }
@@ -3231,6 +3646,11 @@
       this._clearTimers();
       this.sparring.pendingBlunder = null;
       this.sparring.gameOver = true;
+      if (this.mode === 'woodpecker' && !this.hadMistakeThisAttempt && !this.usedAssistance && this.currentPuzzle) {
+        this.state.mistakes = (this.state.mistakes || []).filter((id) => id !== this.currentPuzzle.id);
+        this._saveState();
+        this._renderWoodpeckerPanel();
+      }
       this.status = 'solved';
       this._renderSparringPanel();
       this._renderStatusAndCoach('error', this.t('sparringResigned'));
@@ -3502,6 +3922,12 @@
     }
 
     _onBoardPointerDown(e) {
+      if (this.mode === 'vision') {
+        const sq = this._getSquareFromPoint(e.clientX, e.clientY);
+        if (sq) this._handleVisionSquareClick(sq);
+        return;
+      }
+      if (this.mode === 'evalquiz') return;
       if (e.button !== undefined && e.button !== 0) return;
       const sqEl = e.target.closest('.board-square');
       if (!sqEl) return;
@@ -3665,6 +4091,10 @@
     }
 
     _executeValidatedPlayerMove(from, to, promotion) {
+      if (this.mode === 'kotov') {
+        this._addKotovCandidate(from, to, promotion);
+        return;
+      }
       if (this._isSparringLikeMode()) {
         this._handleSparringPlayerMove(from, to, promotion);
         return;
@@ -3777,6 +4207,9 @@
         // Wrong move!
         this.hadMistakeThisAttempt = true;
         this.state.streak = 0;
+        if (this.currentPuzzle && this.currentPuzzle.id && !this.state.mistakes.includes(this.currentPuzzle.id)) {
+          this.state.mistakes.push(this.currentPuzzle.id);
+        }
         this._saveState();
 
         this.wrongMoveSquare = to;
@@ -3874,6 +4307,11 @@
     }
 
     _onPuzzleSolved() {
+      if (this.mode === 'woodpecker' && !this.hadMistakeThisAttempt && !this.usedAssistance && this.currentPuzzle) {
+        this.state.mistakes = (this.state.mistakes || []).filter((id) => id !== this.currentPuzzle.id);
+        this._saveState();
+        this._renderWoodpeckerPanel();
+      }
       this.status = 'solved';
       const pid = this.currentPuzzle.id;
       const isClean = !this.usedAssistance && !this.hadMistakeThisAttempt;

@@ -94,6 +94,22 @@
       <span class="mode-tab-icon">♟️</span>
       <span id="modeEndgamesText">Końcówki (40)</span>
     </button>
+    <button type="button" id="modeWoodpeckerTab" class="mode-tab gm-tab" data-mode="woodpecker">
+      <span class="mode-tab-icon">🔁</span>
+      <span id="modeWoodpeckerText">Powtórki (Woodpecker)</span>
+    </button>
+    <button type="button" id="modeVisionTab" class="mode-tab gm-tab" data-mode="vision">
+      <span class="mode-tab-icon">👁️</span>
+      <span id="modeVisionText">Wizualizacja</span>
+    </button>
+    <button type="button" id="modeEvalQuizTab" class="mode-tab gm-tab" data-mode="evalquiz">
+      <span class="mode-tab-icon">⚖️</span>
+      <span id="modeEvalQuizText">Oceń Pozycję</span>
+    </button>
+    <button type="button" id="modeKotovTab" class="mode-tab gm-tab" data-mode="kotov">
+      <span class="mode-tab-icon">🧩</span>
+      <span id="modeKotovText">Metoda Kotowa</span>
+    </button>
   </nav>
 
   <!-- Filter Bar (Difficulty: Easy / Medium / Hard + Moves + Tactical Themes) -->
@@ -200,6 +216,84 @@
           <span id="rushHistoryTitle" class="rush-history-title">Historia rundy (kliknij, aby przeanalizować):</span>
           <div id="rushHistoryList" class="rush-history-list"></div>
         </div>
+      </div>
+
+      <!-- Woodpecker / Mistakes Repetition Panel -->
+      <div id="woodpeckerPanel" class="panel-card gm-panel hidden">
+        <div class="sparring-row">
+          <span class="sparring-label">🔁 Metoda Woodpecker — Twoje błędy do poprawy:</span>
+          <strong id="woodpeckerCountVal">0</strong>
+        </div>
+        <p id="woodpeckerDesc" class="gm-desc">Każde zadanie, w którym popełnisz błąd lub użyjesz podpowiedzi, trafia tutaj. Rozwiąż je czysto bez błędu, aby zniknęło z listy!</p>
+        <div class="sparring-actions-grid">
+          <button type="button" id="woodpeckerNextBtn" class="ctrl-btn solution-btn">▶ Następna powtórka</button>
+          <button type="button" id="woodpeckerSeedBtn" class="ctrl-btn hint-btn">⚡ Losowy zestaw (10)</button>
+        </div>
+      </div>
+
+      <!-- Board Vision & Coordinates Trainer Panel -->
+      <div id="visionPanel" class="panel-card gm-panel hidden">
+        <div class="sparring-row">
+          <div id="visionKindGroup" class="pill-group sparring-pill-group">
+            <button type="button" class="filter-pill vision-kind-btn active" data-kind="click">🎯 Kliknij pole (30s)</button>
+            <button type="button" class="filter-pill vision-kind-btn" data-kind="color">⬛⬜ Kolor pola</button>
+          </div>
+        </div>
+        <div class="vision-target-box">
+          <span class="sparring-label">Znajdź pole:</span>
+          <div id="visionTargetSq" class="vision-target-sq">e4</div>
+        </div>
+        <div class="rush-hud-grid">
+          <div class="rush-hud-box">
+            <span class="rush-hud-label">Czas</span>
+            <span id="visionTimerVal" class="rush-hud-value rush-timer">30s</span>
+          </div>
+          <div class="rush-hud-box">
+            <span class="rush-hud-label">Wynik</span>
+            <span id="visionScoreVal" class="rush-hud-value rush-score">0</span>
+          </div>
+          <div class="rush-hud-box">
+            <span class="rush-hud-label">Rekord</span>
+            <span id="visionBestVal" class="rush-hud-value">0</span>
+          </div>
+        </div>
+        <div id="visionColorBtns" class="sparring-actions-grid hidden">
+          <button type="button" id="visionLightBtn" class="ctrl-btn">⬜ Jasne</button>
+          <button type="button" id="visionDarkBtn" class="ctrl-btn">⬛ Ciemne</button>
+        </div>
+        <button type="button" id="visionStartBtn" class="rush-action-btn start">▶ Rozpocznij trening (30s)</button>
+      </div>
+
+      <!-- Positional Evaluation Quiz Panel -->
+      <div id="evalQuizPanel" class="panel-card gm-panel hidden">
+        <div class="sparring-row">
+          <span class="sparring-label">⚖️ Zgadnij Ocenę Pozycji (Intuicja GM)</span>
+          <strong id="evalQuizStreak">Seria: 0</strong>
+        </div>
+        <p class="gm-desc">Oceń, kto stoi lepiej na szachownicy, zanim sprawdzisz ocenę silnika!</p>
+        <div class="eval-quiz-btns">
+          <button type="button" class="ctrl-btn eval-choice-btn" data-choice="white">♔ Białe lepiej (+)</button>
+          <button type="button" class="ctrl-btn eval-choice-btn" data-choice="equal">⚖️ Równo (=)</button>
+          <button type="button" class="ctrl-btn eval-choice-btn" data-choice="black">♚ Czarne lepiej (-)</button>
+        </div>
+        <div id="evalQuizResult" class="gm-result hidden"></div>
+        <button type="button" id="evalQuizNextBtn" class="ctrl-btn solution-btn">▶ Następna pozycja</button>
+      </div>
+
+      <!-- Kotov Candidate Moves + S-B-G Checklist Panel -->
+      <div id="kotovPanel" class="panel-card gm-panel hidden">
+        <div class="sparring-row">
+          <span class="sparring-label">🧩 Metoda Kotowa — Checklista S-B-G</span>
+        </div>
+        <div class="kotov-checklist">
+          <label class="kotov-check-item"><input type="checkbox" id="kotovChkChecks" /> 1. Szachy (moje i rywala)</label>
+          <label class="kotov-check-item"><input type="checkbox" id="kotovChkCaptures" /> 2. Bicia (czy coś wisi?)</label>
+          <label class="kotov-check-item"><input type="checkbox" id="kotovChkThreats" /> 3. Groźby (co zagra rywal?)</label>
+        </div>
+        <p id="kotovPrompt" class="gm-desc">Wykonaj na szachownicy <strong>2 ruchy kandydujące</strong> — trener porówna oba i wskaże najlepszy!</p>
+        <div id="kotovCandidatesList" class="kotov-candidates"></div>
+        <div id="kotovResult" class="gm-result hidden"></div>
+        <button type="button" id="kotovNextBtn" class="ctrl-btn solution-btn">▶ Następna pozycja</button>
       </div>
 
       <!-- Dedicated Endgames Catalog Panel (Visible in Endgames Mode) -->
