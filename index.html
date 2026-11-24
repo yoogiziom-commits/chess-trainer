@@ -86,6 +86,14 @@
       <span class="mode-tab-icon">⏱️</span>
       <span id="modeRushText">Tryb Błyskawiczny</span>
     </button>
+    <button type="button" id="modeSparringTab" class="mode-tab sparring-tab" data-mode="sparring">
+      <span class="mode-tab-icon">🤖</span>
+      <span id="modeSparringText">Sparing z Trenerem</span>
+    </button>
+    <button type="button" id="modeEndgamesTab" class="mode-tab endgames-tab" data-mode="endgames">
+      <span class="mode-tab-icon">♟️</span>
+      <span id="modeEndgamesText">Końcówki (40)</span>
+    </button>
   </nav>
 
   <!-- Filter Bar (Difficulty: Easy / Medium / Hard + Moves + Tactical Themes) -->
@@ -124,6 +132,7 @@
       <div id="boardContainer" class="board-container">
         <div id="boardGrid" class="board-grid" role="grid" aria-label="Szachownica"></div>
         <svg id="arrowSvg" class="arrow-overlay" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+        <button type="button" id="boardHintFab" class="board-hint-fab" title="Podpowiedź (skrót: H)" aria-label="Podpowiedź (skrót: H)">💡</button>
 
         <!-- Promotion Picker Modal Overlay -->
         <div id="promoModal" class="promo-modal hidden" role="dialog" aria-modal="true">
@@ -139,6 +148,23 @@
     <aside class="panel-column">
       <!-- Speed Rush Mode Panel (Visible in Rush Mode) -->
       <div id="rushPanel" class="panel-card rush-panel hidden">
+        <div class="sparring-row">
+          <div id="rushKindGroup" class="pill-group sparring-pill-group">
+            <button type="button" class="filter-pill rush-kind-btn active" data-kind="bot" id="rushKindBot">🤖 Blitz z Botem</button>
+            <button type="button" class="filter-pill rush-kind-btn" data-kind="puzzles" id="rushKindPuzzles">🧩 Puzzle Rush</button>
+          </div>
+        </div>
+
+        <div id="rushBotLevelRow" class="sparring-row">
+          <span id="rushBotLevelLabel" class="sparring-label">Poziom bota:</span>
+          <div id="rushBotLevelGroup" class="pill-group sparring-pill-group">
+            <button type="button" class="filter-pill rush-bot-lvl-btn" data-level="beginner">~800</button>
+            <button type="button" class="filter-pill rush-bot-lvl-btn active" data-level="club">~1200</button>
+            <button type="button" class="filter-pill rush-bot-lvl-btn" data-level="tactical">~1500</button>
+            <button type="button" class="filter-pill rush-bot-lvl-btn" data-level="strong">~1800+</button>
+          </div>
+        </div>
+
         <div class="rush-header-row">
           <div id="rushVariantGroup" class="pill-group rush-variant-group">
             <button type="button" class="filter-pill rush-variant-btn active" data-variant="3m" id="rushBtn3m">⚡ 3 Min</button>
@@ -173,6 +199,147 @@
         <div id="rushHistoryWrap" class="rush-history-wrap hidden">
           <span id="rushHistoryTitle" class="rush-history-title">Historia rundy (kliknij, aby przeanalizować):</span>
           <div id="rushHistoryList" class="rush-history-list"></div>
+        </div>
+      </div>
+
+      <!-- Dedicated Endgames Catalog Panel (Visible in Endgames Mode) -->
+      <div id="endgamesPanel" class="panel-card endgames-panel hidden">
+        <div class="endgames-header">
+          <span id="endgamesPanelTitle" class="sparring-label">♟️ Wybierz końcówkę do treningu z botem (40):</span>
+        </div>
+        <div id="sparringEndgamesGroup" class="endgames-grid">
+          <button type="button" class="filter-pill endgame-drill-btn active" data-endgame="kq">🟢 K+H vs K</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kr">🟢 K+W vs K</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="krr">🟢 2 Wieże (Schodki)</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kbb">🟢 2 Gońce vs K</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kp">🟡 Opozycja (K+P)</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kp_double">🟡 Zdublowane pionki</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kp_edge">🟡 Pionek na bandzie</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="race">🟡 Wyścig pionków</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="breakthrough">🟡 Przełom 3 vs 3</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="outside_passer">🟡 Oddalony wolny pionek</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="protected_passer">🟡 Broniony wolny pionek</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="q_vs_p7">🟡 Hetman vs Pionek 7. linii</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="rook_7th">🟡 Wieża na 7. linii</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="rook_behind">🟡 Wieża za pionkiem</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="two_connected">🟡 2 połączone pionki vs W</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="same_bishops">🟡 Jednopolowe gońce</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="knight_endgame">🟡 Końcówka skoczkowa</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="lucena">🔴 Most Luceny</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="philidor">🔴 Obrona Philidora</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="vancura">🔴 Obrona Vancury</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="triangulation">🔴 Triangulacja (Zugzwang)</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="convert">🔴 Przewaga skoczka</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="exchange_up">🔴 Przewaga jakości (W vs S)</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="good_knight_bad_bishop">🔴 Dobry S vs Zły G</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="opp_bishops">🔴 Różnopolowe gońce</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="q_endgame">🔴 Końcówka hetmańska</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kq_vs_kr">🔴 Hetman vs Wieża</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kr_vs_kb">🔴 Wieża vs Goniec (Obrona)</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kr_vs_kn">🔴 Wieża vs Skoczek</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="kbn">🔴 Goniec + Skoczek vs K</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="distant_opp">🟡 Daleka opozycja</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="wrong_bishop">🟡 Zły goniec (Remis)</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="minority_attack">🟡 Większość 3 vs 2</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="fortress_b_p">🟡 Hetman vs Forteca G+P</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="two_rooks_endgame">🔴 Czterowieżowa (+P)</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="rb_vs_r">🔴 Wieża + Goniec vs W</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="rn_vs_r">🔴 Wieża + Skoczek vs W</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="q_vs_bb">🔴 Hetman vs 2 Gońce</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="q_vs_nn">🔴 Hetman vs 2 Skoczki</button>
+          <button type="button" class="filter-pill endgame-drill-btn" data-endgame="queen_vs_r_p">🔴 Hetman vs Wieża + P</button>
+        </div>
+      </div>
+
+      <!-- Coach Sparring Mode Panel (Visible in Sparring & Endgames Modes) -->
+      <div id="sparringPanel" class="panel-card sparring-panel hidden">
+        <div class="sparring-row">
+          <span id="sparringLevelLabel" class="sparring-label">Poziom bota:</span>
+          <div id="sparringLevelGroup" class="pill-group sparring-pill-group">
+            <button type="button" class="filter-pill sparring-level-btn" data-level="beginner" id="sparringLvlBeginner">~800</button>
+            <button type="button" class="filter-pill sparring-level-btn active" data-level="club" id="sparringLvlClub">~1200</button>
+            <button type="button" class="filter-pill sparring-level-btn" data-level="tactical" id="sparringLvlTactical">~1500</button>
+            <button type="button" class="filter-pill sparring-level-btn" data-level="strong" id="sparringLvlStrong">~1800+</button>
+          </div>
+        </div>
+
+        <div class="sparring-row">
+          <span id="sparringColorLabel" class="sparring-label">Graj jako:</span>
+          <div id="sparringColorGroup" class="pill-group sparring-pill-group">
+            <button type="button" class="filter-pill sparring-color-btn active" data-color="w" id="sparringColorW">♔ Białe</button>
+            <button type="button" class="filter-pill sparring-color-btn" data-color="b" id="sparringColorB">♚ Czarne</button>
+          </div>
+        </div>
+
+        <div class="sparring-toggles-row">
+          <button type="button" id="sparringGuardBtn" class="analysis-toggle-btn active">
+            🛡️ <span id="sparringGuardText">Strażnik Błędów: WŁ.</span>
+          </button>
+          <button type="button" id="sparringRadarBtn" class="analysis-toggle-btn active">
+            📡 <span id="sparringRadarText">Radar Zagrożeń: WŁ.</span>
+          </button>
+        </div>
+
+        <div class="sparring-eval-wrap">
+          <div class="sparring-eval-header">
+            <span id="sparringEvalLabel">Ocena pozycji</span>
+            <strong id="sparringEvalVal">0.0</strong>
+          </div>
+          <div class="sparring-eval-track">
+            <div id="sparringEvalFill" class="sparring-eval-fill" style="width: 50%"></div>
+          </div>
+        </div>
+
+        <div id="sparringBlunderBox" class="sparring-blunder-box hidden">
+          <div class="sparring-blunder-head">
+            <span>⚠️</span>
+            <strong id="sparringBlunderTitle">Strażnik Błędów!</strong>
+          </div>
+          <p id="sparringBlunderText" class="sparring-blunder-text"></p>
+          <div class="sparring-blunder-actions">
+            <button type="button" id="sparringBlunderUndoBtn" class="ctrl-btn hint-btn">↩ <span id="sparringBlunderUndoText">Cofnij i popraw</span></button>
+            <button type="button" id="sparringBlunderKeepBtn" class="ctrl-btn">▶ <span id="sparringBlunderKeepText">Zagraj mimo to</span></button>
+          </div>
+        </div>
+
+        <div class="sparring-actions-grid">
+          <button type="button" id="sparringNewGameBtn" class="ctrl-btn solution-btn">
+            <span>▶</span>
+            <span id="sparringNewGameText">Nowa partia</span>
+          </button>
+          <button type="button" id="sparringUndoBtn" class="ctrl-btn">
+            <span>↩</span>
+            <span id="sparringUndoText">Cofnij</span>
+          </button>
+          <button type="button" id="sparringHintBtn" class="ctrl-btn hint-btn">
+            <span>💡</span>
+            <span id="sparringHintText">Podpowiedź</span>
+          </button>
+          <button type="button" id="sparringResignBtn" class="ctrl-btn">
+            <span>🏳️</span>
+            <span id="sparringResignText">Poddaj się</span>
+          </button>
+        </div>
+
+        <div id="sparringMaterialWrap" class="sparring-endgames-wrap">
+          <span id="sparringMaterialLabel" class="sparring-label">⚔️ Scenariusze treningowe (vs Bot):</span>
+          <div id="sparringMaterialGroup" class="pill-group sparring-endgames-group">
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="punish_center">⚔️ Król w centrum</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="kingside_storm">⚔️ Szturm na króla</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="pin_pressure">⚔️ Presja na związaniu</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="fork_hunt">⚔️ Walka o centrum</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="win_exchange">⚔️ Otwarta linia c</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="convert_piece">⚔️ Realizuj +1 figurę</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="mate_backrank">🎯 Słaba 8. linia</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="mate_kingside">🎯 Atak H+G na roszadę</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="mate_battery">🎯 Atak na linii h</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="open_italian">📖 Partia Włoska</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="open_london">📖 System Londyński</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="open_carokann">📖 Caro-Kann (Czarne)</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="def_castled">🛡️ Obrona roszady</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="def_pin">🛡️ Wyjście ze związania</button>
+            <button type="button" class="filter-pill endgame-drill-btn" data-scenario="def_down_pawn">🛡️ Obrona z -1 pionkiem</button>
+          </div>
         </div>
       </div>
 
@@ -233,6 +400,32 @@
           <span class="legend-item"><i class="legend-dot amber"></i><span id="legendPinText">Bateria / Związanie</span></span>
           <span class="legend-item"><i class="legend-dot blue"></i><span id="legendAltText">Alternatywa</span></span>
         </div>
+
+        <div class="analysis-extra-actions">
+          <button type="button" id="analysisImportBtn" class="ctrl-btn">
+            <span>📋</span>
+            <span id="analysisImportText">Wklej PGN (Moja partia)</span>
+          </button>
+          <button type="button" id="analysisRetryBotBtn" class="ctrl-btn solution-btn">
+            <span>🤖</span>
+            <span id="analysisRetryBotText">Zagraj stąd z botem</span>
+          </button>
+        </div>
+
+        <div id="pgnImportBox" class="pgn-import-box hidden">
+          <label for="pgnInput" id="pgnImportLabel" class="sparring-label">Wklej PGN lub zapis ruchów (np. z Coddy / Lichess / Chess.com):</label>
+          <textarea id="pgnInput" class="pgn-textarea" rows="4" placeholder="1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 ..."></textarea>
+          <div class="pgn-import-actions">
+            <button type="button" id="pgnLoadBtn" class="ctrl-btn hint-btn">🔍 <span id="pgnLoadText">Analizuj partię</span></button>
+            <button type="button" id="pgnCancelBtn" class="ctrl-btn">✕ <span id="pgnCancelText">Anuluj</span></button>
+          </div>
+          <p id="pgnErrorMsg" class="pgn-error-msg hidden"></p>
+        </div>
+
+        <div id="analysisBlundersWrap" class="analysis-blunders-wrap hidden">
+          <span id="analysisBlundersLabel" class="sparring-label">Wykryte błędy (kliknij, aby przejść):</span>
+          <div id="analysisBlundersList" class="analysis-blunders-list"></div>
+        </div>
       </div>
 
       <!-- Puzzle Info Card -->
@@ -282,6 +475,10 @@
         <button type="button" id="flipBtn" class="ctrl-btn">
           <span>⇅</span>
           <span id="flipBtnText">Obróć</span>
+        </button>
+        <button type="button" id="playPuzzleVsBotBtn" class="ctrl-btn solution-btn" style="grid-column: span 2;">
+          <span>🤖</span>
+          <span id="playPuzzleVsBotText">Rozegraj tę pozycję z botem</span>
         </button>
       </div>
 

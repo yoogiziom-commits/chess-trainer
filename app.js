@@ -24,6 +24,50 @@
       modeFamousTab: (n) => `Famous Games (${n})`,
       modeAnalysisTab: (n) => `Battle Analysis (${n})`,
       modeRushTab: 'Speed Rush',
+      modeSparringTab: 'Coach Sparring',
+      modeEndgamesTab: 'Endgames (40)',
+      endgamesPanelTitle: '♟️ Pick an Endgame Drill vs Bot (40):',
+      sparringLevelLabel: 'Bot strength:',
+      sparringColorLabel: 'Play as:',
+      sparringColorW: '♔ White',
+      sparringColorB: '♚ Black',
+      sparringGuardOn: 'Blunder Guard: ON',
+      sparringGuardOff: 'Blunder Guard: OFF',
+      sparringRadarOn: 'Threat Radar: ON',
+      sparringRadarOff: 'Threat Radar: OFF',
+      sparringEvalLabel: 'Position Eval',
+      sparringBlunderTitle: 'Blunder Guard!',
+      sparringBlunderUndo: 'Undo & Retry',
+      sparringBlunderKeep: 'Play Anyway',
+      sparringNewGame: 'New Game',
+      sparringUndo: 'Undo',
+      sparringHint: 'Coach Hint',
+      sparringResign: 'Resign',
+      sparringTitle: (lvl) => `Coach Sparring (${lvl})`,
+      sparringYourTurn: 'Your turn — play a solid move and watch for threats!',
+      sparringBotThinking: 'Bot is thinking...',
+      sparringBlunderMsg: (pawns, refSan) =>
+        `Watch out! That move loses ~${pawns} pawns (opponent can play ${refSan}). Red arrow = threat, blue = safer move.`,
+      sparringBlunderMateMsg: (refSan) =>
+        `Danger! That move walks into checkmate (opponent plays ${refSan}). Undo and protect your king!`,
+      sparringHintMsg: (san) => `Coach suggests: ${san} (green arrow).`,
+      sparringWinMate: 'Checkmate! You beat the bot!',
+      sparringLossMate: 'Checkmate — the bot won this round. Try again!',
+      sparringDraw: (reason) => `Draw (${reason}). Good fight!`,
+      sparringResigned: 'You resigned. Click "New Game" to play again!',
+      sparringEndgamesLabel: '♟️ Endgame Drills (vs Bot):',
+      sparringMaterialLabel: '⚔️ Win Material (Middlegame Scenarios vs Bot):',
+      playPuzzleVsBot: 'Play This Position vs Bot',
+      analysisImportBtn: 'Paste PGN (My Game)',
+      analysisRetryBotBtn: 'Retry from Here vs Bot',
+      pgnImportLabel: 'Paste PGN or move list (e.g. from Coddy / Lichess / Chess.com):',
+      pgnLoadBtn: 'Analyze Game',
+      pgnCancelBtn: 'Cancel',
+      pgnErrorEmpty: 'Please paste a PGN or list of moves first.',
+      pgnErrorNoMoves: 'Could not parse any valid chess moves from that text.',
+      analysisBlundersLabel: 'Detected blunders (click to jump):',
+      analysisNoBlunders: 'No major blunders detected!',
+      customGameTitle: (w, b) => (w && b ? `${w} vs ${b}` : 'My Imported Game'),
       analysisStepLabel: 'Move:',
       analysisAutoTargetOn: 'Auto-Targets: ON',
       analysisAutoTargetOff: 'Auto-Targets: OFF',
@@ -161,6 +205,50 @@
       modeFamousTab: (n) => `Słynne Partie (${n})`,
       modeAnalysisTab: (n) => `Analiza Partii (${n})`,
       modeRushTab: 'Tryb Błyskawiczny',
+      modeSparringTab: 'Sparing z Trenerem',
+      modeEndgamesTab: 'Końcówki (40)',
+      endgamesPanelTitle: '♟️ Wybierz końcówkę do treningu z botem (40):',
+      sparringLevelLabel: 'Poziom bota:',
+      sparringColorLabel: 'Graj jako:',
+      sparringColorW: '♔ Białe',
+      sparringColorB: '♚ Czarne',
+      sparringGuardOn: 'Strażnik Błędów: WŁ.',
+      sparringGuardOff: 'Strażnik Błędów: WYŁ.',
+      sparringRadarOn: 'Radar Zagrożeń: WŁ.',
+      sparringRadarOff: 'Radar Zagrożeń: WYŁ.',
+      sparringEvalLabel: 'Ocena pozycji',
+      sparringBlunderTitle: 'Strażnik Błędów!',
+      sparringBlunderUndo: 'Cofnij i popraw',
+      sparringBlunderKeep: 'Zagraj mimo to',
+      sparringNewGame: 'Nowa partia',
+      sparringUndo: 'Cofnij',
+      sparringHint: 'Podpowiedź',
+      sparringResign: 'Poddaj się',
+      sparringTitle: (lvl) => `Sparing z Trenerem (${lvl})`,
+      sparringYourTurn: 'Twój ruch — graj solidnie i pilnuj niebronionych figur!',
+      sparringBotThinking: 'Bot myśli...',
+      sparringBlunderMsg: (pawns, refSan) =>
+        `Uwaga! Ten ruch traci ok. ${pawns} piona (grozi ${refSan}). Czerwona strzałka = groźba, niebieska = lepszy ruch.`,
+      sparringBlunderMateMsg: (refSan) =>
+        `Niebezpieczeństwo! Ten ruch pozwala na mata (grozi ${refSan}). Cofnij i zabezpiecz króla!`,
+      sparringHintMsg: (san) => `Trener poleca: ${san} (zielona strzałka).`,
+      sparringWinMate: 'Szach-mat! Pokonałeś bota!',
+      sparringLossMate: 'Szach-mat — tym razem wygrał bot. Spróbuj ponownie!',
+      sparringDraw: (reason) => `Remis (${reason}). Dobra walka!`,
+      sparringResigned: 'Poddałeś partię. Kliknij „Nowa partia”, aby zagrać jeszcze raz!',
+      sparringEndgamesLabel: '♟️ Ćwiczenia końcówek (vs Bot):',
+      sparringMaterialLabel: '⚔️ Zdobądź Przewagę (Scenariusze vs Bot):',
+      playPuzzleVsBot: 'Rozegraj tę pozycję z botem',
+      analysisImportBtn: 'Wklej PGN (Moja partia)',
+      analysisRetryBotBtn: 'Zagraj stąd z botem',
+      pgnImportLabel: 'Wklej PGN lub zapis ruchów (np. z Coddy / Lichess / Chess.com):',
+      pgnLoadBtn: 'Analizuj partię',
+      pgnCancelBtn: 'Anuluj',
+      pgnErrorEmpty: 'Wklej najpierw PGN lub listę ruchów.',
+      pgnErrorNoMoves: 'Nie udało się odczytać żadnych poprawnych ruchów szachowych.',
+      analysisBlundersLabel: 'Wykryte błędy (kliknij, aby przejść):',
+      analysisNoBlunders: 'Nie wykryto dużych błędów!',
+      customGameTitle: (w, b) => (w && b ? `${w} – ${b}` : 'Moja zaimportowana partia'),
       analysisStepLabel: 'Posunięcie:',
       analysisAutoTargetOn: 'Auto-Cele: WŁ.',
       analysisAutoTargetOff: 'Auto-Cele: WYŁ.',
@@ -327,6 +415,8 @@
       this.rush = {
         active: false,
         finished: false,
+        vsBot: true, // true = Blitz vs Bot, false = Puzzle Rush
+        botLevel: 'club', // 'beginner' | 'club' | 'tactical' | 'strong'
         variant: '3m', // '3m' | '5m' | 'survival'
         score: 0,
         lives: 3,
@@ -345,6 +435,19 @@
         countdownSec: 5,
         autoTargets: true,
         inspectSquare: null
+      };
+
+      // Coach Sparring state
+      this.sparring = {
+        level: 'club', // 'beginner' | 'club' | 'tactical' | 'strong'
+        playerColor: 'w', // 'w' | 'b'
+        blunderGuard: true,
+        threatRadar: true,
+        evalWhite: 0,
+        pendingBlunder: null, // { moveObj, from, to, promotion, coachInfo }
+        hintMove: null, // { from, to }
+        gameOver: false,
+        resultMsg: null
       };
 
       this._cacheDom();
@@ -403,11 +506,23 @@
       return window.PUZZLES;
     }
 
+    _isSparringLikeMode() {
+      return this.mode === 'sparring' || this.mode === 'endgames';
+    }
+
     setMode(newMode, targetId = null) {
       if (
-        !['puzzles', 'openings', 'material', 'defense', 'famous', 'analysis', 'rush'].includes(
-          newMode
-        )
+        ![
+          'puzzles',
+          'openings',
+          'material',
+          'defense',
+          'famous',
+          'analysis',
+          'rush',
+          'sparring',
+          'endgames'
+        ].includes(newMode)
       )
         return;
       if (this.rush.active && newMode !== 'rush') {
@@ -417,6 +532,7 @@
       if (newMode !== 'analysis') {
         this._stopAnalysisAutoPlay();
       }
+      this._clearTimers();
       this.mode = newMode;
       this.filterDifficulty = 'all';
       this.filterMoves = 'all';
@@ -431,20 +547,54 @@
         this.dom.modeAnalysisTab.classList.toggle('active', this.mode === 'analysis');
       }
       this.dom.modeRushTab.classList.toggle('active', this.mode === 'rush');
+      if (this.dom.modeSparringTab) {
+        this.dom.modeSparringTab.classList.toggle('active', this.mode === 'sparring');
+      }
+      if (this.dom.modeEndgamesTab) {
+        this.dom.modeEndgamesTab.classList.toggle('active', this.mode === 'endgames');
+      }
 
-      this.dom.filterBar.classList.toggle('hidden', this.mode === 'rush');
+      const isSparringLike = this._isSparringLikeMode();
+      this.dom.filterBar.classList.toggle(
+        'hidden',
+        this.mode === 'rush' || isSparringLike
+      );
       this.dom.rushPanel.classList.toggle('hidden', this.mode !== 'rush');
+      if (this.dom.endgamesPanel) {
+        this.dom.endgamesPanel.classList.toggle('hidden', this.mode !== 'endgames');
+      }
+      if (this.dom.sparringPanel) {
+        this.dom.sparringPanel.classList.toggle('hidden', !isSparringLike);
+      }
+      if (this.dom.sparringMaterialWrap) {
+        this.dom.sparringMaterialWrap.classList.toggle('hidden', this.mode !== 'sparring');
+      }
       if (this.dom.analysisPanel) {
         this.dom.analysisPanel.classList.toggle('hidden', this.mode !== 'analysis');
       }
       if (this.dom.trainingControlsGrid) {
-        this.dom.trainingControlsGrid.classList.toggle('hidden', this.mode === 'analysis');
+        this.dom.trainingControlsGrid.classList.toggle(
+          'hidden',
+          this.mode === 'analysis' || isSparringLike
+        );
+      }
+      if (this.dom.navControlsRow) {
+        this.dom.navControlsRow.classList.toggle('hidden', isSparringLike);
       }
       this.dom.movesFilterWrap.classList.toggle('hidden', this.mode !== 'puzzles');
 
       this._applyThemeAndLang();
       this._populateThemeFilter();
       this._updateFilteredPuzzles(false);
+
+      if (this.mode === 'sparring') {
+        this._startSparringGame();
+        return;
+      }
+      if (this.mode === 'endgames') {
+        this._startEndgameDrill(this.activeEndgameKey || 'kq');
+        return;
+      }
 
       if (this.mode === 'rush') {
         this._renderRushHud();
@@ -539,6 +689,8 @@
         modeFamousTab: document.getElementById('modeFamousTab'),
         modeAnalysisTab: document.getElementById('modeAnalysisTab'),
         modeRushTab: document.getElementById('modeRushTab'),
+        modeSparringTab: document.getElementById('modeSparringTab'),
+        modeEndgamesTab: document.getElementById('modeEndgamesTab'),
         modePuzzlesText: document.getElementById('modePuzzlesText'),
         modeOpeningsText: document.getElementById('modeOpeningsText'),
         modeMaterialText: document.getElementById('modeMaterialText'),
@@ -546,8 +698,54 @@
         modeFamousText: document.getElementById('modeFamousText'),
         modeAnalysisText: document.getElementById('modeAnalysisText'),
         modeRushText: document.getElementById('modeRushText'),
+        modeSparringText: document.getElementById('modeSparringText'),
+        modeEndgamesText: document.getElementById('modeEndgamesText'),
+        endgamesPanel: document.getElementById('endgamesPanel'),
+        endgamesPanelTitle: document.getElementById('endgamesPanelTitle'),
+        boardHintFab: document.getElementById('boardHintFab'),
         filterBar: document.getElementById('filterBar'),
         movesFilterWrap: document.getElementById('movesFilterWrap'),
+        navControlsRow: document.getElementById('navControlsRow'),
+
+        sparringPanel: document.getElementById('sparringPanel'),
+        sparringLevelLabel: document.getElementById('sparringLevelLabel'),
+        sparringLevelGroup: document.getElementById('sparringLevelGroup'),
+        sparringColorLabel: document.getElementById('sparringColorLabel'),
+        sparringColorGroup: document.getElementById('sparringColorGroup'),
+        sparringColorW: document.getElementById('sparringColorW'),
+        sparringColorB: document.getElementById('sparringColorB'),
+        sparringGuardBtn: document.getElementById('sparringGuardBtn'),
+        sparringGuardText: document.getElementById('sparringGuardText'),
+        sparringRadarBtn: document.getElementById('sparringRadarBtn'),
+        sparringRadarText: document.getElementById('sparringRadarText'),
+        sparringEvalLabel: document.getElementById('sparringEvalLabel'),
+        sparringEvalVal: document.getElementById('sparringEvalVal'),
+        sparringEvalFill: document.getElementById('sparringEvalFill'),
+        sparringBlunderBox: document.getElementById('sparringBlunderBox'),
+        sparringBlunderTitle: document.getElementById('sparringBlunderTitle'),
+        sparringBlunderText: document.getElementById('sparringBlunderText'),
+        sparringBlunderUndoBtn: document.getElementById('sparringBlunderUndoBtn'),
+        sparringBlunderUndoText: document.getElementById('sparringBlunderUndoText'),
+        sparringBlunderKeepBtn: document.getElementById('sparringBlunderKeepBtn'),
+        sparringBlunderKeepText: document.getElementById('sparringBlunderKeepText'),
+        sparringNewGameBtn: document.getElementById('sparringNewGameBtn'),
+        sparringNewGameText: document.getElementById('sparringNewGameText'),
+        sparringUndoBtn: document.getElementById('sparringUndoBtn'),
+        sparringUndoText: document.getElementById('sparringUndoText'),
+        sparringHintBtn: document.getElementById('sparringHintBtn'),
+        sparringHintText: document.getElementById('sparringHintText'),
+        sparringResignBtn: document.getElementById('sparringResignBtn'),
+        sparringResignText: document.getElementById('sparringResignText'),
+        sparringEndgamesLabel: document.getElementById('sparringEndgamesLabel'),
+        sparringEndgamesGroup: document.getElementById('sparringEndgamesGroup'),
+        sparringMaterialWrap: document.getElementById('sparringMaterialWrap'),
+        sparringMaterialLabel: document.getElementById('sparringMaterialLabel'),
+        sparringMaterialGroup: document.getElementById('sparringMaterialGroup'),
+        playPuzzleVsBotBtn: document.getElementById('playPuzzleVsBotBtn'),
+        playPuzzleVsBotText: document.getElementById('playPuzzleVsBotText'),
+        rushKindGroup: document.getElementById('rushKindGroup'),
+        rushBotLevelRow: document.getElementById('rushBotLevelRow'),
+        rushBotLevelGroup: document.getElementById('rushBotLevelGroup'),
 
         analysisPanel: document.getElementById('analysisPanel'),
         analysisStepLabel: document.getElementById('analysisStepLabel'),
@@ -556,6 +754,21 @@
         analysisAutoTargetBtn: document.getElementById('analysisAutoTargetBtn'),
         analysisAutoTargetText: document.getElementById('analysisAutoTargetText'),
         analysisFlipBtn: document.getElementById('analysisFlipBtn'),
+        analysisImportBtn: document.getElementById('analysisImportBtn'),
+        analysisImportText: document.getElementById('analysisImportText'),
+        analysisRetryBotBtn: document.getElementById('analysisRetryBotBtn'),
+        analysisRetryBotText: document.getElementById('analysisRetryBotText'),
+        pgnImportBox: document.getElementById('pgnImportBox'),
+        pgnImportLabel: document.getElementById('pgnImportLabel'),
+        pgnInput: document.getElementById('pgnInput'),
+        pgnLoadBtn: document.getElementById('pgnLoadBtn'),
+        pgnLoadText: document.getElementById('pgnLoadText'),
+        pgnCancelBtn: document.getElementById('pgnCancelBtn'),
+        pgnCancelText: document.getElementById('pgnCancelText'),
+        pgnErrorMsg: document.getElementById('pgnErrorMsg'),
+        analysisBlundersWrap: document.getElementById('analysisBlundersWrap'),
+        analysisBlundersLabel: document.getElementById('analysisBlundersLabel'),
+        analysisBlundersList: document.getElementById('analysisBlundersList'),
         analysisProgressFill: document.getElementById('analysisProgressFill'),
         analysisFirstBtn: document.getElementById('analysisFirstBtn'),
         analysisPrevBtn: document.getElementById('analysisPrevBtn'),
@@ -688,6 +901,160 @@
         this.dom.modeAnalysisTab.addEventListener('click', () => this.setMode('analysis'));
       }
       this.dom.modeRushTab.addEventListener('click', () => this.setMode('rush'));
+      if (this.dom.modeSparringTab) {
+        this.dom.modeSparringTab.addEventListener('click', () => this.setMode('sparring'));
+      }
+      if (this.dom.modeEndgamesTab) {
+        this.dom.modeEndgamesTab.addEventListener('click', () => this.setMode('endgames'));
+      }
+
+      // Coach Sparring controls
+      if (this.dom.sparringLevelGroup) {
+        this.dom.sparringLevelGroup.addEventListener('click', (e) => {
+          const btn = e.target.closest('.sparring-level-btn');
+          if (!btn) return;
+          this.sparring.level = btn.dataset.level;
+          this._renderSparringPanel();
+        });
+      }
+      if (this.dom.sparringColorGroup) {
+        this.dom.sparringColorGroup.addEventListener('click', (e) => {
+          const btn = e.target.closest('.sparring-color-btn');
+          if (!btn) return;
+          const nextColor = btn.dataset.color;
+          if (nextColor !== this.sparring.playerColor) {
+            this.sparring.playerColor = nextColor;
+            this._startSparringGame();
+          }
+        });
+      }
+      if (this.dom.sparringGuardBtn) {
+        this.dom.sparringGuardBtn.addEventListener('click', () => {
+          this.sparring.blunderGuard = !this.sparring.blunderGuard;
+          this._renderSparringPanel();
+        });
+      }
+      if (this.dom.sparringRadarBtn) {
+        this.dom.sparringRadarBtn.addEventListener('click', () => {
+          this.sparring.threatRadar = !this.sparring.threatRadar;
+          this._renderSparringPanel();
+          this._renderBoard();
+        });
+      }
+      if (this.dom.sparringBlunderUndoBtn) {
+        this.dom.sparringBlunderUndoBtn.addEventListener('click', () => this._undoSparringBlunder());
+      }
+      if (this.dom.sparringBlunderKeepBtn) {
+        this.dom.sparringBlunderKeepBtn.addEventListener('click', () => this._keepSparringBlunder());
+      }
+      if (this.dom.sparringNewGameBtn) {
+        this.dom.sparringNewGameBtn.addEventListener('click', () => this._startSparringGame());
+      }
+      if (this.dom.sparringUndoBtn) {
+        this.dom.sparringUndoBtn.addEventListener('click', () => this._undoSparringPair());
+      }
+      if (this.dom.sparringHintBtn) {
+        this.dom.sparringHintBtn.addEventListener('click', () => this._showSparringHint());
+      }
+      if (this.dom.sparringResignBtn) {
+        this.dom.sparringResignBtn.addEventListener('click', () => this._resignSparring());
+      }
+      if (this.dom.sparringEndgamesGroup) {
+        this.dom.sparringEndgamesGroup.addEventListener('click', (e) => {
+          const btn = e.target.closest('.endgame-drill-btn');
+          if (!btn) return;
+          this._startEndgameDrill(btn.dataset.endgame);
+        });
+      }
+      if (this.dom.sparringMaterialGroup) {
+        this.dom.sparringMaterialGroup.addEventListener('click', (e) => {
+          const btn = e.target.closest('.endgame-drill-btn');
+          if (!btn) return;
+          this._startMaterialScenario(btn.dataset.scenario);
+        });
+      }
+      if (this.dom.playPuzzleVsBotBtn) {
+        this.dom.playPuzzleVsBotBtn.addEventListener('click', () => {
+          if (!this.engine) return;
+          const fen = this.engine.toFen();
+          this.sparring.playerColor = this.engine.turn;
+          this.setMode('sparring');
+          this._startSparringGame(fen);
+        });
+      }
+      if (this.dom.rushKindGroup) {
+        this.dom.rushKindGroup.addEventListener('click', (e) => {
+          const btn = e.target.closest('.rush-kind-btn');
+          if (!btn || this.rush.active) return;
+          this.rush.vsBot = btn.dataset.kind === 'bot';
+          this.dom.rushKindGroup.querySelectorAll('.rush-kind-btn').forEach((b) => {
+            b.classList.toggle('active', b === btn);
+          });
+          if (this.dom.rushBotLevelRow) {
+            this.dom.rushBotLevelRow.classList.toggle('hidden', !this.rush.vsBot);
+          }
+        });
+      }
+      if (this.dom.rushBotLevelGroup) {
+        this.dom.rushBotLevelGroup.addEventListener('click', (e) => {
+          const btn = e.target.closest('.rush-bot-lvl-btn');
+          if (!btn) return;
+          this.rush.botLevel = btn.dataset.level;
+          this.dom.rushBotLevelGroup.querySelectorAll('.rush-bot-lvl-btn').forEach((b) => {
+            b.classList.toggle('active', b === btn);
+          });
+        });
+      }
+
+      // Floating Board Hint Icon + Keyboard Shortcut 'H'
+      const triggerQuickHint = () => {
+        if (this.mode === 'analysis') return;
+        if (this._isSparringLikeMode()) {
+          this._showSparringHint();
+        } else {
+          this.showHint();
+        }
+      };
+      if (this.dom.boardHintFab) {
+        this.dom.boardHintFab.addEventListener('click', (e) => {
+          e.stopPropagation();
+          triggerQuickHint();
+        });
+      }
+      window.addEventListener('keydown', (e) => {
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        const tag = e.target && e.target.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+        if (e.key === 'h' || e.key === 'H') {
+          e.preventDefault();
+          triggerQuickHint();
+        }
+      });
+
+      // PGN Import & Retry from Blunder (Battle Analysis)
+      if (this.dom.analysisImportBtn) {
+        this.dom.analysisImportBtn.addEventListener('click', () => {
+          this.dom.pgnImportBox.classList.toggle('hidden');
+          this.dom.pgnErrorMsg.classList.add('hidden');
+          if (!this.dom.pgnImportBox.classList.contains('hidden')) {
+            this.dom.pgnInput.focus();
+          }
+        });
+      }
+      if (this.dom.pgnCancelBtn) {
+        this.dom.pgnCancelBtn.addEventListener('click', () => {
+          this.dom.pgnImportBox.classList.add('hidden');
+          this.dom.pgnErrorMsg.classList.add('hidden');
+        });
+      }
+      if (this.dom.pgnLoadBtn) {
+        this.dom.pgnLoadBtn.addEventListener('click', () => this._importCustomPgn());
+      }
+      if (this.dom.analysisRetryBotBtn) {
+        this.dom.analysisRetryBotBtn.addEventListener('click', () =>
+          this._retryAnalysisPositionInSparring()
+        );
+      }
 
       // Battle Analysis VCR controls
       if (this.dom.analysisFirstBtn) {
@@ -857,6 +1224,34 @@
         );
       }
       this.dom.modeRushText.textContent = this.t('modeRushTab');
+      if (this.dom.modeSparringText) {
+        this.dom.modeSparringText.textContent = this.t('modeSparringTab');
+        this.dom.sparringLevelLabel.textContent = this.t('sparringLevelLabel');
+        this.dom.sparringColorLabel.textContent = this.t('sparringColorLabel');
+        this.dom.sparringColorW.textContent = this.t('sparringColorW');
+        this.dom.sparringColorB.textContent = this.t('sparringColorB');
+        this.dom.sparringEvalLabel.textContent = this.t('sparringEvalLabel');
+        this.dom.sparringBlunderTitle.textContent = this.t('sparringBlunderTitle');
+        this.dom.sparringBlunderUndoText.textContent = this.t('sparringBlunderUndo');
+        this.dom.sparringBlunderKeepText.textContent = this.t('sparringBlunderKeep');
+        this.dom.sparringNewGameText.textContent = this.t('sparringNewGame');
+        this.dom.sparringUndoText.textContent = this.t('sparringUndo');
+        this.dom.sparringHintText.textContent = this.t('sparringHint');
+        this.dom.sparringResignText.textContent = this.t('sparringResign');
+        if (this.dom.modeEndgamesText) {
+          this.dom.modeEndgamesText.textContent = this.t('modeEndgamesTab');
+        }
+        if (this.dom.endgamesPanelTitle) {
+          this.dom.endgamesPanelTitle.textContent = this.t('endgamesPanelTitle');
+        }
+        if (this.dom.sparringMaterialLabel) {
+          this.dom.sparringMaterialLabel.textContent = this.t('sparringMaterialLabel');
+        }
+        if (this.dom.playPuzzleVsBotText) {
+          this.dom.playPuzzleVsBotText.textContent = this.t('playPuzzleVsBot');
+        }
+        this._renderSparringPanel();
+      }
 
       if (this.dom.analysisStepLabel) {
         this.dom.analysisStepLabel.textContent = this.t('analysisStepLabel');
@@ -869,6 +1264,14 @@
         this.dom.legendThreatText.textContent = this.t('legendThreat');
         this.dom.legendPinText.textContent = this.t('legendPin');
         this.dom.legendAltText.textContent = this.t('legendAlt');
+        if (this.dom.analysisImportText) {
+          this.dom.analysisImportText.textContent = this.t('analysisImportBtn');
+          this.dom.analysisRetryBotText.textContent = this.t('analysisRetryBotBtn');
+          this.dom.pgnImportLabel.textContent = this.t('pgnImportLabel');
+          this.dom.pgnLoadText.textContent = this.t('pgnLoadBtn');
+          this.dom.pgnCancelText.textContent = this.t('pgnCancelBtn');
+          this.dom.analysisBlundersLabel.textContent = this.t('analysisBlundersLabel');
+        }
         this._renderAnalysisPanel();
       }
 
@@ -1344,6 +1747,30 @@
 
       this._renderRushHud();
       this._renderRushHistory();
+      if (this.rush.vsBot) {
+        this.engine = new window.ChessEngine();
+        this.playerColor = 'w';
+        this.flipped = false;
+        this.selectedSquare = null;
+        this.legalTargetsForSelected = [];
+        this.lastMoveSquares = null;
+        this.wrongMoveSquare = null;
+        this.playedMoves = [];
+        this.hintLevel = 0;
+        this.status = 'playing';
+        this.currentPuzzle = {
+          id: 'rush-bot',
+          difficulty: 'medium',
+          movesToMate: 0,
+          themes: [],
+          solution: [],
+          title: { en: `Blitz vs Bot (${this.rush.botLevel})`, pl: `Blitz z Botem (${this.rush.botLevel})` }
+        };
+        this._renderBoard();
+        this._renderMoveHistory();
+        this._renderStatusAndCoach('progress', this.t('sparringYourTurn'));
+        return;
+      }
       this._loadNextRushPuzzle();
     }
 
@@ -1974,6 +2401,882 @@
       return { arrows, targetSquares };
     }
 
+    _retryAnalysisPositionInSparring() {
+      if (this.mode !== 'analysis' || !this.engine) return;
+      this._stopAnalysisAutoPlay();
+      const fen = this.engine.toFen();
+      this.sparring.playerColor = this.engine.turn;
+      this.setMode('sparring');
+      this._startSparringGame(fen);
+    }
+
+    _importCustomPgn() {
+      const raw = (this.dom.pgnInput ? this.dom.pgnInput.value : '').trim();
+      if (!raw) {
+        this.dom.pgnErrorMsg.textContent = this.t('pgnErrorEmpty');
+        this.dom.pgnErrorMsg.classList.remove('hidden');
+        return;
+      }
+
+      // Parse optional PGN headers
+      const getHeader = (name) => {
+        const m = raw.match(new RegExp(`\\[${name}\\s+"([^"]+)"\\]`, 'i'));
+        return m ? m[1].trim() : '';
+      };
+      const whiteName = getHeader('White');
+      const blackName = getHeader('Black');
+      const startFen =
+        getHeader('FEN') || 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+
+      // Strip headers, comments {..}, variations (..), NAGs ($1), and results
+      let moveText = raw
+        .replace(/\[[^\]]*\]/g, ' ')
+        .replace(/\{[^}]*\}/g, ' ')
+        .replace(/\([^)]*\)/g, ' ')
+        .replace(/\$\d+/g, ' ')
+        .replace(/\b(1-0|0-1|1\/2-1\/2|\*)\b/g, ' ')
+        .trim();
+
+      const tokens = this._parseMoveTokens(moveText);
+      if (tokens.length === 0) {
+        this.dom.pgnErrorMsg.textContent = this.t('pgnErrorNoMoves');
+        this.dom.pgnErrorMsg.classList.remove('hidden');
+        return;
+      }
+
+      const customId = 'custom-' + Date.now();
+      const titleEn = this.t('customGameTitle')(whiteName, blackName);
+      const customBattle = {
+        id: customId,
+        difficulty: 'medium',
+        isBattleAnalysis: true,
+        isCustomImport: true,
+        fen: startFen,
+        moves: tokens,
+        themes: ['custom'],
+        title: { en: titleEn, pl: titleEn },
+        overview: {
+          en: `Imported game (${tokens.length} half-moves). Blunders are highlighted below — click any blunder chip and press "Retry from Here vs Bot" to practice!`,
+          pl: `Zaimportowana partia (${tokens.length} półruchów). Poniżej zaznaczono wykryte błędy — kliknij dowolny błąd i wybierz „Zagraj stąd z botem”, aby go przećwiczyć!`
+        },
+        annotations: {}
+      };
+
+      // Validate by building snapshots
+      const snapshots = this._buildBattleSnapshots(customBattle);
+      if (snapshots.length <= 1) {
+        this.dom.pgnErrorMsg.textContent = this.t('pgnErrorNoMoves');
+        this.dom.pgnErrorMsg.classList.remove('hidden');
+        return;
+      }
+
+      // Run fast blunder detection across all plies
+      this._analyzeSnapshotsForBlunders(snapshots);
+      customBattle._precomputedBlunders = snapshots
+        .filter((s) => s.isBlunder)
+        .map((s) => ({ ply: s.ply, key: s.moveKey, cpLoss: s.cpLoss }));
+
+      if (Array.isArray(window.BATTLE_ANALYSES)) {
+        window.BATTLE_ANALYSES.unshift(customBattle);
+      }
+      this.dom.pgnImportBox.classList.add('hidden');
+      this.dom.pgnErrorMsg.classList.add('hidden');
+      this.dom.pgnInput.value = '';
+
+      this._updateFilteredPuzzles(false);
+      this.loadPuzzle(customId);
+      // Attach precomputed blunder metadata to active analysis snapshots
+      for (const b of customBattle._precomputedBlunders) {
+        if (this.analysis.snapshots[b.ply]) {
+          this.analysis.snapshots[b.ply].isBlunder = true;
+          this.analysis.snapshots[b.ply].cpLoss = b.cpLoss;
+        }
+      }
+      this._renderBlunderChips();
+    }
+
+    _analyzeSnapshotsForBlunders(snapshots) {
+      const evalEng = new window.ChessEngine();
+      let prevEvalWhite = 0;
+      for (let i = 0; i < snapshots.length; i++) {
+        const snap = snapshots[i];
+        evalEng.loadFen(snap.fen);
+        // Fast 1-ply + quiescence eval for snappy full-game scanning
+        const res = evalEng.getBestMove({ depth: 1, noise: 0, quiesce: true, timeMs: 60 });
+        const curEvalWhite = res ? res.evalWhite : evalEng.evaluatePosition();
+        snap.evalWhite = curEvalWhite;
+
+        if (i > 0 && snap.moveObj) {
+          const moverSign = snap.moveObj.color === 'w' ? 1 : -1;
+          const cpLoss = moverSign * (prevEvalWhite - curEvalWhite);
+          if (cpLoss >= 180) {
+            snap.isBlunder = true;
+            snap.cpLoss = Math.round(cpLoss);
+          }
+        }
+        prevEvalWhite = curEvalWhite;
+      }
+    }
+
+    _renderBlunderChips() {
+      if (!this.dom.analysisBlundersWrap || !this.dom.analysisBlundersList) return;
+      const snaps = this.analysis.snapshots || [];
+      const blunders = snaps.filter((s) => s.isBlunder);
+      if (blunders.length === 0) {
+        this.dom.analysisBlundersWrap.classList.add('hidden');
+        this.dom.analysisBlundersList.innerHTML = '';
+        return;
+      }
+      this.dom.analysisBlundersWrap.classList.remove('hidden');
+      this.dom.analysisBlundersList.innerHTML = blunders
+        .map((b) => {
+          const pawns = (b.cpLoss / 100).toFixed(1);
+          return `<button type="button" class="blunder-chip" data-ply="${b.ply}">🔴 ${b.moveKey}? (-${pawns})</button>`;
+        })
+        .join('');
+      this.dom.analysisBlundersList.querySelectorAll('.blunder-chip').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const ply = parseInt(btn.dataset.ply, 10);
+          // Jump to the position RIGHT BEFORE the blunder so user can see what they should have played
+          this._stopAnalysisAutoPlay();
+          this._stepAnalysisTo(Math.max(0, ply - 1), false);
+        });
+      });
+    }
+
+    // =========================================================================
+    // COACH SPARRING MODE (Play vs. Built-in Bot + Blunder Guard + Threat Radar)
+    // =========================================================================
+    _startMaterialScenario(key) {
+      const scenarios = {
+        punish_center: {
+          fen: 'r1bqk2r/ppp2ppp/2n2n2/3p4/1b1P4/2N2N2/PPP2PPP/R1BQR1K1 w kq - 0 8',
+          en: 'Win Material vs Bot: Punish the Uncastled King — Open the e-file, pin pieces, and win material!',
+          pl: 'Zdobądź Przewagę (vs Bot): Ukarz króla w centrum — Wykorzystaj wieżę na e1 i atakuj króla na e8!'
+        },
+        kingside_storm: {
+          fen: 'r1bq1rk1/pp2ppbp/2np1np1/8/3NP3/2N1BP2/PPPQ2PP/2KR1B1R w - - 0 9',
+          en: 'Win Material vs Bot: Opposite-Side Castling Storm — Push g4-h4, trade off the g7-bishop, and attack!',
+          pl: 'Zdobądź Przewagę (vs Bot): Szturm na króla — Pchaj pionki g4-h4, wymień gońca g7 i otwórz linię h!'
+        },
+        pin_pressure: {
+          fen: 'r2q1rk1/ppp1bppp/2n2n2/3p2B1/3P4/2N1PN2/PPP2PPP/R2Q1RK1 w - - 0 8',
+          en: 'Win Material vs Bot: Pin Pressure — Pile up on the pinned pieces and dominate the center!',
+          pl: 'Zdobądź Przewagę (vs Bot): Presja na związaniu — Wykorzystaj aktywność figur i szukaj taktyk w centrum!'
+        },
+        fork_hunt: {
+          fen: 'r1bq1rk1/ppp2ppp/2n2n2/3pp3/1bB1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 0 6',
+          en: 'Win Material vs Bot: Central Tension — Resolve the center accurately and look for knight forks and pins!',
+          pl: 'Zdobądź Przewagę (vs Bot): Walka o centrum — Pilnuj figur i wykorzystuj napięcie w centrum do zdobycia przewagi!'
+        },
+        win_exchange: {
+          fen: '2rq1rk1/pp2bppp/2n1pn2/3p4/3P4/2NBPN2/PP3PPP/2RQ1RK1 w - - 0 11',
+          en: 'Win Material vs Bot: Open c-File Battle — Fight for control of the c-file and outpost squares!',
+          pl: 'Zdobądź Przewagę (vs Bot): Otwarta linia c — Walcz o kontrolę linii c i aktywne pola dla skoczków!'
+        },
+        convert_piece: {
+          fen: 'r2q1rk1/ppp2ppp/5n2/3p4/3P4/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 0 9',
+          color: 'w',
+          en: 'Win Material vs Bot: Convert +1 Piece — Trade pieces cleanly, avoid counterplay, and convert your extra bishop!',
+          pl: 'Zdobądź Przewagę (vs Bot): Realizuj +1 figurę — Wymieniaj figury, nie dawaj kontry i wygraj czysto!'
+        },
+        mate_backrank: {
+          fen: '5rk1/5ppp/8/8/8/8/5PPP/3QR1K1 w - - 0 1',
+          color: 'w',
+          en: 'Mate Attack vs Bot: Weak Back Rank — Use your Queen + Rook coordination to break through on the 8th rank!',
+          pl: 'Atak Matowy (vs Bot): Słaba 8. linia — Wykorzystaj współpracę Hetmana i Wieży przeciwko 8. linii!'
+        },
+        mate_kingside: {
+          fen: 'r4rk1/ppp2ppp/2n5/3q4/3P4/3B4/PPP2PPP/R2Q1RK1 w - - 0 12',
+          color: 'w',
+          en: 'Mate Attack vs Bot: Q+B Kingside Attack — Aim at h7, activate your rooks, and build a mating net!',
+          pl: 'Atak Matowy (vs Bot): Atak H+G na roszadę — Celuj w punkt h7, aktywizuj wieże i buduj sieć matową!'
+        },
+        mate_battery: {
+          fen: 'r4rk1/ppp2pp1/2n2n1p/3p4/3P4/2PB1N2/PP3PPP/R2QR1K1 w - - 0 13',
+          color: 'w',
+          en: 'Mate Attack vs Bot: Target the Weakened h6 Hook — Build an attack against Black’s castled king!',
+          pl: 'Atak Matowy (vs Bot): Wykorzystaj osłabienie h6 — Zbuduj atak na roszowanego króla czarnych!'
+        },
+        open_italian: {
+          fen: 'r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4',
+          color: 'w',
+          en: 'Opening vs Bot: Italian Game — Play a solid middlegame from move 4 (c3, d3, O-O) against the bot!',
+          pl: 'Debiut (vs Bot): Partia Włoska — Rozegraj solidnie od 4. ruchu (c3, d3, O-O) przeciwko botowi!'
+        },
+        open_london: {
+          fen: 'rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4',
+          color: 'w',
+          en: 'Opening vs Bot: London System — Complete your pyramid (Nf3, c3, Nbd2, Bd3) and outplay the bot!',
+          pl: 'Debiut (vs Bot): System Londyński — Dokończ piramidę (Sf3, c3, Sbd2, Gd3) i ograj bota!'
+        },
+        open_carokann: {
+          fen: 'rnbqkbnr/pp2pppp/2p5/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR b KQkq - 1 3',
+          color: 'b',
+          en: 'Opening vs Bot: Caro-Kann (Black) — Capture dxe4, bring out Bf5, and play a rock-solid game as Black!',
+          pl: 'Debiut (vs Bot): Obrona Caro-Kann (Czarne) — Zbij dxe4, wyprowadź Gf5 i zagraj solidną partię czarnymi!'
+        },
+        def_castled: {
+          fen: 'r2q1rk1/ppp2ppp/2n1bn2/3p4/3P2b1/2NB1N2/PPP1QPPP/R4RK1 b - - 0 10',
+          color: 'b',
+          en: 'Defense vs Bot: Defend Your Castled King — Neutralize White’s pieces and fight back as Black!',
+          pl: 'Obrona (vs Bot): Obrona roszady — Zneutralizuj figury białych i przejmij inicjatywę czarnymi!'
+        },
+        def_pin: {
+          fen: 'r1bq1rk1/ppp2ppp/2n2n2/3pp1B1/1bB1P3/2NP1N2/PPP2PPP/R2QK2R b KQ - 0 7',
+          color: 'b',
+          en: 'Defense vs Bot: Break the Pin & Counterattack — Unpin safely and punish White’s uncastled king!',
+          pl: 'Obrona (vs Bot): Wyjście ze związania — Bezpiecznie wyjdź ze związania i ukarz króla białych w centrum!'
+        },
+        def_down_pawn: {
+          fen: '2r2rk1/pp3ppp/2n1pn2/8/3P4/2NBPN2/PP3PPP/2R2RK1 b - - 0 14',
+          color: 'b',
+          en: 'Defense vs Bot: Active Defense Down a Pawn — Activate your rooks on the c-file and hold or turn the tables!',
+          pl: 'Obrona (vs Bot): Obrona z pionkiem mniej — Aktywizuj wieże na linii c i odwróć losy partii!'
+        }
+      };
+      const sc = scenarios[key];
+      if (!sc) return;
+      this.sparring.playerColor = sc.color || 'w';
+      this._startSparringGame(sc.fen);
+      const msg = this.state.lang === 'en' ? sc.en : sc.pl;
+      this._renderStatusAndCoach('progress', msg);
+    }
+
+    _startEndgameDrill(key) {
+      const drills = {
+        kq: {
+          fen: '8/8/8/4k3/8/8/3Q4/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: K+Q vs K — Push the king to the edge and checkmate without stalemating!',
+          pl: 'Końcówka: K+H vs K — Zepchnij króla na bandę i daj mata, uważając na pata!'
+        },
+        kr: {
+          fen: '8/8/8/4k3/8/8/3R4/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: K+R vs K — Cut off the king with your rook and walk your king up to mate!',
+          pl: 'Końcówka: K+W vs K — Odetnij króla wieżą i podejdź własnym królem, aby dać mata!'
+        },
+        krr: {
+          fen: '8/8/8/4k3/8/8/R6R/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: 2 Rooks Ladder Mate — Alternate rook checks to push the king to the 8th rank!',
+          pl: 'Końcówka: Mat schodkowy (2 Wieże) — Naprzemiennie odcinaj linie i zepchnij króla na 8. linię!'
+        },
+        kbb: {
+          fen: '8/8/8/4k3/8/8/2B1B3/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: 2 Bishops vs K — Use both bishops side-by-side to herd the king into a corner!',
+          pl: 'Końcówka: 2 Gońce vs K — Ustaw gońce obok siebie, aby zagnać króla do narożnika!'
+        },
+        kp: {
+          fen: '4k3/8/8/4P3/4K3/8/8/8 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: King + Pawn Opposition — Keep your king in front of the pawn and promote!',
+          pl: 'Końcówka: Opozycja (K+P vs K) — Prowadź króla przed pionkiem i dorób hetmana!'
+        },
+        kp_edge: {
+          fen: '7k/8/5K2/7P/8/8/8/8 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Rook-Pawn Edge Case — Notice how Black tries to trap your king or force stalemate!',
+          pl: 'Końcówka: Pionek na bandzie — Zobacz jak ważne jest pole przed pionkiem i unikanie pata!'
+        },
+        race: {
+          fen: '8/8/8/1p6/8/7P/6K1/2k5 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Pawn Race — Push your h-pawn and win the promotion race!',
+          pl: 'Końcówka: Wyścig pionków — Pchaj pionka h i wygraj wyścig o promocję!'
+        },
+        breakthrough: {
+          fen: '8/5ppp/8/5PPP/8/8/6K1/6k1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: 3 vs 3 Pawn Breakthrough — Sacrifice a pawn (g6! or f6!) to create an unstoppable passed pawn!',
+          pl: 'Końcówka: Przełom pionowy 3 vs 3 — Poświęć pionka (g6!), aby stworzyć niepowstrzymanego wolnego pionka!'
+        },
+        lucena: {
+          fen: '1K1k4/1P6/8/8/8/8/r7/3R4 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Lucena Bridge — Cut off the black king, push your rook to the 4th rank, and promote!',
+          pl: 'Końcówka: Most Luceny — Odetnij czarnego króla, zbuduj most wieżą na 4. linii i dorób hetmana!'
+        },
+        philidor: {
+          fen: '4k3/8/4K3/4P3/8/8/r7/5R2 b - - 0 1',
+          color: 'b',
+          en: 'Endgame Drill: Philidor Defense (Black) — Keep your rook on the 6th rank (Ra6!), then check from behind once e6 is played!',
+          pl: 'Końcówka: Obrona Philidora (Czarne) — Ustaw wieżę na 6. linii (Wa6!), a po e6 szachuj od tyłu, aby utrzymać remis!'
+        },
+        convert: {
+          fen: '6k1/5ppp/8/8/8/5N2/5PPP/6K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Convert Extra Knight — Activate your king and knight to win cleanly!',
+          pl: 'Końcówka: Realizacja przewagi skoczka — Aktywizuj króla i skoczka, aby czysto wygrać!'
+        },
+        opp_bishops: {
+          fen: '6k1/5ppp/8/4b3/3PP3/4B3/6PP/6K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Opposite-Colored Bishops (+2 Pawns) — Create two passed pawns far apart to break the blockade!',
+          pl: 'Końcówka: Różnopolowe gońce (+2 pionki) — Stwórz dwa oddalone wolne pionki, aby przełamać blokadę!'
+        },
+        outside_passer: {
+          fen: '6k1/5ppp/8/1P6/8/5PPP/6K1/8 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Outside Passed Pawn — Lure Black’s king to the b-pawn, then invade the kingside!',
+          pl: 'Końcówka: Oddalony wolny pionek — Odciągnij czarnego króla pionkiem b5, a potem wejdź królem po pionki na skrzydle królewskim!'
+        },
+        protected_passer: {
+          fen: '8/6k1/5p2/4pP2/4P1K1/8/8/8 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Protected Passed Pawn — Use your protected f5-pawn to dominate the black king and win!',
+          pl: 'Końcówka: Broniony wolny pionek — Wykorzystaj bronionego pionka f5, aby zdominować czarnego króla!'
+        },
+        q_vs_p7: {
+          fen: '8/8/8/8/4K3/8/2p5/1k3Q2 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Queen vs Pawn on 7th — Give checks to force the black king in front of the pawn, then bring your king closer!',
+          pl: 'Końcówka: Hetman vs Pionek na 7. linii — Szachuj, aby zmusić czarnego króla do stanięcia przed pionkiem, i podchodź swoim królem!'
+        },
+        rook_7th: {
+          fen: 'r5k1/1R3ppp/8/8/4P3/5P1P/5PP1/6K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Active Rook on 7th Rank — Activate your king and push your extra central pawn!',
+          pl: 'Końcówka: Aktywna wieża na 7. linii — Aktywizuj króla i wykorzystaj przewagę pionka e4!'
+        },
+        vancura: {
+          fen: 'R7/P4k2/8/8/8/8/1r6/6K1 b - - 0 1',
+          color: 'b',
+          en: 'Endgame Drill: Vancura Defense (Black) — Attack the a7-pawn from the side (Rb6-a6!) to hold the draw!',
+          pl: 'Końcówka: Obrona Vancury (Czarne) — Atakuj pionka a7 z boku (Wb6-a6!), aby utrzymać remis!'
+        },
+        good_knight_bad_bishop: {
+          fen: '6k1/5p2/4p1p1/3pP1P1/3P1N2/6K1/8/6b1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Good Knight vs Bad Bishop — Classic Magnus-style squeeze! Attack Black’s fixed pawns on light squares!',
+          pl: 'Końcówka: Dobry skoczek vs Zły goniec — Klasyczna technika Magnusa! Atakuj zablokowane pionki czarnych!'
+        },
+        q_endgame: {
+          fen: '6k1/5ppp/8/3q4/3P4/4Q3/5PPP/6K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Queen Endgame (+1 Pawn) — Centralize your queen, create luft for your king, and advance the d-pawn!',
+          pl: 'Końcówka hetmańska (+1 pionek) — Centralizuj hetmana, zabezpiecz króla przed wiecznym szachem i pchaj pionka d4!'
+        },
+        kbn: {
+          fen: '8/8/8/4k3/8/8/2B2N2/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Bishop + Knight vs K (Master Mate!) — Drive the enemy king into a corner of your bishop’s color (a1 or h8)!',
+          pl: 'Końcówka: Goniec + Skoczek vs K (Mistrzowski mat!) — Zagoń króla do narożnika w kolorze Twojego gońca (a1 lub h8)!'
+        },
+        kp_double: {
+          fen: '4k3/8/8/4P3/4P3/4K3/8/8 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Doubled Pawns (K+2P vs K) — Use the rear pawn as a spare tempo to win opposition!',
+          pl: 'Końcówka: Zdublowane pionki (K+2P vs K) — Wykorzystaj tylnego pionka jako zapasowe tempo, aby wygrać opozycję!'
+        },
+        rook_behind: {
+          fen: 'r7/P7/1K6/8/8/8/8/3k1R2 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Rook Behind Passed Pawn — Tarrasch’s Rule! Activate your rook and king to escort the a7-pawn!',
+          pl: 'Końcówka: Wieża za wolnym pionkiem — Zasada Tarrascha! Wykorzystaj aktywność króla i wieży, by przepchnąć pionka!'
+        },
+        two_connected: {
+          fen: '8/8/4k3/2PP4/8/8/4K3/r7 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Two Connected Passed Pawns vs Rook — Advance your pawns together to the 6th rank to overpower the rook!',
+          pl: 'Końcówka: 2 połączone wolne pionki vs Wieża — Prowadź pionki razem na 6. linię, aby pokonać wieżę!'
+        },
+        same_bishops: {
+          fen: '6k1/5ppp/8/4b3/4P3/4B3/5PPP/6K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Same-Colored Bishops (+1 Pawn) — Activate your king and advance your extra central pawn!',
+          pl: 'Końcówka: Jednopolowe gońce (+1 pionek) — Aktywizuj króla i wykorzystaj przewagę centralnego pionka!'
+        },
+        knight_endgame: {
+          fen: '6k1/5ppp/8/4n3/3P4/4N3/5PPP/6K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Knight Endgame (+1 Pawn) — Knight endgames play like pawn endgames: centralize your king and create a passer!',
+          pl: 'Końcówka skoczkowa (+1 pionek) — Końcówki skoczkowe przypominają pionowe: centralizuj króla i twórz wolnego pionka!'
+        },
+        triangulation: {
+          fen: '8/2k5/1p6/pP6/P1K5/8/8/8 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Triangulation (Zugzwang) — Lose a tempo with your king (Kd4-d3-c4!) to put Black in zugzwang!',
+          pl: 'Końcówka: Triangulacja (Zugzwang) — Zrób trójkąt królem, aby oddać ruch czarnym i wejść na ich pionki!'
+        },
+        exchange_up: {
+          fen: '6k1/5ppp/4n3/8/4P3/8/5PPP/3R2K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Exchange Up (R vs N) — Open files for your rook, invade the 7th rank, and trade pawns!',
+          pl: 'Końcówka: Przewaga jakości (W vs S) — Otwieraj linie dla wieży, wejdź na 7. linię i realizuj przewagę!'
+        },
+        kq_vs_kr: {
+          fen: '8/8/8/4k3/3r4/8/3Q4/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Queen vs Rook — Push the black king to the edge and separate the rook from the king with forks!',
+          pl: 'Końcówka: Hetman vs Wieża — Zepchnij czarnego króla na bandę i wygraj wieżę widełkami!'
+        },
+        kr_vs_kb: {
+          fen: '4k3/4b3/8/8/8/8/3R4/4K3 b - - 0 1',
+          color: 'b',
+          en: 'Endgame Drill: Rook vs Bishop (Black Defense) — Head for the "safe corner" (opposite color of your bishop) to hold the draw!',
+          pl: 'Końcówka: Wieża vs Goniec (Obrona Czarnymi) — Uciekaj królem do „bezpiecznego narożnika” przeciwnego koloru niż Twój goniec!'
+        },
+        kr_vs_kn: {
+          fen: '4k3/4n3/8/8/8/8/3R4/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Rook vs Knight — Keep the knight away from its king and trap it on the edge!',
+          pl: 'Końcówka: Wieża vs Skoczek — Oddziel skoczka od jego króla i złap go na bandzie!'
+        },
+        distant_opp: {
+          fen: '4k3/8/8/8/8/4P3/8/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Distant Opposition — Advance your king in front of the pawn and seize opposition!',
+          pl: 'Końcówka: Daleka opozycja — Prowadź króla przed pionkiem i utrzymuj nieparzystą liczbę pól między królami!'
+        },
+        wrong_bishop: {
+          fen: '7k/8/5K2/7P/6B1/8/8/8 b - - 0 1',
+          color: 'b',
+          en: 'Endgame Drill: Wrong-Colored Bishop (Black Defense) — Stay in the h8 corner; White cannot force you out!',
+          pl: 'Końcówka: Zły goniec (Obrona Czarnymi) — Zostań w narożniku h8; biały goniec nie kontroluje pola promocji!'
+        },
+        minority_attack: {
+          fen: '6k1/pp3ppp/8/8/PPP5/8/5PPP/6K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: 3 vs 2 Queenside Majority — Push your queenside pawns cleanly to create a winning passed pawn!',
+          pl: 'Końcówka: Większość 3 vs 2 na skrzydle hetmańskim — Zrealizuj przewagę pionową, tworząc wolnego pionka!'
+        },
+        fortress_b_p: {
+          fen: '8/8/6k1/5p2/5b2/6K1/8/3Q4 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Queen vs Bishop + Pawn — Break the blockade with checks and win the f5-pawn!',
+          pl: 'Końcówka: Hetman vs Goniec + Pionek — Rozbij blokadę szachami i zdobądź pionka f5!'
+        },
+        two_rooks_endgame: {
+          fen: '3r1rk1/5ppp/8/8/3P4/8/5PPP/2RR2K1 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Double-Rook Endgame (+1 Pawn) — Activate both rooks, trade one pair if favorable, and push the d-pawn!',
+          pl: 'Końcówka czterowieżowa (+1 pionek) — Aktywizuj obie wieże i wykorzystaj przewagę wolnego pionka d4!'
+        },
+        rb_vs_r: {
+          fen: '4k3/8/4K3/4B3/8/8/3R4/4r3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Rook + Bishop vs Rook — Coordinate your king, rook, and bishop to create mating threats on the 8th rank!',
+          pl: 'Końcówka: Wieża + Goniec vs Wieża — Współpracuj królem, wieżą i gońcem, tworząc groźby matowe na 8. linii!'
+        },
+        rn_vs_r: {
+          fen: '4k3/8/4K3/4N3/8/8/3R4/4r3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Rook + Knight vs Rook — Create mating nets and knight forks against the defending rook!',
+          pl: 'Końcówka: Wieża + Skoczek vs Wieża — Twórz sieci matowe i widełki skoczkiem przeciwko broniącej wieży!'
+        },
+        q_vs_bb: {
+          fen: '8/8/4k3/3bb3/8/8/3Q4/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Queen vs 2 Bishops — Break the bishop fortress with king advance and double attacks!',
+          pl: 'Końcówka: Hetman vs 2 Gońce — Przełam barierę dwóch gońców marszem króla i podwójnymi atakami!'
+        },
+        q_vs_nn: {
+          fen: '8/8/4k3/3nn3/8/8/3Q4/4K3 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Queen vs 2 Knights — Avoid knight forks and split the two knights apart!',
+          pl: 'Końcówka: Hetman vs 2 Skoczki — Uważaj na widełki i rozdziel współpracę dwóch skoczków!'
+        },
+        queen_vs_r_p: {
+          fen: '6k1/5p2/5r2/8/8/4Q3/6K1/8 w - - 0 1',
+          color: 'w',
+          en: 'Endgame Drill: Queen vs Rook + Pawn — Use zugzwang and checks to separate the rook from the f7-pawn!',
+          pl: 'Końcówka: Hetman vs Wieża + Pionek — Szachuj i użyj zugzwangu, aby oddzielić wieżę od pionka f7!'
+        }
+      };
+      const drill = drills[key];
+      if (!drill) return;
+      this.activeEndgameKey = key;
+      if (this.dom.sparringEndgamesGroup) {
+        this.dom.sparringEndgamesGroup.querySelectorAll('.endgame-drill-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.endgame === key);
+        });
+      }
+      this.sparring.playerColor = drill.color || 'w';
+      this._startSparringGame(drill.fen);
+      const msg = this.state.lang === 'en' ? drill.en : drill.pl;
+      this._renderStatusAndCoach('progress', msg);
+    }
+
+    _startSparringGame(customFen = null) {
+      this._clearTimers();
+      this.engine = new window.ChessEngine(
+        customFen || 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
+      );
+      this.playerColor = this.sparring.playerColor;
+      this.flipped = this.playerColor === 'b';
+      this.selectedSquare = null;
+      this.legalTargetsForSelected = [];
+      this.lastMoveSquares = null;
+      this.wrongMoveSquare = null;
+      this.playedMoves = [];
+      this.hintLevel = 0;
+      this.sparring.pendingBlunder = null;
+      this.sparring.hintMove = null;
+      this.sparring.gameOver = false;
+      this.sparring.resultMsg = null;
+      this.sparring.evalWhite = this.engine.evaluatePosition();
+      this.status = 'playing';
+
+      this.currentPuzzle = {
+        id: 'sparring',
+        difficulty: 'medium',
+        movesToMate: 0,
+        themes: [],
+        solution: [],
+        isSparring: true,
+        title: {
+          en: this.t('sparringTitle')(this._getSparringLevelLabel()),
+          pl: this.t('sparringTitle')(this._getSparringLevelLabel())
+        }
+      };
+
+      this._renderSparringPanel();
+      this._renderBoard();
+      this._renderMoveHistory();
+      this._renderSparringHeader();
+
+      if (this.engine.turn !== this.playerColor) {
+        this.status = 'animating';
+        this._renderStatusAndCoach('thinking', this.t('sparringBotThinking'));
+        this._schedule(() => this._playSparringBotTurn(), 350);
+      } else {
+        this._renderStatusAndCoach('progress', this.t('sparringYourTurn'));
+      }
+    }
+
+    _getSparringLevelLabel() {
+      const map = { beginner: '~800', club: '~1200', tactical: '~1500', strong: '~1800+' };
+      return map[this.sparring.level] || '~1200';
+    }
+
+    _renderSparringHeader() {
+      if (this.dom.puzzleTitle) {
+        this.dom.puzzleTitle.textContent = this.t('sparringTitle')(this._getSparringLevelLabel());
+      }
+      if (this.dom.puzzleIdBadge) this.dom.puzzleIdBadge.textContent = '🤖 BOT';
+      if (this.dom.mateBadge) {
+        this.dom.mateBadge.textContent = this._getSparringLevelLabel();
+        this.dom.mateBadge.dataset.difficulty =
+          this.sparring.level === 'beginner'
+            ? 'easy'
+            : this.sparring.level === 'strong'
+            ? 'hard'
+            : 'medium';
+      }
+      if (this.dom.puzzleSolvedBadge) this.dom.puzzleSolvedBadge.classList.add('hidden');
+      if (this.dom.puzzleThemes) this.dom.puzzleThemes.innerHTML = '';
+      if (this.dom.turnDot && this.dom.turnText) {
+        const isWhiteTurn = this.engine.turn === 'w';
+        this.dom.turnDot.className = `turn-dot ${isWhiteTurn ? 'white' : 'black'}`;
+        this.dom.turnText.textContent = isWhiteTurn ? this.t('whiteToMove') : this.t('blackToMove');
+      }
+    }
+
+    _renderSparringPanel() {
+      if (!this.dom.sparringPanel) return;
+      if (this.dom.sparringLevelGroup) {
+        this.dom.sparringLevelGroup.querySelectorAll('.sparring-level-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.level === this.sparring.level);
+        });
+      }
+      if (this.dom.sparringColorGroup) {
+        this.dom.sparringColorGroup.querySelectorAll('.sparring-color-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.color === this.sparring.playerColor);
+        });
+      }
+      if (this.dom.sparringGuardBtn) {
+        this.dom.sparringGuardBtn.classList.toggle('active', this.sparring.blunderGuard);
+        this.dom.sparringGuardText.textContent = this.sparring.blunderGuard
+          ? this.t('sparringGuardOn')
+          : this.t('sparringGuardOff');
+      }
+      if (this.dom.sparringRadarBtn) {
+        this.dom.sparringRadarBtn.classList.toggle('active', this.sparring.threatRadar);
+        this.dom.sparringRadarText.textContent = this.sparring.threatRadar
+          ? this.t('sparringRadarOn')
+          : this.t('sparringRadarOff');
+      }
+      this._updateSparringEvalUI();
+
+      if (this.dom.sparringBlunderBox) {
+        const pb = this.sparring.pendingBlunder;
+        this.dom.sparringBlunderBox.classList.toggle('hidden', !pb);
+        if (pb) {
+          const refSan = pb.refutationSan || (pb.coachInfo.refutationMove ? pb.coachInfo.refutationMove.from + pb.coachInfo.refutationMove.to : '?');
+          if (pb.coachInfo.walkedIntoMate) {
+            this.dom.sparringBlunderText.textContent = this.t('sparringBlunderMateMsg')(refSan);
+          } else {
+            const pawns = (pb.coachInfo.cpLoss / 100).toFixed(1);
+            this.dom.sparringBlunderText.textContent = this.t('sparringBlunderMsg')(pawns, refSan);
+          }
+        }
+      }
+    }
+
+    _updateSparringEvalUI() {
+      if (!this.dom.sparringEvalVal || !this.dom.sparringEvalFill) return;
+      const cp = this.sparring.evalWhite || 0;
+      if (Math.abs(cp) >= 25000) {
+        this.dom.sparringEvalVal.textContent = cp > 0 ? '+M' : '-M';
+        this.dom.sparringEvalFill.style.width = cp > 0 ? '98%' : '2%';
+        return;
+      }
+      const pawns = (cp / 100).toFixed(1);
+      this.dom.sparringEvalVal.textContent = cp > 0 ? `+${pawns}` : `${pawns}`;
+      // Map [-600..+600] cp to [8%..92%]
+      const clamped = Math.max(-600, Math.min(600, cp));
+      const pct = Math.round(50 + (clamped / 600) * 42);
+      this.dom.sparringEvalFill.style.width = `${pct}%`;
+    }
+
+    _handleSparringPlayerMove(from, to, promotion) {
+      if (this.sparring.gameOver || this.sparring.pendingBlunder) return;
+      if (this.engine.turn !== this.playerColor) return;
+
+      const legal = this.engine.getLegalMoves();
+      const chosen = legal.find(
+        (m) => m.from === from && m.to === to && (!m.promotion || m.promotion === (promotion || 'q'))
+      );
+      if (!chosen) return;
+
+      this.sparring.hintMove = null;
+      this.selectedSquare = null;
+      this.legalTargetsForSelected = [];
+
+      // Blunder Guard check BEFORE committing
+      if (this.sparring.blunderGuard) {
+        const coachInfo = this.engine.evaluateMoveForCoach(chosen);
+        if (coachInfo && coachInfo.isBlunder) {
+          const moveObj = this.engine.makeMove({ from, to, promotion });
+          if (!moveObj) return;
+          let refutationSan = null;
+          if (coachInfo.refutationMove) {
+            try {
+              refutationSan = this.engine.moveToSan(coachInfo.refutationMove);
+            } catch (e) {
+              refutationSan = coachInfo.refutationMove.from + coachInfo.refutationMove.to;
+            }
+          }
+          this.lastMoveSquares = { from, to };
+          this.sparring.pendingBlunder = { moveObj, from, to, promotion, coachInfo, refutationSan };
+          this.sparring.evalWhite = coachInfo.evalAfterWhite;
+          this.status = 'animating';
+          this.sound.wrong();
+          this._renderSparringPanel();
+          this._renderSparringHeader();
+          this._renderBoard();
+          return;
+        }
+      }
+
+      const moveObj = this.engine.makeMove({ from, to, promotion });
+      if (!moveObj) return;
+      this._commitSparringPlayerMove(moveObj);
+    }
+
+    _undoSparringBlunder() {
+      const pb = this.sparring.pendingBlunder;
+      if (!pb) return;
+      this.engine.undo();
+      this.sparring.pendingBlunder = null;
+      this.sparring.evalWhite = pb.coachInfo.evalBeforeWhite;
+      this.lastMoveSquares = null;
+      this.status = 'playing';
+      this._renderSparringPanel();
+      this._renderSparringHeader();
+      this._renderBoard();
+      this._renderStatusAndCoach('progress', this.t('sparringYourTurn'));
+    }
+
+    _keepSparringBlunder() {
+      const pb = this.sparring.pendingBlunder;
+      if (!pb) return;
+      this.sparring.pendingBlunder = null;
+      this._renderSparringPanel();
+      this._commitSparringPlayerMove(pb.moveObj);
+    }
+
+    _commitSparringPlayerMove(moveObj) {
+      this.lastMoveSquares = { from: moveObj.from, to: moveObj.to };
+      this._recordMoveInNotation(moveObj);
+      this._playMoveSound(moveObj);
+      this.sparring.evalWhite = this.engine.evaluatePosition();
+      this._renderSparringPanel();
+      this._renderSparringHeader();
+      this._renderMoveHistory();
+      this._renderBoard();
+
+      if (this._checkSparringGameOver()) return;
+
+      this.status = 'animating';
+      this._renderStatusAndCoach('thinking', this.t('sparringBotThinking'));
+      this._schedule(() => this._playSparringBotTurn(), 320);
+    }
+
+    _playSparringBotTurn() {
+      if (!this._isSparringLikeMode() || this.sparring.gameOver) return;
+      const best = this.engine.getBestMove({ level: this.sparring.level });
+      if (!best || !best.move) {
+        this._checkSparringGameOver();
+        return;
+      }
+      const moveObj = this.engine.makeMove({
+        from: best.move.from,
+        to: best.move.to,
+        promotion: best.move.promotion
+      });
+      if (!moveObj) return;
+
+      this.lastMoveSquares = { from: moveObj.from, to: moveObj.to };
+      this._recordMoveInNotation(moveObj);
+      this._playMoveSound(moveObj);
+      this.sparring.evalWhite = best.evalWhite;
+      this.status = 'playing';
+
+      this._renderSparringPanel();
+      this._renderSparringHeader();
+      this._renderMoveHistory();
+      this._renderBoard();
+
+      if (!this._checkSparringGameOver()) {
+        this._renderStatusAndCoach('progress', this.t('sparringYourTurn'));
+      }
+    }
+
+    _checkSparringGameOver() {
+      const legal = this.engine.getLegalMoves();
+      if (legal.length === 0) {
+        this.sparring.gameOver = true;
+        this.status = 'solved';
+        if (this.engine.inCheck(this.engine.turn)) {
+          const playerWon = this.engine.turn !== this.playerColor;
+          if (playerWon) {
+            this.sound.solved();
+            this._renderStatusAndCoach('solved', this.t('sparringWinMate'));
+          } else {
+            this.sound.wrong();
+            this._renderStatusAndCoach('error', this.t('sparringLossMate'));
+          }
+        } else {
+          this._renderStatusAndCoach('progress', this.t('sparringDraw')('Stalemate / Pat'));
+        }
+        return true;
+      }
+      if (this.engine.isInsufficientMaterial()) {
+        this.sparring.gameOver = true;
+        this.status = 'solved';
+        this._renderStatusAndCoach('progress', this.t('sparringDraw')('Insufficient material'));
+        return true;
+      }
+      if (this.engine.halfMoves >= 100) {
+        this.sparring.gameOver = true;
+        this.status = 'solved';
+        this._renderStatusAndCoach('progress', this.t('sparringDraw')('50-move rule'));
+        return true;
+      }
+      return false;
+    }
+
+    _undoSparringPair() {
+      if (!this._isSparringLikeMode()) return;
+      if (this.sparring.pendingBlunder) {
+        this._undoSparringBlunder();
+        return;
+      }
+      this._clearTimers();
+      // Undo bot reply + player move (2 plies if it's player's turn, 1 ply if bot's turn)
+      let pliesToUndo = this.engine.turn === this.playerColor ? 2 : 1;
+      while (pliesToUndo > 0 && this.engine.history.length > 0) {
+        this.engine.undo();
+        if (this.playedMoves.length > 0) {
+          const lastRow = this.playedMoves[this.playedMoves.length - 1];
+          if (lastRow.blackSan) {
+            lastRow.blackSan = '';
+          } else {
+            this.playedMoves.pop();
+          }
+        }
+        pliesToUndo--;
+      }
+      this.sparring.gameOver = false;
+      this.sparring.hintMove = null;
+      this.lastMoveSquares = null;
+      this.sparring.evalWhite = this.engine.evaluatePosition();
+      this.status = 'playing';
+      this._renderSparringPanel();
+      this._renderSparringHeader();
+      this._renderMoveHistory();
+      this._renderBoard();
+      this._renderStatusAndCoach('progress', this.t('sparringYourTurn'));
+    }
+
+    _showSparringHint() {
+      if (!this._isSparringLikeMode() || this.sparring.gameOver || this.engine.turn !== this.playerColor) return;
+      const best = this.engine.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 300 });
+      if (!best || !best.move) return;
+      this.sparring.hintMove = { from: best.move.from, to: best.move.to };
+      let san = best.move.from + best.move.to;
+      try {
+        san = this.engine.moveToSan(best.move);
+      } catch (e) {}
+      this._renderBoard();
+      this._renderStatusAndCoach('progress', this.t('sparringHintMsg')(san));
+    }
+
+    _resignSparring() {
+      if (!this._isSparringLikeMode() || this.sparring.gameOver) return;
+      this._clearTimers();
+      this.sparring.pendingBlunder = null;
+      this.sparring.gameOver = true;
+      this.status = 'solved';
+      this._renderSparringPanel();
+      this._renderStatusAndCoach('error', this.t('sparringResigned'));
+    }
+
+    _getSparringOverlay() {
+      const arrows = [];
+      const hangingSquares = new Set();
+
+      if (this.sparring.pendingBlunder) {
+        const { coachInfo } = this.sparring.pendingBlunder;
+        if (coachInfo.refutationMove) {
+          arrows.push({
+            from: coachInfo.refutationMove.from,
+            to: coachInfo.refutationMove.to,
+            color: 'red'
+          });
+        }
+        if (coachInfo.bestMove) {
+          arrows.push({
+            from: coachInfo.bestMove.from,
+            to: coachInfo.bestMove.to,
+            color: 'blue'
+          });
+        }
+        return { arrows, hangingSquares };
+      }
+
+      if (this.sparring.hintMove) {
+        arrows.push({
+          from: this.sparring.hintMove.from,
+          to: this.sparring.hintMove.to,
+          color: 'green'
+        });
+      }
+
+      if (this.sparring.threatRadar && !this.sparring.gameOver) {
+        const hanging = this.engine.getHangingPieces(this.playerColor);
+        for (const h of hanging) {
+          hangingSquares.add(h.square);
+        }
+      }
+
+      return { arrows, hangingSquares };
+    }
+
     _renderBoard() {
       const files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
       const ranks = ['8', '7', '6', '5', '4', '3', '2', '1'];
@@ -2002,6 +3305,10 @@
       const analysisOverlay = isAnalysis
         ? this._getActiveAnalysisOverlay()
         : { arrows: [], targetSquares: new Set() };
+      const isSparring = this._isSparringLikeMode();
+      const sparringOverlay = isSparring
+        ? this._getSparringOverlay()
+        : { arrows: [], hangingSquares: new Set() };
 
       let html = '';
       for (let vr = 0; vr < 8; vr++) {
@@ -2028,6 +3335,9 @@
           if (this.wrongMoveSquare === sq) classes.push('wrong-flash');
           if (isAnalysis && analysisOverlay.targetSquares.has(sq)) {
             classes.push('analysis-target');
+          }
+          if (isSparring && sparringOverlay.hangingSquares.has(sq)) {
+            classes.push('hanging-alert');
           }
 
           const showRankCoord = vc === 0;
@@ -2066,6 +3376,8 @@
       this.dom.boardGrid.innerHTML = html;
       if (isAnalysis) {
         this._renderAnalysisArrows(analysisOverlay.arrows);
+      } else if (isSparring) {
+        this._renderAnalysisArrows(sparringOverlay.arrows);
       } else {
         this._renderHintArrow(hintFromSq, hintToSq);
       }
@@ -2353,6 +3665,70 @@
     }
 
     _executeValidatedPlayerMove(from, to, promotion) {
+      if (this._isSparringLikeMode()) {
+        this._handleSparringPlayerMove(from, to, promotion);
+        return;
+      }
+      if (this.mode === 'rush' && this.rush.vsBot && this.rush.active) {
+        const moveObj = this.engine.makeMove({ from, to, promotion });
+        if (!moveObj) return;
+        this.selectedSquare = null;
+        this.legalTargetsForSelected = [];
+        this.lastMoveSquares = { from, to };
+        this._recordMoveInNotation(moveObj);
+        this._playMoveSound(moveObj);
+        this.rush.score++;
+        this._renderRushHud();
+        this._renderMoveHistory();
+        this._renderBoard();
+
+        if (this.engine.getLegalMoves().length === 0) {
+          if (this.engine.inCheck(this.engine.turn)) {
+            this.sound.solved();
+            this._endRush('stopped');
+            this._renderStatusAndCoach('solved', this.t('sparringWinMate'));
+          } else {
+            this._endRush('stopped');
+            this._renderStatusAndCoach('progress', this.t('sparringDraw')('Pat'));
+          }
+          return;
+        }
+
+        this.status = 'animating';
+        this._renderStatusAndCoach('thinking', this.t('sparringBotThinking'));
+        this._schedule(() => {
+          if (!this.rush.active || this.mode !== 'rush') return;
+          const best = this.engine.getBestMove({ level: this.rush.botLevel });
+          if (!best || !best.move) {
+            this._endRush('stopped');
+            return;
+          }
+          const botMove = this.engine.makeMove({
+            from: best.move.from,
+            to: best.move.to,
+            promotion: best.move.promotion
+          });
+          if (!botMove) return;
+          this.lastMoveSquares = { from: botMove.from, to: botMove.to };
+          this._recordMoveInNotation(botMove);
+          this._playMoveSound(botMove);
+          this.status = 'playing';
+          this._renderMoveHistory();
+          this._renderBoard();
+          if (this.engine.getLegalMoves().length === 0) {
+            this._endRush('stopped');
+            if (this.engine.inCheck(this.engine.turn)) {
+              this.sound.wrong();
+              this._renderStatusAndCoach('error', this.t('sparringLossMate'));
+            } else {
+              this._renderStatusAndCoach('progress', this.t('sparringDraw')('Pat'));
+            }
+          } else {
+            this._renderStatusAndCoach('progress', this.t('sparringYourTurn'));
+          }
+        }, 280);
+        return;
+      }
       const candidateUci = from + to + (promotion || '');
       const expectedUci = this.currentPuzzle.solution[this.solutionStep];
       const remMoves = this._remainingAttackerMoves();

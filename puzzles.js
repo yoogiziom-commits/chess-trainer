@@ -1591,6 +1591,999 @@
         en: 'Paul Morphy’s 5-move finale (Paris 1858) teaches every core principle of tactical chess: brings all pieces to the attack (Rd1), sacrifices material to destroy defenders (Rxd7, Bxd7+), and finishes with deflection (Qb8+! Nxb8 Rd8#).',
         pl: 'Finał Partii Operowej Paula Morphy’ego (Paryż 1858) uczy najważniejszych zasad taktyki: wprowadzenia wszystkich figur do gry (Wd1), likwidacji obrońców (Wxd7, Gxd7+) oraz odciągnięcia (Hb8+!).'
       }
+    },
+    {
+      id: 'op-13',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'easy',
+      openingFamily: 'italian',
+      themes: ['solidOpening', 'development', 'castling'],
+      fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+      solution: ['e2e4', 'e7e5', 'g1f3', 'b8c6', 'f1c4', 'f8c5', 'c2c3', 'g8f6', 'd2d3', 'd7d6', 'e1g1'],
+      title: {
+        en: 'Solid Repertoire: Italian Game (Giuoco Piano)',
+        pl: 'Solidny Debiut: Partia Włoska (Giuoco Piano)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6: Claim the center and open lines for your queen and bishop with 1. e4.',
+          pl: 'Krok 1/6: Zajmij centrum i otwórz linie dla hetmana i gońca ruchem 1. e4.'
+        },
+        {
+          en: 'Step 2/6: Develop your kingside knight with tempo, attacking e5: 2. Nf3.',
+          pl: 'Krok 2/6: Rozwiń skoczka z tempem, atakując pionka e5: 2. Sf3.'
+        },
+        {
+          en: 'Step 3/6: Place your bishop on the active a2-g8 diagonal aiming at f7: 3. Bc4.',
+          pl: 'Krok 3/6: Ustaw gońca na aktywnej przekątnej a2-g8, celując w f7: 3. Gc4.'
+        },
+        {
+          en: 'Step 4/6: Prepare a strong pawn center (d4 later) and give your bishop a retreat square: 4. c3.',
+          pl: 'Krok 4/6: Przygotuj silne centrum (d4 w przyszłości) i daj gońcowi pole odwrotu: 4. c3.'
+        },
+        {
+          en: 'Step 5/6: Solidly defend e4 and open the diagonal for your dark-squared bishop: 5. d3.',
+          pl: 'Krok 5/6: Solidnie obroń pionka e4 i otwórz linię dla ciemnoskrzydłowego gońca: 5. d3.'
+        },
+        {
+          en: 'Step 6/6: Get your king to safety and activate the rook: 6. O-O! A rock-solid middlegame.',
+          pl: 'Krok 6/6: Zabezpiecz króla i wprowadź wieżę do gry: 6. O-O! Masz bardzo solidną pozycję.'
+        }
+      ],
+      hint: {
+        en: 'Follow classical principles: center (e4), develop minor pieces (Nf3, Bc4), support center (c3, d3), and castle (O-O).',
+        pl: 'Stosuj klasyczne zasady: centrum (e4), rozwój lekkich figur (Sf3, Gc4), wsparcie centrum (c3, d3) i roszada (O-O).'
+      },
+      explanation: {
+        en: 'Against strong bots, you don’t need risky traps — Giuoco Piano gives you a safe king, zero weaknesses, and a flexible center.',
+        pl: 'Przeciwko mocnym botom nie potrzebujesz ryzykownych pułapek — Giuoco Piano daje bezpiecznego króla, brak słabości i elastyczne centrum.'
+      }
+    },
+    {
+      id: 'op-14',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'easy',
+      openingFamily: 'london',
+      themes: ['solidOpening', 'development', 'pawnStructure'],
+      fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+      solution: ['d2d4', 'd7d5', 'c1f4', 'g8f6', 'e2e3', 'e7e6', 'g1f3', 'c7c5', 'c2c3', 'b8c6', 'b1d2'],
+      title: {
+        en: 'Solid Repertoire: The London System (White)',
+        pl: 'Solidny Debiut: System Londyński (Białe)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6: Start with the solid queen’s pawn: 1. d4.',
+          pl: 'Krok 1/6: Zacznij od solidnego pionka hetmańskiego: 1. d4.'
+        },
+        {
+          en: 'Step 2/6: Develop your dark-squared bishop BEFORE playing e3 so it isn’t locked in: 2. Bf4.',
+          pl: 'Krok 2/6: Wyprowadź ciemnoskrzydłowego gońca PRZED ruchem e3, aby go nie zablokować: 2. Gf4.'
+        },
+        {
+          en: 'Step 3/6: Reinforce d4 and open the diagonal for your light-squared bishop: 3. e3.',
+          pl: 'Krok 3/6: Wzmocnij centrum d4 i otwórz linię dla białopolowego gońca: 3. e3.'
+        },
+        {
+          en: 'Step 4/6: Control the key e5 square and prepare to castle: 4. Nf3.',
+          pl: 'Krok 4/6: Kontroluj kluczowe pole e5 i przygotuj roszadę: 4. Sf3.'
+        },
+        {
+          en: 'Step 5/6: Complete the iconic London pawn pyramid (c3-d4-e3): 5. c3.',
+          pl: 'Krok 5/6: Zbuduj słynną londyńską piramidę pionków (c3-d4-e3): 5. c3.'
+        },
+        {
+          en: 'Step 6/6: Develop the queenside knight without blocking your c-pawn: 6. Nbd2.',
+          pl: 'Krok 6/6: Rozwiń skoczka hetmańskiego, nie blokując pionka c: 6. Sbd2.'
+        }
+      ],
+      hint: {
+        en: 'Build the London setup: 1. d4, 2. Bf4, 3. e3, 4. Nf3, 5. c3, 6. Nbd2.',
+        pl: 'Zbuduj układ londyński: 1. d4, 2. Gf4, 3. e3, 4. Sf3, 5. c3, 6. Sbd2.'
+      },
+      explanation: {
+        en: 'The London System is famous for neutralizing aggressive bots: your d4 pawn is rock-solid, your pieces have natural squares, and it is very hard to blunder in the opening.',
+        pl: 'System Londyński świetnie neutralizuje agresywne boty: pionek d4 jest nie do ruszenia, figury mają naturalne pola i bardzo trudno o błąd w debiucie.'
+      }
+    },
+    {
+      id: 'op-15',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'medium',
+      openingFamily: 'caroKann',
+      themes: ['solidOpening', 'development', 'pawnStructure'],
+      fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1',
+      solution: ['c7c6', 'd2d4', 'd7d5', 'b1c3', 'd5e4', 'c3e4', 'c8f5', 'e4g3', 'f5g6', 'g1f3', 'b8d7'],
+      title: {
+        en: 'Solid Repertoire: Caro-Kann Defense (Black vs 1. e4)',
+        pl: 'Solidny Debiut: Obrona Caro-Kann (Czarne na 1. e4)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6: Prepare to challenge White’s center with ...d5 while keeping your light-squared bishop free: 1... c6.',
+          pl: 'Krok 1/6: Przygotuj uderzenie ...d5, nie blokując białopolowego gońca: 1... c6.'
+        },
+        {
+          en: 'Step 2/6: Strike the center immediately: 2... d5.',
+          pl: 'Krok 2/6: Natychmiast zaatakuj centrum ruchem 2... d5.'
+        },
+        {
+          en: 'Step 3/6: Capture on e4 to open lines for your pieces: 3... dxe4.',
+          pl: 'Krok 3/6: Zbij na e4, aby otworzyć linie dla swoich figur: 3... dxe4.'
+        },
+        {
+          en: 'Step 4/6: Develop your light-squared bishop OUTSIDE the pawn chain with tempo: 4... Bf5!',
+          pl: 'Krok 4/6: Wyprowadź białopolowego gońca POZA łańcuch pionków z tempem: 4... Gf5!'
+        },
+        {
+          en: 'Step 5/6: Tuck the bishop safely away on g6 where it controls the h7-b1 diagonal: 5... Bg6.',
+          pl: 'Krok 5/6: Schowaj gońca bezpiecznie na g6, kontrolując przekątną h7-b1: 5... Gg6.'
+        },
+        {
+          en: 'Step 6/6: Develop your knight to d7 (preparing ...Ngf6 without allowing doubled pawns): 6... Nd7.',
+          pl: 'Krok 6/6: Rozwiń skoczka na d7 (przygotowując ...Sgf6 bez zdwojonych pionków): 6... Sd7.'
+        }
+      ],
+      hint: {
+        en: 'Play the Classical Caro-Kann: 1... c6, 2... d5, 3... dxe4, 4... Bf5, 5... Bg6, 6... Nd7.',
+        pl: 'Zagraj klasyczne Caro-Kann: 1... c6, 2... d5, 3... dxe4, 4... Gf5, 5... Gg6, 6... Sd7.'
+      },
+      explanation: {
+        en: 'The Caro-Kann is one of the most resilient defenses against 1. e4. It avoids early tactics, gives Black a rock-solid pawn structure, and leads to healthy endgames.',
+        pl: 'Caro-Kann to jedna z najbardziej odpornych obron na 1. e4. Unika wczesnych pułapek, daje czarnym świetną strukturę pionową i bezpieczne końcówki.'
+      }
+    },
+    {
+      id: 'op-16',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'medium',
+      openingFamily: 'qgd',
+      themes: ['solidOpening', 'development', 'castling'],
+      fen: 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1',
+      solution: ['d7d5', 'c2c4', 'e7e6', 'b1c3', 'g8f6', 'c1g5', 'f8e7', 'e2e3', 'e8g8', 'g1f3', 'b8d7'],
+      title: {
+        en: 'Solid Repertoire: Queen’s Gambit Declined (Black vs 1. d4)',
+        pl: 'Solidny Debiut: Odrzucony Gambit Hetmański (Czarne na 1. d4)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6: Claim an equal share of the center immediately: 1... d5.',
+          pl: 'Krok 1/6: Zajmij równe miejsce w centrum ruchem 1... d5.'
+        },
+        {
+          en: 'Step 2/6: Decline the gambit and keep your strong central pawn on d5: 2... e6.',
+          pl: 'Krok 2/6: Odrzuć gambit i utrzymaj silnego pionka w centrum na d5: 2... e6.'
+        },
+        {
+          en: 'Step 3/6: Develop your kingside knight and reinforce d5: 3... Nf6.',
+          pl: 'Krok 3/6: Rozwiń skoczka królewskiego i wzmocnij pole d5: 3... Sf6.'
+        },
+        {
+          en: 'Step 4/6: Break the pin on your knight and prepare castling: 4... Be7.',
+          pl: 'Krok 4/6: Zdejmij związanie ze skoczka i przygotuj roszadę: 4... Ge7.'
+        },
+        {
+          en: 'Step 5/6: Castle early to keep your king completely safe: 5... O-O.',
+          pl: 'Krok 5/6: Zrób wczesną roszadę, aby król był w pełni bezpieczny: 5... O-O.'
+        },
+        {
+          en: 'Step 6/6: Develop your queenside knight to support ...c5 or ...e5 breaks later: 6... Nbd7.',
+          pl: 'Krok 6/6: Rozwiń skoczka hetmańskiego, wspierając przyszłe przełamanie ...c5 lub ...e5: 6... Sbd7.'
+        }
+      ],
+      hint: {
+        en: 'Play the classic QGD setup: 1... d5, 2... e6, 3... Nf6, 4... Be7, 5... O-O, 6... Nbd7.',
+        pl: 'Zagraj klasyczny Odrzucony Gambit Hetmański: 1... d5, 2... e6, 3... Sf6, 4... Ge7, 5... O-O, 6... Sbd7.'
+      },
+      explanation: {
+        en: 'The Queen’s Gambit Declined has been trusted by World Champions for over a century. It gives Black a fortress-like kingside and clear counterplay with ...c5.',
+        pl: 'Odrzucony Gambit Hetmański to ulubiona broń Mistrzów Świata od ponad wieku. Daje czarnym bezpiecznego króla i jasną kontrę ruchem ...c5.'
+      }
+    },
+    {
+      id: 'op-17',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'hard',
+      openingFamily: 'ruyLopez',
+      themes: ['solidOpening', 'development', 'castling'],
+      fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+      solution: ['e2e4', 'e7e5', 'g1f3', 'b8c6', 'f1b5', 'a7a6', 'b5a4', 'g8f6', 'e1g1', 'f8e7', 'f1e1'],
+      title: {
+        en: 'Solid Repertoire: Ruy Lopez / Spanish Game (White)',
+        pl: 'Solidny Debiut: Partia Hiszpańska / Ruy Lopez (Białe)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6: Seize the center with 1. e4.',
+          pl: 'Krok 1/6: Zajmij centrum ruchem 1. e4.'
+        },
+        {
+          en: 'Step 2/6: Attack e5 and develop your knight: 2. Nf3.',
+          pl: 'Krok 2/6: Zaatakuj e5 i rozwiń skoczka: 2. Sf3.'
+        },
+        {
+          en: 'Step 3/6: Put indirect pressure on e5 by attacking its defender: 3. Bb5.',
+          pl: 'Krok 3/6: Wywrzyj pośrednią presję na e5, atakując jego obrońcę: 3. Gb5.'
+        },
+        {
+          en: 'Step 4/6: Keep the bishop and maintain the tension on the a4-e8 diagonal: 4. Ba4.',
+          pl: 'Krok 4/6: Zachowaj gońca i utrzymaj napięcie na przekątnej a4-e8: 4. Ga4.'
+        },
+        {
+          en: 'Step 5/6: Castle immediately — if Black takes on e4, Re1 wins it back with advantage: 5. O-O.',
+          pl: 'Krok 5/6: Zrób roszadę — jeśli czarne zbiją na e4, We1 odzyska pionka z przewagą: 5. O-O.'
+        },
+        {
+          en: 'Step 6/6: Defend e4 solidly and prepare c3 + d4 for a dominant center: 6. Re1.',
+          pl: 'Krok 6/6: Solidnie obroń e4 i przygotuj c3 + d4, by zdominować centrum: 6. We1.'
+        }
+      ],
+      hint: {
+        en: 'Play the Mainline Ruy Lopez: 1. e4, 2. Nf3, 3. Bb5, 4. Ba4, 5. O-O, 6. Re1.',
+        pl: 'Zagraj główną linię Partii Hiszpańskiej: 1. e4, 2. Sf3, 3. Gb5, 4. Ga4, 5. O-O, 6. We1.'
+      },
+      explanation: {
+        en: 'The Ruy Lopez is Magnus Carlsen’s own favorite weapon with White. It builds lasting central pressure while keeping your king completely safe.',
+        pl: 'Partia Hiszpańska to ulubiona broń samego Magnusa Carlsena białymi. Buduje długotrwałą presję w centrum przy pełnym bezpieczeństwie króla.'
+      }
+    },
+    {
+      id: 'op-18',
+      isOpeningTrap: true,
+      movesToMate: 6,
+      difficulty: 'hard',
+      openingFamily: 'sicilian',
+      themes: ['solidOpening', 'development', 'counterattack'],
+      fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1',
+      solution: ['c7c5', 'g1f3', 'd7d6', 'd2d4', 'c5d4', 'f3d4', 'g8f6', 'b1c3', 'a7a6', 'f1e2', 'e7e5'],
+      title: {
+        en: 'Solid Repertoire: Sicilian Najdorf Counterattack (Black)',
+        pl: 'Solidny Debiut: Obrona Sycylijska Najdorf (Czarne)'
+      },
+      stepHints: [
+        {
+          en: 'Step 1/6: Fight for the d4 square asymmetrically from move one: 1... c5.',
+          pl: 'Krok 1/6: Walcz asymetrycznie o pole d4 od pierwszego ruchu: 1... c5.'
+        },
+        {
+          en: 'Step 2/6: Control e5 and prepare smooth piece development: 2... d6.',
+          pl: 'Krok 2/6: Kontroluj pole e5 i przygotuj płynny rozwój figur: 2... d6.'
+        },
+        {
+          en: 'Step 3/6: Trade your flank c-pawn for White’s central d-pawn: 3... cxd4.',
+          pl: 'Krok 3/6: Wymień skrzydłowego pionka c za centralnego pionka d białych: 3... cxd4.'
+        },
+        {
+          en: 'Step 4/6: Develop your knight with tempo, attacking e4: 4... Nf6.',
+          pl: 'Krok 4/6: Rozwiń skoczka z tempem, atakując pionka e4: 4... Sf6.'
+        },
+        {
+          en: 'Step 5/6: The signature Najdorf move! Stop Bb5+ / Nb5 and prepare ...e5 or ...b5: 5... a6.',
+          pl: 'Krok 5/6: Słynny ruch Najdorfa! Blokuje Gb5+ / Sb5 i przygotowuje ...e5 lub ...b5: 5... a6.'
+        },
+        {
+          en: 'Step 6/6: Kick White’s centralized knight and claim central space: 6... e5!',
+          pl: 'Krok 6/6: Wypędź centralnego skoczka białych i zdobądź przestrzeń w centrum: 6... e5!'
+        }
+      ],
+      hint: {
+        en: 'Play the Sicilian Najdorf: 1... c5, 2... d6, 3... cxd4, 4... Nf6, 5... a6, 6... e5.',
+        pl: 'Zagraj Sycylijską Najdorf: 1... c5, 2... d6, 3... cxd4, 4... Sf6, 5... a6, 6... e5.'
+      },
+      explanation: {
+        en: 'The Sicilian Najdorf gives Black an extra central pawn majority and dynamic counterplay — the ultimate weapon for playing to win with Black.',
+        pl: 'Obrona Sycylijska Najdorf daje czarnym przewagę pionową w centrum i dynamiczną kontrę — najlepszą broń do gry o zwycięstwo czarnymi.'
+      }
+    },
+    {
+      "id": "op-19",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "easy",
+      "openingFamily": "scotch",
+      "themes": [
+        "solidOpening",
+        "development"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "d2d4",
+        "e5d4",
+        "f3d4",
+        "g8f6",
+        "b1c3"
+      ],
+      "title": {
+        "en": "Solid Opening: Scotch Game (White)",
+        "pl": "Debiut: Partia Szkocka (Białe)"
+      },
+      "hint": {
+        "en": "Open the center early with 3. d4! exd4 4. Nxd4 Nf6 5. Nc3.",
+        "pl": "Otwórz centrum wcześnie: 3. d4! exd4 4. Sxd4 Sf6 5. Sc3."
+      },
+      "explanation": {
+        "en": "The Scotch Game immediately clarifies the center and gives White active piece play.",
+        "pl": "Partia Szkocka od razu otwiera centrum i daje białym aktywną grę figurami."
+      }
+    },
+    {
+      "id": "op-20",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "easy",
+      "openingFamily": "vienna",
+      "themes": [
+        "solidOpening",
+        "development"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "e2e4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "f1c4",
+        "f8c5",
+        "d2d3",
+        "d7d6",
+        "f2f4"
+      ],
+      "title": {
+        "en": "Solid Opening: Vienna Game (White)",
+        "pl": "Debiut: Partia Wiedeńska (Białe)"
+      },
+      "hint": {
+        "en": "Develop Nc3 before f4: 1. e4, 2. Nc3, 3. Bc4, 4. d3, 5. f4!",
+        "pl": "Rozwiń Sc3 przed f4: 1. e4, 2. Sc3, 3. Gc4, 4. d3, 5. f4!"
+      },
+      "explanation": {
+        "en": "The Vienna Game is a safe, flexible weapon that prepares a strong kingside f4 break.",
+        "pl": "Partia Wiedeńska to bezpieczna broń przygotowująca silne przełamanie f4 na skrzydle królewskim."
+      }
+    },
+    {
+      "id": "op-21",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "easy",
+      "openingFamily": "fourKnights",
+      "themes": [
+        "solidOpening",
+        "development",
+        "castling"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "b1c3",
+        "g8f6",
+        "f1b5",
+        "f8b4",
+        "e1g1"
+      ],
+      "title": {
+        "en": "Solid Opening: Four Knights Spanish (White)",
+        "pl": "Debiut: Partia Czterech Skoczków (Białe)"
+      },
+      "hint": {
+        "en": "Develop both knights, pin with Bb5, and castle safely: O-O.",
+        "pl": "Rozwiń oba skoczki, zagraj Gb5 i zrób roszadę O-O."
+      },
+      "explanation": {
+        "en": "The Four Knights is virtually blunder-proof and gets White castled by move 5.",
+        "pl": "Partia Czterech Skoczków jest bardzo solidna i daje białym bezpieczną roszadę już w 5. ruchu."
+      }
+    },
+    {
+      "id": "op-22",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "easy",
+      "openingFamily": "english",
+      "themes": [
+        "solidOpening",
+        "development"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g2g3",
+        "d7d5",
+        "c4d5",
+        "f6d5",
+        "f1g2"
+      ],
+      "title": {
+        "en": "Solid Opening: English Opening (White)",
+        "pl": "Debiut: Partia Angielska (Białe)"
+      },
+      "hint": {
+        "en": "Control d5 from the flank: 1. c4, 2. Nc3, 3. g3, 4. cxd5, 5. Bg2.",
+        "pl": "Kontroluj d5 ze skrzydła: 1. c4, 2. Sc3, 3. g3, 4. cxd5, 5. Gg2."
+      },
+      "explanation": {
+        "en": "The English Opening with Bg2 creates long-term pressure along the h1-a8 diagonal.",
+        "pl": "Partia Angielska z fianchetto Gg2 buduje silną presję na długiej przekątnej h1-a8."
+      }
+    },
+    {
+      "id": "op-23",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "easy",
+      "openingFamily": "reti",
+      "themes": [
+        "solidOpening",
+        "development",
+        "castling"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "g1f3",
+        "d7d5",
+        "g2g3",
+        "g8f6",
+        "f1g2",
+        "e7e6",
+        "e1g1",
+        "f8e7",
+        "d2d3"
+      ],
+      "title": {
+        "en": "Solid Opening: Réti / King’s Indian Attack",
+        "pl": "Debiut: Otwarcie Rétiego / Atak Królewsko-Indyjski"
+      },
+      "hint": {
+        "en": "Fianchetto and castle quickly: 1. Nf3, 2. g3, 3. Bg2, 4. O-O, 5. d3.",
+        "pl": "Zrób fianchetto i szybką roszadę: 1. Sf3, 2. g3, 3. Gg2, 4. O-O, 5. d3."
+      },
+      "explanation": {
+        "en": "A hypermodern setup that avoids early theory traps and builds a rock-solid kingside.",
+        "pl": "Hipernowoczesny układ unikający wczesnych pułapek i dający pancerną roszadę."
+      }
+    },
+    {
+      "id": "op-24",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "easy",
+      "openingFamily": "french",
+      "themes": [
+        "solidOpening",
+        "pawnStructure"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+      "solution": [
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "g8f6",
+        "e4e5",
+        "f6d7",
+        "f2f4",
+        "c7c5"
+      ],
+      "title": {
+        "en": "Solid Opening: French Defense (Black vs 1. e4)",
+        "pl": "Debiut: Obrona Francuska (Czarne na 1. e4)"
+      },
+      "hint": {
+        "en": "Challenge the center with ...e6, ...d5, ...Nf6, ...Nfd7, and strike with ...c5!",
+        "pl": "Zaatakuj centrum przez ...e6, ...d5, ...Sf6, ...Sfd7 i uderz ...c5!"
+      },
+      "explanation": {
+        "en": "The French Defense immediately undermines White’s d4 pawn chain with ...c5.",
+        "pl": "Obrona Francuska natychmiast podważa łańcuch pionków białych ruchem ...c5."
+      }
+    },
+    {
+      "id": "op-25",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "easy",
+      "openingFamily": "petrov",
+      "themes": [
+        "solidOpening",
+        "development"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+      "solution": [
+        "e7e5",
+        "g1f3",
+        "g8f6",
+        "f3e5",
+        "d7d6",
+        "e5f3",
+        "f6e4",
+        "d2d4",
+        "d6d5"
+      ],
+      "title": {
+        "en": "Solid Opening: Petrov / Russian Defense (Black)",
+        "pl": "Debiut: Obrona Rosyjska / Petrova (Czarne)"
+      },
+      "hint": {
+        "en": "Counterattack e4 with 2... Nf6, kick the knight with 3... d6, then win back e4!",
+        "pl": "Kontratakuj e4 ruchem 2... Sf6, przegoń skoczka 3... d6 i odbierz pionka e4!"
+      },
+      "explanation": {
+        "en": "The Petrov Defense is famous for neutralizing White’s opening initiative cleanly.",
+        "pl": "Obrona Petrova słynie z czystego neutralizowania inicjatywy białych."
+      }
+    },
+    {
+      "id": "op-26",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "medium",
+      "openingFamily": "slav",
+      "themes": [
+        "solidOpening",
+        "pawnStructure"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+      "solution": [
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "d5c4",
+        "a2a4",
+        "c8f5"
+      ],
+      "title": {
+        "en": "Solid Opening: Slav Defense (Black vs 1. d4)",
+        "pl": "Debiut: Obrona Słowiańska (Czarne na 1. d4)"
+      },
+      "hint": {
+        "en": "Support d5 with ...c6 so your c8-bishop stays free to develop to f5!",
+        "pl": "Wzmocnij d5 ruchem ...c6, aby goniec c8 mógł wyjść na aktywne pole f5!"
+      },
+      "explanation": {
+        "en": "The Slav Defense keeps Black’s light-squared bishop active outside the pawn chain.",
+        "pl": "Obrona Słowiańska pozwala wyprowadzić białopolowego gońca na f5 poza łańcuch pionków."
+      }
+    },
+    {
+      "id": "op-27",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "medium",
+      "openingFamily": "kid",
+      "themes": [
+        "solidOpening",
+        "development",
+        "castling"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+      "solution": [
+        "g8f6",
+        "c2c4",
+        "g7g6",
+        "b1c3",
+        "f8g7",
+        "e2e4",
+        "d7d6",
+        "g1f3",
+        "e8g8"
+      ],
+      "title": {
+        "en": "Solid Opening: King’s Indian Defense (Black)",
+        "pl": "Debiut: Obrona Królewsko-Indyjska (Czarne)"
+      },
+      "hint": {
+        "en": "Fianchetto with ...Nf6, ...g6, ...Bg7, ...d6, and castle ...O-O!",
+        "pl": "Zbuduj układ królewsko-indyjski: ...Sf6, ...g6, ...Gg7, ...d6 i roszada ...O-O!"
+      },
+      "explanation": {
+        "en": "The King’s Indian Defense gives Black a safe king and dynamic counterplay with ...e5 or ...c5.",
+        "pl": "Obrona Królewsko-Indyjska daje bezpiecznego króla i dynamiczną kontrę ruchami ...e5 lub ...c5."
+      }
+    },
+    {
+      "id": "op-28",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "medium",
+      "openingFamily": "nimzo",
+      "themes": [
+        "solidOpening",
+        "pin"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+      "solution": [
+        "g8f6",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "f8b4",
+        "e2e3",
+        "e8g8",
+        "f1d3",
+        "d7d5"
+      ],
+      "title": {
+        "en": "Solid Opening: Nimzo-Indian Defense (Black)",
+        "pl": "Debiut: Obrona Nimzo-Indyjska (Czarne)"
+      },
+      "hint": {
+        "en": "Pin the c3-knight with ...Bb4, castle early, and strike the center with ...d5!",
+        "pl": "Zwiąż skoczka ruchem ...Gb4, zrób szybką roszadę i uderz w centrum ...d5!"
+      },
+      "explanation": {
+        "en": "The Nimzo-Indian is one of the highest-scoring defenses against 1. d4 at master level.",
+        "pl": "Obrona Nimzo-Indyjska to jedna z najskuteczniejszych broni przeciwko 1. d4 na poziomie mistrzowskim."
+      }
+    },
+    {
+      "id": "op-29",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "medium",
+      "openingFamily": "scandinavian",
+      "themes": [
+        "solidOpening",
+        "development"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+      "solution": [
+        "d7d5",
+        "e4d5",
+        "d8d5",
+        "b1c3",
+        "d5a5",
+        "d2d4",
+        "g8f6",
+        "g1f3",
+        "c7c6"
+      ],
+      "title": {
+        "en": "Solid Opening: Scandinavian Defense (Black)",
+        "pl": "Debiut: Obrona Skandynawska (Czarne)"
+      },
+      "hint": {
+        "en": "Challenge e4 on move 1 with ...d5, tuck the queen on a5, then play ...Nf6 and ...c6.",
+        "pl": "Zaatakuj e4 już w 1. ruchu (...d5), schowaj hetmana na a5 i zagraj ...Sf6 oraz ...c6."
+      },
+      "explanation": {
+        "en": "The Scandinavian Defense immediately takes White out of main-line e4 theory.",
+        "pl": "Obrona Skandynawska od razu wyprowadza białe z głównych teorii 1. e4."
+      }
+    },
+    {
+      "id": "op-30",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "medium",
+      "openingFamily": "pirc",
+      "themes": [
+        "solidOpening",
+        "development",
+        "castling"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+      "solution": [
+        "d7d6",
+        "d2d4",
+        "g8f6",
+        "b1c3",
+        "g7g6",
+        "g1f3",
+        "f8g7",
+        "f1e2",
+        "e8g8"
+      ],
+      "title": {
+        "en": "Solid Opening: Pirc Defense (Black vs 1. e4)",
+        "pl": "Debiut: Obrona Pirca (Czarne na 1. e4)"
+      },
+      "hint": {
+        "en": "Play ...d6, ...Nf6, ...g6, ...Bg7, and castle ...O-O.",
+        "pl": "Zagraj ...d6, ...Sf6, ...g6, ...Gg7 i bezpiecznie zrób roszadę ...O-O."
+      },
+      "explanation": {
+        "en": "The Pirc invites White to overextend in the center while Black prepares a sharp counterattack.",
+        "pl": "Obrona Pirca zaprasza białe do rozbudowy centrum, przygotowując kontratak na skrzydle i w centrum."
+      }
+    },
+    {
+      "id": "op-31",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "medium",
+      "openingFamily": "philidor",
+      "themes": [
+        "solidOpening",
+        "development"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+      "solution": [
+        "e7e5",
+        "g1f3",
+        "d7d6",
+        "d2d4",
+        "g8f6",
+        "b1c3",
+        "b8d7",
+        "f1c4",
+        "f8e7"
+      ],
+      "title": {
+        "en": "Solid Opening: Philidor Defense (Black)",
+        "pl": "Debiut: Obrona Philidora (Czarne)"
+      },
+      "hint": {
+        "en": "Defend e5 solidly with ...d6, then develop ...Nf6, ...Nbd7, and ...Be7.",
+        "pl": "Obroń e5 ruchem ...d6, a potem rozwiń ...Sf6, ...Sbd7 i ...Ge7."
+      },
+      "explanation": {
+        "en": "The Philidor Defense is compact and solid, avoiding sharp tactical traps.",
+        "pl": "Obrona Philidora jest zwarta i bardzo solidna, unikając wczesnych pułapek taktycznych."
+      }
+    },
+    {
+      "id": "op-32",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "medium",
+      "openingFamily": "alekhine",
+      "themes": [
+        "solidOpening",
+        "counterattack"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+      "solution": [
+        "g8f6",
+        "e4e5",
+        "f6d5",
+        "d2d4",
+        "d7d6",
+        "g1f3",
+        "c8g4",
+        "f1e2",
+        "e7e6"
+      ],
+      "title": {
+        "en": "Solid Opening: Alekhine’s Defense (Black)",
+        "pl": "Debiut: Obrona Alechina (Czarne)"
+      },
+      "hint": {
+        "en": "Provoke e5 with ...Nf6, jump to d5, then undermine the center with ...d6 and ...Bg4.",
+        "pl": "Sprowokuj e5 ruchem ...Sf6, skocz na d5 i podważ centrum przez ...d6 oraz ...Gg4."
+      },
+      "explanation": {
+        "en": "Alekhine’s Defense turns White’s advanced pawns into targets for counterattack.",
+        "pl": "Obrona Alechina zamienia wysunięte pionki białych w cele do kontrataku."
+      }
+    },
+    {
+      "id": "op-33",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "hard",
+      "openingFamily": "grunfeld",
+      "themes": [
+        "solidOpening",
+        "counterattack"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+      "solution": [
+        "g8f6",
+        "c2c4",
+        "g7g6",
+        "b1c3",
+        "d7d5",
+        "c4d5",
+        "f6d5",
+        "e2e4",
+        "d5c3"
+      ],
+      "title": {
+        "en": "Solid Opening: Grünfeld Defense (Black)",
+        "pl": "Debiut: Obrona Grünfelda (Czarne)"
+      },
+      "hint": {
+        "en": "Strike the center on move 3 with ...d5! and trade on c3 to attack d4.",
+        "pl": "Uderz w centrum już w 3. ruchu (...d5!) i zbij na c3, by atakować pionka d4."
+      },
+      "explanation": {
+        "en": "The Grünfeld Defense is a dynamic Grandmaster weapon fighting directly against White’s center.",
+        "pl": "Obrona Grünfelda to dynamiczna broń arcymistrzowska walcząca bezpośrednio z centrum białych."
+      }
+    },
+    {
+      "id": "op-34",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "hard",
+      "openingFamily": "dutch",
+      "themes": [
+        "solidOpening",
+        "counterattack"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1",
+      "solution": [
+        "f7f5",
+        "g2g3",
+        "g8f6",
+        "f1g2",
+        "e7e6",
+        "g1f3",
+        "f8e7",
+        "e1g1",
+        "e8g8"
+      ],
+      "title": {
+        "en": "Solid Opening: Classical Dutch Defense (Black)",
+        "pl": "Debiut: Obrona Holenderska (Czarne)"
+      },
+      "hint": {
+        "en": "Fight for e4 with 1... f5, develop ...Nf6, ...e6, ...Be7, and castle ...O-O.",
+        "pl": "Walcz o pole e4 ruchem 1... f5, rozwiń ...Sf6, ...e6, ...Ge7 i zrób roszadę ...O-O."
+      },
+      "explanation": {
+        "en": "The Dutch Defense creates an unbalanced fight for kingside attack.",
+        "pl": "Obrona Holenderska tworzy asymetryczną walkę o atak na skrzydle królewskim."
+      }
+    },
+    {
+      "id": "op-35",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "hard",
+      "openingFamily": "sicilian",
+      "themes": [
+        "solidOpening",
+        "counterattack"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+      "solution": [
+        "c7c5",
+        "g1f3",
+        "d7d6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "g8f6",
+        "b1c3",
+        "g7g6"
+      ],
+      "title": {
+        "en": "Solid Opening: Sicilian Dragon (Black)",
+        "pl": "Debiut: Obrona Sycylijska — Wariant Smoka (Czarne)"
+      },
+      "hint": {
+        "en": "Trade on d4, develop ...Nf6, and prepare the fierce ...Bg7 fianchetto with ...g6!",
+        "pl": "Zbij na d4, rozwiń ...Sf6 i przygotuj silne fianchetto ruchem ...g6!"
+      },
+      "explanation": {
+        "en": "The Sicilian Dragon unleashes a monster dark-squared bishop on g7 aiming down the long diagonal.",
+        "pl": "Wariant Smoka ustawia potężnego ciemnoskrzydłowego gońca na g7 celującego w całą przekątną."
+      }
+    },
+    {
+      "id": "op-36",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "hard",
+      "openingFamily": "evans",
+      "themes": [
+        "sacrifice",
+        "development"
+      ],
+      "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "solution": [
+        "b2b4",
+        "c5b4",
+        "c2c3",
+        "b4a5",
+        "d2d4",
+        "e5d4",
+        "e1g1",
+        "d7d6",
+        "c3d4"
+      ],
+      "title": {
+        "en": "Classic Gambit: Evans Gambit (White)",
+        "pl": "Klasyczny Gambit: Gambit Evansa (Białe)"
+      },
+      "hint": {
+        "en": "Sacrifice the b-pawn with 4. b4! to gain huge central tempo with c3 and d4!",
+        "pl": "Poświęć pionka b ruchem 4. b4!, aby błyskawicznie zbudować centrum przez c3 i d4!"
+      },
+      "explanation": {
+        "en": "The Evans Gambit trades a flank pawn for rapid development and a crushing pawn center.",
+        "pl": "Gambit Evansa oddaje skrzydłowego pionka za błyskawiczny rozwój i potężne centrum."
+      }
+    },
+    {
+      "id": "op-37",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "hard",
+      "openingFamily": "kingsGambit",
+      "themes": [
+        "sacrifice",
+        "development"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "e2e4",
+        "e7e5",
+        "f2f4",
+        "e5f4",
+        "g1f3",
+        "g7g5",
+        "f1c4",
+        "f8g7",
+        "e1g1"
+      ],
+      "title": {
+        "en": "Classic Gambit: King’s Gambit (White)",
+        "pl": "Klasyczny Gambit: Gambit Królewski (Białe)"
+      },
+      "hint": {
+        "en": "Strike with 2. f4! Develop Nf3, Bc4, and castle rapidly to open the f-file!",
+        "pl": "Uderz 2. f4! Rozwiń Sf3, Gc4 i zrób szybką roszadę, otwierając linię f!"
+      },
+      "explanation": {
+        "en": "The King’s Gambit opens the f-file for White’s rook and aims directly at Black’s f7 square.",
+        "pl": "Gambit Królewski otwiera linię f dla białej wieży i od razu atakuje słaby punkt f7."
+      }
+    },
+    {
+      "id": "op-38",
+      "isOpeningTrap": true,
+      "movesToMate": 5,
+      "difficulty": "hard",
+      "openingFamily": "catalan",
+      "themes": [
+        "solidOpening",
+        "development",
+        "castling"
+      ],
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "solution": [
+        "d2d4",
+        "g8f6",
+        "c2c4",
+        "e7e6",
+        "g2g3",
+        "d7d5",
+        "f1g2",
+        "f8e7",
+        "g1f3"
+      ],
+      "title": {
+        "en": "Grandmaster Repertoire: Catalan Opening (White)",
+        "pl": "Repertuar Arcymistrzowski: Partia Katalońska (Białe)"
+      },
+      "hint": {
+        "en": "Combine d4+c4 with the positional fianchetto g3 and Bg2!",
+        "pl": "Połącz d4+c4 z pozycyjnym fianchetto g3 oraz Gg2!"
+      },
+      "explanation": {
+        "en": "The Catalan is a favorite of Magnus Carlsen — it squeezes Black with relentless pressure along the h1-a8 diagonal.",
+        "pl": "Partia Katalońska to ulubiona broń Magnusa Carlsena — wywiera nieustanną presję wzdłuż przekątnej h1-a8."
+      }
     }
   ];
 
@@ -1856,6 +2849,528 @@
         en: '1... Bxh2+! 2. Kh1 Rxd1+ wins White’s queen cleanly with a discovered attack.',
         pl: '1... Gxh2+! 2. Kh1 Wxd1+ zdobywa białego hetmana dzięki uderzeniu z odsłonięcia.'
       }
+    },
+    {
+      "id": "wm-13",
+      "difficulty": "easy",
+      "themes": [
+        "fork"
+      ],
+      "fen": "4k3/8/5q2/8/4N3/8/8/4K3 w - - 0 1",
+      "solution": [
+        "e4f6",
+        "e8e7",
+        "f6d5"
+      ],
+      "title": {
+        "en": "Knight Captures Hanging Queen with Check!",
+        "pl": "Skoczek zbija hetmana z szachem!"
+      },
+      "hint": {
+        "en": "Capture the undefended queen on f6 with check (`Nxf6+`)!",
+        "pl": "Zbij niebronionego hetmana na f6 z szachem (`Sxf6+`)!"
+      },
+      "explanation": {
+        "en": "1. Nxf6+ wins the queen immediately with check.",
+        "pl": "1. Sxf6+ natychmiast wygrywa hetmana z szachem."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-14",
+      "difficulty": "easy",
+      "themes": [
+        "fork"
+      ],
+      "fen": "r3k3/8/8/3N4/8/8/8/4K3 w - - 0 1",
+      "solution": [
+        "d5c7",
+        "e8e7",
+        "c7a8"
+      ],
+      "title": {
+        "en": "Classic Royal Knight Fork on c7!",
+        "pl": "Klasyczne widełki królewskie na c7!"
+      },
+      "hint": {
+        "en": "Jump your knight to c7 (`Nc7+`) to fork the black king and rook!",
+        "pl": "Skocz skoczkiem na c7 (`Sc7+`), robiąc widełki królowi i wieży!"
+      },
+      "explanation": {
+        "en": "1. Nc7+ forks the king on e8 and the rook on a8, winning a full rook.",
+        "pl": "1. Sc7+ robi widełki królowi na e8 i wieży na a8, wygrywając całą wieżę."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-15",
+      "difficulty": "easy",
+      "themes": [
+        "fork"
+      ],
+      "fen": "4k2r/8/8/4N3/8/8/8/4K3 w - - 0 1",
+      "solution": [
+        "e5f7",
+        "e8e7",
+        "f7h8"
+      ],
+      "title": {
+        "en": "Knight Fork on f7 Winning the Rook!",
+        "pl": "Widełki skoczkiem na f7 wygrywające wieżę!"
+      },
+      "hint": {
+        "en": "Jump to f7 (`Nf7+`) to fork the king and h8-rook!",
+        "pl": "Skocz na f7 (`Sf7+`), robiąc widełki królowi i wieży h8!"
+      },
+      "explanation": {
+        "en": "1. Nf7+ forks e8 and h8, winning the rook cleanly.",
+        "pl": "1. Sf7+ robi widełki na e8 i h8, czysto wygrywając wieżę."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-16",
+      "difficulty": "easy",
+      "themes": [
+        "skewer"
+      ],
+      "fen": "4k3/8/8/8/4q3/8/8/4R1K1 w - - 0 1",
+      "solution": [
+        "e1e4"
+      ],
+      "title": {
+        "en": "Pin & Capture on the e-File!",
+        "pl": "Związanie i zbicie na linii e!"
+      },
+      "hint": {
+        "en": "Black’s queen on e4 is pinned to the king and undefended — capture it with `Rxe4`!",
+        "pl": "Czarny hetman na e4 jest związany z królem i niebroniony — zbij go `Wxe4`!"
+      },
+      "explanation": {
+        "en": "1. Rxe4 wins the queen on the spot.",
+        "pl": "1. Wxe4 natychmiast wygrywa hetmana."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-17",
+      "difficulty": "easy",
+      "themes": [
+        "skewer"
+      ],
+      "fen": "r5k1/8/8/8/4B3/8/8/6K1 w - - 0 1",
+      "solution": [
+        "e4d5",
+        "g8f8",
+        "d5a8"
+      ],
+      "title": {
+        "en": "Diagonal Bishop Skewer Winning the Rook!",
+        "pl": "Przekątna szpilka gońcem wygrywająca wieżę!"
+      },
+      "hint": {
+        "en": "Check the king on the a8-h1 diagonal with `Bd5+`, skewering the rook on a8!",
+        "pl": "Daj szacha na przekątnej a8-h1 ruchem `Gd5+`, nabijając wieżę na a8 na szpilkę!"
+      },
+      "explanation": {
+        "en": "1. Bd5+ forces the king to move, allowing 2. Bxa8.",
+        "pl": "1. Gd5+ zmusza króla do odejścia, po czym 2. Gxa8 wygrywa wieżę."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-18",
+      "difficulty": "easy",
+      "themes": [
+        "fork"
+      ],
+      "fen": "r3k3/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",
+      "solution": [
+        "d1a4",
+        "e8e7",
+        "a4a8"
+      ],
+      "title": {
+        "en": "Queen Double Attack on a4!",
+        "pl": "Podwójny atak hetmanem na a4!"
+      },
+      "hint": {
+        "en": "Play `Qa4+` to check the king on e8 and attack the undefended rook on a8!",
+        "pl": "Zagraj `Ha4+`, dając szacha królowi na e8 i atakując niebronioną wieżę na a8!"
+      },
+      "explanation": {
+        "en": "1. Qa4+ forks the king and the a8-rook, winning a full rook.",
+        "pl": "1. Ha4+ robi widełki królowi i wieży a8, wygrywając całą wieżę."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-19",
+      "difficulty": "easy",
+      "themes": [
+        "fork"
+      ],
+      "fen": "4k2r/ppp5/8/8/8/8/PPP5/3Q2K1 w - - 0 1",
+      "solution": [
+        "d1h5",
+        "e8e7",
+        "h5h8"
+      ],
+      "title": {
+        "en": "Queen Fork on h5 Winning the h8-Rook!",
+        "pl": "Widełki hetmanem na h5 wygrywające wieżę!"
+      },
+      "hint": {
+        "en": "Check on h5 (`Qh5+`) to simultaneously attack the h8-rook!",
+        "pl": "Daj szacha na h5 (`Hh5+`), jednocześnie atakując wieżę na h8!"
+      },
+      "explanation": {
+        "en": "1. Qh5+ forks the king on e8 and the rook on h8.",
+        "pl": "1. Hh5+ robi widełki królowi na e8 i wieży na h8."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-20",
+      "difficulty": "medium",
+      "themes": [
+        "pin"
+      ],
+      "fen": "4k3/4r3/8/8/1B6/8/8/4R1K1 w - - 0 1",
+      "solution": [
+        "b4e7"
+      ],
+      "title": {
+        "en": "Win the Pinned Rook on e7!",
+        "pl": "Zbij związaną wieżę na e7!"
+      },
+      "hint": {
+        "en": "Black’s rook on e7 is pinned to the king by your e1-rook. Capture it cleanly with `Bxe7`!",
+        "pl": "Czarna wieża na e7 jest związana z królem przez Twoją wieżę e1. Zbij ją gońcem `Gxe7`!"
+      },
+      "explanation": {
+        "en": "1. Bxe7 wins a full rook because the e7-rook cannot move and is defended only by the king (which would be in check from Re1? No, Re1 defends e7!).",
+        "pl": "1. Gxe7 wygrywa całą wieżę, bo Twoja wieża z e1 broni gońca na e7."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-21",
+      "difficulty": "medium",
+      "themes": [
+        "skewer"
+      ],
+      "fen": "4k3/8/8/8/8/8/8/R3q1K1 w - - 0 1",
+      "solution": [
+        "a1e1"
+      ],
+      "title": {
+        "en": "Absolute Pin on the e-File!",
+        "pl": "Bezwzględne związanie na linii e!"
+      },
+      "hint": {
+        "en": "Play `Rxe1`? Even better — capture the undefended queen on e1!",
+        "pl": "Zbij niebronionego hetmana na e1 ruchem `Wxe1`!"
+      },
+      "explanation": {
+        "en": "1. Rxe1 wins the queen immediately.",
+        "pl": "1. Wxe1 natychmiast wygrywa hetmana."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-22",
+      "difficulty": "medium",
+      "themes": [
+        "skewer"
+      ],
+      "fen": "2q1k3/8/8/8/8/8/8/R5K1 w - - 0 1",
+      "solution": [
+        "a1a8",
+        "e8d7",
+        "a8c8"
+      ],
+      "title": {
+        "en": "8th-Rank Rook Pin Winning the Queen!",
+        "pl": "Związanie wieżą na 8. linii wygrywające hetmana!"
+      },
+      "hint": {
+        "en": "Play `Ra8` to pin Black’s queen on c8 directly to the king on e8!",
+        "pl": "Zagraj `Wa8`, wiążąc czarnego hetmana na c8 bezpośrednio do króla na e8!"
+      },
+      "explanation": {
+        "en": "1. Ra8 pins the queen to the king on the 8th rank, winning the queen.",
+        "pl": "1. Wa8 wiąże hetmana do króla na 8. linii, wygrywając hetmana."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-23",
+      "difficulty": "medium",
+      "themes": [
+        "fork"
+      ],
+      "fen": "3q4/4k3/8/4N3/8/8/8/4K3 w - - 0 1",
+      "solution": [
+        "e5c6",
+        "e7d7",
+        "c6d8"
+      ],
+      "title": {
+        "en": "Royal Knight Fork on c6 Winning the Queen!",
+        "pl": "Królewskie widełki na c6 wygrywające hetmana!"
+      },
+      "hint": {
+        "en": "Jump your knight to c6 (`Nc6+`) to fork the king on e7 and queen on d8!",
+        "pl": "Skocz skoczkiem na c6 (`Sc6+`), robiąc widełki królowi na e7 i hetmanowi na d8!"
+      },
+      "explanation": {
+        "en": "1. Nc6+ forks the king and queen, winning the queen on the next move.",
+        "pl": "1. Sc6+ robi widełki królowi i hetmanowi, wygrywając hetmana w następnym ruchu."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-24",
+      "difficulty": "medium",
+      "themes": [
+        "fork"
+      ],
+      "fen": "5q2/4k3/8/4N3/8/8/8/4K3 w - - 0 1",
+      "solution": [
+        "e5g6",
+        "e7f7",
+        "g6f8"
+      ],
+      "title": {
+        "en": "Royal Knight Fork on g6 Winning the Queen!",
+        "pl": "Królewskie widełki na g6 wygrywające hetmana!"
+      },
+      "hint": {
+        "en": "Jump to g6 (`Ng6+`) to fork the king on e7 and queen on f8!",
+        "pl": "Skocz na g6 (`Sg6+`), robiąc widełki królowi na e7 i hetmanowi na f8!"
+      },
+      "explanation": {
+        "en": "1. Ng6+ wins Black’s queen cleanly.",
+        "pl": "1. Sg6+ czysto wygrywa czarnego hetmana."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-25",
+      "difficulty": "medium",
+      "themes": [
+        "skewer"
+      ],
+      "fen": "4k3/8/8/1q6/8/8/4B3/4K3 w - - 0 1",
+      "solution": [
+        "e2b5"
+      ],
+      "title": {
+        "en": "Bishop Captures Undefended Queen with Pin!",
+        "pl": "Goniec zbija hetmana z szachem!"
+      },
+      "hint": {
+        "en": "Black’s queen on b5 is on the same diagonal as the king — capture it with `Bxb5+`!",
+        "pl": "Czarny hetman na b5 stoi na tej samej przekątnej co król — zbij go `Gxb5+`!"
+      },
+      "explanation": {
+        "en": "1. Bxb5+ wins the queen immediately with check.",
+        "pl": "1. Gxb5+ natychmiast wygrywa hetmana z szachem."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-26",
+      "difficulty": "medium",
+      "themes": [
+        "discoveredAttack"
+      ],
+      "fen": "4k3/4r3/8/8/4B3/8/8/4R1K1 w - - 0 1",
+      "solution": [
+        "e4c6",
+        "e8f8",
+        "e1e7"
+      ],
+      "title": {
+        "en": "Discovered Check Winning the Rook!",
+        "pl": "Szach z odsłonięcia wygrywający wieżę!"
+      },
+      "hint": {
+        "en": "Move your bishop with check (`Bc6+`!) to unleash your e1-rook on Black’s e7-rook!",
+        "pl": "Odejdź gońcem z szachem (`Gc6+`!), odsłaniając atak wieży e1 na wieżę e7!"
+      },
+      "explanation": {
+        "en": "1. Bc6+ is a discovered check — Black must save the king, and 2. Rxe7 wins the rook.",
+        "pl": "1. Gc6+ to szach z odsłonięcia — czarne muszą ratować króla, a 2. Wxe7 wygrywa wieżę."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-27",
+      "difficulty": "hard",
+      "themes": [
+        "discoveredAttack"
+      ],
+      "fen": "4k3/8/3q4/8/4N3/8/8/4R1K1 w - - 0 1",
+      "solution": [
+        "e4d6",
+        "e8d7",
+        "e1e7"
+      ],
+      "title": {
+        "en": "Discovered Check Capture on d6!",
+        "pl": "Zbicie hetmana z szachem z odsłonięcia!"
+      },
+      "hint": {
+        "en": "Capture Black’s queen on d6 with your knight (`Nxd6+`) — it’s a discovered check from your e1-rook!",
+        "pl": "Zbij czarnego hetmana na d6 skoczkiem (`Sxd6+`) — odsłaniasz szacha wieżą z e1!"
+      },
+      "explanation": {
+        "en": "1. Nxd6+ wins the queen with a discovered check!",
+        "pl": "1. Sxd6+ wygrywa hetmana z szachem z odsłonięcia!"
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 2
+    },
+    {
+      "id": "wm-28",
+      "difficulty": "hard",
+      "themes": [
+        "pin"
+      ],
+      "fen": "3r2k1/5ppp/8/8/8/2B5/5PPP/3R2K1 w - - 0 1",
+      "solution": [
+        "d1d8"
+      ],
+      "title": {
+        "en": "Back-Rank Rook Capture!",
+        "pl": "Zbicie wieży z matem na 8. linii!"
+      },
+      "hint": {
+        "en": "Black’s rook on d8 is undefended — capture it with `Rxd8#`!",
+        "pl": "Czarna wieża na d8 jest niebroniona — zbij ją `Wxd8#`!"
+      },
+      "explanation": {
+        "en": "1. Rxd8# wins the rook and delivers checkmate.",
+        "pl": "1. Wxd8# wygrywa wieżę i daje mata."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-29",
+      "difficulty": "hard",
+      "themes": [
+        "fork"
+      ],
+      "fen": "r4rk1/ppp2ppp/8/3q4/8/2N5/PPP2PPP/R2Q1RK1 w - - 0 1",
+      "solution": [
+        "c3d5"
+      ],
+      "title": {
+        "en": "Knight Captures Centralized Queen!",
+        "pl": "Skoczek zbija hetmana w centrum!"
+      },
+      "hint": {
+        "en": "Black left the queen on d5 en prise — capture it with `Nxd5`!",
+        "pl": "Czarne zostawiły hetmana na d5 pod biciem — zbij go `Sxd5`!"
+      },
+      "explanation": {
+        "en": "1. Nxd5 wins the queen cleanly.",
+        "pl": "1. Sxd5 czysto wygrywa hetmana."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-30",
+      "difficulty": "hard",
+      "themes": [
+        "skewer"
+      ],
+      "fen": "6k1/8/8/3q4/8/8/8/3R2K1 w - - 0 1",
+      "solution": [
+        "d1d5"
+      ],
+      "title": {
+        "en": "Rook Captures Undefended Queen on d5!",
+        "pl": "Wieża zbija niebronionego hetmana na d5!"
+      },
+      "hint": {
+        "en": "Capture the hanging queen on d5 with `Rxd5`!",
+        "pl": "Zbij niebronionego hetmana na d5 ruchem `Wxd5`!"
+      },
+      "explanation": {
+        "en": "1. Rxd5 wins the queen on the spot.",
+        "pl": "1. Wxd5 natychmiast wygrywa hetmana."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-31",
+      "difficulty": "hard",
+      "themes": [
+        "fork"
+      ],
+      "fen": "4k3/8/8/2r1q3/3P4/8/8/4K3 w - - 0 1",
+      "solution": [
+        "d4e5"
+      ],
+      "title": {
+        "en": "Pawn Fork Winning the Queen!",
+        "pl": "Widełki pionkiem wygrywające hetmana!"
+      },
+      "hint": {
+        "en": "Your d4-pawn forks Black’s rook and queen — capture the queen with `dxe5`!",
+        "pl": "Twój pionek d4 robi widełki wieży i hetmanowi — zbij hetmana `dxe5`!"
+      },
+      "explanation": {
+        "en": "1. dxe5 wins the queen cleanly.",
+        "pl": "1. dxe5 czysto wygrywa hetmana."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "wm-32",
+      "difficulty": "hard",
+      "themes": [
+        "promotion"
+      ],
+      "fen": "8/4P1k1/8/8/8/8/8/4K3 w - - 0 1",
+      "solution": [
+        "e7e8q"
+      ],
+      "title": {
+        "en": "Promote to a Queen!",
+        "pl": "Promocja na hetmana!"
+      },
+      "hint": {
+        "en": "Push your e7-pawn to e8 and promote to a Queen (`e8=Q`)!",
+        "pl": "Przepchnij pionka e7 na e8 i promuj na Hetmana (`e8=H`)!"
+      },
+      "explanation": {
+        "en": "1. e8=Q promotes with a decisive material advantage.",
+        "pl": "1. e8=H daje decydującą przewagę materialną."
+      },
+      "isMaterialPuzzle": true,
+      "movesToMate": 1
     }
   ];
 
@@ -2121,6 +3636,645 @@
         en: '1... Qe5!! 2. Qxe5 Rxe5 stops both `Qxg7#` and `Rxe8#` simultaneously because e5 is the intersection of the e-file and the long diagonal!',
         pl: '1... He5!! 2. Hxe5 Wxe5 zatrzymuje obie groźby matowe jednocześnie, ponieważ pole e5 leży na przecięciu linii e oraz długiej przekątnej b2-g7!'
       }
+    },
+    {
+      id: 'df-13',
+      isDefensePuzzle: true,
+      movesToMate: 1,
+      difficulty: 'easy',
+      themes: ['blunderCheck', 'defense', 'fork'],
+      fen: 'r1bqk2r/pppp1ppp/2n2n2/4p3/1bB1P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 4 4',
+      solution: ['e1g1'],
+      title: {
+        en: 'Blunder Check: Castle to Safety Before Tactics Start',
+        pl: 'Sprawdź Zagrożenie: Zrób roszadę zanim zaczniesz atak'
+      },
+      hint: {
+        en: 'There is no winning tactic here! Your king is still in the center while Black is ready to play ...d6/...O-O. Play the solid developing move `O-O`.',
+        pl: 'Tu nie ma żadnej kombinacji! Twój król nadal stoi w centrum. Zagraj spokojny, solidny ruch `O-O`, zabezpieczając króla.'
+      },
+      explanation: {
+        en: 'Not every position has a tactic! Castling (`O-O`) secures your king, activates your rook, and avoids falling into central pins against strong bots.',
+        pl: 'Nie w każdej pozycji jest taktyka! Roszada (`O-O`) zabezpiecza króla, wprowadza wieżę i chroni przed związaniami w centrum przeciwko mocnym botom.'
+      }
+    },
+    {
+      id: 'df-14',
+      isDefensePuzzle: true,
+      movesToMate: 1,
+      difficulty: 'easy',
+      themes: ['blunderCheck', 'defense'],
+      fen: 'r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3',
+      solution: ['f8c5'],
+      title: {
+        en: 'Blunder Check: Develop Solidly (Avoid Greedy Mistakes)',
+        pl: 'Sprawdź Zagrożenie: Solidny rozwój zamiast błędów'
+      },
+      hint: {
+        en: 'White’s bishop on c4 eyes f7, and e5 is already defended by Nc6. Develop your dark-squared bishop actively to `Bc5`!',
+        pl: 'Goniec białych na c4 patrzy na f7, a e5 jest już bronione przez Sc6. Rozwiń aktywnie gońca ruchem `Gc5`!'
+      },
+      explanation: {
+        en: 'Playing `3... Bc5` develops a piece, fights for the center, and prepares `...Nf6` and `...O-O` without creating any weaknesses.',
+        pl: 'Ruch `3... Gc5` rozwija figurę, walczy o centrum i przygotowuje `...Sf6` oraz `...O-O` bez tworzenia słabości.'
+      }
+    },
+    {
+      id: 'df-15',
+      isDefensePuzzle: true,
+      movesToMate: 1,
+      difficulty: 'medium',
+      themes: ['blunderCheck', 'defense', 'fork'],
+      fen: 'r1bqkb1r/ppp2ppp/2n2n2/3pp3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4',
+      solution: ['e4d5'],
+      title: {
+        en: 'Blunder Check: Save Your Hanging Bishop & Center',
+        pl: 'Sprawdź Zagrożenie: Uratuj centrum i zaatakowanego gońca'
+      },
+      hint: {
+        en: 'Black just played `3... d5`, attacking BOTH your bishop on c4 and your pawn on e4! Capture `exd5` to resolve the tension cleanly.',
+        pl: 'Czarne właśnie zagrały `3... d5`, atakując JEDNOCZEŚNIE gońca na c4 i pionka na e4! Zbij `exd5`, aby czysto rozwiązać napięcie.'
+      },
+      explanation: {
+        en: '4. exd5! immediately neutralizes Black’s double attack on c4 and e4, keeping a healthy position instead of losing a piece or central pawn.',
+        pl: '4. exd5! natychmiast neutralizuje podwójny atak czarnych na c4 i e4, utrzymując zdrową pozycję zamiast straty figury lub pionka.'
+      }
+    },
+    {
+      id: 'df-16',
+      isDefensePuzzle: true,
+      movesToMate: 1,
+      difficulty: 'medium',
+      themes: ['blunderCheck', 'defense', 'backRank'],
+      fen: '3r2k1/5ppp/8/8/8/8/5PPP/3R2K1 w - - 0 1',
+      solution: ['d1d8'],
+      title: {
+        en: 'Blunder Check: Spot the Back-Rank Threat Immediately',
+        pl: 'Sprawdź Zagrożenie: Zauważ groźbę mata na ostatniej linii'
+      },
+      hint: {
+        en: 'Black’s rook on d8 threatens `...Rxd1#`! Don’t play a random pawn move — trade rooks (`Rxd8#`) or neutralize the d-file immediately!',
+        pl: 'Wieża czarnych na d8 grozi matem! Zbij natychmiast `Wxd8#` — w realnej partii zawsze sprawdzaj otwarte linie!'
+      },
+      explanation: {
+        en: 'Always check open files and back-rank threats on every move! Here `Rxd8#` not only stops Black’s threat, it delivers checkmate on the spot.',
+        pl: 'Zawsze sprawdzaj otwarte linie i groźby na ostatniej linii w każdym ruchu! Tutaj `Wxd8#` nie tylko zatrzymuje groźbę, ale od razu daje mata.'
+      }
+    },
+    {
+      id: 'df-17',
+      isDefensePuzzle: true,
+      movesToMate: 1,
+      difficulty: 'hard',
+      themes: ['blunderCheck', 'defense', 'kingSafety'],
+      fen: 'r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 0 6',
+      solution: ['h2h3'],
+      title: {
+        en: 'Blunder Check: Quiet Prophylaxis (Preventing ...Bg4 Pin)',
+        pl: 'Sprawdź Zagrożenie: Spokojna profilaktyka (Zablokuj ...Gg4)'
+      },
+      hint: {
+        en: 'There is no tactic here! Black wants to play `...Bg4` pinning your f3-knight and jumping `...Nd4`. Play the quiet prophylactic move `h3`!',
+        pl: 'Tu nie ma taktyki! Czarne chcą zagrać `...Gg4`, wiążąc skoczka f3 i skacząc `...Sd4`. Zagraj spokojny ruch profilaktyczny `h3`!'
+      },
+      explanation: {
+        en: 'Prophylaxis (`h3`) is a hallmark of strong players: it prevents `...Bg4` before it becomes annoying and gives your king luft against back-rank mates.',
+        pl: 'Profilaktyka (`h3`) to znak rozpoznawczy silnych graczy: zapobiega uciążliwemu związaniu `...Gg4` i daje królowi „okienko” przed matem na 1. linii.'
+      }
+    },
+    {
+      id: 'df-18',
+      isDefensePuzzle: true,
+      movesToMate: 1,
+      difficulty: 'hard',
+      themes: ['blunderCheck', 'defense'],
+      fen: 'r2q1rk1/ppp2ppp/2n2n2/3p4/1b1P4/2NBPN2/PP3PPP/R1BQK2R w KQ - 0 8',
+      solution: ['e1g1'],
+      title: {
+        en: 'Blunder Check: Complete Development & Break the Pin',
+        pl: 'Sprawdź Zagrożenie: Dokończ rozwój i wyjdź ze związania'
+      },
+      hint: {
+        en: 'Black has already castled and is ready to open the e-file with `...Re8`. Don’t delay — castle kingside (`O-O`) right now!',
+        pl: 'Czarne już zrobiły roszadę i za chwilę otworzą linię e ruchem `...We8`. Nie zwlekaj — zrób roszadę (`O-O`) natychmiast!'
+      },
+      explanation: {
+        en: 'Leaving your king in the center after the opponent castles is the #1 way players get crushed by strong bots. `O-O` keeps your position rock-solid.',
+        pl: 'Zostawienie króla w centrum po roszadzie przeciwnika to najczęstszy powód porażek z mocnymi botami. `O-O` natychmiast zabezpiecza pozycję.'
+      }
+    },
+    {
+      "id": "df-19",
+      "difficulty": "easy",
+      "themes": [
+        "defense",
+        "backRank"
+      ],
+      "fen": "3r2k1/5ppp/8/8/8/8/5PPP/6K1 w - - 0 1",
+      "solution": [
+        "g1f1"
+      ],
+      "title": {
+        "en": "Escape the Back-Rank Mate Threat!",
+        "pl": "Ucieknij przed matem na 1. linii!"
+      },
+      "hint": {
+        "en": "Black threatens `...Rd1#`! Step your king to safety (`Kf1` or create luft) — play `Kf1`!",
+        "pl": "Czarne grożą `...Wd1#`! Ucieknij królem z 1. linii ruchem `Kf1`!"
+      },
+      "explanation": {
+        "en": "1. Kf1 steps off the back-rank trap before `...Rd1#` can happen.",
+        "pl": "1. Kf1 ratuje króla przed matem `...Wd1#`."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-20",
+      "difficulty": "easy",
+      "themes": [
+        "defense",
+        "backRank"
+      ],
+      "fen": "3r2k1/5ppp/8/8/8/8/5PPP/5RK1 w - - 0 1",
+      "solution": [
+        "h2h3"
+      ],
+      "title": {
+        "en": "Create Luft to Stop Back-Rank Mate!",
+        "pl": "Zrób okienko dla króla (h3)!"
+      },
+      "hint": {
+        "en": "Make an escape square for your king with `h3`!",
+        "pl": "Zrób bezpieczne okienko dla króla ruchem `h3`!"
+      },
+      "explanation": {
+        "en": "1. h3 permanently eliminates back-rank mate threats.",
+        "pl": "1. h3 trwale likwiduje groźby mata na 1. linii."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-21",
+      "difficulty": "easy",
+      "themes": [
+        "defense",
+        "kingSafety"
+      ],
+      "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR b KQkq - 4 4",
+      "solution": [
+        "g8f6"
+      ],
+      "title": {
+        "en": "Stop Scholar’s Mate (Qxf7#) with Development!",
+        "pl": "Zatrzymaj Mata Szewskiego ruchem rozwijającym!"
+      },
+      "hint": {
+        "en": "White threatens `Qxf7#`! Block the f-file and develop your knight with `Nf6`!",
+        "pl": "Białe grożą `Hxf7#`! Zablokuj linię f i rozwiń skoczka ruchem `Sf6`!"
+      },
+      "explanation": {
+        "en": "1... Nf6 stops Qxf7# while developing a piece.",
+        "pl": "1... Sf6 zatrzymuje Hxf7# i jednocześnie rozwija figurę."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-22",
+      "difficulty": "easy",
+      "themes": [
+        "defense",
+        "kingSafety"
+      ],
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+      "solution": [
+        "g7g6"
+      ],
+      "title": {
+        "en": "Kick the Queen & Stop Qxf7#!",
+        "pl": "Przegoń hetmana i obroń f7!"
+      },
+      "hint": {
+        "en": "White threatens `Qxf7#`! Push `g6` to kick the queen while defending e5 with Nc6!",
+        "pl": "Białe grożą `Hxf7#`! Zagraj `g6`, przeganiając hetmana (pionek e5 jest już broniony przez Sc6)!"
+      },
+      "explanation": {
+        "en": "1... g6 defends f7 and gains tempo against White’s queen.",
+        "pl": "1... g6 broni f7 i zdobywa tempo na hetmanie białych."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-23",
+      "difficulty": "easy",
+      "themes": [
+        "blunderCheck",
+        "defense"
+      ],
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "solution": [
+        "f1c4"
+      ],
+      "title": {
+        "en": "Solid Development: Bring Out the Bishop",
+        "pl": "Solidny rozwój: Wyprowadź gońca na c4"
+      },
+      "hint": {
+        "en": "Develop your light-squared bishop actively to `Bc4`!",
+        "pl": "Wyprowadź białopolowego gońca aktywnie na `Gc4`!"
+      },
+      "explanation": {
+        "en": "3. Bc4 prepares castling and targets f7.",
+        "pl": "3. Gc4 przygotowuje roszadę i kontroluje centrum."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-24",
+      "difficulty": "easy",
+      "themes": [
+        "blunderCheck",
+        "defense"
+      ],
+      "fen": "rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq d6 0 2",
+      "solution": [
+        "e4d5"
+      ],
+      "title": {
+        "en": "Defend Your Center: Capture on d5!",
+        "pl": "Obroń centrum: Zbij na d5!"
+      },
+      "hint": {
+        "en": "Black attacks your e4-pawn — capture `exd5` cleanly!",
+        "pl": "Czarne atakują pionka e4 — zbij czysto `exd5`!"
+      },
+      "explanation": {
+        "en": "2. exd5 avoids losing the central e4-pawn.",
+        "pl": "2. exd5 nie pozwala czarnym zabrać pionka e4."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-25",
+      "difficulty": "medium",
+      "themes": [
+        "defense",
+        "kingSafety"
+      ],
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p1N1/2B1P3/8/PPPP1PPP/RNBQK2R b KQkq - 5 4",
+      "solution": [
+        "d7d5"
+      ],
+      "title": {
+        "en": "Defend f7 Against Fried Liver Attack!",
+        "pl": "Obroń f7 przed atakiem Fried Liver!"
+      },
+      "hint": {
+        "en": "White threatens `Nxf7` or `Bxf7+`! Block the bishop’s diagonal immediately with `d5!`",
+        "pl": "Białe grożą `Sxf7`! Natychmiast przetnij przekątną gońca ruchem `d5!`."
+      },
+      "explanation": {
+        "en": "4... d5! is the only strong defense against Ng5.",
+        "pl": "4... d5! to jedyna prawidłowa obrona przed atakiem na f7."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-26",
+      "difficulty": "medium",
+      "themes": [
+        "defense",
+        "pin"
+      ],
+      "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 5",
+      "solution": [
+        "e8g8"
+      ],
+      "title": {
+        "en": "Castle to Safety Before Opening the Center!",
+        "pl": "Zrób roszadę przed otwarciem centrum!"
+      },
+      "hint": {
+        "en": "Get your king out of the center immediately with `O-O`!",
+        "pl": "Zabezpiecz króla roszadą `O-O`!"
+      },
+      "explanation": {
+        "en": "Castling early prevents central tactics against the king.",
+        "pl": "Wczesna roszada chroni przed taktykami w centrum."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-27",
+      "difficulty": "medium",
+      "themes": [
+        "defense",
+        "fork"
+      ],
+      "fen": "r1bqkb1r/ppp2ppp/2n2n2/3pp3/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq d6 0 4",
+      "solution": [
+        "e4d5"
+      ],
+      "title": {
+        "en": "Resolve Central Tension Cleanly!",
+        "pl": "Rozwiąż napięcie w centrum!"
+      },
+      "hint": {
+        "en": "Black threatens `...d4` forking your knight — capture `exd5`!",
+        "pl": "Czarne grożą `...d4` — zbij czysto `exd5`!"
+      },
+      "explanation": {
+        "en": "4. exd5 keeps White’s knights active and avoids getting pushed back.",
+        "pl": "4. exd5 utrzymuje aktywne skoczki białych."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-28",
+      "difficulty": "medium",
+      "themes": [
+        "defense"
+      ],
+      "fen": "r2q1rk1/ppp2ppp/2n1bn2/3p4/3P4/2NBPN2/PPP2PPP/R2Q1RK1 w - - 0 9",
+      "solution": [
+        "h2h3"
+      ],
+      "title": {
+        "en": "Quiet Prophylaxis: Stop ...Bg4!",
+        "pl": "Profilaktyka: Zablokuj ...Gg4!"
+      },
+      "hint": {
+        "en": "Play `h3` to keep Black’s pieces off g4 and give your king luft.",
+        "pl": "Zagraj `h3`, blokując pole g4 i dając królowi okienko."
+      },
+      "explanation": {
+        "en": "A solid prophylactic move that prevents annoying pins.",
+        "pl": "Solidny ruch profilaktyczny zapobiegający związaniom."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-29",
+      "difficulty": "medium",
+      "themes": [
+        "defense",
+        "kingSafety"
+      ],
+      "fen": "r1bq1rk1/ppp2ppp/2n2n2/3p4/1b1P4/2NBPN2/PPP2PPP/R1BQK2R w KQ - 2 7",
+      "solution": [
+        "e1g1"
+      ],
+      "title": {
+        "en": "Break the Pin & Castle!",
+        "pl": "Wyjdź ze związania i zrób roszadę!"
+      },
+      "hint": {
+        "en": "Castle kingside (`O-O`) to unpin your c3-knight and secure your king!",
+        "pl": "Zrób roszadę (`O-O`), zdejmując związanie ze skoczka c3!"
+      },
+      "explanation": {
+        "en": "Castling breaks the pin on c3 and brings the rook into the game.",
+        "pl": "Roszada zdejmuje związanie ze skoczka c3 i aktywizuje wieżę."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-30",
+      "difficulty": "medium",
+      "themes": [
+        "defense"
+      ],
+      "fen": "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 b kq - 1 6",
+      "solution": [
+        "e8g8"
+      ],
+      "title": {
+        "en": "Match White’s Castling Immediately!",
+        "pl": "Odpowiedz roszadą na roszadę białych!"
+      },
+      "hint": {
+        "en": "White has castled — don’t leave your king in the center! Play `O-O`.",
+        "pl": "Białe już zrobiły roszadę — zabezpiecz króla ruchem `O-O`."
+      },
+      "explanation": {
+        "en": "Castling keeps Black’s king completely safe.",
+        "pl": "Roszada utrzymuje czarnego króla w pełnym bezpieczeństwie."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-31",
+      "difficulty": "hard",
+      "themes": [
+        "defense",
+        "backRank"
+      ],
+      "fen": "2r3k1/5ppp/8/8/8/8/5PPP/2R3K1 w - - 0 1",
+      "solution": [
+        "c1c8"
+      ],
+      "title": {
+        "en": "Counter-Strike on the Open File!",
+        "pl": "Kontratak na otwartej linii c!"
+      },
+      "hint": {
+        "en": "Black threatens `...Rxc1#` — strike first with `Rxc8#`!",
+        "pl": "Czarne grożą `...Wxc1#` — uderz pierwszy ruchem `Wxc8#`!"
+      },
+      "explanation": {
+        "en": "1. Rxc8# wins immediately on the back rank.",
+        "pl": "1. Wxc8# natychmiast daje mata na 8. linii."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-32",
+      "difficulty": "hard",
+      "themes": [
+        "defense",
+        "kingSafety"
+      ],
+      "fen": "r2q1rk1/ppp1bppp/2n1bn2/3p4/3P4/2N1PN2/PPQ1BPPP/R1B2RK1 w - - 0 10",
+      "solution": [
+        "a2a3"
+      ],
+      "title": {
+        "en": "Prophylaxis: Prevent ...Nb4!",
+        "pl": "Profilaktyka: Zablokuj ...Sb4!"
+      },
+      "hint": {
+        "en": "Black wants to jump `...Nb4` attacking your queen on c2 — stop it with `a3`!",
+        "pl": "Czarne chcą skoczyć `...Sb4`, atakując hetmana c2 — zablokuj to ruchem `a3`!"
+      },
+      "explanation": {
+        "en": "1. a3 stops ...Nb4 and keeps White’s queen comfortable on c2.",
+        "pl": "1. a3 blokuje ...Sb4 i chroni hetmana na c2."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-33",
+      "difficulty": "hard",
+      "themes": [
+        "defense"
+      ],
+      "fen": "r2q1rk1/ppp2ppp/2n2n2/3p2B1/3P4/2N1PN2/PPP2PPP/R2QKB1R b KQ - 2 7",
+      "solution": [
+        "h7h6"
+      ],
+      "title": {
+        "en": "Question the Pinning Bishop!",
+        "pl": "Zapytaj wiążącego gońca ruchem h6!"
+      },
+      "hint": {
+        "en": "Push `h6` to force White’s g5-bishop to make a decision and give your king luft!",
+        "pl": "Zagraj `h6`, zmuszając gońca g5 do decyzji i dając królowi okienko!"
+      },
+      "explanation": {
+        "en": "1... h6 gains space and prevents back-rank issues.",
+        "pl": "1... h6 zdobywa przestrzeń i daje królowi bezpieczne okienko."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-34",
+      "difficulty": "hard",
+      "themes": [
+        "defense",
+        "kingSafety"
+      ],
+      "fen": "r1bq1rk1/ppp2ppp/2n1pn2/3p4/1bPP4/2N2N2/PP2PPPP/R1BQKB1R w KQ - 2 6",
+      "solution": [
+        "e2e3"
+      ],
+      "title": {
+        "en": "Solidify d4 and Prepare Bd3 + O-O!",
+        "pl": "Wzmocnij d4 i przygotuj Gd3 + O-O!"
+      },
+      "hint": {
+        "en": "Support d4 and open the diagonal for your f1-bishop with `e3`!",
+        "pl": "Wzmocnij d4 i otwórz linię dla białopolowego gońca ruchem `e3`!"
+      },
+      "explanation": {
+        "en": "6. e3 prepares Bd3 and castling cleanly.",
+        "pl": "6. e3 przygotowuje Gd3 oraz szybką roszadę."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-35",
+      "difficulty": "hard",
+      "themes": [
+        "defense"
+      ],
+      "fen": "r1bqk2r/ppp1bppp/2n2n2/3pp3/4P3/2NP1N2/PPP1BPPP/R1BQ1RK1 b kq - 2 6",
+      "solution": [
+        "e8g8"
+      ],
+      "title": {
+        "en": "Secure Your King Against Central Breaks!",
+        "pl": "Zabezpiecz króla przed przełamaniem w centrum!"
+      },
+      "hint": {
+        "en": "Castle kingside (`O-O`) right now!",
+        "pl": "Zrób roszadę (`O-O`) natychmiast!"
+      },
+      "explanation": {
+        "en": "6... O-O gets Black’s king safe before the center opens.",
+        "pl": "6... O-O zabezpiecza króla przed otwarciem centrum."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-36",
+      "difficulty": "hard",
+      "themes": [
+        "defense"
+      ],
+      "fen": "r2qk2r/ppp1bppp/2n1bn2/3p4/3P4/2NBPN2/PPP2PPP/R1BQ1RK1 b kq - 4 7",
+      "solution": [
+        "e8g8"
+      ],
+      "title": {
+        "en": "Complete Development with Castling!",
+        "pl": "Dokończ rozwój roszadą!"
+      },
+      "hint": {
+        "en": "Castle kingside (`O-O`) to connect your rooks!",
+        "pl": "Zrób roszadę (`O-O`), aby połączyć wieże!"
+      },
+      "explanation": {
+        "en": "7... O-O completes Black’s opening safely.",
+        "pl": "7... O-O bezpiecznie kończy fazę debiutu czarnych."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-37",
+      "difficulty": "hard",
+      "themes": [
+        "defense"
+      ],
+      "fen": "2r2rk1/pp2bppp/2n1pn2/3p4/3P4/2NBPN2/PP3PPP/2RQ1RK1 w - - 2 12",
+      "solution": [
+        "a2a3"
+      ],
+      "title": {
+        "en": "Stop ...Nb4 Before Expanding!",
+        "pl": "Zablokuj ...Sb4 zanim zaczniesz atak!"
+      },
+      "hint": {
+        "en": "Prevent `...Nb4` attacking your strong d3-bishop with `a3`!",
+        "pl": "Zablokuj skok `...Sb4` na Twojego silnego gońca d3 ruchem `a3`!"
+      },
+      "explanation": {
+        "en": "12. a3 preserves White’s valuable light-squared bishop.",
+        "pl": "12. a3 chroni cennego białopolowego gońca białych."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
+    },
+    {
+      "id": "df-38",
+      "difficulty": "hard",
+      "themes": [
+        "defense"
+      ],
+      "fen": "r4rk1/pp2bppp/2n1pn2/3p4/3P4/2NBPN2/PP3PPP/R2Q1RK1 w - - 2 11",
+      "solution": [
+        "a1c1"
+      ],
+      "title": {
+        "en": "Contest the Open c-File Immediately!",
+        "pl": "Walcz o otwartą linię c natychmiast!"
+      },
+      "hint": {
+        "en": "Activate your rook onto the open c-file with `Rc1`!",
+        "pl": "Wprowadź wieżę na otwartą linię c ruchem `Wc1`!"
+      },
+      "explanation": {
+        "en": "11. Rc1 fights for the most important open file on the board.",
+        "pl": "11. Wc1 walczy o najważniejszą otwartą linię na szachownicy."
+      },
+      "isDefensePuzzle": true,
+      "movesToMate": 1
     }
   ];
 

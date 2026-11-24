@@ -187,7 +187,7 @@ select {
   margin: 0.65rem auto 0;
   padding: 0 1rem;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.42rem;
 }
 
@@ -1549,4 +1549,290 @@ select {
   .board-container {
     max-width: 96vw;
   }
+}
+
+/* ============================================================================
+   COACH SPARRING MODE PANEL
+   ============================================================================ */
+.mode-tab.sparring-tab.active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 182, 212, 0.22));
+  border-color: rgba(16, 185, 129, 0.55);
+  color: #6ee7b7;
+}
+
+.sparring-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.sparring-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.sparring-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.sparring-pill-group {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.sparring-toggles-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.sparring-toggles-row .analysis-toggle-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 0.45rem 0.55rem;
+  font-size: 0.78rem;
+}
+
+.sparring-eval-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sparring-eval-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.sparring-eval-header strong {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+
+.sparring-eval-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #1e293b;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.sparring-eval-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e2e8f0, #f8fafc);
+  transition: width 0.3s ease;
+}
+
+.sparring-blunder-box {
+  background: rgba(239, 68, 68, 0.14);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sparring-blunder-head {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #fca5a5;
+  font-size: 0.88rem;
+}
+
+.sparring-blunder-text {
+  font-size: 0.83rem;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sparring-blunder-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.sparring-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.board-square.hanging-alert::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 3px solid rgba(239, 68, 68, 0.85);
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* ============================================================================
+   PGN IMPORT & BLUNDER SUMMARY (BATTLE ANALYSIS)
+   ============================================================================ */
+.analysis-extra-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+  margin-top: 0.25rem;
+}
+
+.pgn-import-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.7rem;
+  border-radius: 0.75rem;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--border-subtle);
+}
+
+.pgn-textarea {
+  width: 100%;
+  resize: vertical;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  padding: 0.55rem 0.65rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.pgn-textarea:focus {
+  outline: none;
+  border-color: rgba(59, 130, 246, 0.65);
+}
+
+.pgn-import-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.pgn-error-msg {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #fca5a5;
+}
+
+.analysis-blunders-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.25rem;
+}
+
+.analysis-blunders-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.blunder-chip {
+  background: rgba(239, 68, 68, 0.16);
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  color: #fca5a5;
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.blunder-chip:hover {
+  background: rgba(239, 68, 68, 0.28);
+  transform: translateY(-1px);
+}
+
+.sparring-endgames-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sparring-endgames-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.endgame-drill-btn {
+  font-size: 0.74rem;
+  padding: 0.28rem 0.55rem;
+}
+
+.mode-tab.endgames-tab.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(59, 130, 246, 0.22));
+  border-color: rgba(168, 85, 247, 0.55);
+  color: #d8b4fe;
+}
+
+.endgames-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.endgames-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.38rem;
+}
+
+.endgames-grid .endgame-drill-btn {
+  text-align: left;
+  padding: 0.42rem 0.6rem;
+  font-size: 0.78rem;
+  justify-content: flex-start;
+}
+
+.endgames-grid {
+  max-height: 210px;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.board-hint-fab {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 15;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(251, 191, 36, 0.55);
+  background: rgba(15, 23, 42, 0.72);
+  color: #fde68a;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+  opacity: 0.82;
+}
+
+.board-hint-fab:hover {
+  opacity: 1;
+  transform: scale(1.08);
+  background: rgba(245, 158, 11, 0.28);
 }

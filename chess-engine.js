@@ -880,6 +880,345 @@
         return false;
       }
     }
+
+    /**
+     * Checks if neither side has enough material to force checkmate.
+     */
+    isInsufficientMaterial() {
+      const pieces = [];
+      for (let r = 0; r < 8; r++) {
+        for (let c = 0; c < 8; c++) {
+          const p = this.board[r][c];
+          if (p && p.type !== 'k') {
+            pieces.push({ ...p, r, c });
+          }
+        }
+      }
+      if (pieces.length === 0) return true; // K vs K
+      if (pieces.length === 1 && (pieces[0].type === 'n' || pieces[0].type === 'b')) {
+        return true; // K+B vs K or K+N vs K
+      }
+      if (
+        pieces.length === 2 &&
+        pieces[0].type === 'b' &&
+        pieces[1].type === 'b' &&
+        pieces[0].color !== pieces[1].color &&
+        (pieces[0].r + pieces[0].c) % 2 === (pieces[1].r + pieces[1].c) % 2
+      ) {
+        return true; // K+B vs K+B on same color squares
+      }
+      return false;
+    }
+
+    /**
+     * Static position evaluation in centipawns from White's perspective (+ = White better).
+     */
+    evaluatePosition() {
+      const PIECE_VAL = { p: 100, n: 320, b: 330, r: 500, q: 900, k: 20000 };
+
+      // Piece-Square Tables (from White's perspective: row 0 = rank 8, row 7 = rank 1)
+      const PST_P = [
+        [0,  0,  0,  0,  0,  0,  0,  0],
+        [50, 50, 50, 50, 50, 50, 50, 50],
+        [10, 10, 20, 30, 30, 20, 10, 10],
+        [5,  5, 10, 27, 27, 10,  5,  5],
+        [0,  0,  0, 24, 24,  0,  0,  0],
+        [5, -5,-10,  0,  0,-10, -5,  5],
+        [5, 10, 10,-22,-22, 10, 10,  5],
+        [0,  0,  0,  0,  0,  0,  0,  0]
+      ];
+      const PST_N = [
+        [-50,-40,-30,-30,-30,-30,-40,-50],
+        [-40,-20,  0,  0,  0,  0,-20,-40],
+        [-30,  0, 10, 15, 15, 10,  0,-30],
+        [-30,  5, 15, 20, 20, 15,  5,-30],
+        [-30,  0, 15, 20, 20, 15,  0,-30],
+        [-30,  5, 10, 15, 15, 10,  5,-30],
+        [-40,-20,  0,  5,  5,  0,-20,-40],
+        [-50,-40,-30,-30,-30,-30,-40,-50]
+      ];
+      const PST_B = [
+        [-20,-10,-10,-10,-10,-10,-10,-20],
+        [-10,  0,  0,  0,  0,  0,  0,-10],
+        [-10,  0,  5, 10, 10,  5,  0,-10],
+        [-10,  5,  5, 10, 10,  5,  5,-10],
+        [-10,  0, 10, 10, 10, 10,  0,-10],
+        [-10, 10, 10, 10, 10, 10, 10,-10],
+        [-10,  5,  0,  0,  0,  0,  5,-10],
+        [-20,-10,-10,-10,-10,-10,-10,-20]
+      ];
+      const PST_R = [
+        [0,  0,  0,  0,  0,  0,  0,  0],
+        [5, 10, 10, 10, 10, 10, 10,  5],
+        [-5,  0,  0,  0,  0,  0,  0, -5],
+        [-5,  0,  0,  0,  0,  0,  0, -5],
+        [-5,  0,  0,  0,  0,  0,  0, -5],
+        [-5,  0,  0,  0,  0,  0,  0, -5],
+        [-5,  0,  0,  0,  0,  0,  0, -5],
+        [0,  0,  0,  5,  5,  0,  0,  0]
+      ];
+      const PST_Q = [
+        [-20,-10,-10, -5, -5,-10,-10,-20],
+        [-10,  0,  0,  0,  0,  0,  0,-10],
+        [-10,  0,  5,  5,  5,  5,  0,-10],
+        [-5,  0,  5,  5,  5,  5,  0, -5],
+        [0,  0,  5,  5,  5,  5,  0, -5],
+        [-10,  5,  5,  5,  5,  5,  0,-10],
+        [-10,  0,  5,  0,  0,  0,  0,-10],
+        [-20,-10,-10, -5, -5,-10,-10,-20]
+      ];
+      const PST_K_MG = [
+        [-30,-40,-40,-50,-50,-40,-40,-30],
+        [-30,-40,-40,-50,-50,-40,-40,-30],
+        [-30,-40,-40,-50,-50,-40,-40,-30],
+        [-30,-40,-40,-50,-50,-40,-40,-30],
+        [-20,-30,-30,-40,-40,-30,-30,-20],
+        [-10,-20,-20,-20,-20,-20,-20,-10],
+        [20, 20,  0,  0,  0,  0, 20, 20],
+        [20, 30, 10,  0,  0, 10, 30, 20]
+      ];
+      const PST_K_EG = [
+        [-50,-40,-30,-20,-20,-30,-40,-50],
+        [-30,-20,-10,  0,  0,-10,-20,-30],
+        [-30,-10, 20, 30, 30, 20,-10,-30],
+        [-30,-10, 30, 40, 40, 30,-10,-30],
+        [-30,-10, 30, 40, 40, 30,-10,-30],
+        [-30,-10, 20, 30, 30, 20,-10,-30],
+        [-30,-30,  0,  0,  0,  0,-30,-30],
+        [-50,-30,-30,-30,-30,-30,-30,-50]
+      ];
+
+      let nonPawnMaterial = 0;
+      let wBishops = 0;
+      let bBishops = 0;
+      for (let r = 0; r < 8; r++) {
+        for (let c = 0; c < 8; c++) {
+          const p = this.board[r][c];
+          if (!p) continue;
+          if (p.type !== 'p' && p.type !== 'k') {
+            nonPawnMaterial += PIECE_VAL[p.type];
+          }
+          if (p.type === 'b') {
+            if (p.color === 'w') wBishops++;
+            else bBishops++;
+          }
+        }
+      }
+      const isEndgame = nonPawnMaterial <= 2600;
+      const PST = {
+        p: PST_P,
+        n: PST_N,
+        b: PST_B,
+        r: PST_R,
+        q: PST_Q,
+        k: isEndgame ? PST_K_EG : PST_K_MG
+      };
+
+      let score = 0;
+      for (let r = 0; r < 8; r++) {
+        for (let c = 0; c < 8; c++) {
+          const p = this.board[r][c];
+          if (!p) continue;
+          const pstRow = p.color === 'w' ? r : 7 - r;
+          const val = PIECE_VAL[p.type] + PST[p.type][pstRow][c];
+          score += p.color === 'w' ? val : -val;
+        }
+      }
+
+      if (wBishops >= 2) score += 30;
+      if (bBishops >= 2) score -= 30;
+
+      return score;
+    }
+
+    /**
+     * Move ordering heuristic (MVV-LVA + promotions) to maximize Alpha-Beta cutoffs.
+     */
+    _scoreMoveForOrder(m) {
+      const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 100 };
+      let score = 0;
+      if (m.captured) {
+        score += 100 * VAL[m.captured] - VAL[m.piece];
+      }
+      if (m.promotion) {
+        score += 80 * (VAL[m.promotion] || 9);
+      }
+      return score;
+    }
+
+    /**
+     * Quiescence search: resolves tactical captures at leaf nodes to avoid horizon blunders.
+     */
+    _quiesce(alpha, beta, qDepth, deadline) {
+      const standPat = (this.turn === 'w' ? 1 : -1) * this.evaluatePosition();
+      if (standPat >= beta) return beta;
+      if (standPat > alpha) alpha = standPat;
+      if (qDepth <= 0 || (deadline && Date.now() > deadline)) return alpha;
+
+      const captures = this.getLegalMoves().filter((m) => m.captured || m.promotion);
+      if (captures.length === 0) return alpha;
+      captures.sort((a, b) => this._scoreMoveForOrder(b) - this._scoreMoveForOrder(a));
+
+      for (const m of captures) {
+        const snap = this._applyRawMove(m);
+        const score = -this._quiesce(-beta, -alpha, qDepth - 1, deadline);
+        this._undoRawMove(snap);
+        if (score >= beta) return beta;
+        if (score > alpha) alpha = score;
+      }
+      return alpha;
+    }
+
+    /**
+     * Negamax with Alpha-Beta pruning.
+     * Returns score from the current side-to-move's perspective.
+     */
+    _negamax(depth, alpha, beta, ply, useQuiesce, deadline) {
+      const legal = this.getLegalMoves();
+      if (legal.length === 0) {
+        if (this.inCheck(this.turn)) {
+          return -30000 + ply; // checkmated (prefer slower loss / faster mate)
+        }
+        return 0; // stalemate
+      }
+      if (this.halfMoves >= 100 || this.isInsufficientMaterial()) {
+        return 0;
+      }
+      if (depth <= 0 || (deadline && Date.now() > deadline)) {
+        if (useQuiesce) {
+          return this._quiesce(alpha, beta, 3, deadline);
+        }
+        return (this.turn === 'w' ? 1 : -1) * this.evaluatePosition();
+      }
+
+      legal.sort((a, b) => this._scoreMoveForOrder(b) - this._scoreMoveForOrder(a));
+
+      let best = -Infinity;
+      for (const m of legal) {
+        const snap = this._applyRawMove(m);
+        const score = -this._negamax(depth - 1, -beta, -alpha, ply + 1, useQuiesce, deadline);
+        this._undoRawMove(snap);
+        if (score > best) best = score;
+        if (score > alpha) alpha = score;
+        if (alpha >= beta) break;
+      }
+      return best;
+    }
+
+    /**
+     * Finds the best move for the current side to move.
+     * Supports difficulty presets: 'beginner' (~800), 'club' (~1200), 'tactical' (~1500), 'strong' (~1800+).
+     * Returns { move, evalWhite, scoreSide }.
+     */
+    getBestMove(options = {}) {
+      const level = options.level || 'tactical';
+      const presets = {
+        beginner: { depth: 1, noise: 160, quiesce: false, timeMs: 120 },
+        club:     { depth: 2, noise: 45,  quiesce: true,  timeMs: 250 },
+        tactical: { depth: 3, noise: 10,  quiesce: true,  timeMs: 420 },
+        strong:   { depth: 3, noise: 0,   quiesce: true,  timeMs: 650 }
+      };
+      const cfg = presets[level] || presets.tactical;
+      const depth = options.depth !== undefined ? options.depth : cfg.depth;
+      const noise = options.noise !== undefined ? options.noise : cfg.noise;
+      const useQuiesce = options.quiesce !== undefined ? options.quiesce : cfg.quiesce;
+      const deadline = Date.now() + (options.timeMs || cfg.timeMs);
+
+      const legal = this.getLegalMoves();
+      if (legal.length === 0) return null;
+
+      legal.sort((a, b) => this._scoreMoveForOrder(b) - this._scoreMoveForOrder(a));
+
+      const sideSign = this.turn === 'w' ? 1 : -1;
+      const scored = [];
+      let alpha = -Infinity;
+      const beta = Infinity;
+
+      for (const m of legal) {
+        const snap = this._applyRawMove(m);
+        const rawScore = -this._negamax(depth - 1, -beta, -alpha, 1, useQuiesce, deadline);
+        this._undoRawMove(snap);
+
+        const jitter = noise > 0 ? Math.round((Math.random() - 0.5) * 2 * noise) : 0;
+        scored.push({ move: m, rawScore, sortScore: rawScore + jitter });
+        if (noise === 0 && rawScore > alpha) {
+          alpha = rawScore;
+        }
+      }
+
+      scored.sort((a, b) => b.sortScore - a.sortScore);
+      const chosen = scored[0];
+      return {
+        move: chosen.move,
+        scoreSide: chosen.rawScore,
+        evalWhite: sideSign * chosen.rawScore
+      };
+    }
+
+    /**
+     * Evaluates a candidate player move for Coach Blunder Guard.
+     * Compares the best available move before playing vs. the opponent's best refutation after playing.
+     */
+    evaluateMoveForCoach(moveObj) {
+      const playerColor = this.turn;
+      const playerSign = playerColor === 'w' ? 1 : -1;
+
+      // 1. Best move & eval BEFORE player's move (depth 2, zero noise)
+      const before = this.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 260 });
+      if (!before) return null;
+
+      // 2. Apply player's move and find opponent's best reply (depth 2, zero noise)
+      const snap = this._applyRawMove(moveObj);
+      let afterEvalSide = 0;
+      let refutationMove = null;
+      const oppLegal = this.getLegalMoves();
+      if (oppLegal.length === 0) {
+        afterEvalSide = this.inCheck(this.turn) ? 30000 : 0;
+      } else {
+        const oppBest = this.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 260 });
+        refutationMove = oppBest ? oppBest.move : null;
+        afterEvalSide = oppBest ? -oppBest.scoreSide : playerSign * this.evaluatePosition();
+      }
+      this._undoRawMove(snap);
+
+      const cpLoss = before.scoreSide - afterEvalSide;
+      const walkedIntoMate = afterEvalSide <= -25000 && before.scoreSide > -25000;
+      const isBlunder = walkedIntoMate || cpLoss >= 180;
+      const isMistake = !isBlunder && cpLoss >= 95;
+
+      return {
+        isBlunder,
+        isMistake,
+        walkedIntoMate,
+        cpLoss: Math.max(0, Math.round(cpLoss)),
+        bestMove: before.move,
+        refutationMove,
+        evalBeforeWhite: before.evalWhite,
+        evalAfterWhite: playerSign * afterEvalSide
+      };
+    }
+
+    /**
+     * Returns squares of friendly pieces that are currently attacked by the opponent
+     * and either completely undefended or attacked by a lower-value piece.
+     */
+    getHangingPieces(color) {
+      const opp = oppositeColor(color);
+      const hanging = [];
+      for (let r = 0; r < 8; r++) {
+        for (let c = 0; c < 8; c++) {
+          const p = this.board[r][c];
+          if (!p || p.color !== color || p.type === 'k') continue;
+          if (this.isSquareAttacked(r, c, opp)) {
+            const defended = this.isSquareAttacked(r, c, color);
+            if (!defended) {
+              hanging.push({ square: coordsToSquare(r, c), piece: p.type, undefended: true });
+            }
+          }
+        }
+      }
+      return hanging;
+    }
   }
 
   if (typeof module !== 'undefined' && module.exports) {
