@@ -1219,6 +1219,76 @@
       }
       return hanging;
     }
+
+    /**
+     * Multi-PV Coach Helper: returns Top `count` candidate moves evaluated at `depth`
+     * (matching Blunder Guard's 3-ply horizon), each with a 3-ply Principal Variation:
+     * [playerMove, bestOpponentReply, bestPlayerFollowup] + SAN strings.
+     */
+    getTopMovesWithPV(count = 3, depth = 3, timeMs = 450) {
+      const legal = this.getLegalMoves();
+      if (legal.length === 0) return [];
+
+      legal.sort((a, b) => this._scoreMoveForOrder(b) - this._scoreMoveForOrder(a));
+      const sideSign = this.turn === 'w' ? 1 : -1;
+      const deadline = Date.now() + timeMs;
+      const scored = [];
+
+      for (const m of legal) {
+        const snap = this._applyRawMove(m);
+        const rawScore = -this._negamax(depth - 1, -Infinity, Infinity, 1, true, deadline);
+        this._undoRawMove(snap);
+        scored.push({ move: m, scoreSide: rawScore, evalWhite: sideSign * rawScore });
+      }
+
+      scored.sort((a, b) => b.scoreSide - a.scoreSide);
+      const top = scored.slice(0, Math.min(count, scored.length));
+
+      return top.map((entry) => {
+        const pv = [entry.move];
+        const pvSan = [];
+        try {
+          pvSan.push(this.moveToSan(entry.move));
+        } catch (e) {
+          pvSan.push(entry.move.from + entry.move.to);
+        }
+
+        // Ply 2: Opponent's best reply
+        const snap1 = this._applyRawMove(entry.move);
+        const oppBest = this.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 120 });
+        if (oppBest && oppBest.move) {
+          pv.push(oppBest.move);
+          try {
+            pvSan.push(this.moveToSan(oppBest.move));
+          } catch (e) {
+            pvSan.push(oppBest.move.from + oppBest.move.to);
+          }
+
+          // Ply 3: Player's best continuation
+          const snap2 = this._applyRawMove(oppBest.move);
+          const followBest = this.getBestMove({ depth: 1, noise: 0, quiesce: true, timeMs: 80 });
+          if (followBest && followBest.move) {
+            pv.push(followBest.move);
+            try {
+              pvSan.push(this.moveToSan(followBest.move));
+            } catch (e) {
+              pvSan.push(followBest.move.from + followBest.move.to);
+            }
+          }
+          this._undoRawMove(snap2);
+        }
+        this._undoRawMove(snap1);
+
+        return {
+          move: entry.move,
+          san: pvSan[0],
+          scoreSide: entry.scoreSide,
+          evalWhite: entry.evalWhite,
+          pv,
+          pvSan
+        };
+      });
+    }
   }
 
   if (typeof module !== 'undefined' && module.exports) {

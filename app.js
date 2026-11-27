@@ -446,6 +446,8 @@
         evalWhite: 0,
         pendingBlunder: null, // { moveObj, from, to, promotion, coachInfo }
         hintMove: null, // { from, to }
+        hintCandidates: [],
+        selectedHintIdx: 0,
         gameOver: false,
         resultMsg: null
       };
@@ -789,6 +791,10 @@
         endgamesPanel: document.getElementById('endgamesPanel'),
         endgamesPanelTitle: document.getElementById('endgamesPanelTitle'),
         boardHintFab: document.getElementById('boardHintFab'),
+        boardBlunderOverlay: document.getElementById('boardBlunderOverlay'),
+        boardBlunderMsg: document.getElementById('boardBlunderMsg'),
+        boardBlunderUndoBtn: document.getElementById('boardBlunderUndoBtn'),
+        boardBlunderKeepBtn: document.getElementById('boardBlunderKeepBtn'),
         filterBar: document.getElementById('filterBar'),
         movesFilterWrap: document.getElementById('movesFilterWrap'),
         navControlsRow: document.getElementById('navControlsRow'),
@@ -808,6 +814,9 @@
         sparringEvalVal: document.getElementById('sparringEvalVal'),
         sparringEvalFill: document.getElementById('sparringEvalFill'),
         sparringBlunderBox: document.getElementById('sparringBlunderBox'),
+        sparringHintBox: document.getElementById('sparringHintBox'),
+        sparringHintPills: document.getElementById('sparringHintPills'),
+        sparringHintPvLine: document.getElementById('sparringHintPvLine'),
         sparringBlunderTitle: document.getElementById('sparringBlunderTitle'),
         sparringBlunderText: document.getElementById('sparringBlunderText'),
         sparringBlunderUndoBtn: document.getElementById('sparringBlunderUndoBtn'),
@@ -1083,6 +1092,18 @@
       }
       if (this.dom.sparringBlunderKeepBtn) {
         this.dom.sparringBlunderKeepBtn.addEventListener('click', () => this._keepSparringBlunder());
+      }
+      if (this.dom.boardBlunderUndoBtn) {
+        this.dom.boardBlunderUndoBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this._undoSparringBlunder();
+        });
+      }
+      if (this.dom.boardBlunderKeepBtn) {
+        this.dom.boardBlunderKeepBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this._keepSparringBlunder();
+        });
       }
       if (this.dom.sparringNewGameBtn) {
         this.dom.sparringNewGameBtn.addEventListener('click', () => this._startSparringGame());
@@ -3315,6 +3336,9 @@
       this.hintLevel = 0;
       this.sparring.pendingBlunder = null;
       this.sparring.hintMove = null;
+      this.sparring.hintCandidates = [];
+      this.sparring.selectedHintIdx = 0;
+      if (this.dom.sparringHintBox) this.dom.sparringHintBox.classList.add('hidden');
       this.sparring.gameOver = false;
       this.sparring.resultMsg = null;
       this.sparring.evalWhite = this.engine.evaluatePosition();
@@ -3404,13 +3428,17 @@
       if (this.dom.sparringBlunderBox) {
         const pb = this.sparring.pendingBlunder;
         this.dom.sparringBlunderBox.classList.toggle('hidden', !pb);
+        if (this.dom.boardBlunderOverlay) {
+          this.dom.boardBlunderOverlay.classList.toggle('hidden', !pb);
+        }
         if (pb) {
           const refSan = pb.refutationSan || (pb.coachInfo.refutationMove ? pb.coachInfo.refutationMove.from + pb.coachInfo.refutationMove.to : '?');
-          if (pb.coachInfo.walkedIntoMate) {
-            this.dom.sparringBlunderText.textContent = this.t('sparringBlunderMateMsg')(refSan);
-          } else {
-            const pawns = (pb.coachInfo.cpLoss / 100).toFixed(1);
-            this.dom.sparringBlunderText.textContent = this.t('sparringBlunderMsg')(pawns, refSan);
+          const msg = pb.coachInfo.walkedIntoMate
+            ? this.t('sparringBlunderMateMsg')(refSan)
+            : this.t('sparringBlunderMsg')((pb.coachInfo.cpLoss / 100).toFixed(1), refSan);
+          this.dom.sparringBlunderText.textContent = msg;
+          if (this.dom.boardBlunderMsg) {
+            this.dom.boardBlunderMsg.textContent = `⚠️ ${msg}`;
           }
         }
       }
@@ -3442,12 +3470,28 @@
       );
       if (!chosen) return;
 
+      // Check if player chose one of Coach's already-verified Top-3 suggestions (prevents false Blunder Guard alarms!)
+      const topBestScore =
+        this.sparring.hintCandidates.length > 0 ? this.sparring.hintCandidates[0].scoreSide : null;
+      const matchedHint = this.sparring.hintCandidates.find(
+        (c) =>
+          c.move.from === from &&
+          c.move.to === to &&
+          (!c.move.promotion || c.move.promotion === (promotion || 'q'))
+      );
+      const isCoachApproved =
+        Boolean(matchedHint) &&
+        (topBestScore === null || topBestScore - matchedHint.scoreSide < 120);
+
       this.sparring.hintMove = null;
+      this.sparring.hintCandidates = [];
+      this.sparring.selectedHintIdx = 0;
+      if (this.dom.sparringHintBox) this.dom.sparringHintBox.classList.add('hidden');
       this.selectedSquare = null;
       this.legalTargetsForSelected = [];
 
       // Blunder Guard check BEFORE committing
-      if (this.sparring.blunderGuard) {
+      if (this.sparring.blunderGuard && !isCoachApproved) {
         const coachInfo = this.engine.evaluateMoveForCoach(chosen);
         if (coachInfo && coachInfo.isBlunder) {
           const moveObj = this.engine.makeMove({ from, to, promotion });
@@ -3630,15 +3674,49 @@
 
     _showSparringHint() {
       if (!this._isSparringLikeMode() || this.sparring.gameOver || this.engine.turn !== this.playerColor) return;
-      const best = this.engine.getBestMove({ depth: 2, noise: 0, quiesce: true, timeMs: 300 });
-      if (!best || !best.move) return;
-      this.sparring.hintMove = { from: best.move.from, to: best.move.to };
-      let san = best.move.from + best.move.to;
-      try {
-        san = this.engine.moveToSan(best.move);
-      } catch (e) {}
+      const top = this.engine.getTopMovesWithPV(3, 3, 450);
+      if (!top || top.length === 0) return;
+      this.sparring.hintCandidates = top;
+      this.sparring.selectedHintIdx = 0;
+      this.sparring.hintMove = { from: top[0].move.from, to: top[0].move.to };
+      this._renderSparringHintBox();
       this._renderBoard();
-      this._renderStatusAndCoach('progress', this.t('sparringHintMsg')(san));
+      this._renderStatusAndCoach('progress', this.t('sparringHintMsg')(top[0].san));
+    }
+
+    _renderSparringHintBox() {
+      if (!this.dom.sparringHintBox || !this.dom.sparringHintPills || !this.dom.sparringHintPvLine) return;
+      const list = this.sparring.hintCandidates || [];
+      if (list.length === 0) {
+        this.dom.sparringHintBox.classList.add('hidden');
+        return;
+      }
+      this.dom.sparringHintBox.classList.remove('hidden');
+      const medals = ['🥇', '🥈', '🥉'];
+      const fmtEval = (cp) =>
+        Math.abs(cp) >= 25000 ? (cp > 0 ? '+M' : '-M') : cp > 0 ? `+${(cp / 100).toFixed(1)}` : (cp / 100).toFixed(1);
+
+      this.dom.sparringHintPills.innerHTML = list
+        .map(
+          (c, idx) =>
+            `<button type="button" class="sparring-hint-pill ${idx === this.sparring.selectedHintIdx ? 'active' : ''}" data-idx="${idx}">${medals[idx] || ''} ${c.san} (${fmtEval(c.evalWhite)})</button>`
+        )
+        .join('');
+
+      this.dom.sparringHintPills.querySelectorAll('.sparring-hint-pill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          this.sparring.selectedHintIdx = parseInt(btn.dataset.idx, 10) || 0;
+          this._renderSparringHintBox();
+          this._renderBoard();
+        });
+      });
+
+      const active = list[this.sparring.selectedHintIdx] || list[0];
+      const parts = [];
+      if (active.pvSan[0]) parts.push(`🟢 <strong>${active.pvSan[0]}</strong>`);
+      if (active.pvSan[1]) parts.push(`🔴 ${active.pvSan[1]}`);
+      if (active.pvSan[2]) parts.push(`🔵 ${active.pvSan[2]}`);
+      this.dom.sparringHintPvLine.innerHTML = `Plan (3 półruchy): ${parts.join(' → ')}`;
     }
 
     _resignSparring() {
@@ -3679,7 +3757,15 @@
         return { arrows, hangingSquares };
       }
 
-      if (this.sparring.hintMove) {
+      if (this.sparring.hintCandidates && this.sparring.hintCandidates.length > 0) {
+        const active = this.sparring.hintCandidates[this.sparring.selectedHintIdx] || this.sparring.hintCandidates[0];
+        const colors = ['green', 'red', 'blue'];
+        if (active && active.pv) {
+          active.pv.slice(0, 3).forEach((m, idx) => {
+            arrows.push({ from: m.from, to: m.to, color: colors[idx] });
+          });
+        }
+      } else if (this.sparring.hintMove) {
         arrows.push({
           from: this.sparring.hintMove.from,
           to: this.sparring.hintMove.to,
@@ -3794,12 +3880,31 @@
       }
 
       this.dom.boardGrid.innerHTML = html;
+      this._updateBoardHintFabDelay();
       if (isAnalysis) {
         this._renderAnalysisArrows(analysisOverlay.arrows);
       } else if (isSparring) {
         this._renderAnalysisArrows(sparringOverlay.arrows);
       } else {
         this._renderHintArrow(hintFromSq, hintToSq);
+      }
+    }
+
+    _updateBoardHintFabDelay() {
+      if (!this.dom.boardHintFab) return;
+      if (this._hintFabTimer) {
+        clearTimeout(this._hintFabTimer);
+        this._hintFabTimer = null;
+      }
+      this.dom.boardHintFab.classList.add('hidden');
+      const allowed = !['analysis', 'vision', 'evalquiz'].includes(this.mode);
+      if (allowed && this.selectedSquare && this.status === 'playing') {
+        const targetSq = this.selectedSquare;
+        this._hintFabTimer = setTimeout(() => {
+          if (this.selectedSquare === targetSq && this.status === 'playing') {
+            this.dom.boardHintFab.classList.remove('hidden');
+          }
+        }, 3000);
       }
     }
 

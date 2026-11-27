@@ -1932,3 +1932,92 @@ select {
 .board-hide-coords .coord-file {
   display: none !important;
 }
+
+/* ============================================================================
+   COACH MULTI-PV HINT BOX (TOP 3 MOVES + 3-PLY PV)
+   ============================================================================ */
+.sparring-hint-box {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.42);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sparring-hint-head {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: #6ee7b7;
+}
+
+.sparring-hint-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.sparring-hint-pill {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+
+.sparring-hint-pill.active {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.75);
+  color: #a7f3d0;
+}
+
+.sparring-hint-pv {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ============================================================================
+   MOBILE-FRIENDLY BLUNDER GUARD OVERLAY ON BOARD
+   ============================================================================ */
+.board-blunder-overlay {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  z-index: 25;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1.5px solid rgba(239, 68, 68, 0.75);
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.board-blunder-msg {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fecaca;
+  line-height: 1.35;
+}
+
+.board-blunder-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.board-blunder-btns .ctrl-btn {
+  padding: 0.45rem 0.5rem;
+  font-size: 0.8rem;
+}

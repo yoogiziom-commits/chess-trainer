@@ -148,7 +148,16 @@
       <div id="boardContainer" class="board-container">
         <div id="boardGrid" class="board-grid" role="grid" aria-label="Szachownica"></div>
         <svg id="arrowSvg" class="arrow-overlay" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
-        <button type="button" id="boardHintFab" class="board-hint-fab" title="Podpowiedź (skrót: H)" aria-label="Podpowiedź (skrót: H)">💡</button>
+        <button type="button" id="boardHintFab" class="board-hint-fab hidden" title="Podpowiedź (skrót: H)" aria-label="Podpowiedź (skrót: H)">💡</button>
+
+        <!-- Compact Mobile-Friendly Blunder Guard Overlay on Board -->
+        <div id="boardBlunderOverlay" class="board-blunder-overlay hidden" role="dialog" aria-live="polite">
+          <div class="board-blunder-msg" id="boardBlunderMsg">⚠️ Uwaga! Ten ruch traci materiał.</div>
+          <div class="board-blunder-btns">
+            <button type="button" id="boardBlunderUndoBtn" class="ctrl-btn hint-btn">↩ Cofnij</button>
+            <button type="button" id="boardBlunderKeepBtn" class="ctrl-btn">▶ Graj dalej</button>
+          </div>
+        </div>
 
         <!-- Promotion Picker Modal Overlay -->
         <div id="promoModal" class="promo-modal hidden" role="dialog" aria-modal="true">
@@ -382,6 +391,15 @@
           <div class="sparring-eval-track">
             <div id="sparringEvalFill" class="sparring-eval-fill" style="width: 50%"></div>
           </div>
+        </div>
+
+        <div id="sparringHintBox" class="sparring-hint-box hidden">
+          <div class="sparring-hint-head">
+            <span>💡</span>
+            <strong id="sparringHintTitle">Top 3 ruchy trenera (kliknij, aby zobaczyć plan):</strong>
+          </div>
+          <div id="sparringHintPills" class="sparring-hint-pills"></div>
+          <div id="sparringHintPvLine" class="sparring-hint-pv"></div>
         </div>
 
         <div id="sparringBlunderBox" class="sparring-blunder-box hidden">
