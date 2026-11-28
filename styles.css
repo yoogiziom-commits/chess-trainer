@@ -2021,3 +2021,72 @@ select {
   padding: 0.45rem 0.5rem;
   font-size: 0.8rem;
 }
+
+/* ============================================================================
+   COACH CLASSIC SOLUTIONS BOX (OPENING BOOK + STRATEGIC PRINCIPLES)
+   ============================================================================ */
+.sparring-classic-box {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sparring-classic-head {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: #93c5fd;
+}
+
+.sparring-classic-pill {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sparring-classic-pill.active {
+  background: rgba(59, 130, 246, 0.28);
+  border-color: rgba(59, 130, 246, 0.8);
+  color: #bfdbfe;
+}
+
+/* Inline Confirm (✓ / ✕) in place of New Game & Resign buttons */
+.inline-confirm-slot {
+  display: flex;
+  width: 100%;
+}
+
+.inline-confirm-slot > .ctrl-btn {
+  width: 100%;
+}
+
+.inline-confirm-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.confirm-yes-btn {
+  background: rgba(239, 68, 68, 0.24) !important;
+  border-color: rgba(239, 68, 68, 0.65) !important;
+  color: #fecaca !important;
+  font-weight: 800;
+}
+
+.confirm-no-btn {
+  background: rgba(148, 163, 184, 0.16) !important;
+  border-color: rgba(148, 163, 184, 0.45) !important;
+  color: var(--text-primary) !important;
+  font-weight: 800;
+}

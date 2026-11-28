@@ -402,6 +402,15 @@
           <div id="sparringHintPvLine" class="sparring-hint-pv"></div>
         </div>
 
+        <div id="sparringClassicBox" class="sparring-classic-box hidden">
+          <div class="sparring-classic-head">
+            <span>📖</span>
+            <strong id="sparringClassicTitle">Pasujące klasyczne rozwiązania:</strong>
+          </div>
+          <div id="sparringClassicPills" class="sparring-hint-pills"></div>
+          <div id="sparringClassicDesc" class="sparring-hint-pv"></div>
+        </div>
+
         <div id="sparringBlunderBox" class="sparring-blunder-box hidden">
           <div class="sparring-blunder-head">
             <span>⚠️</span>
@@ -415,10 +424,16 @@
         </div>
 
         <div class="sparring-actions-grid">
-          <button type="button" id="sparringNewGameBtn" class="ctrl-btn solution-btn">
-            <span>▶</span>
-            <span id="sparringNewGameText">Nowa partia</span>
-          </button>
+          <div class="inline-confirm-slot">
+            <button type="button" id="sparringNewGameBtn" class="ctrl-btn solution-btn">
+              <span>▶</span>
+              <span id="sparringNewGameText">Nowa partia</span>
+            </button>
+            <div id="sparringNewGameConfirm" class="inline-confirm-pair hidden">
+              <button type="button" id="sparringNewGameYes" class="ctrl-btn confirm-yes-btn" title="Potwierdź nową partię">✓</button>
+              <button type="button" id="sparringNewGameNo" class="ctrl-btn confirm-no-btn" title="Anuluj">✕</button>
+            </div>
+          </div>
           <button type="button" id="sparringUndoBtn" class="ctrl-btn">
             <span>↩</span>
             <span id="sparringUndoText">Cofnij</span>
@@ -427,9 +442,19 @@
             <span>💡</span>
             <span id="sparringHintText">Podpowiedź</span>
           </button>
-          <button type="button" id="sparringResignBtn" class="ctrl-btn">
-            <span>🏳️</span>
-            <span id="sparringResignText">Poddaj się</span>
+          <div class="inline-confirm-slot">
+            <button type="button" id="sparringResignBtn" class="ctrl-btn">
+              <span>🏳️</span>
+              <span id="sparringResignText">Poddaj się</span>
+            </button>
+            <div id="sparringResignConfirm" class="inline-confirm-pair hidden">
+              <button type="button" id="sparringResignYes" class="ctrl-btn confirm-yes-btn" title="Potwierdź poddanie">✓</button>
+              <button type="button" id="sparringResignNo" class="ctrl-btn confirm-no-btn" title="Anuluj">✕</button>
+            </div>
+          </div>
+          <button type="button" id="sparringClassicBtn" class="ctrl-btn" style="grid-column: span 2;">
+            <span>📖</span>
+            <span id="sparringClassicText">Klasyczne rozwiązanie</span>
           </button>
         </div>
 

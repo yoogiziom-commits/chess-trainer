@@ -1264,9 +1264,9 @@
             pvSan.push(oppBest.move.from + oppBest.move.to);
           }
 
-          // Ply 3: Player's best continuation
+          // Ply 3: Player's 2nd move
           const snap2 = this._applyRawMove(oppBest.move);
-          const followBest = this.getBestMove({ depth: 1, noise: 0, quiesce: true, timeMs: 80 });
+          const followBest = this.getBestMove({ depth: 1, noise: 0, quiesce: true, timeMs: 60 });
           if (followBest && followBest.move) {
             pv.push(followBest.move);
             try {
@@ -1274,6 +1274,30 @@
             } catch (e) {
               pvSan.push(followBest.move.from + followBest.move.to);
             }
+
+            // Ply 4: Opponent's 2nd reply -> Ply 5: Player's 3rd move
+            const snap3 = this._applyRawMove(followBest.move);
+            const oppBest2 = this.getBestMove({ depth: 1, noise: 0, quiesce: true, timeMs: 50 });
+            if (oppBest2 && oppBest2.move) {
+              pv.push(oppBest2.move);
+              try {
+                pvSan.push(this.moveToSan(oppBest2.move));
+              } catch (e) {
+                pvSan.push(oppBest2.move.from + oppBest2.move.to);
+              }
+              const snap4 = this._applyRawMove(oppBest2.move);
+              const followBest2 = this.getBestMove({ depth: 1, noise: 0, quiesce: true, timeMs: 50 });
+              if (followBest2 && followBest2.move) {
+                pv.push(followBest2.move);
+                try {
+                  pvSan.push(this.moveToSan(followBest2.move));
+                } catch (e) {
+                  pvSan.push(followBest2.move.from + followBest2.move.to);
+                }
+              }
+              this._undoRawMove(snap4);
+            }
+            this._undoRawMove(snap3);
           }
           this._undoRawMove(snap2);
         }

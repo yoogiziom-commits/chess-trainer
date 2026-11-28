@@ -448,6 +448,8 @@
         hintMove: null, // { from, to }
         hintCandidates: [],
         selectedHintIdx: 0,
+        classicSuggestions: [],
+        selectedClassicIdx: 0,
         gameOver: false,
         resultMsg: null
       };
@@ -817,6 +819,11 @@
         sparringHintBox: document.getElementById('sparringHintBox'),
         sparringHintPills: document.getElementById('sparringHintPills'),
         sparringHintPvLine: document.getElementById('sparringHintPvLine'),
+        sparringClassicBtn: document.getElementById('sparringClassicBtn'),
+        sparringClassicText: document.getElementById('sparringClassicText'),
+        sparringClassicBox: document.getElementById('sparringClassicBox'),
+        sparringClassicPills: document.getElementById('sparringClassicPills'),
+        sparringClassicDesc: document.getElementById('sparringClassicDesc'),
         sparringBlunderTitle: document.getElementById('sparringBlunderTitle'),
         sparringBlunderText: document.getElementById('sparringBlunderText'),
         sparringBlunderUndoBtn: document.getElementById('sparringBlunderUndoBtn'),
@@ -824,12 +831,18 @@
         sparringBlunderKeepBtn: document.getElementById('sparringBlunderKeepBtn'),
         sparringBlunderKeepText: document.getElementById('sparringBlunderKeepText'),
         sparringNewGameBtn: document.getElementById('sparringNewGameBtn'),
+        sparringNewGameConfirm: document.getElementById('sparringNewGameConfirm'),
+        sparringNewGameYes: document.getElementById('sparringNewGameYes'),
+        sparringNewGameNo: document.getElementById('sparringNewGameNo'),
         sparringNewGameText: document.getElementById('sparringNewGameText'),
         sparringUndoBtn: document.getElementById('sparringUndoBtn'),
         sparringUndoText: document.getElementById('sparringUndoText'),
         sparringHintBtn: document.getElementById('sparringHintBtn'),
         sparringHintText: document.getElementById('sparringHintText'),
         sparringResignBtn: document.getElementById('sparringResignBtn'),
+        sparringResignConfirm: document.getElementById('sparringResignConfirm'),
+        sparringResignYes: document.getElementById('sparringResignYes'),
+        sparringResignNo: document.getElementById('sparringResignNo'),
         sparringResignText: document.getElementById('sparringResignText'),
         sparringEndgamesLabel: document.getElementById('sparringEndgamesLabel'),
         sparringEndgamesGroup: document.getElementById('sparringEndgamesGroup'),
@@ -1105,18 +1118,56 @@
           this._keepSparringBlunder();
         });
       }
-      if (this.dom.sparringNewGameBtn) {
-        this.dom.sparringNewGameBtn.addEventListener('click', () => this._startSparringGame());
-      }
+      const wireInlineConfirm = (mainBtn, confirmPair, yesBtn, noBtn, onConfirm, needsConfirmFn) => {
+        if (!mainBtn || !confirmPair || !yesBtn || !noBtn) return;
+        let autoHideId = null;
+        const reset = () => {
+          if (autoHideId) { clearTimeout(autoHideId); autoHideId = null; }
+          confirmPair.classList.add('hidden');
+          mainBtn.classList.remove('hidden');
+        };
+        mainBtn.addEventListener('click', () => {
+          if (needsConfirmFn && !needsConfirmFn()) {
+            onConfirm();
+            return;
+          }
+          mainBtn.classList.add('hidden');
+          confirmPair.classList.remove('hidden');
+          if (autoHideId) clearTimeout(autoHideId);
+          autoHideId = setTimeout(reset, 5000);
+        });
+        yesBtn.addEventListener('click', () => {
+          reset();
+          onConfirm();
+        });
+        noBtn.addEventListener('click', reset);
+      };
+
+      wireInlineConfirm(
+        this.dom.sparringNewGameBtn,
+        this.dom.sparringNewGameConfirm,
+        this.dom.sparringNewGameYes,
+        this.dom.sparringNewGameNo,
+        () => this._startSparringGame(),
+        () => this.playedMoves.length > 0 && !this.sparring.gameOver
+      );
       if (this.dom.sparringUndoBtn) {
         this.dom.sparringUndoBtn.addEventListener('click', () => this._undoSparringPair());
       }
       if (this.dom.sparringHintBtn) {
         this.dom.sparringHintBtn.addEventListener('click', () => this._showSparringHint());
       }
-      if (this.dom.sparringResignBtn) {
-        this.dom.sparringResignBtn.addEventListener('click', () => this._resignSparring());
+      if (this.dom.sparringClassicBtn) {
+        this.dom.sparringClassicBtn.addEventListener('click', () => this._showSparringClassics());
       }
+      wireInlineConfirm(
+        this.dom.sparringResignBtn,
+        this.dom.sparringResignConfirm,
+        this.dom.sparringResignYes,
+        this.dom.sparringResignNo,
+        () => this._resignSparring(),
+        () => !this.sparring.gameOver
+      );
       if (this.dom.sparringEndgamesGroup) {
         this.dom.sparringEndgamesGroup.addEventListener('click', (e) => {
           const btn = e.target.closest('.endgame-drill-btn');
@@ -3338,7 +3389,10 @@
       this.sparring.hintMove = null;
       this.sparring.hintCandidates = [];
       this.sparring.selectedHintIdx = 0;
+      this.sparring.classicSuggestions = [];
+      this.sparring.selectedClassicIdx = 0;
       if (this.dom.sparringHintBox) this.dom.sparringHintBox.classList.add('hidden');
+      if (this.dom.sparringClassicBox) this.dom.sparringClassicBox.classList.add('hidden');
       this.sparring.gameOver = false;
       this.sparring.resultMsg = null;
       this.sparring.evalWhite = this.engine.evaluatePosition();
@@ -3424,6 +3478,7 @@
           : this.t('sparringRadarOff');
       }
       this._updateSparringEvalUI();
+      this._updateClassicButtonState();
 
       if (this.dom.sparringBlunderBox) {
         const pb = this.sparring.pendingBlunder;
@@ -3486,7 +3541,10 @@
       this.sparring.hintMove = null;
       this.sparring.hintCandidates = [];
       this.sparring.selectedHintIdx = 0;
+      this.sparring.classicSuggestions = [];
+      this.sparring.selectedClassicIdx = 0;
       if (this.dom.sparringHintBox) this.dom.sparringHintBox.classList.add('hidden');
+      if (this.dom.sparringClassicBox) this.dom.sparringClassicBox.classList.add('hidden');
       this.selectedSquare = null;
       this.legalTargetsForSelected = [];
 
@@ -3714,9 +3772,271 @@
       const active = list[this.sparring.selectedHintIdx] || list[0];
       const parts = [];
       if (active.pvSan[0]) parts.push(`🟢 <strong>${active.pvSan[0]}</strong>`);
-      if (active.pvSan[1]) parts.push(`🔴 ${active.pvSan[1]}`);
-      if (active.pvSan[2]) parts.push(`🔵 ${active.pvSan[2]}`);
-      this.dom.sparringHintPvLine.innerHTML = `Plan (3 półruchy): ${parts.join(' → ')}`;
+      if (active.pvSan[2]) parts.push(`🔵 <strong>${active.pvSan[2]}</strong>`);
+      if (active.pvSan[4]) parts.push(`🟡 <strong>${active.pvSan[4]}</strong>`);
+      this.dom.sparringHintPvLine.innerHTML = `Twoje 3 ruchy do przodu: ${parts.join(' → ')}`;
+    }
+
+    _buildClassicOpeningIndex() {
+      if (this._classicBookIndex) return this._classicBookIndex;
+      const index = new Map();
+      const openings = window.OPENING_TRAPS || [];
+      const eng = new window.ChessEngine();
+
+      for (const op of openings) {
+        if (!op.fen || !Array.isArray(op.solution) || op.solution.length === 0) continue;
+        try {
+          eng.loadFen(op.fen);
+        } catch (e) {
+          continue;
+        }
+        for (let i = 0; i < op.solution.length; i++) {
+          const fenParts = eng.toFen().split(' ');
+          const key = `${fenParts[0]} ${fenParts[1]} ${fenParts[2]}`;
+          const uci = op.solution[i];
+          const from = uci.slice(0, 2);
+          const to = uci.slice(2, 4);
+          const promotion = uci[4];
+
+          // Compute up to 4 PLAYER-ONLY moves in SAN + coordinates (skipping opponent replies)
+          const tempEng = new window.ChessEngine(eng.toFen());
+          const lineSan = [];
+          const lineMoves = [];
+          for (let j = i; j < op.solution.length && lineMoves.length < 4; j++) {
+            const u = op.solution[j];
+            const mFrom = u.slice(0, 2);
+            const mTo = u.slice(2, 4);
+            const m = tempEng.makeMove({ from: mFrom, to: mTo, promotion: u[4] });
+            if (!m) break;
+            if ((j - i) % 2 === 0) {
+              lineSan.push(m.san);
+              lineMoves.push({ from: mFrom, to: mTo });
+            }
+          }
+
+          if (lineSan.length > 0) {
+            if (!index.has(key)) index.set(key, []);
+            const arr = index.get(key);
+            const titlePl = (op.title && op.title.pl) || op.id;
+            const titleEn = (op.title && op.title.en) || op.id;
+            // Deduplicate by first move + short title
+            if (!arr.some((x) => x.moveUci === uci && x.titlePl === titlePl)) {
+              arr.push({
+                kind: 'opening',
+                titlePl,
+                titleEn,
+                moveUci: uci,
+                move: { from, to, promotion },
+                san: lineSan[0],
+                lineSan,
+                lineMoves,
+                descPl: (op.explanation && op.explanation.pl) || '',
+                descEn: (op.explanation && op.explanation.en) || ''
+              });
+            }
+          }
+
+          const stepMove = eng.makeMove({ from, to, promotion });
+          if (!stepMove) break;
+        }
+      }
+      this._classicBookIndex = index;
+      return index;
+    }
+
+    _getExecutableClassics() {
+      if (!this.engine || this.sparring.gameOver) return [];
+      const legal = this.engine.getLegalMoves();
+      if (legal.length === 0) return [];
+
+      // Layer 1: Exact Opening Book Match (guaranteed executable in current position!)
+      const fenParts = this.engine.toFen().split(' ');
+      const key = `${fenParts[0]} ${fenParts[1]} ${fenParts[2]}`;
+      const book = this._buildClassicOpeningIndex();
+      const rawMatches = book.get(key) || [];
+      const validBook = rawMatches
+        .filter((item) =>
+          legal.some((m) => m.from === item.move.from && m.to === item.move.to)
+        )
+        .slice(0, 4);
+
+      if (validBook.length > 0) return validBook;
+
+      // Layer 2: Executable Strategic Principles (Middlegame / Endgame)
+      const principles = [];
+      const turn = this.engine.turn;
+      const opp = turn === 'w' ? 'b' : 'w';
+
+      // Helper: quick check that move doesn't immediately hang the moved piece
+      const isSafeMove = (m) => {
+        const snap = this.engine._applyRawMove(m);
+        const toCoords = window.ChessEngine ? null : null;
+        const files = 'abcdefgh';
+        const c = files.indexOf(m.to[0]);
+        const r = 8 - parseInt(m.to[1], 10);
+        const attacked = this.engine.isSquareAttacked(r, c, opp);
+        const defended = this.engine.isSquareAttacked(r, c, turn);
+        this.engine._undoRawMove(snap);
+        return !attacked || defended;
+      };
+
+      // 2a. Castling (King Safety)
+      const castleMove = legal.find((m) => m.isCastle);
+      if (castleMove) {
+        const san = this.engine.moveToSan(castleMove);
+        principles.push({
+          kind: 'principle',
+          titlePl: 'Bezpieczeństwo króla (Roszada)',
+          titleEn: 'King Safety (Castling)',
+          move: { from: castleMove.from, to: castleMove.to },
+          san,
+          lineSan: [san],
+          descPl: `Klasyczna zasada: Zabezpiecz króla roszadą (${san}) i połącz wieże!`,
+          descEn: `Classic principle: Secure your king with castling (${san}) and connect your rooks!`
+        });
+      }
+
+      // 2b. Develop an unmoved minor piece (N/B on back rank)
+      const backRank = turn === 'w' ? '1' : '8';
+      const devMove = legal.find(
+        (m) =>
+          (m.piece === 'n' || m.piece === 'b') &&
+          m.from[1] === backRank &&
+          m.to[1] !== backRank &&
+          isSafeMove(m)
+      );
+      if (devMove) {
+        const san = this.engine.moveToSan(devMove);
+        principles.push({
+          kind: 'principle',
+          titlePl: 'Rozwój lekkiej figury',
+          titleEn: 'Develop a Minor Piece',
+          move: { from: devMove.from, to: devMove.to },
+          san,
+          lineSan: [san],
+          descPl: `Klasyczna zasada: Wyprowadź nieaktywną figurę z linii startowej ruchem ${san}.`,
+          descEn: `Classic principle: Develop an unmoved minor piece from the back rank with ${san}.`
+        });
+      }
+
+      // 2c. Open file for Rook
+      const files = 'abcdefgh';
+      const openFiles = new Set();
+      for (let c = 0; c < 8; c++) {
+        let hasPawn = false;
+        for (let r = 0; r < 8; r++) {
+          const p = this.engine.board[r][c];
+          if (p && p.type === 'p') { hasPawn = true; break; }
+        }
+        if (!hasPawn) openFiles.add(files[c]);
+      }
+      if (openFiles.size > 0) {
+        const rookFileMove = legal.find(
+          (m) => m.piece === 'r' && openFiles.has(m.to[0]) && !openFiles.has(m.from[0]) && isSafeMove(m)
+        );
+        if (rookFileMove) {
+          const san = this.engine.moveToSan(rookFileMove);
+          principles.push({
+            kind: 'principle',
+            titlePl: 'Zajmij otwartą linię wieżą',
+            titleEn: 'Claim the Open File',
+            move: { from: rookFileMove.from, to: rookFileMove.to },
+            san,
+            lineSan: [san],
+            descPl: `Klasyczny plan: Wieże lubią otwarte linie — zagraj ${san}!`,
+            descEn: `Classic plan: Rooks belong on open files — play ${san}!`
+          });
+        }
+      }
+
+      // 2d. Endgame King Activation (when few pieces remain)
+      let nonPawnCount = 0;
+      for (let r = 0; r < 8; r++) {
+        for (let c = 0; c < 8; c++) {
+          const p = this.engine.board[r][c];
+          if (p && p.type !== 'p' && p.type !== 'k') nonPawnCount++;
+        }
+      }
+      if (nonPawnCount <= 4) {
+        const kingCenterMove = legal.find(
+          (m) => m.piece === 'k' && ['c', 'd', 'e', 'f'].includes(m.to[0]) && ['3', '4', '5', '6'].includes(m.to[1])
+        );
+        if (kingCenterMove) {
+          const san = this.engine.moveToSan(kingCenterMove);
+          principles.push({
+            kind: 'principle',
+            titlePl: 'Aktywizacja króla w końcówce',
+            titleEn: 'Endgame King Activation',
+            move: { from: kingCenterMove.from, to: kingCenterMove.to },
+            san,
+            lineSan: [san],
+            descPl: `Klasyczna zasada końcówkowa: W końcówce król jest silną figurą — prowadź go do centrum (${san})!`,
+            descEn: `Classic endgame principle: Activate your king toward the center (${san})!`
+          });
+        }
+      }
+
+      return principles.slice(0, 3);
+    }
+
+    _updateClassicButtonState() {
+      if (!this.dom.sparringClassicBtn || !this.dom.sparringClassicText) return;
+      if (!this._isSparringLikeMode() || !this.engine || this.sparring.gameOver) return;
+      const list = this._getExecutableClassics();
+      const base = this.state.lang === 'en' ? 'Classic Solution' : 'Klasyczne rozwiązanie';
+      this.dom.sparringClassicText.textContent =
+        list.length > 0 ? `${base} (${list.length})` : `${base} (0)`;
+      this.dom.sparringClassicBtn.disabled = list.length === 0;
+    }
+
+    _showSparringClassics() {
+      if (!this._isSparringLikeMode() || this.sparring.gameOver || this.engine.turn !== this.playerColor) return;
+      const list = this._getExecutableClassics();
+      if (list.length === 0) return;
+      this.sparring.classicSuggestions = list;
+      this.sparring.selectedClassicIdx = 0;
+      this._renderSparringClassicBox();
+      this._renderBoard();
+    }
+
+    _renderSparringClassicBox() {
+      if (!this.dom.sparringClassicBox || !this.dom.sparringClassicPills || !this.dom.sparringClassicDesc) return;
+      const list = this.sparring.classicSuggestions || [];
+      if (list.length === 0) {
+        this.dom.sparringClassicBox.classList.add('hidden');
+        return;
+      }
+      this.dom.sparringClassicBox.classList.remove('hidden');
+      const isEn = this.state.lang === 'en';
+
+      this.dom.sparringClassicPills.innerHTML = list
+        .map((item, idx) => {
+          const shortTitle = (isEn ? item.titleEn : item.titlePl).replace(/^(Solidny Debiut|Debiut|Solid Opening|Solid Repertoire|Classic Opening|Anti-Sicilian|Grandmaster .*?):\s*/i, '');
+          return `<button type="button" class="sparring-classic-pill ${idx === this.sparring.selectedClassicIdx ? 'active' : ''}" data-idx="${idx}">📖 ${shortTitle} (${item.san})</button>`;
+        })
+        .join('');
+
+      this.dom.sparringClassicPills.querySelectorAll('.sparring-classic-pill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          this.sparring.selectedClassicIdx = parseInt(btn.dataset.idx, 10) || 0;
+          this._renderSparringClassicBox();
+          this._renderBoard();
+        });
+      });
+
+      const active = list[this.sparring.selectedClassicIdx] || list[0];
+      const title = isEn ? active.titleEn : active.titlePl;
+      const desc = isEn ? active.descEn : active.descPl;
+      const dots = ['🟢', '🔵', '🟡', '🔴'];
+      const seq = active.lineSan
+        .map((s, idx) => `${dots[idx] || ''} <strong>${s}</strong>`)
+        .join(' → ');
+      this.dom.sparringClassicDesc.innerHTML =
+        active.kind === 'opening'
+          ? (isEn
+              ? `Your plan for <strong>${title}</strong>: ${seq}. ${desc}`
+              : `Twoje kroki w <strong>${title}</strong>: ${seq}. ${desc}`)
+          : `🟢 <strong>${title} (${active.san}):</strong> ${desc}`;
     }
 
     _resignSparring() {
@@ -3757,12 +4077,26 @@
         return { arrows, hangingSquares };
       }
 
-      if (this.sparring.hintCandidates && this.sparring.hintCandidates.length > 0) {
+      if (this.sparring.classicSuggestions && this.sparring.classicSuggestions.length > 0) {
+        const active =
+          this.sparring.classicSuggestions[this.sparring.selectedClassicIdx] ||
+          this.sparring.classicSuggestions[0];
+        const colors = ['green', 'blue', 'amber', 'red'];
+        if (active && Array.isArray(active.lineMoves) && active.lineMoves.length > 0) {
+          active.lineMoves.slice(0, 4).forEach((m, idx) => {
+            arrows.push({ from: m.from, to: m.to, color: colors[idx] || 'blue' });
+          });
+        } else if (active && active.move) {
+          arrows.push({ from: active.move.from, to: active.move.to, color: 'green' });
+        }
+      } else if (this.sparring.hintCandidates && this.sparring.hintCandidates.length > 0) {
         const active = this.sparring.hintCandidates[this.sparring.selectedHintIdx] || this.sparring.hintCandidates[0];
-        const colors = ['green', 'red', 'blue'];
+        const playerIndices = [0, 2, 4];
+        const colors = ['green', 'blue', 'amber'];
         if (active && active.pv) {
-          active.pv.slice(0, 3).forEach((m, idx) => {
-            arrows.push({ from: m.from, to: m.to, color: colors[idx] });
+          playerIndices.forEach((pvIdx, cIdx) => {
+            const m = active.pv[pvIdx];
+            if (m) arrows.push({ from: m.from, to: m.to, color: colors[cIdx] });
           });
         }
       } else if (this.sparring.hintMove) {
